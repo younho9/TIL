@@ -117,4 +117,4 @@ git remote -v
 git push -u origin master
 ```
 
-이제 [u](http://username.github.io)sername.github.io에서 만든 사이트를 볼 수 있다.
+이제 username.github.io에서 만든 사이트를 볼 수 있다.

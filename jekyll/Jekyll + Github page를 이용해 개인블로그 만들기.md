@@ -4,7 +4,7 @@
 
 [Jekyll on macOS](https://jekyllrb.com/docs/installation/macos/)
 
-![screenshot1](/images/screenshot1.png)
+![screenshot1](images/screenshot1.png)
 
 맥에는 루비가 기본적으로 설치되어 있지만, Jekyll 홈페이지의 설명대로 아래의 명령을 입력하면 오류가 발생한다.
 
@@ -13,7 +13,7 @@
 gem install jekyll bundler
 ```
 
-![screenshot2](/images/screenshot2.png)
+![screenshot2](images/screenshot2.png)
 
 ### Gem::FilePermissionError
 
@@ -38,7 +38,7 @@ brew install rbenv ruby-build
 rbenv versions
 ```
 
-![screenshot3](/images/screenshot3.png)
+![screenshot3](images/screenshot3.png)
 
 아래의 명령으로 설치가능한 루비 버전 목록을 보고 원하는 버전을 설치한다.
 
@@ -56,7 +56,7 @@ rbenv global 2.6.5
 
 다시 버전을 확인해본다.
 
-![screenshot4](/images/screenshot4.png)
+![screenshot4](images/screenshot4.png)
 
 이제 Jekyll과 bundler를 설치할 수 있다.
 
@@ -84,7 +84,7 @@ bundle exec jekyll serve
 
 ### GitHub에 username.github.io로 repository 만들기
 
-![screenshot5](/images/screenshot5.png)
+![screenshot5](images/screenshot5.png)
 
 Github에서 username.github.io로 repository를 만든다
 

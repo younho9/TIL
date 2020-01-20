@@ -8,7 +8,7 @@
 
 맥에는 루비가 기본적으로 설치되어 있지만, Jekyll 홈페이지의 설명대로 아래의 명령을 입력하면 오류가 발생한다.
 
-```
+```bash
 # RubyGems를 통해 Jekyll과 Bundler를 설치한다
 gem install jekyll bundler
 ```
@@ -27,14 +27,14 @@ rbenv라는 ruby version 관리자를 통해 여러 버전의 루비를 맥에 �
 
 brew를 이용해 rbenv와 ruby-build를 설치한다.
 
-```
+```bash
 brew update
 brew install rbenv ruby-build
 ```
 
 설치가 완료되면 아래의 명령으로 테스트해본다.
 
-```
+```bash
 rbenv versions
 ```
 
@@ -42,7 +42,7 @@ rbenv versions
 
 아래의 명령으로 설치가능한 루비 버전 목록을 보고 원하는 버전을 설치한다.
 
-```
+```bash
 rbenv install -l
 
 rbenv install 2.6.5
@@ -50,7 +50,7 @@ rbenv install 2.6.5
 
 설치 후 rbenv로 글로벌 버전을 설치한 루비 버전으로 변경한다.
 
-```
+```bash
 rbenv global 2.6.5
 ```
 
@@ -69,7 +69,7 @@ gem install jekyll bundler
 
 ### Jekyll을 이용해 사이트 빌드
 
-```
+```bash
 # ./myblog에 새 Jekyll 사이트를 생성한다
 jekyll new younho9.github.io
 
@@ -88,7 +88,7 @@ bundle exec jekyll serve
 
 Github에서 username.github.io로 repository를 만든다
 
-```
+```bash
 # git init으로 git 생성
 git init
 

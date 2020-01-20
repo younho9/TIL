@@ -23,25 +23,25 @@ URL의 모습과 사이트에 데이터를 원하는 대로 표시할 수 있다
 1. [루비 개발 환경 설치하기](https://jekyllrb.com/docs/installation/)
 2. Jekyll과 [bundler](https://jekyllrb.com/docs/ruby-101/#bundler) [gems](https://jekyllrb.com/docs/ruby-101/#gems) 설치하기
 
-```
+```bash
 gem install jekyll bundler
 ```
 
-3. 새 Jekyll site 생성하기  `./myblog`
+3. 새 Jekyll site 생성하기  `./myblog	`
 
-```
+```bash
 jekyll new myblog
 ```
 
 4. 생성한 Jekyll site 디렉토리로 이동
 
-```
+```bash
 cd myblog
 ```
 
 5. 사이트를 빌드하고 로컬 서버로 접속 가능하게 만들기
 
-```
+```bash
 bundle exec jekyll serve
 ```
 
@@ -70,14 +70,16 @@ gem은 다음과 같은 기능을 수행할 수 있다.
 
 Gemfile은 사이트에 필요한 gems의 리스트를 기록해놓은 파일이다. 단순한 Jekyll site라면 
 
-    source "https://rubygems.org"
-    
-    gem "jekyll"
-    
-    group :jekyll_plugins do
-      gem "jekyll-feed"
-      gem "jekyll-seo-tag"
-    end
+```bash
+source "https://rubygems.org"
+
+gem "jekyll"
+
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+end
+```
 
 
 

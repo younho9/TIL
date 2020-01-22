@@ -1,0 +1,128 @@
+# CSS 개요
+
+## 기본 문법
+
+```css
+선택자 {
+  속성: 속성값;
+  속성: 속성값;
+}
+```
+
+### 선택자(Selector)의 역할
+
+속성과 값을 지정할 대상을 검색
+
+ex) `<div>` 태그에 적용하겠다.
+
+### 속성(Property)과 값(Value)의 역할
+
+검색된 대상에 지정될 CSS 명령
+
+ex)색깔을 빨갛게 하겠다.
+
+### 주석(Comment)
+
+문서 내 수정사항이나 설명등을 작성
+
+일반적인 에디터에서 단축키 `⌘` + `/` 
+
+### 기본 예제
+
+```html
+<div>Hello</div>   <!--RED-->
+<span>Hello</span>
+```
+
+```css
+div {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* 글자색: 빨강; */
+/* 글자크기: 20px; */
+/* 글자두께: 두껍게; */
+```
+
+## 선언 방식
+
+### 인라인(in-line) 방식
+
+HTML 요소(태그)의 `style` 속성에 직접 작성하는 방식
+
+```html
+<div style="color: red; font-size: 20px; font-weight: bold;">Hello</div>
+```
+
+### 내장(embedded) 방식
+
+HTML `<style></style>` 안에 작성하는 방식
+
+```html
+<head>
+  <style>
+    div {
+      color: red;
+      font-size: 20px;
+      font-weight: bold;
+    }    
+  </style>
+</head>
+<body>
+  <div>Hello</div>
+</body>
+```
+
+### 링크(link) 방식
+
+HTML `<link>` 를 이용하여 외부 CSS를 불러와 적용하는 방식
+
+```HTML
+<head>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div>Hello</div>
+</body>
+```
+
+```css
+/* main.css */
+div {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+```
+
+### `@import` 방식
+
+CSS `@import` 를 이용하여 외부 CSS를 불러와 적용하는 방식
+
+> CSS가 CSS를 가져오는 방식
+
+```html
+<head>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div>Hello</div>
+</body>
+```
+
+```css
+/* main.css */
+@import url("./main2.css");
+```
+
+```css
+/* main2.css */
+div {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+```
+
+> 주의사항 : 링크(link) 방식은 병렬적으로 외부 문서를 가져오지만, `@import` 방식은 직렬적, 순차적으로 외부 문서를 가져와 성능 측면에서 좋지 않을 수 있다.

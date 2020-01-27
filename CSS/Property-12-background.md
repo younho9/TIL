@@ -1,4 +1,4 @@
-# CSS 속성 12. background
+# CSS 속성 12. `background`
 
 ## `background`
 

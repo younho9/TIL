@@ -1,8 +1,7 @@
 # 메타데이터 - `<meta>` 요소
 
-[head 태그에는 무엇이 있을까? HTML의 메타데이터](https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-
-MDN 문서를 보면서 공부한 기록
+> ❗️ 해당 글은 [head 태그에는 무엇이 있을까? HTML의 메타데이터](https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) - MDN 문서를 보면서 공부한 기록입니다.
+>
 
 
 
@@ -68,3 +67,8 @@ MDN 페이지의 이러한 메타데이터는 페이스북에 링크했을 때 �
 <meta name="twitter:title" content="Mozilla Developer Network">
 ```
 
+
+
+## Reference
+
+[head 태그에는 무엇이 있을까? HTML의 메타데이터](https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)

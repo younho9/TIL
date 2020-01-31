@@ -1,5 +1,7 @@
 # CSS 속성 13. `transition` & `transform`
 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+
 ## `transition`
 
 CSS 속성의 시작과 끝을 지정(전환 효과)하여 중간 값을 애니메이션 - 단축 속성
@@ -315,3 +317,7 @@ img {
 ![matrix-function](images/matrix-function.png)
 
 > ☝️ 요소의 일반 변환(Transforms) 함수(2D, 3D)를 사용하더라도 브라우저에 의해 `matrix` 함수로 계산되어 적용된다. (2D 변환 함수는 `matrix` 로, 3D 변환 함수는 `matrix3d` 로) 따라서 일반적인 경우는 `matrix` 함수가 아닌 일반 변환 함수를 사용하면 된다.
+
+## Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

@@ -1,5 +1,7 @@
 # CSS 속성 9. `font`
 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+
 ## `font`
 
 글자 관련 속성들을 지정 - 단축 속성
@@ -208,3 +210,6 @@ font-family: [글꼴 후보1, 글꼴 후보2, ... ], 글꼴 계열;
 | `cursive`    | 필기체 계열                                   | ![cursive](images/cursive.png)       |
 | `fantasy`    | 장식(재미있는 문자 표현을 포함하는) 글꼴 계열 | ![fantasy](images/fantasy.png)       |
 
+## Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

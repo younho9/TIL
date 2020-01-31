@@ -1,6 +1,8 @@
 # CSS 속성 11. 띄움(정렬), 위치 관련 속성
 
-## `float`
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+
+## float`
 
 요소를 좌우 방향으로 띄움(수평 정렬)
 
@@ -342,3 +344,6 @@ position > z-index > HTML 마지막 코드
 
 > ☝️ 위의 네 요소는 `position` 속성이 지정되어 있을 때만 사용할 수 있다.
 
+## Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

@@ -1,5 +1,7 @@
 # CSS 속성 14. `animation`
 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+
 ## `animation`
 
 요소에 애니메이션을 설정/제어 - 단축 속성
@@ -186,3 +188,6 @@ animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반�
 | `running` | 애니메이션을 동작      | `running` |
 | `paused`  | 애니메이션 동작을 정지 |           |
 
+## Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

@@ -1,5 +1,7 @@
 # 선택자(Selector) - 1편
 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+
 ## 기본 선택자(Basic Selectors)
 
 ### 전체 선택자(Universal Selector)
@@ -213,3 +215,7 @@ div .orange {
 > 1. 자식(child) : 요소의 1단계(1-depth) 하위 요소
 > 2. 후손(descendant) : 요소 내의 모든 하위 요소
 > 3. 형제(sibling) : 요소와 같은 단계의 요소
+
+## Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

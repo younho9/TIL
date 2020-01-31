@@ -1,5 +1,7 @@
 # 선택자(Selector) - 2편
 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+
 ## 가상 클래스 선택자(Pseudo-Classes Selectors)
 
 ### Hover
@@ -485,3 +487,7 @@ h1 { color: red; } /* 1pt 태그 */
 
 > `:hover` 와 같은 '가상 클래스'는 '클래스' 선택자 점수( `10pt` )를 가지며 '가상 요소'는 '태그'  선택자 점수( `1pt` )를 가진다.
 부정 선택자 `:not()` 는 점수를 가지지 않는다.
+
+## Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

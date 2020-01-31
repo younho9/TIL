@@ -1,5 +1,7 @@
 # CSS 속성 2. `margin`
 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+
 ## `margin`
 
 요소의 '외부(바깥) 여백'을 지정 - 단축 속성 (위 오른쪽 아래 왼쪽)
@@ -142,3 +144,6 @@ margin: [위, 아래, 좌, 우];  /* 모든 방향 */
 | 둘 다 음수       | `-30px`    | `-10px`    | 더 작은 값으로 중복  | `-30px` |
 | 각각 양수와 음수 | `-30px`    | `10px`     | `-30` + `10` = `-20` | `-20px` |
 
+## Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

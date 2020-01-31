@@ -1,5 +1,7 @@
 # CSS 속성 6. `display`
 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+
 ## `display`
 
 요소의 박스 타입(유형)을 설정
@@ -91,3 +93,7 @@ input {
 ### `display: none;`
 
 `display: none;` 은 `opacity: 0;` 가 존재하지만 보이지 않게만 하는 것과는 달리 요소가 완벽히 존재하지 않는 것처럼 만들어준다.
+
+## Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

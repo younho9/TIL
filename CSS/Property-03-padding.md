@@ -1,5 +1,7 @@
 # CSS 속성 3. `padding`
 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+
 ## `padding`
 
 요소의 '내부(안쪽) 여백'을 지정 - 단축 속성 (위 오른쪽 아래 왼쪽)
@@ -95,3 +97,7 @@ div {
 ```
 
 `box-sizing: border-box;` 는 100 x 100 크기의 요소를 만들고 그 안에서 `padding` 이 들어가도록 자동 계산해준다.
+
+## Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

@@ -1,5 +1,7 @@
 # CSS 속성 10. 문자(text) 관련 속성
 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+
 ## `color`
 
 문자의 색상을 지정
@@ -122,3 +124,6 @@ HTML의 이미지 태그를 사용시에는 이렇게 alt를 사용해 대체 �
 
 > ☝️ `normal` 은 마찬가지로 단위로 보면 `0` 에 해당하는데, 띄어쓰기의 너비가 `0` 이라는 뜻이 아니라 '기본 띄어쓰기 너비 + 0' 이라는 뜻이다
 
+## Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

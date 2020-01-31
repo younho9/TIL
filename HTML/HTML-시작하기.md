@@ -1,8 +1,6 @@
 # HTML 시작하기
 
-[HTML 시작하기](https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-
-MDN 문서를 보면서 공부한 기록
+> ❗️ 해당 글은 [HTML 시작하기](https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started) - MDN 문서를 보면서 공부한 기록입니다.
 
 
 
@@ -226,3 +224,9 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 ```
 
 > `href` : **h**ypertext **ref**erence
+
+
+
+## Reference
+
+[HTML 시작하기](https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started)

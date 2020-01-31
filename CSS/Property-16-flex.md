@@ -1,5 +1,7 @@
 # CSS 속성 16. `flex`
 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료([CSS Flex(Flexible Box) 완벽 가이드](https://heropy.blog/2018/11/24/css-flexible-box/))를 정리한 것입니다.
+
 `flex` 는 웹 페이지에서 수평 구조 레이아웃을 쉽고 명확하게 구성할 수 있는 방법이다.
 
 ## `flex` 이전의 방법들과의 비교
@@ -649,3 +651,9 @@ flex: 증가너비 감소너비 기본너비;
 | `baseline`   | `item` 을 문자 기준선에 정렬                     |        |
 
 ![flex-align-self](https://heropy.blog/images/screenshot/css-flexible-box/flex-align-self.jpg)
+
+## Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
+
+[CSS Flex(Flexible Box) 완벽 가이드](https://heropy.blog/2018/11/24/css-flexible-box/)

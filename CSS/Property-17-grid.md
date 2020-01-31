@@ -1,5 +1,7 @@
 # CSS 속성 17. `grid`
 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료([CSS Grid 완벽 가이드](https://heropy.blog/2019/08/17/css-grid/))를 정리한 것입니다.
+
 CSS `grid` (그리드)는 2차원(행과 열)의 레이아웃 시스템을 제공한다.
 
 `flexible box` 는 비교적 단순한 1차원 레이아웃을 위하여 사용되고, 좀 더 복잡한 레이아웃을 위해서는 `grid` 를 사용할 수 있다.
@@ -762,3 +764,9 @@ footer { grid-area: footer; }
 ```
 
 ![auto-fill](https://heropy.blog/images/screenshot/css-grid/auto-fill-3.jpg)
+
+## Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
+
+[CSS Grid 완벽 가이드](https://heropy.blog/2019/08/17/css-grid/)

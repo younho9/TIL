@@ -21,11 +21,11 @@ CSS호환성을 갖춰 **CSS가 지원하는 모든 문법과 기능을** SCSS�
 ```sass
 // Sass
 .box
-	width: 100px
-	height: 200px
-	.content
-		color: red
-		float: left
+  width: 100px
+  height: 200px
+  .content
+    color: red
+    float: left
 ```
 
 ```scss

@@ -123,7 +123,7 @@ div span.icon {
 
 Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 
-```
+```scss
 // SCSS
 @mixin 믹스인이름($매개변수) {
   스타일;

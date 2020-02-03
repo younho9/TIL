@@ -77,6 +77,6 @@ overflow-x: auto;
 overflow-y: auto;
 ```
 
-## Referenceㄴ
+## Reference
 
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

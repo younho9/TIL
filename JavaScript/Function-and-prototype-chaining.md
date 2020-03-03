@@ -11,7 +11,7 @@ JS에서 함수를 생성하는 방법은 4가지이다.
 - 함수 선언문(function statement)
 - 함수 표현식(function expression)
 - `Function()` 생성자 함수
-- - (ES6) 화살표 함수(arrow function)
+- (ES6) 화살표 함수(arrow function)
 
 ### 함수 리터럴
 

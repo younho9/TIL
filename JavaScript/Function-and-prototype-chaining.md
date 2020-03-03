@@ -19,7 +19,7 @@ JS에서 함수를 생성하는 방법은 4가지이다.
 
 ```javascript
 function add(x, y) {
-	return x + y;
+  return x + y;
 }
 ```
 
@@ -36,7 +36,7 @@ function add(x, y) {
 
 ```javascript
 function add(x, y) {
-	return x + y;
+  return x + y;
 }
 ```
 
@@ -50,7 +50,7 @@ function add(x, y) {
 
 ```javascript
 var add = function (x,y) {
-	return x + y;
+  return x + y;
 }
 
 var plus = add;
@@ -67,7 +67,7 @@ console.log(plus(5,6)); // 11
 
 ```javascript
 var add = function sum(x, y) {
-	return x + y;
+  return x + y;
 };
 
 console.log(add(3,4)); // 7
@@ -94,7 +94,7 @@ console.log(factorialVar(3));
 
 ```javascript
 var add = function add(x, y) {
-	return x + y;
+  return x + y;
 };
 ```
 
@@ -155,8 +155,8 @@ console.log(foo(1, 2)); // 3
 
 // 함수 body가 여러 줄일 경우
 var foo = (a, b) => {
-	var c = 3;
-	return a + b + c;
+  var c = 3;
+  return a + b + c;
 }
 console.log(foo(1, 2)) // 6
 
@@ -225,12 +225,12 @@ console.log(obj.baz()); // 200
 ```javascript
 // 함수 표현식으로 foo() 함수 생성
 var foo = function(func) {
-	func(); // 인자로 받은 func() 함수 호출
+  func(); // 인자로 받은 func() 함수 호출
 };
 
 // foo() 함수 실행
 foo(function() {
-	console.log('Function can be used as the argument.');
+  console.log('Function can be used as the argument.');
 });
 ```
 
@@ -239,9 +239,9 @@ foo(function() {
 ```javascript
 // 함수를 리턴하는 foo() 함수 정의
 var foo = function() {
-	return function () {
-		console.log('this function is the return value.');
-	};
+  return function () {
+    console.log('this function is the return value.');
+  };
 };
 
 var bar = foo();
@@ -256,7 +256,7 @@ bar();
 
 ```javascript
 function add(x, y) {
-	return x + y;
+  return x + y;
 }
 
 console.dir(add);

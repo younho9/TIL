@@ -300,14 +300,14 @@ console.dir(add);
 ```html
 <!DOCTYPE html>
 <html>
-	<body>
-		<script>
-			// 페이지 로드 시 호출될 콜백 함수
-				window.onload = function() {
-					alert('This is the callback function.');
-				};
-		</script>
-	</body>
+  <body>
+    <script>
+      // 페이지 로드 시 호출될 콜백 함수
+      window.onload = function() {
+        alert('This is the callback function.');
+      };
+    </script>
+  </body>
 </html>
 ```
 
@@ -317,7 +317,7 @@ console.dir(add);
 
 ```javascript
 (function (name) {
-	console.log('This is the immediate function -->' + name);
+  console.log('This is the immediate function -->' + name);
 })('foo');
 ```
 
@@ -364,17 +364,17 @@ JS에서는 함수 코드 내부에서 함수 정의가 가능하다. 이러한 
 ```javascript
 // parent() 함수 정의
 function parent() {
-	var a = 100;
-	var b = 200;
-	
-	// child() 내부 함수 정의
-	function child() {
-		var b = 300;
-		
-		console.log(a);
-		console.log(b);
-	}
-	child();
+  var a = 100;
+  var b = 200;
+
+  // child() 내부 함수 정의
+  function child() {
+    var b = 300;
+
+    console.log(a);
+    console.log(b);
+  }
+  child();
 }
 
 parent();
@@ -397,14 +397,14 @@ Uncaught ReferenceError: child is not defined
 
 ```javascript
 function parent() {
-	var a = 100;
-	// child() 내부 함수
-	var child = function () {
-		console.log(a);
-	};
-	
-	// child() 함수 반환
-	return child;
+  var a = 100;
+  // child() 내부 함수
+  var child = function () {
+    console.log(a);
+  };
+
+  // child() 함수 반환
+  return child;
 }
 
 var inner = parent();
@@ -425,10 +425,10 @@ JS에서는 함수도 일급 객체이므로 일반 값처럼 함수 자체를 �
 
 ```javascript
 var self = function () {
-	console.log('a');
-	return function () {
-		console.log('b');
-	}
+  console.log('a');
+  return function () {
+    console.log('b');
+  }
 }
 self = self(); // a
 self(); // b
@@ -442,7 +442,7 @@ JS에서는 함수를 호출할 때 함수 형식에 맞춰 인자를 넘기지 
 
 ```javascript
 function func(arg1, arg2) {
-	console.log(arg1, arg2);
+  console.log(arg1, arg2);
 }
 
 func(); // undefined undefined
@@ -463,8 +463,8 @@ JS에서는 함수를 호출할 때 암묵적으로 `arguments` 객체가 내부
 
 ```javascript
 function add(a, b) {
-	console.dir(arguments);
-	return a + b;
+  console.dir(arguments);
+  return a + b;
 }
 
 console.log(add(1)); // NaN
@@ -478,13 +478,13 @@ console.log(add(1,2,3)); // 3
 
 ```javascript
 function sum() {
-	var result = 0;
-	
-	for(var i=0; i < arguments.length; i++) {
-		result += arguments[i];
-	}
-	
-	return result;
+  var result = 0;
+
+  for(var i=0; i < arguments.length; i++) {
+    result += arguments[i];
+  }
+
+  return result;
 }
 
 console.log(sum(1,2,3)); // 6
@@ -503,14 +503,14 @@ JS의 여러 가지 **함수가 호출되는 방식(호출 패턴)**에 따라 `
 
 ```javascript
 var myObject = {
-	name: 'foo',
-	sayName: function () {
-		console.log(this.name);
-	}
+  name: 'foo',
+  sayName: function () {
+    console.log(this.name);
+  }
 };
 
 var otherObject = {
-	name: 'bar'
+  name: 'bar'
 };
 
 otherObject.sayName = myObject.sayName;
@@ -542,7 +542,7 @@ console.log(window.test);
 
 // sayFoo() 함수
 var sayFoo = function () {
-	console.log(this.test); // sayFoo() 함수 호출 시 this는 전역 객체에 바인딩된다.
+  console.log(this.test); // sayFoo() 함수 호출 시 this는 전역 객체에 바인딩된다.
 };
 
 sayFoo();
@@ -554,23 +554,23 @@ sayFoo();
 var value = 100;
 
 var myObject = {
-	varlue: 1,
-	func1: function () {
-		this.value += 1;
-		console.log('func1() called. this.value : ' + this.value);
+  varlue: 1,
+  func1: function () {
+    this.value += 1;
+    console.log('func1() called. this.value : ' + this.value);
 
-		func2 = function () {
-			this.value += 1;
-			console.log('func2 called. this.value : ' + this.value);
+    func2 = function () {
+      this.value += 1;
+      console.log('func2 called. this.value : ' + this.value);
 
-			func3 = function () {
-				this.value += 1;
-				console.log('func3() called. this.value : ' + this.value);
-			}
-			func3();
-		}
-		func2();
-	}
+      func3 = function () {
+        this.value += 1;
+        console.log('func3() called. this.value : ' + this.value);
+      }
+      func3();
+    }
+    func2();
+  }
 };
 myObject.func1();
 ```
@@ -591,25 +591,25 @@ func3() called - this.value : 102
 var value = 100;
 
 var myObject = {
-	varlue: 1,
-	func1: function () {
-		var that = this;
-		
-		this.value += 1;
-		console.log('func1() called. this.value : ' + this.value);
+  varlue: 1,
+  func1: function () {
+    var that = this;
 
-		func2 = function () {
-			that.value += 1;
-			console.log('func2 called. this.value : ' + that.value);
+    this.value += 1;
+    console.log('func1() called. this.value : ' + this.value);
 
-			func3 = function () {
-				that.value += 1;
-				console.log('func3() called. this.value : ' + that.value);
-			}
-			func3();
-		}
-		func2();
-	}
+    func2 = function () {
+      that.value += 1;
+      console.log('func2 called. this.value : ' + that.value);
+
+      func3 = function () {
+        that.value += 1;
+        console.log('func3() called. this.value : ' + that.value);
+      }
+      func3();
+    }
+    func2();
+  }
 };
 myObject.func1();
 ```
@@ -633,7 +633,7 @@ func3() called - this.value : 4
 
 생성자 함수의 내부 `this` 는 메소드, 함수 호출 방식의 `this` 바인딩과 다르게 동작한다.
 
-생성자 함수가 동작하는 방식
+##### 생성자 함수가 동작하는 방식
 
 `new` 연산자로 자바스크립트 함수를 생성자로 호출하면 다음과 같은 순서로 동작한다.
 
@@ -663,24 +663,24 @@ console.log(foo.name); // foo
 
 ![constructor-function](images/constructor-function.png)
 
-객체 리터럴 방식과 생성자 함수를 통한 객체 생성 방식의 차이
+##### 객체 리터럴 방식과 생성자 함수를 통한 객체 생성 방식의 차이
 
 객체 리터럴 방식은 같은 형태의 객체를 재생성할 수 없다. 이에 반해 `Person()` 생성자 함수를 사용해 같은 형태의 다른 객체를 여러개 생성할 수 있다.
 
 ```javascript
 // 객체 리터럴 방식으로 foo 객체 생성
 var foo = {
-	name: 'foo', 
-	age: 35, 
-	gender: 'man'
+  name: 'foo', 
+  age: 35, 
+  gender: 'man'
 }; 
 console.dir(foo);
 
 // 생성자 함수 
 function Person(name, age, gender, position) {
-	this.name = name; 
-	this.age = age; 
-	this.gender = gender;
+  this.name = name; 
+  this.age = age; 
+  this.gender = gender;
 }
 
 // Person 생성자 함수를 이용해 bar 객체, baz 객체 생성
@@ -709,15 +709,15 @@ bar instanceof Person // true Person.prototype.isPrototypeOf(bar) // true Object
 baz instanceof Person // true Person.prototype.isPrototypeOf(baz) // true Object.prototype.isPrototypeOf(baz) // true
 ```
 
-생성자 함수를 `new` 를 붙이지 않고 호출할 경우
+##### 생성자 함수를 `new` 를 붙이지 않고 호출할 경우
 
 객체 생성을 목적으로 작성한 생성자 함수를 `new` 를 붙이지 않거나, 일반 함수를 `new` 를 붙여 호출할 경우 오류가 발생할 수 있다. ( `this` 바인딩 방식이 다르기 때문)
 
 ```javascript
 function Person(name, age, gender, position) {
-	this.name = name; 
-	this.age = age; 
-	this.gender = gender;
+  this.name = name; 
+  this.age = age; 
+  this.gender = gender;
 }
 
 var qux = Person('qux', 20, 'man');
@@ -736,9 +736,9 @@ console.log(window.gender); // man
 
 ```javascript
 function A(arg) {
-	if (!(this instanceof A))
-		return new A(arg);
-	this.value = arg ? arg : 0;
+  if (!(this instanceof A))
+    return new A(arg);
+  this.value = arg ? arg : 0;
 }
 var a = new A(100); 
 var b = A(10);
@@ -771,9 +771,9 @@ function.apply(thisArg, argArray)
 ```javascript
 // 생성자 함수
 function Person(name, age, gender) {
-	this.name = name;
-	this.age = age;
-	this.gender = gender;
+  this.name = name;
+  this.age = age;
+  this.gender = gender;
 }
 
 // foo 빈 객체 생성
@@ -800,8 +800,8 @@ Person.call(foo, 'foo', 30, 'man');
 
 ```javascript
 function myFunction() {
-	var args = Array.prototype.slice.apply(arguments);
-	console.dir(args);
+  var args = Array.prototype.slice.apply(arguments);
+  console.dir(args);
 }
 
 myFunction(1,2,3);
@@ -820,7 +820,7 @@ myFunction(1,2,3);
 ```javascript
 // noReturnFunc() 함수
 var noReturnFunc = function () {
-	console.log(‘This function has no return statement.’); 
+  console.log(‘This function has no return statement.’); 
 };
 
 var result = noReturnFunc(); // This function has no return statement.
@@ -834,12 +834,12 @@ console.log(result); // undefined
 ```javascript
 // Person() 생성자 함수
 function Person(name, age, gender) {
-	this.name = name;
-	this.age = age;
-	this.gender = gender;
+  this.name = name;
+  this.age = age;
+  this.gender = gender;
 
-	// 명시적으로 다른 객체 반환
-	return { name: 'bar', age: 20, gender: 'woman' };
+  // 명시적으로 다른 객체 반환
+  return { name: 'bar', age: 20, gender: 'woman' };
 }
 
 var foo = new Person('foo', 30, 'man');
@@ -856,11 +856,11 @@ console.dir(foo);
 
 ```javascript
 function Person(name, age, gender) {
-	this.name = name;
-	this.age = age;
-	this.gender = gender;
-	
-	return 100;
+  this.name = name;
+  this.age = age;
+  this.gender = gender;
+
+  return 100;
 }
 
 var foo = new Person('foo', 30, 'man');

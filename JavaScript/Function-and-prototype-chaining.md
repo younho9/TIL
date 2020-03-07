@@ -275,7 +275,7 @@ console.dir(add);
 
 출력값을 확인해보면 크롬에서는 `Empty()` 함수
 
-> `**Function.prototype` 객체의 프로토타입 객체는?**
+> **`Function.prototype` 객체의 프로토타입 객체는?**
 
 모든 함수들의 부모 객체인 `Function.prototype` 의 부모는 예외적으로 `Object.prototype` 객체
 
@@ -495,7 +495,7 @@ console.log(sum(1,2,3,4,5,6,7,8,9)); // 45
 
 JS에서는 함수를 호출할 때 기존 매개변수로 전달되는 인자값에 더해 `arguments` 객체 및 `this` 인자가 함수 내부로 암묵적으로 전달된다.
 
-JS의 여러 가지 **함수가 호출되는 방식(호출 패턴)**에 따라 `this` 가 다른 객체를 참조하기( `this` 바인딩) 때문에 이해하기 어렵다.
+JS의 여러 가지 **함수가 호출되는 방식(호출 패턴)** 에 따라 `this` 가 다른 객체를 참조하기( `this` 바인딩) 때문에 이해하기 어렵다.
 
 #### 객체의 메소드를 호출할 때 `this` 바인딩
 
@@ -879,7 +879,7 @@ Java와 같은 객체지향 프로그래밍에서는 클래스를 정의하고 �
 
 > ☝️ 참고로 최근의 ES6 문법에서는 `Class` 문법이 추가되었으나 자바스크립트가 클래스 기반으로 바뀌었다는 것은 아니다.
 
-JS의 모든 객체는 자신의 부모인 `Prototype` 객체를 가리키는 숨겨진 프로퍼티가 있는데 ECMAScript에서는 이를 **암묵적 프로토 타입 링크(Implicit prototype link)**라고 부르며 **`[[Prototype]]` 라는 숨겨진 프로퍼티**에 저장된다. (크롬이나 파이어폭스 같은 브라우저에서는 이를 **`__proto__` 프로퍼티**로 **명시적으로** 제공하고 있다.)
+JS의 모든 객체는 자신의 부모인 `Prototype` 객체를 가리키는 숨겨진 프로퍼티가 있는데 ECMAScript에서는 이를 **암묵적 프로토 타입 링크(Implicit prototype link)** 라고 부르며 **`[[Prototype]]` 라는 숨겨진 프로퍼티**에 저장된다. (크롬이나 파이어폭스 같은 브라우저에서는 이를 **`__proto__` 프로퍼티**로 **명시적으로** 제공하고 있다.)
 
 그런데 함수 객체가 가지는 **`prototype` 프로퍼티**와 객체의 숨은 프로퍼티 **`[[Prototype]]` 링크**를 구분해야 한다. 이것이 바로 헷갈리기 쉬운 프로토타입의 두 가지 의미이다.
 
@@ -902,7 +902,7 @@ console.dir(myFunc);
 
 이 `[[Prototype]]` 링크 속성은 **모든 객체가 가지고 있는 속성**이다. 이 속성은 이 **객체를 생성한 생성자 함수의 `prototype` 프로퍼티가 가리키는** `Prototype` **객체**를 가리키고, 링크로 연결해 **자신의 부모 객체로 설정**한다.
 
-```
+```javascript
 // Person 생성자 함수
 function Person(name) {
   this.name = name;
@@ -937,7 +937,7 @@ JS의 객체 생성 방식을 다시 한번 정리하면 이렇다.
 
 그리고 JS에서 객체는 자기 자신의 프로퍼티뿐만 아니라, 자신의 부모 역할을 하는 `Prototype` 객체의 프로퍼티를 자신의 것으로 접근하는 것이 가능하다. 이를 **프로토타입 체이닝**이라고 한다.
 
-```
+```javascript
 var myObject = {
   name: 'foo',
   sayName: function() {
@@ -969,7 +969,7 @@ myObject.sayNickName(); // Uncaught TypeError: Object #<Object> has no method 's
 
 그러면 객체 리터럴 방식이 아닌, 직접 정의한 생성자 함수로 객체를 생성하는 경우 어떻게 프로토타입 체이닝이 동작하는지 알아보자.
 
-```
+```javascript
 // Person() 생성자 함수
 function Person(name, age, hobby) {
   this.name = name;
@@ -1011,7 +1011,7 @@ JS의 숫자, 문자열, 배열 등에서 사용하는 표준 메소드들의 �
 
 또한 JS는 표준 빌트인 `Prototype` 객체에 사용자가 직접 메소드를 정의해 추가하는 것을 허용한다.
 
-```
+```javascript
 String.prototype.testMethod = function () {
   console.log('This is the String.prototype.testMethod()');
 };
@@ -1030,11 +1030,11 @@ console.dir(String.prototype);
 
 ### 프로토타입도 자바스크립트 객체다
 
-함수가 생성될 때, 자신의 `prototype` 프로퍼티에 연결되는 `Prototype` 객체는 디폴트로 `constructor` 프로퍼티만을 가진 객체다. 다시 말해 `**Prototype` 객체 역시 자바스크립트 객체**이다.
+함수가 생성될 때, 자신의 `prototype` 프로퍼티에 연결되는 `Prototype` 객체는 디폴트로 `constructor` 프로퍼티만을 가진 객체다. 다시 말해 **`Prototype` 객체 역시 자바스크립트 객체**이다.
 
 즉, 일반 객체처럼 동적 프로퍼티 추가/삭제가 가능하다. 이렇게 변경된 프로퍼티는 실시간으로 프로토타입 체이닝에 반영된다.
 
-```
+```javascript
 // Person 생성자 함수
 function Person(name) {
   this.name = name;
@@ -1064,7 +1064,7 @@ foo.sayHello(); // Hello
 
 이는 앞서 살펴본 객체의 메소드를 호출할 때 `this` 바인딩 규칙과 동일하다. 즉 `this` 가 메소드를 호출한 객체에 바인딩된다.
 
-```
+```javascript
 // Person() 생성자 함수
 function Person(name) {
   this.name = name;
@@ -1092,7 +1092,7 @@ console.log(Person.prototype.getName()); // person
 
 이 함수 생성과 동시에 생성되는 `Prototype` 객체를 **디폴트 프로토타입**이라고 한다. 그런데, 이 디폴트 프로토타입 객체를 다른 일반 객체로 변경하는 것이 가능하다.
 
-```
+```javascript
 // Person() 생성자 함수
 function Person(name) {
   this.name = name;
@@ -1129,7 +1129,7 @@ console.log(bar.constructor);
 
 프로토타입 체이닝은 객체의 프로퍼티를 읽으려고할 때, 메소드를 실행할 때만 동작하고 반대로 객체에 있는 특정 프로퍼티에 값을 쓰려고 할 때는 프로토타입 체이닝이 일어나지 않는다. 객체에 없는 프로퍼티에 값을 쓰려고 할 경우에는 동적으로 객체에 프로퍼티를 추가하기 때문이다.
 
-```
+```javascript
 // Person() 생성자 함수
 function Person(name) {
   this.name  = name;

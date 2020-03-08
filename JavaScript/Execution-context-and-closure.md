@@ -142,19 +142,21 @@ console.log(var2); // 2
 
 #### 예제 1
 
-    var value = 'value1';
-    
-    function printFunc() {
-      var value = 'value2';
-    
-      function printValue() {
-        return value;
-      }
-    
-      console.log(printValue());
-    }
-    
-    printFunc();
+```javascript
+var value = 'value1';
+
+function printFunc() {
+  var value = 'value2';
+
+  function printValue() {
+    return value;
+  }
+
+  console.log(printValue());
+}
+
+printFunc();
+```
 
 [출력 결과]
 

@@ -8,12 +8,12 @@
 
 
 <figure>
-  <img src="images/13-0-1.png" alt="Java-13.0.1 version">
+  <img src="/Java/images/13-0-1.png" alt="Java-13.0.1 version">
   <figcaption>Java Platform(JDK) 13.0.1</figcaption>
 </figure>
 
 <figure>
-  <img src="images/8u231.png" alt="Java 8u231 version">
+  <img src="/Java/images/8u231.png" alt="Java 8u231 version">
   <figcaption>Java SE 8u231</figcaption>
 </figure>
 

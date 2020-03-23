@@ -1,6 +1,6 @@
 # [리액트를 다루는 기술] 1장 - 리액트 시작
 
-![Chapter 1 banner image](images/banner-image.png)
+![Chapter 1 banner image](images/chapter-1-banner-image.png)
 
 > 이 글은 김민준(velopert)님의 [리액트를 다루는 기술](http://www.yes24.com/Product/Goods/78233628?Acode=101)을 참조하여 작성한 글입니다.
 

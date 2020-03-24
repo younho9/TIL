@@ -36,6 +36,7 @@
 
 * 📂 **React**
   * [1장 - 리액트 시작](/React/01-React-start.md)
+  * [2장 - JSX](/React/02-JSX.md)
 
 * 📂 **Boostrap**
   * [Bootstrap 시작하기](/Bootstrap/Bootstrap-getting-started.md)

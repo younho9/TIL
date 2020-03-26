@@ -74,3 +74,6 @@
   * [8. Blogging](/Jekyll/08-Blogging.md)
   * [9. Collections](/Jekyll/09-Collections.md)
   * [10. Deployment](/Jekyll/10-Deployment.md)
+
+* 📂 **Setting**
+  * [[Mac] 버추얼박스(VirtualBox)에 우분투(Ubuntu) 설치하기](/Setting/Mac-VirtualBox-Ubuntu-install.md)

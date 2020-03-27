@@ -39,7 +39,7 @@
 
 일단 먼저 어댑터 2에서 추가했던 vboxnet() 호스트 전용 어댑터를 추가해준다.
 
-![_2020-03-26__11.15.41.png](images/Mac-VirtualBox-Ubuntu-ssh/add-adapter.png)
+![add-adapter.png](images/Mac-VirtualBox-Ubuntu-ssh/add-adapter.png)
 
 ## 우분투 설정
 
@@ -60,11 +60,11 @@ sudo apt install net-tools
 ```
 
 
-![ubuntu-ifconfig.png](images/Mac-VirtualBox-Ubuntu-ssh/ubuntu-ifconfig.png)
+![ubuntu-ifconfig-install.png](images/Mac-VirtualBox-Ubuntu-ssh/ubuntu-ifconfig-install.png)
 
 설치가 된 이후 다시 ifconfig을 해보면 두 개의 네트워크 인터페이스가 나오는데, `enp0s3` , `enp0s8` 이다. 이 때 `enp0s8` 가 어댑터 2로 연결한 vboxnet()이고, 이 어댑터의 inet 뒤로 이어지는 ipv4 주소가 필요하다.
 
-![ubuntu-ifconfig%201.png](images/Mac-VirtualBox-Ubuntu-ssh/ubuntu-ifconfig%201.png)
+![ubuntu-ifconfig.png](images/Mac-VirtualBox-Ubuntu-ssh/ubuntu-ifconfig.png)
 
 여기의 ipv4 주소가 `192.168.56.xxx` 라 하면 맥(호스트)에서 ssh로 이 주소를 통해 접근할 수 있다.
 

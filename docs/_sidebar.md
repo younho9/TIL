@@ -77,3 +77,4 @@
 
 * 📂 **Setting**
   * [[Mac] 버추얼박스(VirtualBox)에 우분투(Ubuntu) 설치하기](/Setting/Mac-VirtualBox-Ubuntu-install.md)
+  * [[Mac] 버추얼박스(VirtualBox)에 설치된 우분투(Ubuntu) 맥 터미널에서 접속하기](/Setting/Mac-VirtualBox-Ubuntu-ssh.md)

@@ -266,7 +266,7 @@ export default NewComponent;
 
 만약 이 컴포넌트를 사용하는 App 컴포넌트에서 `name` 값을 문자열이 아닌 숫자로 전달한다면 어떻게 될까?
 
-![banner](images/chapter-3-proptypes-error.png)
+![proptypes-error](images/chapter-3-proptypes-error.png)
 
 화면에 값이 렌더링되어 나타나기는 하지만, Console을 열어보면 경고 메시지를 볼 수 있는데, `NewComponent` 의 `name` `prop` 에 `string` 타입이 들어올 것으로 생각했지만 유효하지 않은 `number` 타입이 들어왔다고 표시하고 있다.
 
@@ -414,7 +414,7 @@ const App = () => {
 export default App;
 ```
 
-![banner](images/chapter-3-counter-result.png)
+![counter-result](images/chapter-3-counter-result.png)
 
 버튼을 클릭하면 숫자가 1씩 올라간다.
 
@@ -528,7 +528,7 @@ export default Say;
 
 함수를 호출하면 배열이 반환되는데, 배열의 첫 번째 원소는 현재 상태, 두 번째 원소는 상태를 바꾸어 주는 세터(Setter) 함수이다. 이를 비구조화 할당으로 `message` , `setMessage` 에 할당해 주고 있다. `onClickEnter` 함수는 'Hi!' 라는 메시지로 `state` 를 세팅하는 함수이고, `onClickLeave` 함수는 'Bye!' 라는 메시지로 `state` 를 세팅하는 함수이다.
 
-![banner](images/chapter-3-message-result.png)
+![message-result](images/chapter-3-message-result.png)
 
 결과를 보면 Enter, Exit 버튼을 클릭할 때 메시지가 변하는 것을 확인할 수 있다.
 
@@ -568,7 +568,7 @@ export default Say;
 > JSX inline style 문법
 `style={ 객체 }` 이므로 `color` 는 현재 문자열. `{ color }` 로 하면 `{ color : "black" }` 로 객체 형태가 된다. 따라서 `style={{ color }}` 가 옳은 문법.
 
-![banner](images/chapter-3-color-result.png)
+![color-result](images/chapter-3-color-result.png)
 
 ## `state` 를 사용할 때 주의 사항
 
@@ -607,7 +607,7 @@ const nextArray = array.concat({ id: 4 });
 
 ## 정리
 
-![banner](images/chapter-3-props-vs-state.png)
+![props-vs-state](images/chapter-3-props-vs-state.png)
 
 `props` 와 `state` 모두 컴포넌트에서 사용하거나 렌더링할 데이터를 담고 있지만, `props` 는 부모 컴포넌트가 설정하고, `state` 는 컴포넌트 내부에서 값을 업데이트한다.
 
@@ -615,4 +615,4 @@ const nextArray = array.concat({ id: 4 });
 
 ## 같이 읽기
 
-[React.Component - React](https://ko.reactjs.org/docs/react-component.html#setstate)
+🔗 [React.Component - React](https://ko.reactjs.org/docs/react-component.html#setstate)

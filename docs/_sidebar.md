@@ -38,6 +38,7 @@
   * [1장 - 리액트 시작](/React/01-React-start.md)
   * [2장 - JSX](/React/02-JSX.md)
   * [3장 - Component](/React/03-Component.md)
+  * [4장 - 이벤트 핸들링](/React/04-Event-handling.md)
 
 * 📂 **Boostrap**
   * [Bootstrap 시작하기](/Bootstrap/Bootstrap-getting-started.md)

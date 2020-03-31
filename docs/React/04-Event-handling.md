@@ -23,7 +23,7 @@
     div, button, input, form, span 등의 DOM 요소에는 이벤트를 설정할 수 있지만, 직접 만든 리액트 컴포넌트에는 이벤트를 자체적으로 설정할 수 없다.
 
     ```javascript
-<MyComponent onClick={doSomething}/>
+    <MyComponent onClick={doSomething}/>
     ```
 
     이 코드는 이름이 `onClick` 인 `props` 를 컴포넌트에 전달할 뿐이다.
@@ -35,6 +35,8 @@
       {/* ... */}
     </div>
     ```
+
+
 
 리액트에서 지원하는 다양한 이벤트 종류는 아래의 링크를 통해 확인할 수 있다.
 

@@ -40,6 +40,7 @@
   * [3장 - Component](/React/03-Component.md)
   * [4장 - 이벤트 핸들링](/React/04-Event-handling.md)
   * [5장 - ref: DOM에 이름 달기](/React/05-ref-DOM.md)
+  * [6장 - 컴포넌트 반복](/React/06-Component-iteration.md)
 
 * 📂 **Boostrap**
   * [Bootstrap 시작하기](/Bootstrap/Bootstrap-getting-started.md)

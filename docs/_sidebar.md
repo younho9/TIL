@@ -80,6 +80,10 @@
   * [9. Collections](/Jekyll/09-Collections.md)
   * [10. Deployment](/Jekyll/10-Deployment.md)
 
+* 📂 **System Programming**
+  * [시스템 소프트웨어란](/System-programming/01-System-software.md)
+  * [SIC/XE Machine Architecture](/System-programming/02-SIC-XE-Machine-Architecture.md)
+
 * 📂 **iOS**
   * [Lecture 1. Introduction to iOS 11, Xcode 9 and Swift 4](/iOS/Lecture-1-Introduction-to-iOS11-Xcode9-and-Swift4.md)
   * [Lecture 2. MVC's](/iOS/Lecture-2-MVC.md)

@@ -84,7 +84,7 @@ li {
 
 ```html
 <div>
-	<ul>
+  <ul>
     <li>사과</li>
     <li>딸기</li>
     <li id="orange" class="orange">오렌지</li>   <!--선택-->

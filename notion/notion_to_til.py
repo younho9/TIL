@@ -3,7 +3,7 @@ import sys
 
 from notion.client import NotionClient
 
-def get_til_contents(token_v2, parent_page_url_or_id, directory_name):
+def get_contents_from_notion(token_v2, parent_page_url_or_id, directory_name):
     client = NotionClient(token_v2=token_v2)
     til_repo = client.get_block(parent_page_url_or_id)
     

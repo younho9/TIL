@@ -2,7 +2,7 @@ import config
 import argparse
 import sys
 
-from get_til import get_til_contents
+from notion_to_til import get_contents_from_notion
 
 if __name__ == "__main__":
     description = "Export 📝TIL(Today I Learned) contents from Notion to /docs/directory"
@@ -19,5 +19,5 @@ if __name__ == "__main__":
     url = config.url
     token = config.token_v2
 
-    get_til_contents(token, url, directory)
+    get_contents_from_notion(token, url, directory)
     

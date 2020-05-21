@@ -1,5 +1,4 @@
 import os
-import sys
 
 from notion.client import NotionClient
 

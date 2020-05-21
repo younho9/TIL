@@ -2,7 +2,7 @@
 
 ## what's in iOS
 
-### Core OS 
+### Core OS
 
 OSX Kernel, Power Management, Mach 3.0, Keychain Access, BSD Certificates, Sockets File System, Security, Bonjour
 
@@ -28,7 +28,7 @@ Language(s) : Swift
 
 Frameworks : Foundation, UIKit
 
-Design Strategy : MVC (Model, View, Controller) 
+Design Strategy : MVC (Model, View, Controller)
 
 ## Xcode
 
@@ -58,9 +58,9 @@ Type : UIButton 버튼이 메소드를 보내주는 것
 
 Event
 
-Arguments 
+Arguments
 
-Swift 문법 
+Swift 문법
 
 func (keyword) touchCard (method name) (arguments )
 
@@ -75,7 +75,7 @@ Swiftd에선 인스턴스 변수를 속성(Property)이라고 한다
 
 인스턴스 변수를 초기화 하는 2가지 방법
 
-1. 이니셜라이저 : 메소드 
+1. 이니셜라이저 : 메소드
 
 2. = 0
 
@@ -92,4 +92,3 @@ Action : 메소드를 만듬
 Outlet : 인스턴스 변수를 만듬
 
 ! : init이 필요 없음
-

@@ -4,8 +4,7 @@
 
 컴퓨터를 초기화하여 Java를 다시 설치하려고 했다.
 
-[*Java SE 다운로드 페이지*](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
-
+[_Java SE 다운로드 페이지_](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 <figure>
   <img src="/Java/images/13-0-1.png" alt="Java-13.0.1 version">
@@ -17,13 +16,13 @@
   <figcaption>Java SE 8u231</figcaption>
 </figure>
 
-첫 번째 사진은 현재 가장 최신 버전인 듯한 `13.0.1` 이고, 오른쪽은 보편적으로 많이 쓰인다고 하는 8버전이다. 
+첫 번째 사진은 현재 가장 최신 버전인 듯한 `13.0.1` 이고, 오른쪽은 보편적으로 많이 쓰인다고 하는 8버전이다.
 
 그런데 왜 표기법이 하나는 `13.0.1` , 하나는 `8u231` 로 다른 것일까?
 
 ## 자바 버전 표기법
 
-Java `SE` `13.` `0.` `1` `(LTS)` 
+Java `SE` `13.` `0.` `1` `(LTS)`
 
 `SE` : Standard Edition
 `13.` : 주 버전
@@ -39,7 +38,7 @@ Java `SE` `13.` `0.` `1` `(LTS)`
 
 또한 그냥 Java 8, Java 13 버전이라고 편하게 부르기도 한다.
 
-그리고 Java SE 13을 설치한다는 것은 JDK 13을 설치한다는 것과 동일한 의미이다. 
+그리고 Java SE 13을 설치한다는 것은 JDK 13을 설치한다는 것과 동일한 의미이다.
 
 8버전의 경우 JDK 1.8이라고 하기도 한다.
 
@@ -82,7 +81,7 @@ JVM은 다음과 같은 역할을 한다.
 - 바이너리 코드를 실행하고 (Executes code)
 - 실행환경(Runtime Environment)의 규격을 제공한다. (Provides runtime environment)
 
-    어떠한 장비에서든지 실행될 수 있도록 기본 환경을 제공해 준다.
+  어떠한 장비에서든지 실행될 수 있도록 기본 환경을 제공해 준다.
 
 ## 그림으로 정리
 
@@ -92,12 +91,12 @@ JVM은 다음과 같은 역할을 한다.
 
 # Reference
 
-🔗 [*[혼자 공부하는 자바] Java 8/11 다운로드 & 개발 환경 설정하기(JDK)*](https://m.post.naver.com/viewer/postView.nhn?volumeNo=22725606&memberNo=25379965&searchKeyword=%EC%84%A4%EC%B9%98%EB%90%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8&searchRank=134)
+🔗 [_[혼자 공부하는 자바] Java 8/11 다운로드 & 개발 환경 설정하기(JDK)_](https://m.post.naver.com/viewer/postView.nhn?volumeNo=22725606&memberNo=25379965&searchKeyword=%EC%84%A4%EC%B9%98%EB%90%9C%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8&searchRank=134)
 
-🔗 [*[점프 투 자바] JVM, JRE, JDK의 차이*](https://wikidocs.net/257)
+🔗 [_[점프 투 자바] JVM, JRE, JDK의 차이_](https://wikidocs.net/257)
 
-🔗 [*자바 소프트웨어(JRE, JDK, Server-JRE) 차이*](https://wanzargen.tistory.com/8?category=700063)
+🔗 [_자바 소프트웨어(JRE, JDK, Server-JRE) 차이_](https://wanzargen.tistory.com/8?category=700063)
 
-🔗 [*[JAVA 자바] JDK, JRE, JVM 차이*](https://arer.tistory.com/156)
+🔗 [_[JAVA 자바] JDK, JRE, JVM 차이_](https://arer.tistory.com/156)
 
-🔗 [*JDK, JRE, 그리고 JVM의 차이*](https://tworab.tistory.com/13)
+🔗 [_JDK, JRE, 그리고 JVM의 차이_](https://tworab.tistory.com/13)

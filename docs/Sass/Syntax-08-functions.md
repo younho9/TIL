@@ -6,9 +6,9 @@
 
 함수와 `@mixins` 은 거의 유사하지만 반환되는 내용이 다르다
 
- `@mixin` 은 지정한 스타일(Style)을 반환하는 반면, 
- 
- 함수는 보통 연산된(Computed) 값을 `@return` 지시어를 통해 반환한다.
+`@mixin` 은 지정한 스타일(Style)을 반환하는 반면,
+
+함수는 보통 연산된(Computed) 값을 `@return` 지시어를 통해 반환한다.
 
 ```scss
 // Mixins
@@ -38,7 +38,7 @@
 $max-width: 980px;
 
 @function columns($number: 1, $columns: 12) {
-  @return $max-width * ($number / $columns)
+  @return $max-width * ($number / $columns);
 }
 
 .box_group {
@@ -93,7 +93,7 @@ $max-width: 980px;
 }
 
 div {
-  color: extract-red(#D55A93);
+  color: extract-red(#d55a93);
 }
 ```
 

@@ -12,31 +12,27 @@
 
 1. 이벤트 이름은 카멜 표기법으로
 
-    HTML에서는 `onclick` 으로 작성하지만 리액트에서는 카멜 표기법으로 `onClick` 으로 작성해야 한다.
+   HTML에서는 `onclick` 으로 작성하지만 리액트에서는 카멜 표기법으로 `onClick` 으로 작성해야 한다.
 
 2. 이벤트에는 함수 형태의 값을 전달.
 
-    HTML에서 이벤트를 설정할 때 큰따옴표 안에 실행할 코드를 넣었지만, 리액트에서는 함수 형태의 객체를 전달한다. 화살표 함수 문법을 사용하거나 혹은 외부에 미리 함수를 만들어서 전달하기도 한다.
+   HTML에서 이벤트를 설정할 때 큰따옴표 안에 실행할 코드를 넣었지만, 리액트에서는 함수 형태의 객체를 전달한다. 화살표 함수 문법을 사용하거나 혹은 외부에 미리 함수를 만들어서 전달하기도 한다.
 
 3. DOM 요소에만 이벤트를 설정할 수 있다.
 
-    div, button, input, form, span 등의 DOM 요소에는 이벤트를 설정할 수 있지만, 직접 만든 리액트 컴포넌트에는 이벤트를 자체적으로 설정할 수 없다.
+   div, button, input, form, span 등의 DOM 요소에는 이벤트를 설정할 수 있지만, 직접 만든 리액트 컴포넌트에는 이벤트를 자체적으로 설정할 수 없다.
 
-    ```javascript
-    <MyComponent onClick={doSomething}/>
-    ```
+   ```javascript
+   <MyComponent onClick={doSomething} />
+   ```
 
-    이 코드는 이름이 `onClick` 인 `props` 를 컴포넌트에 전달할 뿐이다.
+   이 코드는 이름이 `onClick` 인 `props` 를 컴포넌트에 전달할 뿐이다.
 
-    컴포넌트에 자체적으로 이벤트를 설정할 수는 없지만, 전달받은 props 를 컴포넌트 내부의 DOM 이벤트로 설정할 수는 있다.
-    
-    ```javascript
-    <div onClick={this.props.onClick}>
-      {/* ... */}
-    </div>
-    ```
+   컴포넌트에 자체적으로 이벤트를 설정할 수는 없지만, 전달받은 props 를 컴포넌트 내부의 DOM 이벤트로 설정할 수는 있다.
 
-
+   ```javascript
+   <div onClick={this.props.onClick}>{/* ... */}</div>
+   ```
 
 리액트에서 지원하는 다양한 이벤트 종류는 아래의 링크를 통해 확인할 수 있다.
 
@@ -51,7 +47,7 @@ src 디렉토리에 `EventPractice.js` 파일을 만들고 App 컴포넌트에�
 `EventPractice.js`
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class EventPractice extends Component {
   render() {
@@ -69,8 +65,8 @@ export default EventPractice;
 `App.js`
 
 ```javascript
-import React from 'react';
-import EventPractice from './Practice';
+import React from "react";
+import EventPractice from "./Practice";
 
 const App = () => {
   return <EventPractice />;
@@ -84,7 +80,7 @@ export default App;
 `EventPractice` 컴포넌트에 input 요소를 렌더링하는 코드와 해당 요소에 onChange 이벤트를 설정하는 코드를 작성한다.
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class EventPractice extends Component {
   render() {
@@ -92,14 +88,12 @@ class EventPractice extends Component {
       <div>
         <h1>Event Practice</h1>
         <input
-          type="text" 
+          type="text"
           name="message"
           placeholder="type something"
-          onChange={
-            (e) => {
-              console.log(e);
-            }
-          }
+          onChange={(e) => {
+            console.log(e);
+          }}
         />
       </div>
     );
@@ -113,18 +107,18 @@ export default EventPractice;
 
 ![chapter-4-syntheticevent-object.png](images/chapter-4-syntheticevent-object.png)
 
-콘솔에 `SyntheticzEvent` 라는 객체가 나타나는 것을 볼 수 있는데, 이 객체는 웹 브라우저의 네이티브 이벤트를 감싸는 객체로, 이벤트 함수의 파라미터(예제 코드에서는 `e` )로 접근할 수 있다. 
+콘솔에 `SyntheticzEvent` 라는 객체가 나타나는 것을 볼 수 있는데, 이 객체는 웹 브라우저의 네이티브 이벤트를 감싸는 객체로, 이벤트 함수의 파라미터(예제 코드에서는 `e` )로 접근할 수 있다.
 
 네이티브 이벤트와 인터페이스가 같으므로, 순수 JS에서 HTML 이벤트를 다룰 때와 똑같이 사용하면 되지만, 네이티브 이벤트와 달리 이벤트가 끝나면 이벤트가 초기화 되므로 정보를 참조할 수 없기 때문에, 비동기적으로 이벤트 객체를 참조해야 한다면 `e.persist()` 함수를 호출해 주어야 한다.
 
 이제 `state` 에 input 값을 담아보도록 한다. `state` 초기값을 설정하고 이벤트 핸들링 함수 내부에서 `this.setState` 메소드를 호출하여 `state` 를 업데이트한다.
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class EventPractice extends Component {
   state = {
-    message: ''
+    message: "",
   };
 
   render() {
@@ -136,9 +130,9 @@ class EventPractice extends Component {
           name="message"
           placeholder="type something"
           value={this.state.message}
-          onChange={e => {
+          onChange={(e) => {
             this.setState({
-              message: e.target.value
+              message: e.target.value,
             });
           }}
         />
@@ -155,11 +149,11 @@ export default EventPractice;
 이제 input 요소 아래에 button 을 하나 만들고, 클릭 이벤트가 발생하면 현재 input 에 담긴 텍스트를 띄운 후 공백으로 설정하도록 한다.
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class EventPractice extends Component {
   state = {
-    message: ''
+    message: "",
   };
 
   render() {
@@ -171,9 +165,9 @@ class EventPractice extends Component {
           name="message"
           placeholder="type something"
           value={this.state.message}
-          onChange={e => {
+          onChange={(e) => {
             this.setState({
-              message: e.target.value
+              message: e.target.value,
             });
           }}
         />
@@ -181,7 +175,7 @@ class EventPractice extends Component {
           onClick={() => {
             alert(this.state.message);
             this.setState({
-              message: ''
+              message: "",
             });
           }}
         >
@@ -202,11 +196,11 @@ export default EventPractice;
 현재의 코드는 이벤트에 실행할 함수를 렌더링 메소드 내부에 만들어서 전달해주고 있다. 이 방법 대신 함수를 미리 만들어 전달하면 가독성을 높일 수 있다.
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class EventPractice extends Component {
   state = {
-    message: ''
+    message: "",
   };
 
   constructor(props) {
@@ -217,14 +211,14 @@ class EventPractice extends Component {
 
   handleChange(e) {
     this.setState({
-      message: e.target.value
+      message: e.target.value,
     });
   }
 
   handleClick() {
     alert(this.state.message);
     this.setState({
-      message: ''
+      message: "",
     });
   }
 
@@ -250,28 +244,28 @@ export default EventPractice;
 
 여기서 주의해야할 점은 this 바인딩이다. this는 함수가 어디서 호출되는지에 따라 결정된다. 클래스의 임의 메소드가 특정 HTML 요소의 이벤트로 등록되는 과정에서 메소드와 this의 관계가 끊어지게 된다.
 
-따라서 this를 컴포넌트 자신으로 가르키게 하기 위해 메소드를 this와 바인딩하는 작업이 필요하고, 현재 코드에서는 `constructor` 함수 내부에서 함수를 바인딩하고 있다. 메소드 바인딩은 이렇게 생성자 메소드에서 하는 것이 정석이다. 새 메소드를 만들 때마다 `constructor` 도 수정해야하기 때문이다. 
+따라서 this를 컴포넌트 자신으로 가르키게 하기 위해 메소드를 this와 바인딩하는 작업이 필요하고, 현재 코드에서는 `constructor` 함수 내부에서 함수를 바인딩하고 있다. 메소드 바인딩은 이렇게 생성자 메소드에서 하는 것이 정석이다. 새 메소드를 만들 때마다 `constructor` 도 수정해야하기 때문이다.
 
 하지만 클래스형 컴포넌트에서 [public class fields](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) 문법을 사용하여 화살표 함수로 메소드를 구현하면, 좀 더 편하게 작성할 수 있다. 화살표 함수의 this는 부모 함수의 this를 상속받는데 JS에서 클래스는 함수로 구현되어 있기 때문에 this는 컴포넌트 자신이 되므로 bind(this)를 하지 않아도 된다.
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class EventPractice extends Component {
   state = {
-    message: ''
+    message: "",
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({
-      message: e.target.value
+      message: e.target.value,
     });
   };
 
   handleClick = () => {
     alert(this.state.message);
     this.setState({
-      message: ''
+      message: "",
     });
   };
 
@@ -304,25 +298,25 @@ export default EventPractice;
 `onChange` 이벤트 핸들러에서 `e.target.name` 은 해당 input의 name을 가리킨다. 이 값을 이용해 state를 설정하면 쉽게 해결할 수 있다.
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class EventPractice extends Component {
   state = {
-    username: '',
-    message: ''
+    username: "",
+    message: "",
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   handleClick = () => {
-    alert(this.state.username + ': ' + this.state.message);
+    alert(this.state.username + ": " + this.state.message);
     this.setState({
-      username: '',
-      message: ''
+      username: "",
+      message: "",
     });
   };
 
@@ -356,9 +350,9 @@ export default EventPractice;
 ![chapter-4-handle-two-input.png](images/chapter-4-handle-two-input.png)
 
 ```javascript
-handleChange = e => {
+handleChange = (e) => {
   this.setState({
-    [e.target.name]: e.target.value
+    [e.target.name]: e.target.value,
   });
 };
 ```
@@ -370,30 +364,30 @@ handleChange = e => {
 키를 눌렀을 때 발생하는 `KeyPress` 이벤트를 처리해본다. 두 번째 인풋에서 `Enter` 키를 눌렀을 때 `handleCick` 메소드를 호출하도록 코드를 추가한다.
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class EventPractice extends Component {
   state = {
-    username: '',
-    message: ''
+    username: "",
+    message: "",
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   handleClick = () => {
-    alert(this.state.username + ': ' + this.state.message);
+    alert(this.state.username + ": " + this.state.message);
     this.setState({
-      username: '',
-      message: ''
+      username: "",
+      message: "",
     });
   };
 
-  handleKeyPress = e => {
-    if (e.key === 'Enter') {
+  handleKeyPress = (e) => {
+    if (e.key === "Enter") {
       this.handleClick();
     }
   };
@@ -433,20 +427,20 @@ export default EventPractice;
 `EventPractice.js`
 
 ```javascript
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const EventPractice = () => {
-  const [username, setUsername] = useState('');
-  const [message, setMessage] = useState('');
-  const onChangeUsername = e => setUsername(e.target.value);
-  const onChangeMessage = e => setMessage(e.target.value);
+  const [username, setUsername] = useState("");
+  const [message, setMessage] = useState("");
+  const onChangeUsername = (e) => setUsername(e.target.value);
+  const onChangeMessage = (e) => setMessage(e.target.value);
   const onClick = () => {
-    alert(username + ': ' + message);
-    setUsername('');
-    setMessage('');
+    alert(username + ": " + message);
+    setUsername("");
+    setMessage("");
   };
-  const onKeyPress = e => {
-    if (e.key === 'Enter') {
+  const onKeyPress = (e) => {
+    if (e.key === "Enter") {
       onClick();
     }
   };
@@ -482,30 +476,30 @@ export default EventPractice;
 위의 함수형 컴포넌트 코드에서는 `e.target.name` 을 사용하지 않고 `onChange` 관련 함수를 따로 만들었다. 하지만 input의 개수가 많아질수록 불편해지므로, `e.target.name` 을 활용하는 것이 더 좋을 수 있다.
 
 ```javascript
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const EventPractice = () => {
   const [form, setForm] = useState({
-    username: '',
-    message: ''
+    username: "",
+    message: "",
   });
   const { username, message } = form;
-  const onChange = e => {
+  const onChange = (e) => {
     const nextForm = {
       ...form,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     };
     setForm(nextForm);
   };
   const onClick = () => {
-    alert(username + ': ' + message);
+    alert(username + ": " + message);
     setForm({
-      username: '',
-      message: ''
+      username: "",
+      message: "",
     });
   };
-  const onKeyPress = e => {
-    if (e.key === 'Enter') {
+  const onKeyPress = (e) => {
+    if (e.key === "Enter") {
       onClick();
     }
   };

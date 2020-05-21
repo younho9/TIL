@@ -214,19 +214,23 @@ grid-template-columns: [선이름] 1열크기 [선이름] 2열크기 [선이름]
 .container > * {
   border: 10px solid red;
 }
-header { grid-area: header; }
-main   { grid-area: main; }
-aside  { grid-area: aside; }
-footer { grid-area: footer; }
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+}
 ```
-
-
-
-
 
 ### `row-gap(grid-row-gap)` , `column-gap(grid-column-gap)` , `gap(grid-gap)`
 
-각 행과 행 사이, 열과 열 사이의 간격(Gutter)을 지정 
+각 행과 행 사이, 열과 열 사이의 간격(Gutter)을 지정
 
 > 더 명확하게 그리드 선(Grid Line)의 크기를 지정
 
@@ -251,7 +255,7 @@ footer { grid-area: footer; }
 }
 /* 하나의 값으로 통일할 수 있습니다. */
 .container {
-  gap: 10px;  /* row-gap: 10px; + column-gap: 10px; */
+  gap: 10px; /* row-gap: 10px; + column-gap: 10px; */
 }
 /* 하나의 값만 적용하고자 한다면 다음과 같이 사용할 수 있습니다. */
 .container {
@@ -285,10 +289,10 @@ footer { grid-area: footer; }
 .container {
   width: 600px;
   display: grid;
-  grid-template-rows: repeat(2, 100px);  /* 명시적 행 */
-  grid-template-columns: repeat(3, 1fr);  /* 명시적 열 */ 
-  grid-auto-rows: 100px;  /* 암시적 행 */
-  grid-auto-columns: 100px;  /* 암시적 열 */
+  grid-template-rows: repeat(2, 100px); /* 명시적 행 */
+  grid-template-columns: repeat(3, 1fr); /* 명시적 열 */
+  grid-auto-rows: 100px; /* 암시적 행 */
+  grid-auto-columns: 100px; /* 암시적 열 */
 }
 .item {
   border: 10px solid red;
@@ -388,16 +392,16 @@ footer { grid-area: footer; }
 
 #### 속성 값
 
-| 값              | 의미                                                         | 기본값   |
-| --------------- | ------------------------------------------------------------ | -------- |
-| `normal`        | stretch 와 같다                                              | `normal` |
-| `start`         | 시작점(위쪽) 정렬                                            |          |
-| `center`        | 수직 가운데 정렬                                             |          |
-| `end`           | 끝점(아래쪽) 정렬                                            |          |
-| `space-around`  | 각 행 위아래에 여백을 고르게 정렬                            |          |
+| 값              | 의미                                                                  | 기본값   |
+| --------------- | --------------------------------------------------------------------- | -------- |
+| `normal`        | stretch 와 같다                                                       | `normal` |
+| `start`         | 시작점(위쪽) 정렬                                                     |          |
+| `center`        | 수직 가운데 정렬                                                      |          |
+| `end`           | 끝점(아래쪽) 정렬                                                     |          |
+| `space-around`  | 각 행 위아래에 여백을 고르게 정렬                                     |          |
 | `space-between` | 첫 행은 시작점에, 끝 행은 끝점에 정렬되고 나머지 여백으로 고르게 정렬 |          |
-| `space-evenly`  | 모든 여백을 고르게 정렬                                      |          |
-| `stretch`       | 열 축을 채우기 위해 그리드 콘텐츠를 늘림                     |          |
+| `space-evenly`  | 모든 여백을 고르게 정렬                                               |          |
+| `stretch`       | 열 축을 채우기 위해 그리드 콘텐츠를 늘림                              |          |
 
 ![align-content](https://heropy.blog/images/screenshot/css-grid/align-content-1.jpg)
 
@@ -409,16 +413,16 @@ footer { grid-area: footer; }
 
 #### 속성 값
 
-| 값              | 의미                                                         | 기본값   |
-| --------------- | ------------------------------------------------------------ | -------- |
-| `normal`        | `stretch`와 같다                                             | `normal` |
-| `start`         | 시작점(왼쪽) 정렬                                            |          |
-| `center`        | 수평 가운데 정렬                                             |          |
-| `end`           | 끝점(오른쪽) 정렬                                            |          |
-| `space-around`  | 각 열 좌우에 여백을 고르게 정렬                              |          |
+| 값              | 의미                                                                  | 기본값   |
+| --------------- | --------------------------------------------------------------------- | -------- |
+| `normal`        | `stretch`와 같다                                                      | `normal` |
+| `start`         | 시작점(왼쪽) 정렬                                                     |          |
+| `center`        | 수평 가운데 정렬                                                      |          |
+| `end`           | 끝점(오른쪽) 정렬                                                     |          |
+| `space-around`  | 각 열 좌우에 여백을 고르게 정렬                                       |          |
 | `space-between` | 첫 열은 시작점에, 끝 열은 끝점에 정렬되고 나머지 여백으로 고르게 정렬 |          |
-| `space-evenly`  | 모든 여백을 고르게 정렬                                      |          |
-| `stretch`       | 행 축을 채우기 위해 그리드 콘텐츠를 늘림                     |          |
+| `space-evenly`  | 모든 여백을 고르게 정렬                                               |          |
+| `stretch`       | 행 축을 채우기 위해 그리드 콘텐츠를 늘림                              |          |
 
 ![justify-content](https://heropy.blog/images/screenshot/css-grid/justify-content-1.jpg)
 
@@ -456,20 +460,20 @@ footer { grid-area: footer; }
 
 ### 속성
 
-| 속성                | 의미                                                         |
-| ------------------- | ------------------------------------------------------------ |
-| `grid-row-start`    | 그리드 아이템(Item)의 행 시작 위치 지정                      |
-| `grid-row-end`      | 그리드 아이템의 행 끝 위치 지정                              |
-| `grid-row`          | `grid-row-xxx`의 단축 속성(행 시작/끝 위치)                  |
-| `grid-column-start` | 그리드 아이템의 열 시작 위치 지정                            |
-| `grid-column-end`   | 그리드 아이템의 열 끝 위치 지정                              |
-| `grid-column`       | `grid-column-xxx`의 단축 속성(열 시작/끝 위치)               |
+| 속성                | 의미                                                                 |
+| ------------------- | -------------------------------------------------------------------- |
+| `grid-row-start`    | 그리드 아이템(Item)의 행 시작 위치 지정                              |
+| `grid-row-end`      | 그리드 아이템의 행 끝 위치 지정                                      |
+| `grid-row`          | `grid-row-xxx`의 단축 속성(행 시작/끝 위치)                          |
+| `grid-column-start` | 그리드 아이템의 열 시작 위치 지정                                    |
+| `grid-column-end`   | 그리드 아이템의 열 끝 위치 지정                                      |
+| `grid-column`       | `grid-column-xxx`의 단축 속성(열 시작/끝 위치)                       |
 | `grid-area`         | 영역(Area) 이름을 설정하거나, `grid-row`와 `grid-column`의 단축 속성 |
-| `align-self`        | 단일 그리드 아이템을 수직(열 축) 정렬                        |
-| `justify-self`      | 단일 그리드 아이템을 수평(행 축) 정렬                        |
-| `place-self`        | `align-self`와 `justify-self`의 단축 속성                    |
-| `order`             | 그리드 아이템의 배치 순서를 지정                             |
-| `z-index`           | 그리드 아이템의 쌓이는 순서를 지정                           |
+| `align-self`        | 단일 그리드 아이템을 수직(열 축) 정렬                                |
+| `justify-self`      | 단일 그리드 아이템을 수평(행 축) 정렬                                |
+| `place-self`        | `align-self`와 `justify-self`의 단축 속성                            |
+| `order`             | 그리드 아이템의 배치 순서를 지정                                     |
+| `z-index`           | 그리드 아이템의 쌓이는 순서를 지정                                   |
 
 ### `grid-row-start` , `grid-column-start` , `grid-row-end` , `grid-column-end`
 
@@ -519,7 +523,8 @@ footer { grid-area: footer; }
 
 ```css
 .item {
-  grid-area: <grid-row-start> / <grid-column-start> / <grid-row-end> / <grid-column-end>;
+  grid-area: <grid-row-start> / <grid-column-start> / <grid-row-end> /
+    <grid-column-end>;
   grid-area: 영역이름;
 }
 ```
@@ -567,9 +572,15 @@ footer { grid-area: footer; }
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
 }
-.item:nth-child(1) { order: 1; }
-.item:nth-child(3) { order: 5; }
-.item:nth-child(5) { order: -1; }
+.item:nth-child(1) {
+  order: 1;
+}
+.item:nth-child(3) {
+  order: 5;
+}
+.item:nth-child(5) {
+  order: -1;
+}
 ```
 
 > ☝️ 음수도 사용 가능
@@ -614,7 +625,8 @@ footer { grid-area: footer; }
   grid-template-columns: repeat(3, [col-start] 100px [col-end]);
 }
 .container {
-  grid-template: repeat(2, [row-start] 200px [row-end]) / repeat(3, [col-start] 100px [col-end]);
+  grid-template: repeat(2, [row-start] 200px [row-end]) / repeat(3, [col-start]
+        100px [col-end]);
 }
 ```
 
@@ -634,7 +646,7 @@ footer { grid-area: footer; }
 
 첫 번째 인수는 '최솟값'이고 두 번째 인수는 '최댓값'이다.
 
-`grid-template-row` , `grid-template-columns` , `grid-auto-rows` 그리고  `grid-auto-columns` 에서 사용한다.
+`grid-template-row` , `grid-template-columns` , `grid-auto-rows` 그리고 `grid-auto-columns` 에서 사용한다.
 
 일반 요소에 `min-width` 와 `max-width` 속성을 동시에 지정하는 것과 유사하다.
 

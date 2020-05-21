@@ -1,6 +1,6 @@
 # CSS 속성 4. `border`
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ## `border`
 
@@ -8,9 +8,9 @@
 
 ### 속성 값
 
-| 값              | 의미           | 기본값    |
-| -------------- | ------------- | -------- |
-| `border-width` | 선의 두께(너비)  | `medium` |
+| 값             | 의미            | 기본값   |
+| -------------- | --------------- | -------- |
+| `border-width` | 선의 두께(너비) | `medium` |
 | `border-style` | 선의 종류       | `none`   |
 | `border-color` | 선의 색상       | `black`  |
 
@@ -77,20 +77,20 @@ border-top: 두께 종류;
 
 ### 속성 값
 
-| 값       | 의미          | 기본값   |
-| -------- | ------------- | -------- |
-| `medium` | 중간 두께     | `medium` |
-| `thin`   | 얇은 두께     |          |
-| `thick`  | 두꺼운 두께   |          |
+| 값       | 의미                              | 기본값   |
+| -------- | --------------------------------- | -------- |
+| `medium` | 중간 두께                         | `medium` |
+| `thin`   | 얇은 두께                         |          |
+| `thick`  | 두꺼운 두께                       |          |
 | 단위     | `px` , `em` , `cm` 등 단위로 지정 |          |
 
 ### 사용법
 
 ```css
-border-width: 위 우 아래 좌;       /* 시계 방향 */
-border-width: 위 [좌, 우] 아래;    /* 위 아래 방향 */
+border-width: 위 우 아래 좌; /* 시계 방향 */
+border-width: 위 [좌, 우] 아래; /* 위 아래 방향 */
 border-width: [위, 아래] [좌, 우]; /* 위,아래 + 좌,우 */
-border-width: [위, 아래, 좌, 우];  /* 모든 방향 */
+border-width: [위, 아래, 좌, 우]; /* 모든 방향 */
 ```
 
 ```css
@@ -104,7 +104,7 @@ border-width: [위, 아래, 좌, 우];  /* 모든 방향 */
 
 ```css
 .box1 {
-  border-width: 10px 20px 30px 40px;	/* 단축 속성 */
+  border-width: 10px 20px 30px 40px; /* 단축 속성 */
 }
 .box2 {
   /* 개별 속성 */
@@ -137,10 +137,10 @@ border-width: [위, 아래, 좌, 우];  /* 모든 방향 */
 ### 사용법
 
 ```css
-border-style: 위 우 아래 좌;       /* 시계 방향 */
-border-style: 위 [좌, 우] 아래;    /* 위 아래 방향 */
+border-style: 위 우 아래 좌; /* 시계 방향 */
+border-style: 위 [좌, 우] 아래; /* 위 아래 방향 */
 border-style: [위, 아래] [좌, 우]; /* 위,아래 + 좌,우 */
-border-style: [위, 아래, 좌, 우];  /* 모든 방향 */
+border-style: [위, 아래, 좌, 우]; /* 모든 방향 */
 ```
 
 ```css
@@ -154,7 +154,7 @@ border-style: [위, 아래, 좌, 우];  /* 모든 방향 */
 
 ```css
 .box1 {
-  border-style: solid dotted double inset;	/* 단축 속성 */
+  border-style: solid dotted double inset; /* 단축 속성 */
 }
 .box2 {
   /* 개별 속성 */
@@ -179,16 +179,16 @@ border-style: [위, 아래, 좌, 우];  /* 모든 방향 */
 ### 사용법
 
 ```css
-border-color: 위 우 아래 좌;       /* 시계 방향 */
-border-color: 위 [좌, 우] 아래;    /* 위 아래 방향 */
+border-color: 위 우 아래 좌; /* 시계 방향 */
+border-color: 위 [좌, 우] 아래; /* 위 아래 방향 */
 border-color: [위, 아래] [좌, 우]; /* 위,아래 + 좌,우 */
-border-color: [위, 아래, 좌, 우];  /* 모든 방향 */
+border-color: [위, 아래, 좌, 우]; /* 모든 방향 */
 ```
 
 ```css
 .box {
   border-color: red green blue yellow;
-  border-color: red green blue ;
+  border-color: red green blue;
   border-color: red green;
   border-color: red;
 }
@@ -196,7 +196,7 @@ border-color: [위, 아래, 좌, 우];  /* 모든 방향 */
 
 ```css
 .box1 {
-  border-color: red green blue yellow;	/* 단축 속성 */
+  border-color: red green blue yellow; /* 단축 속성 */
 }
 .box2 {
   /* 개별 속성 */
@@ -233,7 +233,7 @@ div {
 ```css
 /* 100 x 100 (px) 크기의 요소 만들기 */
 .box {
-  width: 60px;  /* +40px */
+  width: 60px; /* +40px */
   height: 80px; /* +20px */
   background: tomato;
   border: 10px 20px;

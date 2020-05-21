@@ -14,7 +14,7 @@ Sass는 CSS 전처리기(Preprocessor)로, CSS와 유사하고 보다 편리한 
 
 ### Sass와 SCSS
 
-Sass(Syntactically Awesome Style Sheets)의 3버전부터 등장한 SCSS(Sassy Cascading Style Sheets)는 이름처럼 CSS 문법을 살려 'Sass한 CSS'이다. 
+Sass(Syntactically Awesome Style Sheets)의 3버전부터 등장한 SCSS(Sassy Cascading Style Sheets)는 이름처럼 CSS 문법을 살려 'Sass한 CSS'이다.
 
 CSS호환성을 갖춰 **CSS가 지원하는 모든 문법과 기능을** SCSS에서 그대로 사용할 수 있다.
 
@@ -33,14 +33,14 @@ CSS호환성을 갖춰 **CSS가 지원하는 모든 문법과 기능을** SCSS�
 .box {
   width: 100px;
   height: 200px;
-  .content{
+  .content {
     color: blue;
     float: left;
   }
 }
 ```
 
-둘의 가장 큰 차이는 Sass는 선택자의 유효범위를 '들여쓰기'로 구분하고, SCSS는 중괄호( `{}` )로 구분한다는 것이다. 
+둘의 가장 큰 차이는 Sass는 선택자의 유효범위를 '들여쓰기'로 구분하고, SCSS는 중괄호( `{}` )로 구분한다는 것이다.
 
 CSS와의 호환성 때문에 SCSS의 방식이 선호된다.
 
@@ -50,9 +50,9 @@ CSS와의 호환성 때문에 SCSS의 방식이 선호된다.
 
 #### SassMeister
 
-간단하게 웹페이지에서 사용하는  Sass 컴파일러
+간단하게 웹페이지에서 사용하는 Sass 컴파일러
 
- [SassMeister](https://www.sassmeister.com/)
+[SassMeister](https://www.sassmeister.com/)
 
 #### Parcel
 

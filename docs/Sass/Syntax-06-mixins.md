@@ -10,7 +10,7 @@ Mixin 사용법을 두 가지로 나누면 선언하기( `@mixin` )와 포함하
 
 ### `@mixin`
 
-기본적인 `@mixin` 선언법은 다음과 같은데, SCSS와 Sass의 문법이 조금 차이가 있다. 
+기본적인 `@mixin` 선언법은 다음과 같은데, SCSS와 Sass의 문법이 조금 차이가 있다.
 
 ```scss
 // SCSS
@@ -142,8 +142,12 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
   border: $width dashed $color;
 }
 
-.box1 { @include dash-line(1px, red); }
-.box2 { @include dash-line(4px, blue); }
+.box1 {
+  @include dash-line(1px, red);
+}
+.box2 {
+  @include dash-line(4px, blue);
+}
 ```
 
 컴파일하면
@@ -174,8 +178,12 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
   border: $width dashed $color;
 }
 
-.box1 { @include dash-line; }
-.box2 { @include dash-line(4px); }
+.box1 {
+  @include dash-line;
+}
+.box2 {
+  @include dash-line(4px);
+}
 ```
 
 컴파일하면
@@ -206,13 +214,7 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 ```
 
 ```scss
-@mixin position(
-  $p: absolute,
-  $t: null,
-  $b: null,
-  $l: null,
-  $r: null
-) {
+@mixin position($p: absolute, $t: null, $b: null, $l: null, $r: null) {
   position: $p;
   top: $t;
   bottom: $b;
@@ -226,11 +228,7 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 }
 .fixed {
   // 인수가 많아짐에 따라 가독성을 확보하기 위해 줄바꿈
-  @include position(
-    fixed,
-    $t: 30px,
-    $r: 40px
-  );
+  @include position(fixed, $t: 30px, $r: 40px);
 }
 ```
 
@@ -293,21 +291,15 @@ div {
 div {
   width: 100px;
   height: 200px;
-  background: url("/images/a.png") no-repeat 10px 20px,
-              url("/images/b.png") no-repeat,
-              url("/images/c.png");
+  background: url("/images/a.png") no-repeat 10px 20px, url("/images/b.png")
+      no-repeat, url("/images/c.png");
 }
 ```
 
 인수 리스트는 `@mixin` 으로 전달할 때도 사용할 수 있다.
 
 ```scss
-@mixin font(
-  $style: normal,
-  $weight: normal,
-  $size: 16px,
-  $family: sans-serif
-) {
+@mixin font($style: normal, $weight: normal, $size: 16px, $family: sans-serif) {
   font: {
     style: $style;
     weight: $weight;
@@ -322,18 +314,21 @@ div {
 }
 span {
   // 필요한 값만 맵으로 변수에 담아 전달
-  $font-values: (style: italic, size: 22px);
+  $font-values: (
+    style: italic,
+    size: 22px,
+  );
   @include font($font-values...);
 }
 a {
   // 필요한 값만 맵으로 전달
-  @include font((weight: 900, family: monospace)...);
+  @include font((weight: 900, family: monospace) ...);
 }
 ```
 
 `$font-values` 는 `div` 에서는 리스트로, `span` , `a` 에서는 맵으로 사용된 변수이다.
 
-`...` 을 변수 뒤에 추가하여 인수로 전달함으로 여러 변수들을 한번에 전달할 수 있다. 
+`...` 을 변수 뒤에 추가하여 인수로 전달함으로 여러 변수들을 한번에 전달할 수 있다.
 
 ### `@content`
 
@@ -366,7 +361,7 @@ a {
   // icon Mixin에 스타일 블록을 추가하여 사용
   @include icon("/images/icon.png") {
     position: absolute;
-  };
+  }
 }
 ```
 

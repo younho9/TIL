@@ -1,6 +1,6 @@
 # CSS 속성 6. `display`
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ## `display`
 
@@ -17,8 +17,6 @@
 | `none`         | 요소의 박스 타입이 없음(요소가 사라짐) |        |
 
 > ☝️ `inline-block` 은 기본적으로 `inline` 으로 수평으로 쌓이는데, `width` , `height` 를 사용할 수 있고 `margin` , `padding` 의 `top` , `bottom` 을 사용할 수 있는 `block` 의 특성을 갖고 있다
-
-
 
 ### 인라인(Inline) 요소과 블록(Block) 요소의 `margin` `padding`
 
@@ -74,7 +72,7 @@ div {
 - 인라인-블록 요소
 
 ```html
-<input type="text">
+<input type="text" />
 ```
 
 ```css
@@ -87,8 +85,6 @@ input {
 ```
 
 인라인-블록 요소인 `input` 태그는 인라인 요소가 갖지 못하는 `width` , `height` , `margin-top` , `margin-bottom` , `padding-top` , `padding-bottom` 의 속성을 모두 가질 수 있다.
-
-
 
 ### `display: none;`
 

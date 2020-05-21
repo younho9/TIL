@@ -1,6 +1,6 @@
 # CSS 속성 12. `background`
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ## `background`
 
@@ -89,15 +89,13 @@ background-image: url("경로");
 }
 .box1 {
   /* 개별 속성 */
-  background-image: url("../img/image1.jpg"),
-    url("../img/image2.jpg"), 
+  background-image: url("../img/image1.jpg"), url("../img/image2.jpg"),
     url("../img/image3.jpg");
 }
 .box2 {
   /* 단축 속성 */
-  background: url("../img/image1.jpg") no-repeat, 
-    url("../img/image2.jpg") no-repeat 100px 50px,
-    url("../img/image3.jpg") repeat-x;
+  background: url("../img/image1.jpg") no-repeat, url("../img/image2.jpg")
+      no-repeat 100px 50px, url("../img/image3.jpg") repeat-x;
 }
 ```
 
@@ -126,8 +124,7 @@ background-image: url("경로");
 
 ```css
 .box {
-  background-image: 
-    url("https://heropy.blog/css/images/logo.png");
+  background-image: url("https://heropy.blog/css/images/logo.png");
   background-size: 100px;
   background-repeat: no-repeat;
   width: 550px;
@@ -142,11 +139,11 @@ background-image: url("경로");
 
 ### 속성 값
 
-| 값   | 의미                                                         | 기본값  |
-| ---- | ------------------------------------------------------------ | ------- |
-| `%`  | 왼쪽 상단 모서리는 `0% 0%` , 오른쪽 하단 모서리는 `100% 100%` | `0% 0%` |
+| 값   | 의미                                                                     | 기본값  |
+| ---- | ------------------------------------------------------------------------ | ------- |
+| `%`  | 왼쪽 상단 모서리는 `0% 0%` , 오른쪽 하단 모서리는 `100% 100%`            | `0% 0%` |
 | 방향 | 방향을 입력하여 위치 설정 `top` , `bottom` , `left` , `right` , `center` |         |
-| 단위 | `px` , `em` , `cm` 등 단위로 지정                            |         |
+| 단위 | `px` , `em` , `cm` 등 단위로 지정                                        |         |
 
 ### 사용법
 
@@ -158,7 +155,7 @@ background-position: 방향1 방향2;
 
 > 가운데에 위치시킬 때는 `center center;` 로 해도 되지만 `center` 를 한번만 입력해도 가능하다.
 
-값이 단위(  `%` , `px` 등)일 경우
+값이 단위( `%` , `px` 등)일 경우
 
 ```css
 background-position: X축 Y축;
@@ -185,8 +182,7 @@ background-position: X축(left, right, center) Y축(top, bottom, center);
   width: 550px;
   height: 300px;
   border: 2px dashed lightgray;
-  background-image: 
-    url("https://heropy.blog/css/images/logo.png");
+  background-image: url("https://heropy.blog/css/images/logo.png");
   background-size: 100px;
   background-repeat: no-repeat;
   background-position: center;
@@ -199,11 +195,11 @@ background-position: X축(left, right, center) Y축(top, bottom, center);
 
 ### 속성 값
 
-| 값       | 의미                                                         | 기본값   |
-| -------- | ------------------------------------------------------------ | -------- |
-| `scroll` | 배경 이미지가 요소를 따라서 같이 스크롤 됨                   | `scroll` |
+| 값       | 의미                                                                   | 기본값   |
+| -------- | ---------------------------------------------------------------------- | -------- |
+| `scroll` | 배경 이미지가 요소를 따라서 같이 스크롤 됨                             | `scroll` |
 | `fixed`  | 배경 이미지가 뷰포트(viewport)에 고정되어, 요소와 같이 스크롤되지 않음 |          |
-| `local`  | 요소 내 스크롤 시 배경 이미지가 같이 스크롤 됨               |          |
+| `local`  | 요소 내 스크롤 시 배경 이미지가 같이 스크롤 됨                         |          |
 
 ### 예제
 
@@ -229,8 +225,7 @@ section {
   background-attachment: fixed;
 }
 .section3 {
-  background-image: 
-    url("https://www.istarbucks.co.kr/common/img/main/reserve_bg.jpg");
+  background-image: url("https://www.istarbucks.co.kr/common/img/main/reserve_bg.jpg");
   background-size: auto 100%;
   background-position: right bottom;
   background-attachment: fixed;
@@ -269,12 +264,12 @@ section {
 
 ### 속성 값
 
-| 값        | 의미                                                         | 기본값 |
-| --------- | ------------------------------------------------------------ | ------ |
-| `auto`    | 배경 이미지가 원래의 크기로 표시됨                           | `auto` |
-| 단위      | - `px` , `em` , `%` 등 단위로 지정<br />- `width height` 형태로 입력 가능(E.g. `120px 370px`  )<br />- `width` 만 입력하면 비율에 맞게 지정됨(E.g. `120px` ) |        |
-| `cover`   | - 배경 이미지의 크기 비율을 유지하며, 요소의 더 넓은 너비에 맞춰짐<br />- 이미지가 잘릴 수 있음 |        |
-| `contain` | - 배경 이미지의 크기 비율을 유지하며, 요소의 더 짧은 너비에 맞춰짐<br />- 이미지가 잘리지 않음 |        |
+| 값        | 의미                                                                                                                                                        | 기본값 |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `auto`    | 배경 이미지가 원래의 크기로 표시됨                                                                                                                          | `auto` |
+| 단위      | - `px` , `em` , `%` 등 단위로 지정<br />- `width height` 형태로 입력 가능(E.g. `120px 370px` )<br />- `width` 만 입력하면 비율에 맞게 지정됨(E.g. `120px` ) |        |
+| `cover`   | - 배경 이미지의 크기 비율을 유지하며, 요소의 더 넓은 너비에 맞춰짐<br />- 이미지가 잘릴 수 있음                                                             |        |
+| `contain` | - 배경 이미지의 크기 비율을 유지하며, 요소의 더 짧은 너비에 맞춰짐<br />- 이미지가 잘리지 않음                                                              |        |
 
 ### 예제
 
@@ -288,8 +283,7 @@ section {
   height: 300px;
   border: 2px solid red;
   margin: 50px;
-  background-image: 
-    url("https://heropy.blog/css/images/logo.png"); 
+  background-image: url("https://heropy.blog/css/images/logo.png");
   /* 500x500 */
   background-repeat: no-repeat;
   background-size: contain;

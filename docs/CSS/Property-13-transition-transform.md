@@ -1,6 +1,6 @@
 # CSS 속성 13. `transition` & `transform`
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ## `transition`
 
@@ -167,7 +167,7 @@ transform: 원근법 이동 크기 회전 기울임;
 ### 3D 예제
 
 ```html
-<img src="https://heropy.blog/css/images/logo.png" alt="HEROPY">
+<img src="https://heropy.blog/css/images/logo.png" alt="HEROPY" />
 ```
 
 ```css
@@ -178,7 +178,7 @@ img {
 }
 ```
 
-> ☝️ `perspective()` 는 `transform`의 속성 값 중에 제일 앞에 와야 한다. 
+> ☝️ `perspective()` 는 `transform`의 속성 값 중에 제일 앞에 와야 한다.
 
 ### `transform` 변환 속성
 
@@ -196,16 +196,16 @@ img {
 
 ### 속성 값
 
-| 값   | 의미                                     | 기본값 |
-| ---- | ---------------------------------------- | ------ |
-| X축  | `left` , `right` , `center` , `%` , 단위 | `50%`  |
-| Y축  | `top` , `bottom` , `center` , `%` , 단위 | `50%`  |
-| Z축  | 단위                                     | `0`    |
+| 값  | 의미                                     | 기본값 |
+| --- | ---------------------------------------- | ------ |
+| X축 | `left` , `right` , `center` , `%` , 단위 | `50%`  |
+| Y축 | `top` , `bottom` , `center` , `%` , 단위 | `50%`  |
+| Z축 | 단위                                     | `0`    |
 
 ### 예제
 
 ```html
-<img src="https://heropy.blog/css/images/logo.png" alt="HEROPY">
+<img src="https://heropy.blog/css/images/logo.png" alt="HEROPY" />
 ```
 
 ```css
@@ -235,7 +235,7 @@ img {
 <div class="perspective">
   <div class="grand-parent">
     <div class="parent">
-      <img src="https://heropy.blog/css/images/logo.png" alt="HEROPY">
+      <img src="https://heropy.blog/css/images/logo.png" alt="HEROPY" />
     </div>
   </div>
 </div>
@@ -247,7 +247,7 @@ img {
   perspective: 500px;
   padding: 70px;
 }
-.grand-parent{
+.grand-parent {
   width: 200px;
   border: 3px solid dodgerblue;
   transition: 1s;
@@ -259,7 +259,7 @@ img {
   border: 3px solid tomato;
   transition: 1s;
   transform: rotateY(45deg);
-  transform-style: preserve-3d; 
+  transform-style: preserve-3d;
 }
 img {
   width: 200px;

@@ -1,6 +1,6 @@
 # CSS 개요
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ## 기본 문법
 
@@ -27,12 +27,13 @@ ex)색깔을 빨갛게 하겠다.
 
 문서 내 수정사항이나 설명등을 작성
 
-일반적인 에디터에서 단축키 `⌘` + `/` 
+일반적인 에디터에서 단축키 `⌘` + `/`
 
 ### 기본 예제
 
 ```html
-<div>Hello</div>   <!--RED-->
+<div>Hello</div>
+<!--RED-->
 <span>Hello</span>
 ```
 
@@ -68,7 +69,7 @@ HTML `<style></style>` 안에 작성하는 방식
       color: red;
       font-size: 20px;
       font-weight: bold;
-    }    
+    }
   </style>
 </head>
 <body>
@@ -106,7 +107,7 @@ CSS `@import` 를 이용하여 외부 CSS를 불러와 적용하는 방식
 
 ```html
 <head>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
   <div>Hello</div>

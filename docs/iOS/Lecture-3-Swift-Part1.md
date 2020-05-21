@@ -30,7 +30,7 @@ for (i=0.5; i<=15.25; i+=0.3) // c에서 가능하지만 swift에서는 불가�
 
 ### stride
 
->  : 셀 수 있는 범위를 생성해 주는 전역 함수
+> : 셀 수 있는 범위를 생성해 주는 전역 함수
 
 ```swift
 for i in stride(from: 0.5, through: 15.25, by: 0.3) {
@@ -40,11 +40,11 @@ for i in stride(from: 0.5, through: 15.25, by: 0.3) {
 // to: 열린 범위 (OpenedCountableRange)
 ```
 
-※ `CountableRange` 는 `generic type` 이다. (`Int` 일 필요가 없다) 
+※ `CountableRange` 는 `generic type` 이다. (`Int` 일 필요가 없다)
 
 ## Tuple
 
-> : 메소드나 변수가 없는 소형 구조체.  
+> : 메소드나 변수가 없는 소형 구조체.
 
 ```swift
 let x: (String, Int, Double) = ("hello", 5, 0.85) // the type of x is a tuple
@@ -77,7 +77,7 @@ print("height is \(x.height)") // height is 80
 
 ## Computed Properties
 
->  : 메모리에 저장되지 않고 호출할 때마다 값을 가지고, 새로운 값이 설정 될 때마다 특정 역할을 수행하는 프로퍼티
+> : 메모리에 저장되지 않고 호출할 때마다 값을 가지고, 새로운 값이 설정 될 때마다 특정 역할을 수행하는 프로퍼티
 
 ```swift
 var foo: Double // 일반적으로 사용하는 저장 프로퍼티
@@ -99,11 +99,11 @@ var bar: Double {
 }
 ```
 
-> `get` 은 꼭 필요하지만 `set` 은 꼭 필요하지 않다. 
+> `get` 은 꼭 필요하지만 `set` 은 꼭 필요하지 않다.
 >
-> `get` 만 사용하면 "read only" 프로퍼티가 된다. 
+> `get` 만 사용하면 "read only" 프로퍼티가 된다.
 >
-> 읽기 전용 프로퍼티로 사용할 때 `get` 은 굳이 쓰지 않아도 된다. 
+> 읽기 전용 프로퍼티로 사용할 때 `get` 은 굳이 쓰지 않아도 된다.
 
 ```swift
 set {
@@ -119,7 +119,7 @@ set(index) {
 >
 > 아무것도 적지 않으면 `newValue` 로 사용할 수 있고, 다른 이름을 사용하고 싶으면 다른 이름을 넣으면 된다.
 >
-> 그러나 많은 경우 `newValue` 를 사용한다. 
+> 그러나 많은 경우 `newValue` 를 사용한다.
 
 ## Access Control
 
@@ -193,7 +193,7 @@ enum FryOrderSize {
 ### enum 값 할당
 
 ```swift
-let menuItem: FastFoodMenuItem = FastFoodMenuItem.hamburger(numberOfPatties: 2) 
+let menuItem: FastFoodMenuItem = FastFoodMenuItem.hamburger(numberOfPatties: 2)
 var otherItem: FastFoodMenuItem = FastFoodMenuItem.cookie
 ```
 
@@ -247,7 +247,7 @@ switch menuItem {
 ```swift
 var menuItem = FastFoodMenuItem.drink("Coke", ounces: 32)
 switch menuItem {
-  case .hamburger(let pattyCount): print("a burger with \(pattyCount) patties!") 
+  case .hamburger(let pattyCount): print("a burger with \(pattyCount) patties!")
   case .fries(let size): print("a \(size) order of fries!")
   case .drink(let brand, let ounces): print("a \(ounces)oz \(brand)")
   case .cookie: print("a cookie!")
@@ -274,15 +274,15 @@ enum FastFoodMenuItem {
       case .drink(_, let ounces): return ounces == 16 // & 16oz drink of any kind
     }
   }
-  var calories: Int { 
-    // calculate and return caloric value here 
+  var calories: Int {
+    // calculate and return caloric value here
   }
 }
 ```
 
 > `enum` 내부의 함수에서 `switch self` 를 사용해서 자신의 연동된 데이터를 사용할 수 있다.
 >
-> `.fires, .cookie ` 처럼 하나의 경우로 묶을 수 있다.
+> `.fires, .cookie` 처럼 하나의 경우로 묶을 수 있다.
 >
 > `.drink(_, let ounces)` 의 경우처럼 어느 것이든 상관 없을 때 사용하는 기호가 `_` 이다.
 >
@@ -301,11 +301,11 @@ enum FastFoodMenuItem {
 
 > 변수 내에 있을 때에는 `self` 를 수정하는 것이 가능하다.
 >
-> `mutating` 이라는 keyword를 꼭 사용해야 한다. (`enum` 이 값 타입이기 때문이다.)  
+> `mutating` 이라는 keyword를 꼭 사용해야 한다. (`enum` 이 값 타입이기 때문이다.)
 
 ## Optionals
 
-> : `Optional` 은 배열처럼 어떠한 값이든 올 수 있는 `generic` 이며, 값을 가지거나 가지지 않는 두 가지 경우가 있는  `enum` 이다.
+> : `Optional` 은 배열처럼 어떠한 값이든 올 수 있는 `generic` 이며, 값을 가지거나 가지지 않는 두 가지 경우가 있는 `enum` 이다.
 
 ```swift
 enum Optional<T> { // a generic type, like Array<Element> or Dictionary<key,Value>
@@ -314,7 +314,7 @@ enum Optional<T> { // a generic type, like Array<Element> or Dictionary<key,Valu
 }
 ```
 
-옵셔널을 `enum` 처럼 사용할 경우에 코드가 길어지기 때문에 `?, !` 등의 특수문자를 사용해 옵셔널의 가능한 경우에 대해  `switch` 를 사용하지 않아도 된다. 
+옵셔널을 `enum` 처럼 사용할 경우에 코드가 길어지기 때문에 `?, !` 등의 특수문자를 사용해 옵셔널의 가능한 경우에 대해 `switch` 를 사용하지 않아도 된다.
 
 ### 선언과 할당
 
@@ -353,8 +353,8 @@ if let greeting = hello {
 // 아래와 같은 의미
 switch hello {
 	case .some(let data): print(data)
-	case .none: { 
-    // do something else 
+	case .none: {
+    // do something else
   }
 }
 ```
@@ -362,7 +362,7 @@ switch hello {
 - **Implicitly Unwrapped Optional**
 
 ```swift
-var hello: String! 
+var hello: String!
 print(hello)
 
 // 아래와 같은 의미
@@ -391,7 +391,7 @@ switch x {
 
 - **Optional chaining**
 
-> : 하나라도  `nil` 인 경우 `nil` 을 할당함
+> : 하나라도 `nil` 인 경우 `nil` 을 할당함
 
 ```swift
 let x: String? = ...
@@ -421,12 +421,12 @@ switch x {
 > : 객체지향 디자인을 지원하고 기능과 데이터 모두를 단일 상속할 수 있으며 레퍼런스 타입으로 힙에 저장된다. `Swift` 에서는 힙이 자동적으로 clean 상태가 된다. (via reference counting, not garbage collection)
 
 - **Automatic Reference Counting**
-  - 힙 내의 참조 타입에 포인터를 만들 때마다 `Swift` 는 어딘가에 있는 카운터에 1을 더한다. 매번 그 포인터가 가리키는 것이 없어지거나 더 이상 가리키지 않을 때 마치 옵셔널처럼 `nil` 로 설정되고 그 카운터가 1 줄어들게 된다. 카운터가 0이 되면 즉시 힙에서 꺼낸다. 가리키는 포인터가 없어질 때 바로 사라진다. 
+  - 힙 내의 참조 타입에 포인터를 만들 때마다 `Swift` 는 어딘가에 있는 카운터에 1을 더한다. 매번 그 포인터가 가리키는 것이 없어지거나 더 이상 가리키지 않을 때 마치 옵셔널처럼 `nil` 로 설정되고 그 카운터가 1 줄어들게 된다. 카운터가 0이 되면 즉시 힙에서 꺼낸다. 가리키는 포인터가 없어질 때 바로 사라진다.
 - **Influencing ARC**
   - 다음의 3가지 키워드를 레퍼런스 타입 변수 앞에 선언함으로 ARC에 영향을 줄 수 있다.
     - `strong` : `default` 레퍼런스 카운팅. 가리키고 있는 한 힙 내에 그것을 둔다.
-    - `weak` : 힙 내의 어떤 것을 가리키고 있지만 다른 사람이 흥미를 가져야만 흥미를 가지게 된다. 다시 말해서 다른 사용자가 `strong` 포인터를 가지면 그것을 힙 내에 유지하고 아무도 흥미가 없게 되면 다시말해 스트롱 포인터가 없으면 `nil` 을 받아서 그것을 힙에서 제거한다. 나 때문에 어떤 것을 힙에 두지 않는 것을 의미한다.  모든 `strong` 이 없어 졌을 때 `nil` 로 설정된다. `weak` 은 옵셔널 포인터로 참조 타입을 가리키는 것만 가능하다. `delegation` 에서 `weak` 을 사용한다.
-    - `unowned`  : 참조하지 않는다는 의미. 만약 힙 내부의 어떤 것을 가리키고 있을 때 `strong` 포인터로 인식하지 않는 것이고 힙에서 사라졌을 때 접근하지 않는 것이다. 매우 위험. 자동 참조 횟수 계산 시스템을 뛰어넘으려고 하는 것. 메모리 사이클을 피하기 위해서 사용된다. `closure` 과 함께 사용한다.
+    - `weak` : 힙 내의 어떤 것을 가리키고 있지만 다른 사람이 흥미를 가져야만 흥미를 가지게 된다. 다시 말해서 다른 사용자가 `strong` 포인터를 가지면 그것을 힙 내에 유지하고 아무도 흥미가 없게 되면 다시말해 스트롱 포인터가 없으면 `nil` 을 받아서 그것을 힙에서 제거한다. 나 때문에 어떤 것을 힙에 두지 않는 것을 의미한다. 모든 `strong` 이 없어 졌을 때 `nil` 로 설정된다. `weak` 은 옵셔널 포인터로 참조 타입을 가리키는 것만 가능하다. `delegation` 에서 `weak` 을 사용한다.
+    - `unowned` : 참조하지 않는다는 의미. 만약 힙 내부의 어떤 것을 가리키고 있을 때 `strong` 포인터로 인식하지 않는 것이고 힙에서 사라졌을 때 접근하지 않는 것이다. 매우 위험. 자동 참조 횟수 계산 시스템을 뛰어넘으려고 하는 것. 메모리 사이클을 피하기 위해서 사용된다. `closure` 과 함께 사용한다.
 
 ### struct
 
@@ -438,4 +438,4 @@ switch x {
 
 ### protocol
 
-> : 프로토콜은 작업을 수행하기 위해 타입에서 필요로 하는 메소드, 프로퍼티, 그리고 다른 요구 사항을 정의하는 계약의 역할. 다음 수업에서 다룸 
+> : 프로토콜은 작업을 수행하기 위해 타입에서 필요로 하는 메소드, 프로퍼티, 그리고 다른 요구 사항을 정의하는 계약의 역할. 다음 수업에서 다룸

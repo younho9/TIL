@@ -4,7 +4,7 @@
 
 ## 클래스 기반 언어 vs 프로토타입 기반 언어
 
-먼저 클래스란 같은 종류의 집단에 속하는 속성(attribute)과 행위(behavior)를 정의한 것으로, 객체지향 프로그램의 기본적인 사용자 정의 데이터형이라고 할 수 있다. 결국  클래스는 객체 생성에 사용되는 패턴 혹은 청사진일 뿐이며 `new` 연산자를 통한 인스턴스화 과정이 필요하다.
+먼저 클래스란 같은 종류의 집단에 속하는 속성(attribute)과 행위(behavior)를 정의한 것으로, 객체지향 프로그램의 기본적인 사용자 정의 데이터형이라고 할 수 있다. 결국 클래스는 객체 생성에 사용되는 패턴 혹은 청사진일 뿐이며 `new` 연산자를 통한 인스턴스화 과정이 필요하다.
 
 이러한 클래스 기반 언어는 모든 인스턴스가 클래스에 정의된 대로 같은 구조이고, 보통 런타임에 그 구조를 변경할 수 없다. 이러한 특성은 정확성, 안정성, 예측성 측면에서 좋지만, 프로토타입 기반의 언어는 동적으로 자유롭게 객체의 구조와 동작 방식을 바꿀 수 있다는 장점이 있다.
 
@@ -27,20 +27,19 @@ function Person(name) {
   this.setName = function (value) {
     this.name = value;
   };
-
 }
 
-var me = new Person('zzoon');
+var me = new Person("zzoon");
 console.log(me.getName()); // zzoon
 
-me.setName('iamhjoo');
+me.setName("iamhjoo");
 console.log(me.getName()); // iamhjoo
 ```
 
 여기서 `new` 키워드로 새로운 객체 `me` 를 만든 부분을 주목하자.
 
 ```javascript
-var me = new Person('zzoon');
+var me = new Person("zzoon");
 ```
 
 이 형태는 기존 객체지향 프로그래밍 언어에서 한 클래스의 인스턴스를 생성하는 코드와 매우 유사하다. 함수 `Person` 이 클래스이자 생성자의 역할을 하는 것이다.
@@ -50,9 +49,9 @@ var me = new Person('zzoon');
 하지만 이것은 문제가 많은 예제이다. `Person` 생성자 함수로 여러 객체를 만든다고 해보자.
 
 ```javascript
-var me = new Person('me');
-var you = new Person('you');
-var him = new Person('him');
+var me = new Person("me");
+var you = new Person("you");
+var him = new Person("him");
 ```
 
 이렇게 사용하는 것은 겉으로는 별 문제 없이 작동하지만, 각 객체는 자기 영역에서 공통적으로 사용할 수 있는 `setName()` , `getName()` 함수를 따로 생성하고 있어서, 중복되는 영역을 불필요하게 메모리에 올려놓고 사용하고 있다.
@@ -64,16 +63,16 @@ function Person(arg) {
   this.name = arg;
 }
 
-Person.prototype.getName = function() {
+Person.prototype.getName = function () {
   return this.name;
-}
+};
 
-Person.prototype.setName = function(value) {
+Person.prototype.setName = function (value) {
   this.name = value;
-}
+};
 
-var me = new Person('me');
-var you = new Person('you');
+var me = new Person("me");
+var you = new Person("you");
 console.log(me.getName());
 console.log(you.getName());
 ```
@@ -97,16 +96,16 @@ function Person(arg) {
   this.name = arg;
 }
 
-Person.method('setName', function (value) {
+Person.method("setName", function (value) {
   this.name = value;
 });
 
-Person.method('getName', function () {
+Person.method("getName", function () {
   return this.name;
 });
 
-var me  = new Person('me');
-var you = new Person('you');
+var me = new Person("me");
+var you = new Person("you");
 
 console.log(me.getName()); // me
 console.log(you.getName()); // you
@@ -125,22 +124,21 @@ function Person(arg) {
   this.name = arg;
 }
 
-Person.prototype.setName = function(value) {
+Person.prototype.setName = function (value) {
   this.name = value;
 };
 
-Person.prototype.getName = function() {
+Person.prototype.getName = function () {
   return this.name;
 };
 
-function Student(arg) {
-}
+function Student(arg) {}
 
-var you = new Person('iamhjoo');
+var you = new Person("iamhjoo");
 Student.prototype = you;
 
-var me = new Student('zzoon');
-me.setName('zzoon');
+var me = new Student("zzoon");
+me.setName("zzoon");
 console.log(me.getName());
 ```
 

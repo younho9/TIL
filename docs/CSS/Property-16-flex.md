@@ -31,7 +31,7 @@
 }
 ```
 
-> ☝️ `inline-block` 은 `block` 요소를 `inline` 요소(텍스트)처럼 다루게  되고, 이는 요소 사이의 공백을 제거하기 위한 `font-size` 수정을 불러오는 등 좋지 않은 방법이다.
+> ☝️ `inline-block` 은 `block` 요소를 `inline` 요소(텍스트)처럼 다루게 되고, 이는 요소 사이의 공백을 제거하기 위한 `font-size` 수정을 불러오는 등 좋지 않은 방법이다.
 
 ### `float` 속성
 
@@ -63,7 +63,7 @@
 
 > ☝️ `float` 이라는 속성이 요소를 수평화하는데 전문적으로 사용되는 속성이 아니다.
 
-###  `flex`
+### `flex`
 
 ```html
 <div class="container">
@@ -119,7 +119,7 @@
 
 `display` 속성으로 `flex container` 를 정의한다.
 
-보통 `display: block;` , `display: inline` , `display: inline-block` , `display: none;` 으로 사용했었는데, ( [Property-06-display](./Property-06-display.md) 참조)  `display: flex;` 또는 `display: inline-flex;` 도 사용할 수 있다.
+보통 `display: block;` , `display: inline` , `display: inline-block` , `display: none;` 으로 사용했었는데, ( [Property-06-display](./Property-06-display.md) 참조) `display: flex;` 또는 `display: inline-flex;` 도 사용할 수 있다.
 
 #### 속성 값
 
@@ -132,7 +132,7 @@
 
 ![flex-display](https://heropy.blog/images/screenshot/css-flexible-box/flex-display.jpg)
 
-`display: flex;` 로 지정된 `flex container` 는 `block` 요소와 같이 수직으로 쌓이며, 
+`display: flex;` 로 지정된 `flex container` 는 `block` 요소와 같이 수직으로 쌓이며,
 
 `display: inline-flex;` 로 지정된 `flex container` 는 `inline` 요소와 같이 수평으로 쌓인다.
 
@@ -246,13 +246,13 @@ flex-flow: 주축 여러줄묶음;
 
 #### 속성 값
 
-| 값              | 의미                                                         | 기본값       |
-| --------------- | ------------------------------------------------------------ | ------------ |
-| `flex-start`    | `items` 를 시작점(flex-start)으로 정렬                       | `flex-start` |
-| `flex-end`      | `items` 를 끝점(flex-end)으로 정렬                           |              |
-| `center`        | `items` 를 가운데 정렬                                       |              |
-| `space-between` | 시작 `item` 은 시작점에, 마지막 `item` 은 끝점에 정렬되고, 나머지  `items` 는 사이에 고르게 정렬됨 |              |
-| `space-around`  | `items` 를 균등한 여백을 포함하여 정렬                       |              |
+| 값              | 의미                                                                                              | 기본값       |
+| --------------- | ------------------------------------------------------------------------------------------------- | ------------ |
+| `flex-start`    | `items` 를 시작점(flex-start)으로 정렬                                                            | `flex-start` |
+| `flex-end`      | `items` 를 끝점(flex-end)으로 정렬                                                                |              |
+| `center`        | `items` 를 가운데 정렬                                                                            |              |
+| `space-between` | 시작 `item` 은 시작점에, 마지막 `item` 은 끝점에 정렬되고, 나머지 `items` 는 사이에 고르게 정렬됨 |              |
+| `space-around`  | `items` 를 균등한 여백을 포함하여 정렬                                                            |              |
 
 ![flex-justify-content](https://heropy.blog/images/screenshot/css-flexible-box/flex-justify-content.jpg)
 
@@ -292,14 +292,14 @@ flex-flow: 주축 여러줄묶음;
 
 #### 속성 값
 
-| 값              | 의미                                                         | 기본값    |
-| --------------- | ------------------------------------------------------------ | --------- |
-| `stretch`       | `container` 의 교차 축을 채우기 위해 `items` 를 늘림         | `stretch` |
-| `flex-start`    | `items` 를 시작점(flex-start)으로 정렬                       |           |
-| `flex-end`      | `items` 를 끝점(flex-end)으로 정렬                           |           |
-| `center`        | `items` 를 가운데 정렬                                       |           |
-| `space-between` | 시작 `item` 은 시작점에, 마지막 `item` 은 끝점에 정렬되고 나머지  `items` 는 사이에 고르게 정렬됨 |           |
-| `space-around`  | `items` 를 균등한 여백을 포함하여 정렬                       |           |
+| 값              | 의미                                                                                             | 기본값    |
+| --------------- | ------------------------------------------------------------------------------------------------ | --------- |
+| `stretch`       | `container` 의 교차 축을 채우기 위해 `items` 를 늘림                                             | `stretch` |
+| `flex-start`    | `items` 를 시작점(flex-start)으로 정렬                                                           |           |
+| `flex-end`      | `items` 를 끝점(flex-end)으로 정렬                                                               |           |
+| `center`        | `items` 를 가운데 정렬                                                                           |           |
+| `space-between` | 시작 `item` 은 시작점에, 마지막 `item` 은 끝점에 정렬되고 나머지 `items` 는 사이에 고르게 정렬됨 |           |
+| `space-around`  | `items` 를 균등한 여백을 포함하여 정렬                                                           |           |
 
 > ☝️ `stretch` 는 교차 축에 해당하는 너비(속성 `width` 혹은 `height` )가 값이 `auto` (기본값)일 경우 교차 축을 채우기 위해 자동으로 늘어난다.
 
@@ -406,13 +406,13 @@ flex-flow: 주축 여러줄묶음;
 
 ### `order`
 
-`item` 의 순서를 설정 
+`item` 의 순서를 설정
 
 `item` 에 숫자를 지정하고 숫자가 클수록 순서가 밀린다. (음수가 허용)
 
 > ☝️ HTML 구조보다 우선해서 순서를 변경할 수 있기 때문에 유용
 >
-> `order` 의 숫자가 같으면  HTML 구조에 따라 정렬된다
+> `order` 의 숫자가 같으면 HTML 구조에 따라 정렬된다
 
 #### 속성 값
 
@@ -467,7 +467,7 @@ flex: 증가너비 감소너비 기본너비;
 
 ![flex-grow](https://heropy.blog/images/screenshot/css-flexible-box/flex-grow.jpg)
 
-모든 `items` 의 총 증가 너비( `flex-grow` )에서 각 item 의 증가 너비의 비율만큼 너비를 가질 수 있는데, 
+모든 `items` 의 총 증가 너비( `flex-grow` )에서 각 item 의 증가 너비의 비율만큼 너비를 가질 수 있는데,
 
 첫 번째 그림처럼 `item` 이 3개이고 증가 너비가 각각 `1` , `2` , `1` 이면
 
@@ -479,7 +479,7 @@ flex: 증가너비 감소너비 기본너비;
 
 두 번째 그림처럼 `item` 이 3개이고 증가 너비가 각각 `1` , `3` , `2` 이면
 
-첫 번째  `item` 은 총 너비의 16.6% (1/6),
+첫 번째 `item` 은 총 너비의 16.6% (1/6),
 
 두 번째 `item` 은 총 너비의 50% (1/2),
 
@@ -523,7 +523,7 @@ flex: 증가너비 감소너비 기본너비;
   display: flex;
 }
 .container .item {
-/*   width: 100px; */
+  /*   width: 100px; */
   height: 100px;
   background: tomato;
   border: 4px dashed red;
@@ -563,7 +563,7 @@ flex: 증가너비 감소너비 기본너비;
 }
 ```
 
-> 💡 이렇게 한 `item` 은 고정 너비  `width` 를 지정하고 한 `item` 은 `flex-grow` 속성을 지정하면, `container` 의 사이즈가 변할 때 지정한 `item` 만 가변 사이즈를 지니도록 만들 수 있다.
+> 💡 이렇게 한 `item` 은 고정 너비 `width` 를 지정하고 한 `item` 은 `flex-grow` 속성을 지정하면, `container` 의 사이즈가 변할 때 지정한 `item` 만 가변 사이즈를 지니도록 만들 수 있다.
 
 ### `flex-shrink`
 
@@ -587,7 +587,7 @@ flex: 증가너비 감소너비 기본너비;
 
 `item` 의 (공간 배분 전) 기본 너비를 설정.
 
-값이  `auto` 일 경우 `width` , `height` 등의 속성으로 `item` 의 너비를 설정할 수 있다.
+값이 `auto` 일 경우 `width` , `height` 등의 속성으로 `item` 의 너비를 설정할 수 있다.
 
 하지만 단위 값이 주어진 경우 설정할 수 없다.
 
@@ -598,11 +598,11 @@ flex: 증가너비 감소너비 기본너비;
 | `auto` | 가변 `item` 과 같은 너비          | `auto` |
 | 단위   | `px` , `em` , `cm` 등 단위로 지정 |        |
 
-> ☝️ `flex` 단축 속성에서  `flex-basis` 를 생략하면 값이 `0` 이 된다.
+> ☝️ `flex` 단축 속성에서 `flex-basis` 를 생략하면 값이 `0` 이 된다.
 
 ![flex-basis](https://heropy.blog/images/screenshot/css-flexible-box/flex-basis.jpg)
 
-> ☝️ `item` 전체가 비율대로( `flex-grow` ) 증가하려면 `flex-basis` 가 `0` 인 것이 중요하다. 
+> ☝️ `item` 전체가 비율대로( `flex-grow` ) 증가하려면 `flex-basis` 가 `0` 인 것이 중요하다.
 
 #### 예제
 
@@ -629,15 +629,15 @@ flex: 증가너비 감소너비 기본너비;
 }
 ```
 
-> ☝️ `flex-basis: auto;` 이면 콘텐츠를 제외한 영역의 비율에 따라 `item` 의 너비가 설정된다. `flex-basis: 0;` 이면 `item`  전체가 비율에 따라 설정된다.
+> ☝️ `flex-basis: auto;` 이면 콘텐츠를 제외한 영역의 비율에 따라 `item` 의 너비가 설정된다. `flex-basis: 0;` 이면 `item` 전체가 비율에 따라 설정된다.
 
 ### `align-self`
 
-교차 축(cross-axis)에서 개별  `item` 의 정렬 방법을 설정
+교차 축(cross-axis)에서 개별 `item` 의 정렬 방법을 설정
 
-`align-items` 는  `container` 내 모든 `item` 의 정렬 방법을 설정하는데, 필요에 의해 일부 `item` 만 정렬 방법을 변경하려고 할 경우 `align-self` 를 사용할 수 있다.
+`align-items` 는 `container` 내 모든 `item` 의 정렬 방법을 설정하는데, 필요에 의해 일부 `item` 만 정렬 방법을 변경하려고 할 경우 `align-self` 를 사용할 수 있다.
 
-이 속성은  `align-items` 속성보다 우선한다.
+이 속성은 `align-items` 속성보다 우선한다.
 
 #### 속성 값
 

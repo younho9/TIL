@@ -35,12 +35,12 @@ struct Concentration {
 
 ## 프로토콜 (protocol)
 
-> : 별도의 구현이 없는 메소드와 변수의 리스트이고 API에서 원하는 것을 불러오는 방식이다. 호출자와 피호출자가 원하는 것을 표현한다. 
+> : 별도의 구현이 없는 메소드와 변수의 리스트이고 API에서 원하는 것을 불러오는 방식이다. 호출자와 피호출자가 원하는 것을 표현한다.
 
 - 프로토콜은 API를 매우 유연하고 표현가능하도록 만들어 준다. (블라인드 커뮤니케이션 구조에서 효과적)
 - **프로토콜은 하나의 타입**
 - 순수하게 기능만을 상속, 다중 상속 가능
-- 프로토콜에서 구현되는 모든 메소드와 프로퍼티들은 프로토콜을 상속하는 경우 반드시 구현해야 한다. 
+- 프로토콜에서 구현되는 모든 메소드와 프로퍼티들은 프로토콜을 상속하는 경우 반드시 구현해야 한다.
 
 ### 프로토콜의 선언
 
@@ -53,7 +53,7 @@ protocol SomeProtocol: InheritedProtocol1, InheritedProtocol2 {
 }
 ```
 
-> - `SomeProtocol` 이 `InheritedProtocol1,2` 를 상속받고 있으므로 `SomeProtocol` 을 상속받는 경우  `InheritedProtocol1,2` 도 구현해 주어야 한다.
+> - `SomeProtocol` 이 `InheritedProtocol1,2` 를 상속받고 있으므로 `SomeProtocol` 을 상속받는 경우 `InheritedProtocol1,2` 도 구현해 주어야 한다.
 >
 > - `property` 의 경우 `get` 또는 `get` , `set` 인지 명시해 주어야 한다.
 > - `receiver` 를 변경할 것이 예상되는 함수에 대해서는 `mutating` 을 명시해 주어야 한다.
@@ -65,7 +65,7 @@ protocol SomeProtocol: class, InheritedProtocol1, InheritedProtocol2 {
 }
 ```
 
-> - 이 프로토콜이 절대 `struct` 에서 구현되지 않도록 하려면  `class` 를 프로토콜을 선언할 때 넣으면 된다. (`mutating` 을 사용할 필요가 없다.)
+> - 이 프로토콜이 절대 `struct` 에서 구현되지 않도록 하려면 `class` 를 프로토콜을 선언할 때 넣으면 된다. (`mutating` 을 사용할 필요가 없다.)
 > - `class` 의 경우 `init` 은 반드시 `required` 를 명시해 주어야 한다. 그렇지 않으면 `subclass` 에서 이를 준수하지 않을 것이다.
 
 ### 프로토콜 구현
@@ -182,7 +182,7 @@ Dictionary<Key: Hashable, Value>
 
 > : 문자열은 `Unicode` 로 만들어지지만 `Character` 라는 개념이 있다.
 >
-> 문자열은 정수로 색인할 수 없다. 
+> 문자열은 정수로 색인할 수 없다.
 >
 > ex) "café pesto" 의 경우 é 는 2개의 Unicode로 표현될 수도 있고 1개로 표현될 수도 있기 때문이다.
 
@@ -192,20 +192,20 @@ let firstCharacterIndex = pizzaJoint.startIndex // of type String.Index
 let fourthCharacterIndex = pizzaJoint.index(firstCharacterIndex, offsetBy: 3)
 let fourthCharacter = pizzaJoint[fourthCharacterIndex] // é
 
-if let firstSpace = pizzaJoint.index(of: " ") { // returns nil if " " not found 
+if let firstSpace = pizzaJoint.index(of: " ") { // returns nil if " " not found
 	let secondWordIndex = pizzaJoint.index(firstSpace, offsetBy: 1)
 	let secondWord = pizzaJoint[secondWordIndex..<pizzaJoint.endIndex]
 }
 ```
 
-> `..<` 는 `String.Index` 타입의 `Range` 이다. `Range` 는 `Array` 와 같은 `generic type` 이다. (`Int` 의 `Range` 일 필요는 없다.) 
+> `..<` 는 `String.Index` 타입의 `Range` 이다. `Range` 는 `Array` 와 같은 `generic type` 이다. (`Int` 의 `Range` 일 필요는 없다.)
 
 ```swift
 // Another way to find the second word
 pizzaJoint.components(separatedBy: " ")[1]
 ```
 
-> `components(separatedBy: )` : return an `Array<String>` 
+> `components(separatedBy: )` : return an `Array<String>`
 
 ```swift
 for c in s { } // iterate through all Characters in s
@@ -213,13 +213,13 @@ let characterArray = Array(s) // Array<Character>
 (Array has an init that takes any Sequence as an argument)
 ```
 
-> `String` 은 또한 `Character` 의  `Collection` 이다. (`Array` 처럼)
+> `String` 은 또한 `Character` 의 `Collection` 이다. (`Array` 처럼)
 >
 > 모든 `indexing` 과 관련된 것들은 (`index(of: )` , etc) `Collection` 의 한 부분이다.
 >
 > `Collection` 은 또한 `Sequence` 이기 때문에 위의 것들이 가능하다.
 >
-> `Array<Character>` 로 문자열을 만들면 `Int` 로 `indexing` 할 수 있다. (하나의 요령)   
+> `Array<Character>` 로 문자열을 만들면 `Int` 로 `indexing` 할 수 있다. (하나의 요령)
 
 ```swift
 var s = pizzaJoint // makes a mutable copy of pizzaJoint (because it's a value type!)
@@ -244,11 +244,11 @@ func replaceSubrange(Range<String.Index>, with: Collection of Character)
 s.replaceSubrange(..<s.endIndex, with: "new contents")
 ```
 
-> `..<Range` 를 보면 좌변에 범위의 시작을 적지 않았다. 하지만 `Swift` 는 영리하게 `String` 의 시작점을 `default` 로 알고 있고, 마찬가지로 끝 부분을 비워놓아도 된다. 
+> `..<Range` 를 보면 좌변에 범위의 시작을 적지 않았다. 하지만 `Swift` 는 영리하게 `String` 의 시작점을 `default` 로 알고 있고, 마찬가지로 끝 부분을 비워놓아도 된다.
 
 ## NSAttributedString
 
-> : 문자열의 모든 문자가 각각 폰트나 색깔과 같은 속성을 딕셔너리로 갖고 있는 문자열. 딕셔너리의 여러 키와 값들이 그 문자를 어떻게 화면에 표현할지 나타낸다. 
+> : 문자열의 모든 문자가 각각 폰트나 색깔과 같은 속성을 딕셔너리로 갖고 있는 문자열. 딕셔너리의 여러 키와 값들이 그 문자를 어떻게 화면에 표현할지 나타낸다.
 >
 > 딕셔너리의 키는 폰트나 색깔 등이고, 값은 `UIFont` 또는 `UIColor` 와 같은 것들이다.
 
@@ -265,7 +265,7 @@ flipCountLabel.attributedText = attribtext // UIButton has attributedTitle
 
 > 절대 자료구조에 `Any` 라는 타입을 사용해서는 안된다.
 >
-> 이는 `Objective-C` 에서 가져온 API이기 때문에 `Swift` 답지 않다. 
+> 이는 `Objective-C` 에서 가져온 API이기 때문에 `Swift` 답지 않다.
 
 - `NSAttributedString` 의 특이한 점
 
@@ -287,7 +287,7 @@ NSString과 String 사이에는 자동적인 연결이 있어서 NSString을 받
 
 > : 변수를 함수 타입으로 선언할 수 있다.
 >
-> `argument` 와 `return` 의 타입을 선언하기만 하면 된다. 
+> `argument` 와 `return` 의 타입을 선언하기만 하면 된다.
 
 ```swift
 var operation: (Double) -> Double
@@ -371,4 +371,3 @@ arrayOfOperations.append(operation)
 ```
 
 메모리 사이클을 일으킬 수 있고 이 때 `unowned` 를 사용할 수 있다.
-

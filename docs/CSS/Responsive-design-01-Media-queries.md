@@ -1,6 +1,6 @@
 # 반응형 디자인 1.Media queries
 
-> ❗️ 해당 글은 패스트캠퍼스 - 프론트엔드 개발 강의에서 HTML & CSS, SASS(SCSS) Part의 박영웅 강사님의 강의자료를 정리한 것입니다. 
+> ❗️ 해당 글은 패스트캠퍼스 - 프론트엔드 개발 강의에서 HTML & CSS, SASS(SCSS) Part의 박영웅 강사님의 강의자료를 정리한 것입니다.
 
 ## `@media`
 
@@ -74,7 +74,7 @@
 ```css
 /* MEDIA */
 @media (max-width: 1024px) {
-   /* 선택자와 속성들 */
+  /* 선택자와 속성들 */
 }
 ```
 
@@ -91,8 +91,12 @@
 `index.html`
 
 ```html
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" media="all and (max-width: 1024px)" href="css/main_medium.css">
+<link rel="stylesheet" href="css/main.css" />
+<link
+  rel="stylesheet"
+  media="all and (max-width: 1024px)"
+  href="css/main_medium.css"
+/>
 ```
 
 `main.css` 를 연결하고, 반응형이 들어있는 `main_midium.css` 도 연결하는데, 이 때 `midia` 속성을 사용하여 미디어 타입과 특성을 정의해 사용할 수 있다.

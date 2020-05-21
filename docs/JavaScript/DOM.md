@@ -19,9 +19,9 @@
       - [previousSibling, nextSibling](#previoussibling-nextsibling)
       - [previousElementSibling, nextElementSibling](#previouselementsibling-nextelementsibling)
   - [DOM Manipulation (조작)](#dom-manipulation-조작)
-      - [nodeName](#nodename)
-      - [nodeType](#nodetype)
-      - [nodeValue](#nodevalue)
+    - [nodeName](#nodename)
+    - [nodeType](#nodetype)
+    - [nodeValue](#nodevalue)
     - [텍스트 노드에의 접근/수정](#텍스트-노드에의-접근수정)
     - [속성 노드에의 접근/수정](#속성-노드에의-접근수정)
       - [className](#classname)
@@ -105,8 +105,8 @@ DOM tree는 네 종류의 노드로 구성된다.
 ```
 
 ```javascript
-const elem = document.getElementById('sphinx');
-elem.className = 'red';
+const elem = document.getElementById("sphinx");
+elem.className = "red";
 ```
 
 - 결과
@@ -119,8 +119,8 @@ elem.className = 'red';
 - HTMLElement를 상속받은 객체를 리턴한다.
 
 ```javascript
-const elem = document.querySelector('#sphinx');
-elem.className = 'red';
+const elem = document.querySelector("#sphinx");
+elem.className = "red";
 ```
 
 ![animal-result-1](images/animal-result-1.png)
@@ -133,9 +133,9 @@ elem.className = 'red';
 - HTMLCollection 을 리턴한다. (live)
 
 ```javascript
-const elems = document.getElementsByClassName('black');
+const elems = document.getElementsByClassName("black");
 for (let i = 0; i < elems.length; i++) {
-  elems[i].className = 'red';
+  elems[i].className = "red";
 }
 ```
 
@@ -153,20 +153,20 @@ for (let i = 0; i < elems.length; i++) {
 - while 반복문을 사용하면서, elems의 요소가 남아있지 않을 때까지 반복한다.
 
 ```javascript
-const elems = document.getElementsByClassName('black');
+const elems = document.getElementsByClassName("black");
 
 while (elems.length > 0) {
   // elems에 요소가 남아 있지 않을 때까지 무한반복
-  elems[0].className = 'red';
+  elems[0].className = "red";
 }
 ```
 
 - HTMLCollection을 배열로 변경한다. (권장)
 
 ```javascript
-const elems = document.getElementsByClassName('black');
+const elems = document.getElementsByClassName("black");
 
-[...elems].forEach((elem) => (elem.className = 'red'));
+[...elems].forEach((elem) => (elem.className = "red"));
 ```
 
 - querySelectorAll 메소드를 사용한다.
@@ -181,8 +181,8 @@ const elems = document.getElementsByClassName('black');
 > NodeList는 HTMLCollection과 달리 non-live 이기 때문에, loop 안에서 length의 변화가 일어나지 않는다.
 
 ```javascript
-const elems = document.querySelectorAll('.black');
-elems.forEach((elem) => (elem.className = 'red'));
+const elems = document.querySelectorAll(".black");
+elems.forEach((elem) => (elem.className = "red"));
 ```
 
 #### document.getElementsByTagName(tagName)
@@ -191,8 +191,8 @@ elems.forEach((elem) => (elem.className = 'red'));
 - HTMLCollection (live)을 리턴한다
 
 ```javascript
-const elems = document.getElementsByTagName('li');
-[...elems].forEach((elem) => (elem.className = 'red'));
+const elems = document.getElementsByTagName("li");
+[...elems].forEach((elem) => (elem.className = "red"));
 ```
 
 ### DOM Traversing(탐색)
@@ -205,8 +205,8 @@ const elems = document.getElementsByTagName('li');
 - HTMLElement를 상속받은 객체를 리턴한다.
 
 ```javascript
-const elem = document.querySelector('#sphinx');
-elem.parentNode.className = 'red';
+const elem = document.querySelector("#sphinx");
+elem.parentNode.className = "red";
 ```
 
 #### firstChild, lastChild
@@ -215,9 +215,9 @@ elem.parentNode.className = 'red';
 - HTMLElement를 상속받은 객체를 리턴한다.
 
 ```javascript
-const elem = document.querySelector('ul');
-elem.firstChild.className = 'black';
-elem.lastChild.className = 'black';
+const elem = document.querySelector("ul");
+elem.firstChild.className = "black";
+elem.lastChild.className = "black";
 ```
 
 위의 예제를 실행해보면 잘 동작하지 않는데, IE를 제외한 대부분의 브라우저들이 요소 사이의 공백 또는 줄바꿈 문자를 텍스트 노드로 취급하여 첫번째 자식 노드, 마지막 자식 노드를 HTML 요소로 판단하지 않기 때문이다.
@@ -227,6 +227,7 @@ elem.lastChild.className = 'black';
 - HTML의 공백을 제거한다.
 
 ```html
+<!-- prettier-ignore -->
 <ul><li id="cocker" class="red">코카</li>
   <li id="sichu" class="red">시츄</li>
   <li id="poodle" class="red">푸들</li></ul>
@@ -253,7 +254,7 @@ elem.lastChild.className = 'black';
 - HTMLCollection(live)를 리턴한다.
 
 ```javascript
-const elem = document.querySelector('ul');
+const elem = document.querySelector("ul");
 
 if (elem.hasChildNodes()) {
   console.log(elem.childNodes);
@@ -317,7 +318,7 @@ if (elem.hasChildNodes()) {
 4. nodeValue를 이용하여 텍스트 수정
 
 ```javascript
-const elem = document.querySelector('ul');
+const elem = document.querySelector("ul");
 console.dir(elem); // HTMLElement: ul
 console.log(elem.nodeName); // UL
 console.log(elem.nodeType); // 1: Element node
@@ -332,7 +333,7 @@ const textNode = firstDog.firstChild;
 console.log(textNode.nodeName); // #text
 console.log(textNode.nodeType); // 3: Text node
 console.log(textNode.nodeValue); // 코카
-textNode.nodeValue = '포메리안';
+textNode.nodeValue = "포메리안";
 ```
 
 ![animal-result-5](images/animal-result-5.png)
@@ -348,11 +349,11 @@ textNode.nodeValue = '포메리안';
 class 속성의 값을 취득 또는 변경한다. className 프로퍼티에 값을 할당하는 경우 class 속성이 없으면 class 속성을 생성하고 지정된 값을 설정한다. class 속성의 값이 여러 개일 경우 공백으로 구분된 문자열이 반환되므로 String 메소드 `split(' ')` 을 사용하여 배열로 변경하여 사용한다.
 
 ```javascript
-const elems = document.querySelectorAll('li');
+const elems = document.querySelectorAll("li");
 
 [...elems].forEach((elem) => {
-  if (elem.className === 'red') {
-    elem.className = 'black';
+  if (elem.className === "red") {
+    elem.className = "black";
   }
 });
 ```
@@ -364,11 +365,11 @@ const elems = document.querySelectorAll('li');
 add, remove, item, toggle, contains, replace 메소드를 제공한다.
 
 ```javascript
-const elems = document.querySelectorAll('li');
+const elems = document.querySelectorAll("li");
 
 [...elems].forEach((elem) => {
-  if (elem.classList.contains('black')) {
-    elem.classList.replace('black', 'red');
+  if (elem.classList.contains("black")) {
+    elem.classList.replace("black", "red");
   }
 });
 ```
@@ -380,12 +381,12 @@ const elems = document.querySelectorAll('li');
 - `id` 속성의 값을 취득 또는 변경한다. `id` 속성에 값을 할당하는 경우, `id` 속성이 존재하지 않으면 `id` 속성을 생성하고 지정된 값을 설정한다.
 
 ```javascript
-const heading = document.querySelector('h1');
+const heading = document.querySelector("h1");
 
 console.dir(heading);
 console.log(heading.firstChild.nodeValue);
 
-heading.id = 'heading';
+heading.id = "heading";
 console.log(heading.id); // heading
 ```
 
@@ -410,20 +411,20 @@ console.log(heading.id); // heading
 - Return : undefined
 
 ```javascript
-const elems = document.querySelectorAll('li');
+const elems = document.querySelectorAll("li");
 
 elems.forEach((elem) => {
-  if (elem.hasAttribute('class')) {
-    console.log(elem.getAttribute('id'));
+  if (elem.hasAttribute("class")) {
+    console.log(elem.getAttribute("id"));
   }
 });
 
-const sphinx = document.getElementById('sphinx');
-sphinx.setAttribute('class', 'red');
+const sphinx = document.getElementById("sphinx");
+sphinx.setAttribute("class", "red");
 
-const sichu = document.getElementById('sichu');
-sichu.removeAttribute('class');
-console.log(sichu.hasAttribute('class'));
+const sichu = document.getElementById("sichu");
+sichu.removeAttribute("class");
+console.log(sichu.hasAttribute("class"));
 ```
 
 ![animal-result-9](images/animal-result-9.png)
@@ -435,16 +436,16 @@ console.log(sichu.hasAttribute('class'));
 요소의 텍스트 콘텐츠를 취득 또는 변경한다. 이 때 마크업은 무시되기 때문에 `ul.textContent = '<h1>Heading</h1>'` 처럼 마크업을 포함시키면 문자열로 인식되어 그대로 출력된다.
 
 ```javascript
-const ul = document.querySelector('ul');
+const ul = document.querySelector("ul");
 console.log(ul.textContent);
 
-const cocker = document.getElementById('cocker');
+const cocker = document.getElementById("cocker");
 console.log(cocker.textContent);
 
-cocker.textContent += '스 파니엘';
+cocker.textContent += "스 파니엘";
 console.log(cocker.textContent);
 
-cocker.textContent = '<li>코카스 파니엘</li>';
+cocker.textContent = "<li>코카스 파니엘</li>";
 console.log(cocker.textContent);
 ```
 
@@ -459,16 +460,16 @@ innerText 프로퍼티로도 텍스트 콘텐츠에 접근할 수 있다. 하지
 해당 요소의 모든 자식 요소를 포함하는 모든 콘텐츠를 하나의 문자열로 취득할 수 있다. 이 문자열은 마크업을 포함한다.
 
 ```javascript
-const ul = document.querySelector('ul');
+const ul = document.querySelector("ul");
 console.log(ul.innerHTML);
 
-const cocker = document.getElementById('cocker');
+const cocker = document.getElementById("cocker");
 console.log(cocker.innerHTML);
 
-cocker.innerHTML += '스 파니엘';
+cocker.innerHTML += "스 파니엘";
 console.log(cocker.innerHTML);
 
-cocker.innerHTML = '<li>코카스 파니엘</li>';
+cocker.innerHTML = "<li>코카스 파니엘</li>";
 console.log(cocker.innerHTML);
 ```
 
@@ -477,7 +478,7 @@ console.log(cocker.innerHTML);
 innerHTML 프로퍼티를 사용하여 마크업이 포함된 새로운 요소를 DOM에 추가할 수 있다.
 
 ```javascript
-const cocker = document.getElementById('cocker');
+const cocker = document.getElementById("cocker");
 cocker.innerHTML += '<li id="york" class="red">요크</li>';
 ```
 
@@ -521,20 +522,20 @@ innerHTML 프로퍼티를 사용하지 않고 새로운 콘텐츠를 추가할 �
 
 ```javascript
 // 태그 이름을 인자로 전달하여 새로운 요소 생성
-const newDog = document.createElement('li');
+const newDog = document.createElement("li");
 
 // 텍스트 노드를 생성
-const newText = document.createTextNode('포메리안');
+const newText = document.createTextNode("포메리안");
 
 // 텍스트 노드를 newDog의 자식으로 DOM 트리에 추가
 newDog.appendChild(newText);
 
-const container = document.querySelector('ul');
+const container = document.querySelector("ul");
 
 // newElem을 container의 자식으로 DOM 트리에 추가. 마지막 요소로 추가된다.
 container.appendChild(newDog);
 
-const removeDog = document.getElementById('sichu');
+const removeDog = document.getElementById("sichu");
 
 // container의 자식인 removeElem 요소를 DOM 트리에서 제거한다
 console.log(container.removeChild(removeDog));
@@ -562,11 +563,11 @@ console.log(container.removeChild(removeDog));
 ```
 
 ```javascript
-const dogList = document.querySelector('ul');
-dogList.insertAdjacentHTML('afterbegin', '<li id="york" class="dog">요크</li>');
+const dogList = document.querySelector("ul");
+dogList.insertAdjacentHTML("afterbegin", '<li id="york" class="dog">요크</li>');
 dogList.insertAdjacentHTML(
-  'beforeend',
-  '<li id="dober" class="dog">도베르만</li>',
+  "beforeend",
+  '<li id="dober" class="dog">도베르만</li>'
 );
 ```
 
@@ -604,18 +605,18 @@ innerHTML과 insertAdjacentHTML()은 크로스 스크립팅 공격(XSS: Cross-Si
 style 속성을 사용하면 inline 스타일 선언을 생성한다. 특정 요소에 inline 스타일을 지정하는 경우 사용한다.
 
 ```javascript
-const dogList = document.querySelector('ul');
-dogList.insertAdjacentHTML('afterbegin', '<li id="york" class="dog">요크</li>');
+const dogList = document.querySelector("ul");
+dogList.insertAdjacentHTML("afterbegin", '<li id="york" class="dog">요크</li>');
 dogList.insertAdjacentHTML(
-  'beforeend',
-  '<li id="dober" class="dog">도베르만</li>',
+  "beforeend",
+  '<li id="dober" class="dog">도베르만</li>'
 );
 
-const york = document.getElementById('york');
-const dober = document.getElementById('dober');
+const york = document.getElementById("york");
+const dober = document.getElementById("dober");
 
-york.style.color = 'red';
-dober.style.color = 'red';
+york.style.color = "red";
+dober.style.color = "red";
 ```
 
 ![animal-result-15](images/animal-result-15.png)
@@ -623,17 +624,17 @@ dober.style.color = 'red';
 style 프로퍼티 값을 취득하려면 window.getComputedStyle을 사용한다. 이 메소드는 인자로 주어진 요소의 모든 CSS 프로퍼티 값을 반환한다.
 
 ```javascript
-const box = document.querySelector('.box');
+const box = document.querySelector(".box");
 
-const width = getStyle(box, 'width');
-const height = getStyle(box, 'height');
-const backgroundColor = getStyle(box, 'background-color');
-const border = getStyle(box, 'border');
+const width = getStyle(box, "width");
+const height = getStyle(box, "height");
+const backgroundColor = getStyle(box, "background-color");
+const border = getStyle(box, "border");
 
-console.log('width: ' + width);
-console.log('height: ' + height);
-console.log('backgroundColor: ' + backgroundColor);
-console.log('border: ' + border);
+console.log("width: " + width);
+console.log("height: " + height);
+console.log("backgroundColor: " + backgroundColor);
+console.log("border: " + border);
 
 /**
  * 요소에 적용된 CSS 프로퍼티를 반환한다.

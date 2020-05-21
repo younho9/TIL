@@ -1,6 +1,6 @@
 # CSS 속성 7. `overflow`
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ## `overflow`
 
@@ -8,11 +8,11 @@
 
 ### 속성 값
 
-| 값        | 의미                                                         | 기본값    |
-| --------- | ------------------------------------------------------------ | --------- |
-| `visible` | 넘친 부분을 자르지 않고 그대로 보여줌                        | `visible` |
-| `hidden`  | 넘친 부분을 잘라내고, 보이지 않도록 함                       |           |
-| `scroll`  | 넘친 부분을 잘라내고, 스크롤 바를 이용하여 볼 수 있도록 함   |           |
+| 값        | 의미                                                                | 기본값    |
+| --------- | ------------------------------------------------------------------- | --------- |
+| `visible` | 넘친 부분을 자르지 않고 그대로 보여줌                               | `visible` |
+| `hidden`  | 넘친 부분을 잘라내고, 보이지 않도록 함                              |           |
+| `scroll`  | 넘친 부분을 잘라내고, 스크롤 바를 이용하여 볼 수 있도록 함          |           |
 | `auto`    | 넘친 부분이 있는 경우만 잘라내 스크롤 바를 이용하여 볼 수 있도록 함 |           |
 
 ### 사용법
@@ -21,7 +21,7 @@
 overflow: visible;
 overflow: hidden;
 overflow: scroll;
-overflow: auto
+overflow: auto;
 ```
 
 ### 예제
@@ -73,7 +73,7 @@ overflow-y: scroll;
 overflow-x: auto;
 ```
 
-```css 
+```css
 overflow-y: auto;
 ```
 

@@ -1,6 +1,6 @@
 # 선택자(Selector) - 1편
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ## 기본 선택자(Basic Selectors)
 
@@ -15,15 +15,23 @@
 ```
 
 ```html
-<div>   <!--선택-->
-  <ul>    <!--선택-->
-    <li>사과</li>   <!--선택-->
-    <li>딸기</li>   <!--선택-->
-    <li>오렌지</li>   <!--선택-->
+<div>
+  <!--선택-->
+  <ul>
+    <!--선택-->
+    <li>사과</li>
+    <!--선택-->
+    <li>딸기</li>
+    <!--선택-->
+    <li>오렌지</li>
+    <!--선택-->
   </ul>
-  <div>당근</div> <!--선택-->
-  <p>토마토</p>   <!--선택-->
-  <span>오렌지</span><!--선택-->
+  <div>당근</div>
+  <!--선택-->
+  <p>토마토</p>
+  <!--선택-->
+  <span>오렌지</span
+  ><!--선택-->
 </div>
 ```
 
@@ -40,9 +48,12 @@ li {
 ```html
 <div>
   <ul>
-    <li>사과</li>   <!--선택-->
-    <li>딸기</li>   <!--선택-->
-    <li>오렌지</li>   <!--선택-->
+    <li>사과</li>
+    <!--선택-->
+    <li>딸기</li>
+    <!--선택-->
+    <li>오렌지</li>
+    <!--선택-->
   </ul>
   <div>당근</div>
   <p>토마토</p>
@@ -65,11 +76,13 @@ li {
   <ul>
     <li>사과</li>
     <li>딸기</li>
-    <li class="orange">오렌지</li>   <!--선택-->
+    <li class="orange">오렌지</li>
+    <!--선택-->
   </ul>
   <div>당근</div>
   <p>토마토</p>
-  <span class="orange">오렌지</span>   <!--선택-->
+  <span class="orange">오렌지</span>
+  <!--선택-->
 </div>
 ```
 
@@ -79,7 +92,6 @@ li {
 #orange {
   color: red;
 }
-
 ```
 
 ```html
@@ -87,7 +99,8 @@ li {
   <ul>
     <li>사과</li>
     <li>딸기</li>
-    <li id="orange" class="orange">오렌지</li>   <!--선택-->
+    <li id="orange" class="orange">오렌지</li>
+    <!--선택-->
   </ul>
   <div>당근</div>
   <p>토마토</p>
@@ -105,7 +118,7 @@ li {
 
 ```css
 span.orange {
- color: red;
+  color: red;
 }
 ```
 
@@ -118,7 +131,8 @@ span.orange {
   </ul>
   <div>당근</div>
   <p>토마토</p>
-  <span class="orange">오렌지</span>   <!--선택-->
+  <span class="orange">오렌지</span>
+  <!--선택-->
 </div>
 ```
 
@@ -137,7 +151,8 @@ ul > .orange {
   <ul>
     <li>사과</li>
     <li>딸기</li>
-    <li id="orange" class="orange">오렌지</li>   <!--선택-->
+    <li id="orange" class="orange">오렌지</li>
+    <!--선택-->
   </ul>
   <div>당근</div>
   <p>토마토</p>
@@ -160,11 +175,13 @@ div .orange {
   <ul>
     <li>사과</li>
     <li>딸기</li>
-    <li id="orange" class="orange">오렌지</li>   <!--선택-->
+    <li id="orange" class="orange">오렌지</li>
+    <!--선택-->
   </ul>
   <div>당근</div>
   <p>토마토</p>
-  <span class="orange">오렌지</span>   <!--선택-->
+  <span class="orange">오렌지</span>
+  <!--선택-->
 </div>
 ```
 
@@ -184,7 +201,8 @@ div .orange {
   <li>딸기</li>
   <li>수박</li>
   <li class="orange">오렌지</li>
-  <li>망고</li>   <!--선택-->
+  <li>망고</li>
+  <!--선택-->
   <li>사과</li>
 </ul>
 ```
@@ -205,8 +223,10 @@ div .orange {
   <li>딸기</li>
   <li>수박</li>
   <li class="orange">오렌지</li>
-  <li>망고</li>   <!--선택-->
-  <li>사과</li>   <!--선택-->
+  <li>망고</li>
+  <!--선택-->
+  <li>사과</li>
+  <!--선택-->
 </ul>
 ```
 

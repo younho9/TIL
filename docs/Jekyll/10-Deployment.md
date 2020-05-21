@@ -11,7 +11,7 @@
 `Gemfile` 을 루트 디렉토리에 다음과 같이 만든다.
 
     source 'https://rubygems.org'
-    
+
     gem 'jekyll'
 
 그리고 나서 터미널에서 `bundle install` 을 실행한다. 이것은 gems를 설치하고, `Gemfile.lock` 을 만든다. `Gemfile.lock` 은 현재의 gem 버젼을 다음에 있을 `bundle install` 전까지 고정시킨다. 만약 gem 버젼을 업데이트하고 싶다면 `bundle update` 를 실행할 수 있다.
@@ -37,9 +37,9 @@ Jekyll은 많은 플러그인을 가지고 있다. - [Jekyll plugins](https://je
 이 세 가지 플러그인을 사용하기 위해서 `Gemfile` 에 추가한다.
 
     source 'https://rubygems.org'
-    
+
     gem 'jekyll'
-    
+
     group :jekyll_plugins do
       gem 'jekyll-sitemap'
       gem 'jekyll-feed'
@@ -62,18 +62,16 @@ plugins:
 `jekyll-feed` 와 `jekyll-seo-tag` 를 사용하기 위해서는 `_layouts/default.html` 에 따로 태그를 추가해 주어야 한다.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    {% feed_meta %}
-    {% seo %}
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    {% feed_meta %} {% seo %}
   </head>
   <body>
-    {% include navigation.html %}
-    {{ content }}
+    {% include navigation.html %} {{ content }}
   </body>
 </html>
 ```
@@ -94,7 +92,7 @@ JEKYLL_ENV=production bundle exec jekyll build
 
 ```html
 {% if jekyll.environment == "production" %}
-  <script src="my-analytics-script.js"></script>
+<script src="my-analytics-script.js"></script>
 {% endif %}
 ```
 

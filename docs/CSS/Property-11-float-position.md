@@ -1,6 +1,6 @@
 # CSS 속성 11. 띄움(정렬), 위치 관련 속성
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ## float
 
@@ -21,9 +21,7 @@
 ```html
 <article>
   <div class="picture"></div>
-  Lorem ipsum
-  ...
-  dolore voluptatum! 
+  Lorem ipsum ... dolore voluptatum!
 </article>
 ```
 
@@ -336,10 +334,10 @@ position > z-index > HTML 마지막 코드
 
 요소의 `position` 기준에 맞는 '위쪽', '아래쪽', '왼쪽', '오른쪽'에서의 거리(위치)를 설정
 
-| 값     | 의미                                                         | 기본값 |
-| ------ | ------------------------------------------------------------ | ------ |
-| `auto` | 브라우저가 계산                                              | `auto` |
-| 단위   | `px` , `em` , `cm` 등 단위로 지정                            | `0`    |
+| 값     | 의미                                                                              | 기본값 |
+| ------ | --------------------------------------------------------------------------------- | ------ |
+| `auto` | 브라우저가 계산                                                                   | `auto` |
+| 단위   | `px` , `em` , `cm` 등 단위로 지정                                                 | `0`    |
 | `%`    | 부모(위치 상의 부모(조상)) 요소의 가로 또는 세로 너비의 비율로 지정, 음수 값 허용 |        |
 
 > ☝️ 위의 네 요소는 `position` 속성이 지정되어 있을 때만 사용할 수 있다.

@@ -10,7 +10,7 @@ CSS와 다른 점은, Sass는 기본적으로 외부의 Sass(또는 SCSS) 파일
 
 따라서 Sass에서 `@import` 를 사용하면 최종적으로 하나의 CSS로 컴파일해주기 때문에 여러 번의 요청을 보낼 필요가 없어서 성능적으로도 좋다. 또한 가져온 파일에 정의된 모든 변수 또는 Mixins 등을 주 파일에서 사용할 수 있으므로 유용하다.
 
-> 🔗 [CSS - Overview - `@import` 방식](../CSS/Overview.md) 참조  
+> 🔗 [CSS - Overview - `@import` 방식](../CSS/Overview.md) 참조
 
 Sass는 기본적으로 Sass(또는 SCSS) 파일을 가져오지만, 몇 가지 경우에는 CSS `@import` 문법으로 변환되므로 주의해야한다.
 
@@ -64,7 +64,7 @@ Sass-App
 
 ```scss
 // main.scss
-@import "header", "side-menu"
+@import "header", "side-menu";
 ```
 
 `node-sass` 로 컴파일하면
@@ -133,4 +133,3 @@ Sass-App
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
 
 [Sass(SCSS) 완전 정복!](https://heropy.blog/2018/01/31/sass/)
-

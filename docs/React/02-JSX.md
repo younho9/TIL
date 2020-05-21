@@ -37,9 +37,9 @@ yarn start # 또는 npm start
 `src/App.js`
 
 ```javascript
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -67,7 +67,7 @@ export default App;
 
 create-react-app으로 프로젝트를 생성한 후 `src/App.js` 를 열어보면 다음의 코드가 생성되어 있다.
 
-`import React from 'react';` 이 코드는 리액트 라이브러리를 불러와서 사용할 수 있게 해주는 코드이다. 리액트 프로젝트를 만들면 `node_modules` 디렉토리가 함께 생성되는데, 이 디렉토리는 npm(Node Package Manager)으로 설치한 외부 패키지들이 저장되는 곳이다. 이 디렉토리에 있는 리액트 모듈을 가져와서 사용하는 것이다. 
+`import React from 'react';` 이 코드는 리액트 라이브러리를 불러와서 사용할 수 있게 해주는 코드이다. 리액트 프로젝트를 만들면 `node_modules` 디렉토리가 함께 생성되는데, 이 디렉토리는 npm(Node Package Manager)으로 설치한 외부 패키지들이 저장되는 곳이다. 이 디렉토리에 있는 리액트 모듈을 가져와서 사용하는 것이다.
 
 `import logo from './logo.svg';` , `import './App.css';` 이 코드를 보면 리액트 뿐만 아니라 css, svg 또한 모듈로 가져오는 것을 확인할 수 있다. 이처럼 js, 스타일시트, 이미지 등 모든 것을 모듈로 로딩해서 사용하도록 할 수 있다. 이렇게 모듈 시스템을 사용하면, 파일 단위로 관리할 수 있어서 프로젝트의 규모가 커질 때 관리하기 용이해진다.
 
@@ -122,7 +122,12 @@ function App() {
 
 ```javascript
 function App() {
-  return React.createElement("div", null, "Hello ", React.createElement("b", null, "react"));
+  return React.createElement(
+    "div",
+    null,
+    "Hello ",
+    React.createElement("b", null, "react")
+  );
 }
 ```
 
@@ -141,7 +146,7 @@ JSX는 HTML 코드와 비슷해 가독성이 높고 작성하기도 쉽다.
 HTML 태그 뿐만 아니라 리액트 컴포넌트를 JSX 안에서 작성할 수 있다. `App.js` 에서 만든 App 컴포넌트를 `src/index.js` 에서는 마치 HTML 태그 쓰듯이 작성한다.
 
 ```javascript
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 > `index.js` 의 이 코드는 App 컴포넌트를 `public/index.html` 파일에 작성된 `id="root"` 인 요소 안에 렌더링하는 역할을 한다.
@@ -174,7 +179,7 @@ Virtual DOM에서 컴포넌트 변화를 감지할 때 효율적으로 비교하
 `src/App.js`
 
 ```javascript
-import React from 'react';
+import React from "react";
 
 function App() {
   return (
@@ -197,7 +202,7 @@ export default App;
 `src/App.js`
 
 ```javascript
-import React, {Fragment} from 'react';
+import React, { Fragment } from "react";
 
 function App() {
   return (
@@ -216,7 +221,7 @@ Fragment를 이렇게도 표현할 수 있다.
 `src/App.js`
 
 ```javascript
-import React from 'react';
+import React from "react";
 
 function App() {
   return (
@@ -241,10 +246,10 @@ JSX 안에서는 JS 표현식을 쓸 수 있다. JSX 내부에 코드를 `{}` �
 `src/App.js`
 
 ```javascript
-import React from 'react';
+import React from "react";
 
 function App() {
-	const name = 'React';
+  const name = "React";
   return (
     <>
       <h1>Hello World!</h1>
@@ -265,7 +270,7 @@ JSX 밖에서 if 문을 사용할 수 있지만, JSX 내부에서는 조건부 �
 `src/App.js`
 
     import React from 'react';
-    
+
     function App() {
     	const name = 'React';
       return (
@@ -278,7 +283,7 @@ JSX 밖에서 if 문을 사용할 수 있지만, JSX 내부에서는 조건부 �
         </div>
       );
     }
-    
+
     export default App;
 
 #### AND 연산자(&&)
@@ -288,15 +293,11 @@ JSX 밖에서 if 문을 사용할 수 있지만, JSX 내부에서는 조건부 �
 `src/App.js`
 
 ```javascript
-import React from 'react';
+import React from "react";
 
 function App() {
-	const name = 'Reaaaact';
-  return (
-    <div>
-      {name === 'React' ? <h1>Hello React!</h1> : null}
-    </div>
-  );
+  const name = "Reaaaact";
+  return <div>{name === "React" ? <h1>Hello React!</h1> : null}</div>;
 }
 
 export default App;
@@ -314,14 +315,14 @@ export default App;
 
 > [🔗 Truthy and Falsy](https://learnjs.vlpt.us/useful/02-truthy-and-falsy.html)
 
-주의할 점은 falsy한 값인 0은 예외적으로 화면에 나타난다는 것이다. 
+주의할 점은 falsy한 값인 0은 예외적으로 화면에 나타난다는 것이다.
 
 ```javascript
 const number = 0;
-return number && <div>내용</div>
+return number && <div>내용</div>;
 ```
 
-이 코드는 화면에 숫자 0이 렌더링된다. 
+이 코드는 화면에 숫자 0이 렌더링된다.
 
 #### undefined를 렌더링하지 않기
 
@@ -330,8 +331,8 @@ return number && <div>내용</div>
 `src/App.js`
 
 ```javascript
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function App() {
   const name = undefined;

@@ -73,9 +73,15 @@ Sass(SCSS)는 중첩 기능을 제공해주어 상위 선택자의 반복을 피
 
 ```scss
 .fs {
-  &-small { font-size: 12px; }
-  &-medium { font-size: 14px; }
-  &-large { font-size: 16px; }
+  &-small {
+    font-size: 12px;
+  }
+  &-medium {
+    font-size: 14px;
+  }
+  &-large {
+    font-size: 16px;
+  }
 }
 ```
 
@@ -93,7 +99,7 @@ Sass(SCSS)는 중첩 기능을 제공해주어 상위 선택자의 반복을 피
 }
 ```
 
-### 중첩 벗어나기 `@at-root` 
+### 중첩 벗어나기 `@at-root`
 
 `@at-root` 는 중첩에서 벗어나고 싶을 때 사용하는 키워드이다.
 
@@ -112,7 +118,7 @@ Sass(SCSS)는 중첩 기능을 제공해주어 상위 선택자의 반복을 피
 }
 ```
 
-`$width` , `$height` 와 같이 이름 앞에 `$` 가 붙은 값은 변수로 사용할 수 있다. 
+`$width` , `$height` 와 같이 이름 앞에 `$` 가 붙은 값은 변수로 사용할 수 있다.
 
 > 🔗 [Sass(SCSS) Syntax - 3. 변수](./Syntax-3-variables.md) 참조
 
@@ -166,19 +172,19 @@ Sass(SCSS)는 중첩 기능을 제공해주어 상위 선택자의 반복을 피
     weight: bold;
     size: 10px;
     family: sans-serif;
-  };
+  }
   margin: {
     top: 10px;
     left: 20px;
-  };
+  }
   padding: {
     bottom: 40px;
     right: 30px;
-  };
+  }
 }
 ```
 
-> ☝️ `(속성의 접두사): {}` 
+> ☝️ `(속성의 접두사): {}`
 
 컴파일하면
 

@@ -6,7 +6,7 @@
 
 ## 설치
 
-Jekyll은 Ruby 프로그램이므로 먼저 컴퓨터에 Ruby를 설치해야한다. 
+Jekyll은 Ruby 프로그램이므로 먼저 컴퓨터에 Ruby를 설치해야한다.
 
 [Installation](https://jekyllrb.com/docs/installation/)
 
@@ -48,10 +48,10 @@ bundle
 `index.html` 을 생성하고 아래를 입력한다.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Home</title>
   </head>
   <body>

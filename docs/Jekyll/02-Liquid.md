@@ -4,7 +4,7 @@
 
 Liquid는 Jekyll이 사용하고 있는 템플릿 언어이다.
 
-크게 Objects, tags, filters의 3가지 메인 파트로 구성된다. 
+크게 Objects, tags, filters의 3가지 메인 파트로 구성된다.
 
 ## Objects
 
@@ -28,11 +28,11 @@ Liquid는 Jekyll이 사용하고 있는 템플릿 언어이다.
     	</div>
     {% endif %}
 
-`page.show_sidebar` 가 참이면 사이드바가 출력된다. 
+`page.show_sidebar` 가 참이면 사이드바가 출력된다.
 
 ## Filters
 
-필터는 Liquid 객체의 출력을 변경한다. 출력 내에서 사용되며, `|` 로 구분된다. 
+필터는 Liquid 객체의 출력을 변경한다. 출력 내에서 사용되며, `|` 로 구분된다.
 
 예를 들면
 

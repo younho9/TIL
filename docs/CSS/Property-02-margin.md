@@ -1,6 +1,6 @@
 # CSS 속성 2. `margin`
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ## `margin`
 
@@ -21,10 +21,10 @@
 ### 사용법
 
 ```css
-margin: 위 우 아래 좌;       /* 시계 방향 */
-margin: 위 [좌, 우] 아래;    /* 위 아래 방향 */
+margin: 위 우 아래 좌; /* 시계 방향 */
+margin: 위 [좌, 우] 아래; /* 위 아래 방향 */
 margin: [위, 아래] [좌, 우]; /* 위,아래 + 좌,우 */
-margin: [위, 아래, 좌, 우];  /* 모든 방향 */
+margin: [위, 아래, 좌, 우]; /* 모든 방향 */
 ```
 
 ```css
@@ -42,7 +42,7 @@ margin: [위, 아래, 좌, 우];  /* 모든 방향 */
 
 ```css
 .box1 {
-  margin: 10px 20px 30px 40px;	/* 단축 속성 */
+  margin: 10px 20px 30px 40px; /* 단축 속성 */
 }
 .box2 {
   /* 개별 속성 */
@@ -62,8 +62,6 @@ margin: [위, 아래, 좌, 우];  /* 모든 방향 */
 3. 부모 요소의 `margin-bottom` 과 자식 요소의 `margin-bottom` 이 만났을 때
 
 > '마진 중복'은 버그(오류)가 아니다. 현상을 우회하거나 응용할 수 있다.
-
-
 
 ### 형제 요소끼리 만났을 때
 
@@ -102,8 +100,6 @@ margin: [위, 아래, 좌, 우];  /* 모든 방향 */
 
 하지만 `float: left;` 속성을 제거하면, 블록 요소가 수직으로 쌓이게 되는데 이 때 형제 요소들의 `margin-top` 과 `margin-bottom` 이 만나면서 `margin` 이 `40px` 이 되는 것이 아니라 그대로 `20px` 임을 확인할 수 있다. 이것이 마진 중복이다.
 
-
-
 ### 부모 요소와 자식 요소가 만났을 때
 
 ```html
@@ -131,8 +127,6 @@ margin: [위, 아래, 좌, 우];  /* 모든 방향 */
 이렇게 부모 요소의 `margin-top` 과 자식 요소의 `margin-top` 이 만나있다면 자식 요소의 `margin-top` 이 합쳐지게 된다.
 
 > 부모 요소의 `margin-top` 과 자식 요소의 `margin-top` 이 만나지 않도록 부모 요소에 `padding: 10px;` 을 추가하면 마진 중복이 발생하지 않는다.
-
-
 
 ### 마진 중복 계산법
 

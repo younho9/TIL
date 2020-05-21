@@ -23,7 +23,8 @@
 컴파일하면
 
 ```css
-.btn, .btn-danger {
+.btn,
+.btn-danger {
   padding: 10px;
   margin: 10px;
   background: blue;
@@ -74,7 +75,8 @@
   background: blue;
 }
 
-.container .item .icon, .container .item .new-icon {
+.container .item .icon,
+.container .item .new-icon {
   width: 100px;
   height: 100px;
   background: green;
@@ -91,10 +93,9 @@
 
 확장은 유익할 수 있으나 **부작용**이 있다. (사용을 권장하지 않음)
 
-> ☝️ `@mixin` 으로 대체해서 사용 
+> ☝️ `@mixin` 으로 대체해서 사용
 >
 > 🔗 [Sass Guidelines Extend](https://sass-guidelin.es/ko/#extend) 참고
-
 
 ## Reference
 

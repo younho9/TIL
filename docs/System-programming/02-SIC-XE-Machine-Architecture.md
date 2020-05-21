@@ -3,10 +3,10 @@
 # 시스템 소프트웨어와 기계 종속성
 
 1. 시스템 소프트웨어의 설계는 그 소프트웨어가 동작할 머신의 구조와 밀접한 관련이 있다.
-    - 예를 들어, 어셈블러는 mnemonic instruction을 machine code로 해석하고, 운영체제는 컴퓨팅 시스템의 자원을 직접적으로 관리한다.
+   - 예를 들어, 어셈블러는 mnemonic instruction을 machine code로 해석하고, 운영체제는 컴퓨팅 시스템의 자원을 직접적으로 관리한다.
 2. 시스템의 구체적인 구현법은 시간이 지남에 따라 변했지만, 바탕에 깔려있는 컨셉은 여전하다.
 3. 시스템 소프트웨어의 기본적인 구조와 설계는 대부분의 컴퓨터에서 비슷하다.
-    - 예를 들어, 어셈블러의 일반적인 설계와 로직은 다른 머신 아키텍쳐에서 거의 동일하다.
+   - 예를 들어, 어셈블러의 일반적인 설계와 로직은 다른 머신 아키텍쳐에서 거의 동일하다.
 
 # SIC와 SIC/XE
 
@@ -92,7 +92,7 @@ Character는 8비트(ASCII), Integer는 24비트
 
 > 명령어 표기법
 
-A ← (A) + (m .. m+2) : A 레지스터에 A 레지스터의 값과 메모리 주소 *m, m+1, m+2* 에 있는 값(3Bytes word 이므로)을 더해서 넣는다.
+A ← (A) + (m .. m+2) : A 레지스터에 A 레지스터의 값과 메모리 주소 _m, m+1, m+2_ 에 있는 값(3Bytes word 이므로)을 더해서 넣는다.
 
 `()` 로 감싸 있으면 메모리 주소 또는 레지스터 주소에 담겨있는 값을 말하고 감싸 있지 않으면 해당 주소를 말한다.
 
@@ -100,10 +100,10 @@ A ← (A) + (m .. m+2) : A 레지스터에 A 레지스터의 값과 메모리 �
 
 LDA, LDX, STA, STX, etc.
 
-- `LDA m` : A 레지스터 ← (*m .. m+2)*, A 레지스터에 m 이 가르키는 메모리 주소에 있는 값을 Load함.
-- `LDX m` : X 레지스터 ← (*m .. m+2)*, X 레지스터에 m 이 가르키는 메모리 주소에 있는 값을 Load함.
-- `STA m` : (*m .. m+2)* ← A 레지스터, A 레지스터에 있는 값을 m 이 가르키는 메모리 주소에 Store함.
-- `STX m` : (*m .. m+2)* ← X 레지스터, X 레지스터에 있는 값을 m 이 가르키는 메모리 주소에 Store함.
+- `LDA m` : A 레지스터 ← (_m .. m+2)_, A 레지스터에 m 이 가르키는 메모리 주소에 있는 값을 Load함.
+- `LDX m` : X 레지스터 ← (_m .. m+2)_, X 레지스터에 m 이 가르키는 메모리 주소에 있는 값을 Load함.
+- `STA m` : (_m .. m+2)_ ← A 레지스터, A 레지스터에 있는 값을 m 이 가르키는 메모리 주소에 Store함.
+- `STX m` : (_m .. m+2)_ ← X 레지스터, X 레지스터에 있는 값을 m 이 가르키는 메모리 주소에 Store함.
 
 > LDCH, STCH 의 Character 데이터를 다룰 때는 앞의 16비트를 자르고 맨 뒤의 8자리만 Load하고 Store한다
 
@@ -111,31 +111,31 @@ LDA, LDX, STA, STX, etc.
 
 이 명령어들은 모두 A 레지스터와 관련이 있다.
 
-- `ADD m` : A ← (A) + (m .. *m+2*)
-- `SUB m` : A ← (A) - (m .. *m+2*)
-- `MUL m` : A ← (A) * (m .. *m+2*)
-- `DIV m` : A ← (A) / (m .. *m+2*)
-- `AND m` : A ← (A) & (m .. *m+2*)
-- `OR m` : A ← (A) | (m .. *m+2*)
+- `ADD m` : A ← (A) + (m .. _m+2_)
+- `SUB m` : A ← (A) - (m .. _m+2_)
+- `MUL m` : A ← (A) * (m .. *m+2\*)
+- `DIV m` : A ← (A) / (m .. _m+2_)
+- `AND m` : A ← (A) & (m .. _m+2_)
+- `OR m` : A ← (A) | (m .. _m+2_)
 
 ### Comparison
 
 2가지 명령어 COMP 와 TIX
 
 - `COMP m` : 비교되어 나온 값(크다, 작다, 같다)을 SW 레지스터의 Condition code에 저장한다
-- `TIX m` : X ← (X) + 1; 후 X와 (*m .. m+2*) 를 비교한 결과를 SW 레지스터의 Condition code에 저장한다
+- `TIX m` : X ← (X) + 1; 후 X와 (_m .. m+2_) 를 비교한 결과를 SW 레지스터의 Condition code에 저장한다
 
 ### Conditional Jumps
 
 SW 레지스터의 Condition code에 따라 점프하는 명령어이다.
 
-`J m` : PC ← (*m .. m+2*)
+`J m` : PC ← (_m .. m+2_)
 
-`JLT m` : PC ← (*m .. m+2*) if CC set to <
+`JLT m` : PC ← (_m .. m+2_) if CC set to <
 
-`JGT m` : PC ← (*m .. m+2*) if CC set to >
+`JGT m` : PC ← (_m .. m+2_) if CC set to >
 
-`JEQ m` : PC ← (*m .. m+2*) if CC set to =
+`JEQ m` : PC ← (_m .. m+2_) if CC set to =
 
 ### Subroutine Linkage
 
@@ -183,32 +183,32 @@ SIC와는 달리 명령어를 처리하는 포맷이 존재한다.
 
 - Format 1 (1 byte) : Opcode(8bits)
 - Format 2 (2 byte) : Opcode(8bits) + r1(4bits) + r2(4bits)
-- Format 3 (3 byte) (*Flag e = 0*) : Opcode(6bits) + | n | i | x | b | p | e | + address(12bits)
+- Format 3 (3 byte) (_Flag e = 0_) : Opcode(6bits) + | n | i | x | b | p | e | + address(12bits)
 
 ![sic-xe-format-3-instruction-format](images/sic-xe-format-3-instruction-format.png)
 
-- Format 4 (4 byte) (*Flag e = 1*) : Opcode(6bits) + | n | i | x | b | p | e | + address(20bits)
+- Format 4 (4 byte) (_Flag e = 1_) : Opcode(6bits) + | n | i | x | b | p | e | + address(20bits)
 
 ![sic-xe-format-4-instruction-format](images/sic-xe-format-4-instruction-format.png)
 
 ### Addressing Modes
 
 - **Relative addressing** modes for Format 3
-    - Base relative addressing, when *b=1, p=0 : TA = (B) + disp/addr*
-    - PC relative addressing, when *b=0, p=1 : TA = (PC) + disp/addr*
+  - Base relative addressing, when _b=1, p=0 : TA = (B) + disp/addr_
+  - PC relative addressing, when _b=0, p=1 : TA = (PC) + disp/addr_
 - **Direct addressing** mode for Format 3 & 4
-    - *b = p = 0 : TA = disp/addr*
+  - _b = p = 0 : TA = disp/addr_
 
-> when *x=1* 일 때, **indexed addressing**이 결합되어 (X)가 TA 계산에 더해진다
+> when _x=1_ 일 때, **indexed addressing**이 결합되어 (X)가 TA 계산에 더해진다
 
-- *i=1, n=0* : **immediate addressing**, 메모리 참조 없이 TA가 operand 값으로 쓰인다.
-- *i=0, n=1* : **indirect addressing**, 메모리 참조 값으로 다시 메모리 접근
+- _i=1, n=0_ : **immediate addressing**, 메모리 참조 없이 TA가 operand 값으로 쓰인다.
+- _i=0, n=1_ : **indirect addressing**, 메모리 참조 값으로 다시 메모리 접근
 
 > indexed는 immediate or indirect에서 사용될 수 없다.
 
-- *i=0, n=0* : **simple addressing for SIC**
-    - b, p, e 값이 address field로 쓰인다. (SIC의 address는 15bits이므로)
-- *i=1, n=1* : **simple addressing for SIC/XE**
+- _i=0, n=0_ : **simple addressing for SIC**
+  - b, p, e 값이 address field로 쓰인다. (SIC의 address는 15bits이므로)
+- _i=1, n=1_ : **simple addressing for SIC/XE**
 
 # 참고자료
 

@@ -47,9 +47,9 @@ MySQL, Oracle, SQL Server, PostgreSQL, DB2, Access ...
 - WEB이 등장하면서 웹 개발자들은 WEB Page에 사용할 데이터베이스를 찾게 되었고 무료인 MySQL이 매우 좋은 대안이었음.
 - WEB과 함께 폭발적인 성장.
 
-스프레드시트는 마우스 또는 키보드로 입력해야 함. 
+스프레드시트는 마우스 또는 키보드로 입력해야 함.
 
-데이터베이스는 프로그래밍 언어를 이용해 할 수 있음. 
+데이터베이스는 프로그래밍 언어를 이용해 할 수 있음.
 
 ## MySQL의 구조
 
@@ -88,9 +88,7 @@ USE dbname;
 SHOW DATABASES;
 ```
 
-
-
-- SQL(Structured Query Language) 
+- SQL(Structured Query Language)
 - Structured: 구조화된 / 정리정돈된 데이터베이스를
 - Query: CRUD를 요청할 수 있게
 - Language: 데이터베이스 서버와 유저가 소통할 수 있는 언어로 구현한 프로그램.
@@ -128,9 +126,8 @@ INSERT INTO table_name (column1, column2 ...) VALUES('value1', 'value2' ...)
 
 - `NOW()` : 현재 시간 함수
 
-### SELECT 
+### SELECT
 
 https://dev.mysql.com/doc/refman/8.0/en/select.html
 
 ### READ
-

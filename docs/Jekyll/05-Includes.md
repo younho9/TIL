@@ -25,18 +25,17 @@
 
 네비게이션을 `include` 태그를 이용해 `layout` 에 추가한다.
 
-`_layouts/default.html` 
+`_layouts/default.html`
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>{{ page.title }}</title>
   </head>
   <body>
-    {% include navigation.html %}
-    {{ content }}
+    {% include navigation.html %} {{ content }}
   </body>
 </html>
 ```

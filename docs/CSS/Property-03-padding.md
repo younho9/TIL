@@ -1,6 +1,6 @@
 # CSS 속성 3. `padding`
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ## `padding`
 
@@ -16,10 +16,10 @@
 ### 사용법
 
 ```css
-padding: 위 우 아래 좌;       /* 시계 방향 */
-padding: 위 [좌, 우] 아래;    /* 위 아래 방향 */
+padding: 위 우 아래 좌; /* 시계 방향 */
+padding: 위 [좌, 우] 아래; /* 위 아래 방향 */
 padding: [위, 아래] [좌, 우]; /* 위,아래 + 좌,우 */
-padding: [위, 아래, 좌, 우];  /* 모든 방향 */
+padding: [위, 아래, 좌, 우]; /* 모든 방향 */
 ```
 
 ```css
@@ -37,7 +37,7 @@ padding: [위, 아래, 좌, 우];  /* 모든 방향 */
 
 ```css
 .box1 {
-  padding: 10px 20px 30px 40px;	/* 단축 속성 */
+  padding: 10px 20px 30px 40px; /* 단축 속성 */
 }
 .box2 {
   /* 개별 속성 */
@@ -74,7 +74,7 @@ div {
 ```css
 /* 100 x 100 (px) 크기의 요소 만들기 */
 .box {
-  width: 60px;  /* +40px */
+  width: 60px; /* +40px */
   height: 80px; /* +20px */
   background: tomato;
   padding: 10px 20px;

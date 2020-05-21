@@ -4,7 +4,7 @@
 
 > 이 글은 김민준(velopert)님의 [리액트를 다루는 기술](http://www.yes24.com/Product/Goods/78233628?Acode=101)을 참조하여 작성한 글입니다.
 
-일반 HTML에서 DOM 요소에 이름을 달 때 id를 사용한다. 
+일반 HTML에서 DOM 요소에 이름을 달 때 id를 사용한다.
 
 ```html
 <div id="my-element"></div>
@@ -14,8 +14,8 @@
 
 HTML에서 id를 사용하는 것처럼, 리액트 내부에서 DOM에 이름을 다는 방법이 있는데 그것이 ref(reference)의 개념이다.
 
-> 리액트 컴포넌트 안에서도 id를 사용할 수 있지만, HTML에서 DOM의 id는 유일해야 하는데, 컴포넌트가 여러 번 사용되면 중복 id가 생기니 잘못된 사용이다. 
-ref는 전역적으로 작동하지 않고, 컴포넌트 내부에서만 작동하기 때문에 문제가 발생하지 않는다.
+> 리액트 컴포넌트 안에서도 id를 사용할 수 있지만, HTML에서 DOM의 id는 유일해야 하는데, 컴포넌트가 여러 번 사용되면 중복 id가 생기니 잘못된 사용이다.
+> ref는 전역적으로 작동하지 않고, 컴포넌트 내부에서만 작동하기 때문에 문제가 발생하지 않는다.
 
 # ref는 어떤 상황에서 사용해야 할까?
 
@@ -76,26 +76,26 @@ ref는 **"특정 DOM을 꼭 직접적으로 건드려야 할 때"** 사용한다
 `ValidationSample.js`
 
 ```javascript
-import React, { Component } from 'react';
-import './ValidationSample.css';
+import React, { Component } from "react";
+import "./ValidationSample.css";
 
 class ValidationSample extends Component {
   state = {
-    password: '',
+    password: "",
     clicked: false,
-    validated: false
+    validated: false,
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({
-      password: e.target.value
+      password: e.target.value,
     });
   };
 
   handleButtonClick = () => {
     this.setState({
       clicked: true,
-      validated: this.state.password === '0000'
+      validated: this.state.password === "0000",
     });
   };
 
@@ -109,9 +109,9 @@ class ValidationSample extends Component {
           className={
             this.state.clicked
               ? this.state.validated
-                ? 'success'
-                : 'failure'
-              : ''
+                ? "success"
+                : "failure"
+              : ""
           }
         />
         <button onClick={this.handleButtonClick}>Validate</button>
@@ -132,8 +132,8 @@ App 컴포넌트에서 `ValidationSample` 컴포넌트를 불러와 렌더링해
 `App.js`
 
 ```javascript
-import React, { Component } from 'react';
-import ValidationSample from './ValidationSample';
+import React, { Component } from "react";
+import ValidationSample from "./ValidationSample";
 
 class App extends Component {
   render() {
@@ -162,27 +162,31 @@ ref를 사용하는 방법은 두 가지이다.
 
 ## 콜백 함수를 통한 ref 설정
 
-ref를 만드는 가장 기본적인 방법은 콜백 함수를 사용하는 것이다. ref를 달고자 하는 요소에 콜백 함수 ref를 props로 전달해주면 된다. 이 콜백 함수는 ref 값을 파라미터로 받고, ref를 컴포넌트의 멤버 변수로 설정해준다. 
+ref를 만드는 가장 기본적인 방법은 콜백 함수를 사용하는 것이다. ref를 달고자 하는 요소에 콜백 함수 ref를 props로 전달해주면 된다. 이 콜백 함수는 ref 값을 파라미터로 받고, ref를 컴포넌트의 멤버 변수로 설정해준다.
 
 ```javascript
-<input ref={(ref) => {this.input=ref}} />
+<input
+  ref={(ref) => {
+    this.input = ref;
+  }}
+/>
 ```
 
-이렇게 하면 `this.input` 이 input 요소의 DOM을 가리키게 된다. 이 때, 이름은 `this.input` 뿐만 아니라 원하는 것으로 자유롭게 설정할 수 있다. 
+이렇게 하면 `this.input` 이 input 요소의 DOM을 가리키게 된다. 이 때, 이름은 `this.input` 뿐만 아니라 원하는 것으로 자유롭게 설정할 수 있다.
 
 ## createRef를 통한 ref 설정
 
 리액트에 내장되어 있는 createRef 라는 함수를 사용해 ref를 만들 수도 있다. 이 기능은 리액트 v16.3부터 도입되었다.
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class RefSample extends Component {
   input = React.createRef();
 
   handleFocus = () => {
     this.input.current.focus();
-  }
+  };
 
   render() {
     return (
@@ -228,7 +232,7 @@ createRef를 사용하여 ref를 만들려면 먼저 컴포넌트 내부에서 �
 handleButtonClick = () => {
   this.setState({
     clicked: true,
-    validated: this.state.password === '0000'
+    validated: this.state.password === "0000",
   });
   this.input.focus();
 };
@@ -244,7 +248,9 @@ handleButtonClick = () => {
 
 ```javascript
 <MyComponent
-  ref={(ref) => {this.myComponent=ref}}
+  ref={(ref) => {
+    this.myComponent = ref;
+  }}
 />
 ```
 
@@ -257,28 +263,28 @@ handleButtonClick = () => {
 `ScrollBox.js`
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class ScrollBox extends Component {
   render() {
     const style = {
-      border: '1px solid black',
-      height: '300px',
-      width: '300px',
-      overflow: 'auto',
-      position: 'relative'
+      border: "1px solid black",
+      height: "300px",
+      width: "300px",
+      overflow: "auto",
+      position: "relative",
     };
 
     const innerStyle = {
-      width: '100%',
-      height: '650px',
-      background: 'linear-gradient(white, black)'
+      width: "100%",
+      height: "650px",
+      background: "linear-gradient(white, black)",
     };
 
     return (
       <div
         style={style}
-        ref={ref => {
+        ref={(ref) => {
           this.box = ref;
         }}
       >
@@ -296,8 +302,8 @@ App 컴포넌트에서는 기존 `ValidationSample` 을 지우고 `ScrollBox` �
 `App.js`
 
 ```javascript
-import React, { Component } from 'react';
-import ScrollBox from './ScrollBox';
+import React, { Component } from "react";
+import ScrollBox from "./ScrollBox";
 
 class App extends Component {
   render() {
@@ -323,7 +329,7 @@ export default App;
 - `clientHeight` : 스크롤이 있는 박스의 높이
 
 > 스크롤을 내려야 볼 수 있는 박스 내부의 긴 콘텐츠 → `scrollHeight`
-긴 콘텐츠를 스크롤바로 감싸는 박스 → `clientHeight`
+> 긴 콘텐츠를 스크롤바로 감싸는 박스 → `clientHeight`
 
 스크롤바의 위치 `scrollTop` 은 0부터 (박스 내부의 긴 콘텐츠 - 스크롤바로 감싸고 있는 바깥의 박스)의 크기 값을 가진다. (바깥의 박스가 300이고 내부의 콘텐츠가 650이라면 스크롤바의 위치가 0~350)
 
@@ -332,7 +338,7 @@ export default App;
 `ScrollBox.js`
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class ScrollBox extends Component {
   scrollToBottom = () => {
@@ -341,23 +347,23 @@ class ScrollBox extends Component {
   };
   render() {
     const style = {
-      border: '1px solid black',
-      height: '300px',
-      width: '300px',
-      overflow: 'auto',
-      position: 'relative'
+      border: "1px solid black",
+      height: "300px",
+      width: "300px",
+      overflow: "auto",
+      position: "relative",
     };
 
     const innerStyle = {
-      width: '100%',
-      height: '650px',
-      background: 'linear-gradient(white, black)'
+      width: "100%",
+      height: "650px",
+      background: "linear-gradient(white, black)",
     };
 
     return (
       <div
         style={style}
-        ref={ref => {
+        ref={(ref) => {
           this.box = ref;
         }}
       >
@@ -377,14 +383,14 @@ export default ScrollBox;
 `App.js`
 
 ```javascript
-import React, { Component } from 'react';
-import ScrollBox from './ScrollBox';
+import React, { Component } from "react";
+import ScrollBox from "./ScrollBox";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <ScrollBox ref={ref => (this.ScrollBox = ref)} />
+        <ScrollBox ref={(ref) => (this.ScrollBox = ref)} />
         <button onClick={() => this.ScrollBox.scrollToBottom()}>
           맨 밑으로
         </button>

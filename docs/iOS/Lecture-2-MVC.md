@@ -4,7 +4,7 @@
 
 application의 모든 객체는 3가지 캠프로 나눌 수 있음
 
-캠프 사이의 커뮤니케이션을 관리하는 것이 MVC 
+캠프 사이의 커뮤니케이션을 관리하는 것이 MVC
 
 ### Model
 
@@ -30,4 +30,3 @@ The Model and view should never speak to each other
 
 - 구조체는 상속성이 없음
 - 구조체는 Value type, 클래스는 Reference type
-

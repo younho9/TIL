@@ -25,13 +25,13 @@ ECMAScript에서는 실행 컨텍스트의 생성을 다음처럼 설명한다.
 **"현재 실행되는 컨텍스트에서 이 컨텍스트와 관련 없는 실행 코드가 실행되면, 새로운 컨텍스트가 생성되어 스택에 들어가고 제어권이 그 컨텍스트로 이동한다."**
 
 ```javascript
-var x = 'xxx';
+var x = "xxx";
 
-function foo () {
-  var y = 'yyy';
+function foo() {
+  var y = "yyy";
 
-  function bar () {
-    var z = 'zzz';
+  function bar() {
+    var z = "zzz";
     console.log(x + y + z);
   }
   bar();
@@ -83,8 +83,6 @@ foo();
 
 변수나 내부 함수의 경우 단지 메모리에 생성하고 초기화는 각 변수나 함수에 해당하는 표현식이 실행되기 전까지는 이루어지지 않는다. (함수 선언문의 경우 함수 호이스팅이 일어나 함수 객체를 즉시 할당한다.)
 
- 
-
 ### `this` 바인딩
 
 마지막 단계에서는 `this` 키워드를 사용하는 값이 할당된다. 이 값에 어떤 객체가 들어갈지는 [함수호출과 `this` 바인딩](https://www.notion.so/younho9/4-2-3b392de0b7854a1593e3aabf63ce73ec#8e12b9ea90ae44fca633a5c8687c2b3a)에서 살펴봤으니 참조하자.
@@ -97,7 +95,7 @@ foo();
 
 자바스크립트에서는 함수 내의 `{}` 블록, 즉 `for() {}` , `if() {}` 와 같은 구문은 유효 범위가 없고, 오직 함수만이 유효 범위의 한 단위가 된다. (ES6에서는 let, const를 통해 `{}` 안에 유효 범위를 갖게 만들 수 있다.)
 
-이 유효 범위를 나타내는 스코프가 `[[scope]]` 프로퍼티로 각  함수 내에서 연결 리스트 형식으로 관리되는데, 이를 스코프 체인이라고 한다.
+이 유효 범위를 나타내는 스코프가 `[[scope]]` 프로퍼티로 각 함수 내에서 연결 리스트 형식으로 관리되는데, 이를 스코프 체인이라고 한다.
 
 - **각각의 함수는 `[[scope]]` 프로퍼티로 자신이 생성된 실행 컨텍스트의 스코프 체인을 참조한다.**
 - **함수가 실행되는 순간 실행 컨텍스트가 생성되고 이 실행 컨텍스트는 실행된 함수의 `[[scope]]` 프로퍼티를 기반으로 새로운 스코프 체인을 만든다.**
@@ -143,10 +141,10 @@ console.log(var2); // 2
 #### 예제 1
 
 ```javascript
-var value = 'value1';
+var value = "value1";
 
 function printFunc() {
-  var value = 'value2';
+  var value = "value2";
 
   function printValue() {
     return value;
@@ -167,14 +165,14 @@ printFunc();
 #### 예제 2
 
 ```javascript
-var value = 'value1';
+var value = "value1";
 
 function printValue() {
   return value;
 }
 
 function printFunc(func) {
-  var value = 'value2';
+  var value = "value2";
   console.log(func());
 }
 
@@ -196,7 +194,9 @@ printFunc(printValue);
 ```javascript
 function outerFunc() {
   var x = 10;
-  var innerFunc = function() { console.log(x); }
+  var innerFunc = function () {
+    console.log(x);
+  };
   return innerFunc;
 }
 
@@ -208,9 +208,9 @@ inner(); // 10
 
 예제에서 `innerFunc()` 는 `outerFunc()` 의 실행이 끝난 후 실행된다. `outerFunc()` 의 실행 컨텍스트가 사라진 이후에 `innerFunc` 실행 컨텍스트가 생성되는 것이다. 그러면 `innerFunc()` 의 스코프 체인은 `outerFunc` 변수 객체를 참조할 수 있을까?
 
-이것을 가능하게 하는 것이 **클로저(Closure)** 라는 개념이다. `outerFunc` 의 실행 컨텍스트가 사라지더라도 `outerFunc` 변수 객체는 여전히 남아있다. 
+이것을 가능하게 하는 것이 **클로저(Closure)** 라는 개념이다. `outerFunc` 의 실행 컨텍스트가 사라지더라도 `outerFunc` 변수 객체는 여전히 남아있다.
 
-여기서 최종 반환되는 함수 `innerFunc` 가 외부 함수 `outerFunc` 의 지역변수 `x` 에 접근하고 있다는 것이 중요하다. 이 지역 변수에 접근하려면, 함수가 종료되어 실행 컨텍스트가 반환되더라도, 변수 객체는 반환되는 내부 함수의 스코프 체인에 그대로 남아있어야만 접근할 수 있다. 
+여기서 최종 반환되는 함수 `innerFunc` 가 외부 함수 `outerFunc` 의 지역변수 `x` 에 접근하고 있다는 것이 중요하다. 이 지역 변수에 접근하려면, 함수가 종료되어 실행 컨텍스트가 반환되더라도, 변수 객체는 반환되는 내부 함수의 스코프 체인에 그대로 남아있어야만 접근할 수 있다.
 
 이처럼 **이미 생명 주기가 끝난 외부 함수의 변수를 참조하는 함수를 클로저**라고 한다. 따라서 `innerFunc()` 를 클로저라고 하고, **클로저로 참조되는 외부 변수 `x` 를 자유 변수** 라고 한다.
 

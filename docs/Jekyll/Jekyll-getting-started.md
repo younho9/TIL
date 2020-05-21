@@ -4,8 +4,6 @@
 
 Jekyll Docs의 Getting Started를 읽고 시도해본 기록.
 
-
-
 ## 빠른 시작
 
 Jekyll은 정적 사이트 생성기.
@@ -27,7 +25,7 @@ URL의 모습과 사이트에 데이터를 원하는 대로 표시할 수 있다
 gem install jekyll bundler
 ```
 
-3. 새 Jekyll site 생성하기  `./myblog	`
+3. 새 Jekyll site 생성하기  `./myblog`
 
 ```bash
 jekyll new myblog
@@ -47,15 +45,13 @@ bundle exec jekyll serve
 
 6. [http://localhost:4000](http://localhost:4000/) 주소로 접속하기
 
-
-
 ## Ruby101
 
 Jekyll은 Ruby로 작성되었다.
 
 ### Gems
 
-gem은 Ruby 프로젝트에 포함시킬 수 있는 코드이다. 
+gem은 Ruby 프로젝트에 포함시킬 수 있는 코드이다.
 
 gem은 Ruby 프로젝트의 기능을 패키지하고 다른 프로젝트나 다른 사람들과 공유할 수 있도록 해준다.
 
@@ -68,7 +64,7 @@ gem은 다음과 같은 기능을 수행할 수 있다.
 
 ### Gemfile
 
-Gemfile은 사이트에 필요한 gems의 리스트를 기록해놓은 파일이다. 단순한 Jekyll site라면 
+Gemfile은 사이트에 필요한 gems의 리스트를 기록해놓은 파일이다. 단순한 Jekyll site라면
 
 ```bash
 source "https://rubygems.org"
@@ -80,8 +76,6 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
 end
 ```
-
-
 
 ## Bundler
 
@@ -96,8 +90,6 @@ If you’re using a `Gemfile` you would first run `bundle install` to instal
 For more information about how to use Bundler in your Jekyll project, this [tutorial](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) should provide answers to the most common questions and explain how to get up and running quickly.
 
 [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)
-
-
 
 ## Jekyll 커뮤니티
 

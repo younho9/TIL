@@ -15,6 +15,7 @@
 layout: post
 author: jill
 ---
+
 A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.
 
@@ -25,7 +26,7 @@ starch covered with a rind, which may be green, yellow, red, purple, or brown
 when ripe.
 ```
 
-이것은 어떻게 보면 `[about.md](http://about.md)` 파일과 비슷해 보이는데, `author` 라는 커스텀 변수가 있고(꼭 필요한 것은 아니고 `creator` 라는 이름으로 사용할 수도 있다.) `layout` 이 다르다. 
+이것은 어떻게 보면 `[about.md](http://about.md)` 파일과 비슷해 보이는데, `author` 라는 커스텀 변수가 있고(꼭 필요한 것은 아니고 `creator` 라는 이름으로 사용할 수도 있다.) `layout` 이 다르다.
 
 ## Layout
 
@@ -35,6 +36,7 @@ when ripe.
 ---
 layout: default
 ---
+
 <h1>{{ page.title }}</h1>
 <p>{{ page.date | date_to_string }} - {{ page.author }}</p>
 
@@ -58,6 +60,7 @@ Jekyll에서는 포스트들을 `site.posts` 로 접근할 수 있다.
 layout: default
 title: Blog
 ---
+
 <h1>Latest Posts</h1>
 
 <ul>
@@ -98,6 +101,7 @@ blog에 여러 포스트를 추가해본다.
 layout: post
 author: jill
 ---
+
 An apple is a sweet, edible fruit produced by an apple tree.
 Apple trees are cultivated worldwide, and are the most widely grown species in
 the genus Malus. The tree originated in Central Asia, where its wild ancestor,
@@ -113,6 +117,7 @@ colonists.
 layout: post
 author: ted
 ---
+
 Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
 berry of several species of woody vines in the genus Actinidia.
 The most common cultivar group of kiwifruit is oval, about the size of a large

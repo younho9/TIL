@@ -17,11 +17,11 @@
 `App.js`
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class App extends Component {
   render() {
-    const name = 'react';
+    const name = "react";
     return <div classNme="react">{name}</div>;
   }
 }
@@ -41,12 +41,12 @@ export default App;
 
 ## 컴포넌트 만들기
 
-컴포넌트를 만들기 위해서는 `create react-app` 으로 만든 리액트 프로젝트에서 src 디렉토리에 컴포넌트 파일 `NewComponent.js` 을 생성한다. 
+컴포넌트를 만들기 위해서는 `create react-app` 으로 만든 리액트 프로젝트에서 src 디렉토리에 컴포넌트 파일 `NewComponent.js` 을 생성한다.
 
 `NewComponent.js`
 
 ```javascript
-import React from 'react';
+import React from "react";
 
 const NewComponent = () => {
   return <div>Hello React Component!</div>;
@@ -66,8 +66,8 @@ export default NewComponent;
 그리고 나서 이 컴포넌트를 불러올 다른 컴포넌트에서 import 하려면 다음과 같이 할 수 있다.
 
 ```javascript
-import React from 'react';
-import NewComponent from './NewComponent';
+import React from "react";
+import NewComponent from "./NewComponent";
 
 const App = () => {
   return (
@@ -91,8 +91,8 @@ export default App;
 `App.js`
 
 ```javascript
-import React from 'react';
-import NewComponent from './NewComponent';
+import React from "react";
+import NewComponent from "./NewComponent";
 
 const App = () => {
   return (
@@ -107,14 +107,14 @@ export default App;
 
 ### JSX 내부에서 `props` 렌더링
 
-이렇게 부모 컴포넌트에서 `NewComponent` 에 지정한 `name` 이라는 속성은 다음과 같이  `NewComponent` 에서 `props` 를 파라미터로 받아 와서 사용 할 수 있다.
+이렇게 부모 컴포넌트에서 `NewComponent` 에 지정한 `name` 이라는 속성은 다음과 같이 `NewComponent` 에서 `props` 를 파라미터로 받아 와서 사용 할 수 있다.
 
 `NewComponent.js`
 
 ```javascript
-import React from 'react';
+import React from "react";
 
-const NewComponent = props => {
+const NewComponent = (props) => {
   return <div>Hello, React Component! I'm {props.name}</div>;
 };
 
@@ -126,15 +126,15 @@ export default NewComponent;
 만약 해당 컴포넌트를 사용하는 부모 컴포넌트에서 `props` 값을 지정하지 않았을 경우에 `defaultProps` 로 기본값을 설정할 수 있다.
 
 ```javascript
-import React from 'react';
+import React from "react";
 
-const NewComponent = props => {
+const NewComponent = (props) => {
   return <div>Hello, React Component! I'm {props.name}</div>;
 };
 
 NewComponent.defaultProps = {
-  name: 'default name'
-}
+  name: "default name",
+};
 
 export default NewComponent;
 ```
@@ -146,8 +146,8 @@ export default NewComponent;
 `App.js`
 
 ```javascript
-import React from 'react';
-import NewComponent from './NewComponent';
+import React from "react";
+import NewComponent from "./NewComponent";
 
 const App = () => {
   return <NewComponent>React</NewComponent>;
@@ -161,9 +161,9 @@ export default App;
 `NewComponent.js`
 
 ```javascript
-import React from 'react';
+import React from "react";
 
-const NewComponent = props => {
+const NewComponent = (props) => {
   return (
     <div>
       Hello, React Component! My name is {props.name}
@@ -174,8 +174,8 @@ const NewComponent = props => {
 };
 
 NewComponent.defaultProps = {
-  name: 'default name'
-}
+  name: "default name",
+};
 
 export default NewComponent;
 ```
@@ -187,9 +187,9 @@ export default NewComponent;
 `NewComponent.js`
 
 ```javascript
-import React from 'react';
+import React from "react";
 
-const NewComponent = props => {
+const NewComponent = (props) => {
   const { name, children } = props;
   return (
     <div>
@@ -201,7 +201,7 @@ const NewComponent = props => {
 };
 
 NewComponent.defaultProps = {
-  name: 'default name'
+  name: "default name",
 };
 
 export default NewComponent;
@@ -212,7 +212,7 @@ export default NewComponent;
 `NewComponent.js`
 
 ```javascript
-import React from 'react';
+import React from "react";
 
 const NewComponent = ({ name, children }) => {
   return (
@@ -225,7 +225,7 @@ const NewComponent = ({ name, children }) => {
 };
 
 NewComponent.defaultProps = {
-  name: 'default name'
+  name: "default name",
 };
 
 export default NewComponent;
@@ -238,8 +238,8 @@ export default NewComponent;
 `NewComponent.js`
 
 ```javascript
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const NewComponent = ({ name, children }) => {
   return (
@@ -252,11 +252,11 @@ const NewComponent = ({ name, children }) => {
 };
 
 NewComponent.defaultProps = {
-  name: 'default name'
+  name: "default name",
 };
 
 NewComponent.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string,
 };
 
 export default NewComponent;
@@ -276,7 +276,7 @@ export default NewComponent;
 
 ```javascript
 NewComponent.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 ```
 
@@ -293,8 +293,8 @@ PropTypes 에는 배열, 함수, 숫자 등 여러 종류를 설정할 수 있�
 `NewComponent.js`
 
 ```javascript
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class NewComponent extends Component {
   render() {
@@ -310,11 +310,11 @@ class NewComponent extends Component {
 }
 
 NewComponent.defaultProps = {
-  name: 'default name'
+  name: "default name",
 };
 
 NewComponent.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };
 
 export default NewComponent;
@@ -323,16 +323,16 @@ export default NewComponent;
 클래스형 컴포넌트에서는 `defaultProps` 와 `propTypes` 를 class 내부에서 지정할 수도 있다.
 
 ```javascript
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class NewComponent extends Component {
   static defaultProps = {
-    name: 'default name'
+    name: "default name",
   };
 
   static propTypes = {
-    name: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
   };
   render() {
     const { name, children } = this.props;
@@ -362,13 +362,13 @@ src 디렉터리에 새로운 `Counter.js` 컴포넌트를 만든다.
 `Counter.js`
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Counter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: 0
+      number: 0,
     };
   }
   render() {
@@ -404,8 +404,8 @@ export default Counter;
 `App.js`
 
 ```javascript
-import React from 'react';
-import Counter from './Counter';
+import React from "react";
+import Counter from "./Counter";
 
 const App = () => {
   return <Counter />;
@@ -421,11 +421,11 @@ export default App;
 앞에서 `constructor` 메소드를 사용했는데 다른 방식으로 간단하게 `state` 의 초기값을 지정할 수 있다.
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    number: 0
+    number: 0,
   };
   render() {
     const { number } = this.state;
@@ -483,11 +483,11 @@ onClick={() => {
 <button
   onClick={() => {
     this.setState(
-      prevState => ({
-        number: prevState.number + 1
+      (prevState) => ({
+        number: prevState.number + 1,
       }),
       () => {
-        console.log('setState가 호출되었습니다.');
+        console.log("setState가 호출되었습니다.");
       }
     );
   }}
@@ -505,12 +505,12 @@ src 디렉토리에 `Say.js` 를 생성한다.
 `Say.js`
 
 ```javascript
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Say = () => {
-  const [message, setMessage] = useState('');
-  const onClickEnter = () => setMessage('Hi!');
-  const onClickLeave = () => setMessage('Bye!');
+  const [message, setMessage] = useState("");
+  const onClickEnter = () => setMessage("Hi!");
+  const onClickLeave = () => setMessage("Bye!");
 
   return (
     <div>
@@ -524,7 +524,7 @@ const Say = () => {
 export default Say;
 ```
 
-코드 첫 줄을 보면 `useState` 를 import 한다. 그리고 `useState` 함수를 사용하는데, 함수의 인자에는 상태의 초깃값을 넣어줄 수 있다. 클래스형 컴포넌트에서의 `state` 초깃값은 객체 형태로 넣어주어야 하지만, `useState` 에서 값의 형태는 자유이다. 
+코드 첫 줄을 보면 `useState` 를 import 한다. 그리고 `useState` 함수를 사용하는데, 함수의 인자에는 상태의 초깃값을 넣어줄 수 있다. 클래스형 컴포넌트에서의 `state` 초깃값은 객체 형태로 넣어주어야 하지만, `useState` 에서 값의 형태는 자유이다.
 
 함수를 호출하면 배열이 반환되는데, 배열의 첫 번째 원소는 현재 상태, 두 번째 원소는 상태를 바꾸어 주는 세터(Setter) 함수이다. 이를 비구조화 할당으로 `message` , `setMessage` 에 할당해 주고 있다. `onClickEnter` 함수는 'Hi!' 라는 메시지로 `state` 를 세팅하는 함수이고, `onClickLeave` 함수는 'Bye!' 라는 메시지로 `state` 를 세팅하는 함수이다.
 
@@ -535,27 +535,27 @@ export default Say;
 `useState` 는 한 컴포넌트에서 여러 번 사용할 수 있다. 색을 관리하는 `color` 를 `state` 에 추가한다.
 
 ```javascript
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Say = () => {
-  const [message, setMessage] = useState('');
-  const onClickEnter = () => setMessage('Hi!');
-  const onClickLeave = () => setMessage('Bye!');
+  const [message, setMessage] = useState("");
+  const onClickEnter = () => setMessage("Hi!");
+  const onClickLeave = () => setMessage("Bye!");
 
-  const [color, setColor] = useState('black');
+  const [color, setColor] = useState("black");
 
   return (
     <div>
       <button onClick={onClickEnter}>Enter</button>
       <button onClick={onClickLeave}>Exit</button>
       <h1 style={{ color }}>{message}</h1>
-      <button style={{ color: 'red' }} onClick={() => setColor('red')}>
+      <button style={{ color: "red" }} onClick={() => setColor("red")}>
         Red
       </button>
-      <button style={{ color: 'green' }} onClick={() => setColor('green')}>
+      <button style={{ color: "green" }} onClick={() => setColor("green")}>
         Green
       </button>
-      <button style={{ color: 'blue' }} onClick={() => setColor('blue')}>
+      <button style={{ color: "blue" }} onClick={() => setColor("blue")}>
         Blue
       </button>
     </div>
@@ -566,7 +566,7 @@ export default Say;
 ```
 
 > JSX inline style 문법
-`style={ 객체 }` 이므로 `color` 는 현재 문자열. `{ color }` 로 하면 `{ color : "black" }` 로 객체 형태가 된다. 따라서 `style={{ color }}` 가 옳은 문법.
+> `style={ 객체 }` 이므로 `color` 는 현재 문자열. `{ color }` 로 하면 `{ color : "black" }` 로 객체 형태가 된다. 따라서 `style={{ color }}` 가 옳은 문법.
 
 ![color-result](images/chapter-3-color-result.png)
 
@@ -576,12 +576,12 @@ export default Say;
 
 ```javascript
 // 클래스형 컴포넌트
-this.state.number = this.state.number +1;
+this.state.number = this.state.number + 1;
 this.state.array = this.array.push(2);
 this.state.object.value = 5;
 
 // 함수형 컴포넌트
-const [object, setObject] = useState({ a:1, b:1 });
+const [object, setObject] = useState({ a: 1, b: 1 });
 object.b = 2;
 ```
 
@@ -598,7 +598,7 @@ const nextObject = { ...object, b: 2 };
 const array = [
   { id: 1, value: true },
   { id: 2, value: true },
-  { id: 3, value: false }
+  { id: 3, value: false },
 ];
 const nextArray = array.concat({ id: 4 });
 ```

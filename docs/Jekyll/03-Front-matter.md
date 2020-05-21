@@ -24,10 +24,11 @@ Front matter란 문서의 상단에 있는 두 개의 triple-dashed line ( `—-
 ---
 title: Home
 ---
-<!doctype html>
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>{{ page.title }}</title>
   </head>
   <body>
@@ -36,4 +37,4 @@ title: Home
 </html>
 ```
 
-상단에 Front matter를 기입하고, `<title>` 태그 사이에 Liquid 문법으로 `{{ page.title }}` 를 사용하면, 상단에 기입한 Front matter 인 `title: Home` 를 보고  `Home` 이 `<title>` 태그에 들어가게 된다.
+상단에 Front matter를 기입하고, `<title>` 태그 사이에 Liquid 문법으로 `{{ page.title }}` 를 사용하면, 상단에 기입한 Front matter 인 `title: Home` 를 보고 `Home` 이 `<title>` 태그에 들어가게 된다.

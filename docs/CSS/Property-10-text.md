@@ -1,12 +1,12 @@
 # CSS 속성 10. 문자(text) 관련 속성
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다. 
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ## `color`
 
 문자의 색상을 지정
 
-> ☝️ 요소의 색상은 `background-color` 
+> ☝️ 요소의 색상은 `background-color`
 
 ### 속성 값
 
@@ -63,7 +63,7 @@
 
 (첫 번째 줄의) 들여쓰기를 지정
 
-> ☝️ 음수 값을 사용할 수 있다. 음수 값을 사용하면 첫째 줄은 왼쪽으로 들여쓰기(내어쓰기) 된다. 
+> ☝️ 음수 값을 사용할 수 있다. 음수 값을 사용하면 첫째 줄은 왼쪽으로 들여쓰기(내어쓰기) 된다.
 
 ```css
 div {
@@ -74,14 +74,14 @@ div {
 ### `background: url("");` 로 이미지 삽입 시 `alt` 입력법
 
 ```html
-<img src="이미지 링크" alt="대체 텍스트">
+<img src="이미지 링크" alt="대체 텍스트" />
 ```
 
-HTML의 이미지 태그를 사용시에는 이렇게 alt를 사용해 대체 텍스트를 입력할 수 있다. 
+HTML의 이미지 태그를 사용시에는 이렇게 alt를 사용해 대체 텍스트를 입력할 수 있다.
 
 그런데 CSS의 `background: url("");` 속성을 사용 시에는 어떻게 대체 텍스트를 입력할 수 있을까?
 
-``` html
+```html
 <div class="class-name">대체 텍스트</div>
 ```
 

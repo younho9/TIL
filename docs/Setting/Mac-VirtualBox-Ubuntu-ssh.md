@@ -59,7 +59,6 @@
 sudo apt install net-tools
 ```
 
-
 ![ubuntu-ifconfig-install.png](images/Mac-VirtualBox-Ubuntu-ssh/ubuntu-ifconfig-install.png)
 
 설치가 된 이후 다시 ifconfig을 해보면 두 개의 네트워크 인터페이스가 나오는데, `enp0s3` , `enp0s8` 이다. 이 때 `enp0s8` 가 어댑터 2로 연결한 vboxnet()이고, 이 어댑터의 inet 뒤로 이어지는 ipv4 주소가 필요하다.
@@ -89,7 +88,7 @@ ps -ef | grep ssh
 
 ## 맥 터미널에서 ssh로 우분투 접속
 
-우분투에서 확인한 ipv4 주소로 맥 터미널에서 ssh로 접속할 수 있다. ipv4 주소가 `192.168.56.xxx` 라면 맥에서 터미널을 실행하고 `ssh username@192.168.56.xxx` 를 실행한다. 우분투의 암호를 입력하면 아래와 같은 내용이 출력되고 우분투 서버에 접속하게 된다. 
+우분투에서 확인한 ipv4 주소로 맥 터미널에서 ssh로 접속할 수 있다. ipv4 주소가 `192.168.56.xxx` 라면 맥에서 터미널을 실행하고 `ssh username@192.168.56.xxx` 를 실행한다. 우분투의 암호를 입력하면 아래와 같은 내용이 출력되고 우분투 서버에 접속하게 된다.
 
 이제 맥 터미널에서 프로그래밍할 수 있다!
 
@@ -118,7 +117,7 @@ $ ssh-keygen -t rsa
 Generating public/private rsa key pair.
 ```
 
-SSH 키를 저장할 위치를 지정하는데 엔터를 누르면 기본 경로 ($HOME/.ssh)에 저장된다. 그리고 passphrase를 입력하는데 passphrase는 일종의 비밀번호로 비공개키를 입력한 값으로 암호화하는데 자동 로그인을 원한다면 생략해야한다.
+SSH 키를 저장할 위치를 지정하는데 엔터를 누르면 기본 경로 (\$HOME/.ssh)에 저장된다. 그리고 passphrase를 입력하는데 passphrase는 일종의 비밀번호로 비공개키를 입력한 값으로 암호화하는데 자동 로그인을 원한다면 생략해야한다.
 
 비밀번호를 확인하면 같은 값으로 생략하면 되고, 그러면 키가 생성된다.
 
@@ -170,7 +169,7 @@ Are you sure you want to continue connecting (yes/no)? yes
 
 ### alias 등록
 
-마지막으로 맥 터미널에서 매번 `ssh username@192.168.56.xxx` 의 명령어를 입력하는 것이 상당히 불편하므로 쉘의 run command에 alias를 등록해준다. 
+마지막으로 맥 터미널에서 매번 `ssh username@192.168.56.xxx` 의 명령어를 입력하는 것이 상당히 불편하므로 쉘의 run command에 alias를 등록해준다.
 
 맥에서 bash를 사용한다면 ~/bash_profile 에, zsh를 사용한다면 ~/zshrc에 alias를 등록하면 사용자가 지정한 단축 명령만으로 원하는 명령어를 실행할 수 있다.
 

@@ -32,7 +32,7 @@ do {
 ```
 
 > 통상적으로 에러를 날릴 수 있는 메소드 호출 주변에 `do-catch` 문을 집어넣고, 메소드 호출에 앞서 `try` 를 쓴다. `catch` 뒤의 `let` `error` 는 에러 프로토콜을 구현한 지역 변수이다.
-> 
+>
 > 즉 `do` 를 실행해보고 `error` 가 발생한다면 `error` 를 `throw` 한다.
 
 ```swift
@@ -92,7 +92,7 @@ jpeg, JSON 등 데이터를 다양한 클래스로 바꿀 수 있는 메소드�
 
 ## Views
 
-> `UIView` 의 `Subclass` 
+> `UIView` 의 `Subclass`
 >
 > 좌표계를 정의하는 화면의 사각형
 
@@ -102,7 +102,7 @@ jpeg, JSON 등 데이터를 다양한 클래스로 바꿀 수 있는 메소드�
   - var superview: UIView?
   - Var subviews: [UIView]
 
-> 최상위에는 검정색 뷰가 있다. 그리고 `UIViewController` 에서 아주 중요한 변수인 `view` 가 있다. 
+> 최상위에는 검정색 뷰가 있다. 그리고 `UIViewController` 에서 아주 중요한 변수인 `view` 가 있다.
 
 ```swift
 func addSubview(_ view: UIView) // sent to view's superview
@@ -139,7 +139,7 @@ required init?(coder aDecoder: NSCoder) { // a required, failable initializer
 
 ```swift
 awakeFromNib() {
-  
+
 }
 ```
 
@@ -180,11 +180,11 @@ contains(CGPoint) -> Bool
 ### View Coordinate System (좌표계)
 
 - iOS에서 원점은 왼쪽 상단이다. (Mac 은 왼쪽 하단)
-- 좌표계의 단위는 `points` 
+- 좌표계의 단위는 `points`
 
 > `pixels` 은 디바이스에서 그릴 수 있는 최소 단위이며, `points` 는 coordinate system에서의 단위이다. 대부분의 경우 `point` 당 2 `pixels` 가 있지만, 1,3일 수도 있다. `var contentsScaleFactor: CGFloat` 를 통해 확인할 수 있다.
 
-- `bounds` : 쓰고 있는 드로잉 좌표계의 원점과 높이 너비 등을 알려줌. 
+- `bounds` : 쓰고 있는 드로잉 좌표계의 원점과 높이 너비 등을 알려줌.
 
 ```swift
 var bounds: CGRect
@@ -203,7 +203,7 @@ var frame: CGRect
 
 ![bounds_frame](images/bounds_frame.jpeg)
 
-> `view` 는 회전할 수 있다. `view` 가 회전했다면  `bounds` 는 유지되지만 `frame` 은 더 커져야 할 것이다.
+> `view` 는 회전할 수 있다. `view` 가 회전했다면 `bounds` 는 유지되지만 `frame` 은 더 커져야 할 것이다.
 
 ### Creating Views
 
@@ -236,6 +236,7 @@ setNeedsDisplay(_ rect: CGRect)
 ```
 
 - 어떻게 my draw(CGRect)를 구현하는가
+
   1. 드로잉 레이어에 들어있는 코어 그래픽스를 이용
   2. 객체 지향적으로 `UIBezierPath` 클래스를 불러와 드로잉
 
@@ -299,7 +300,7 @@ let oval = UIBezierPath(ovalIn: CGRect)
 - Clipping your drawing to a UIBezierPath's path
 
 ```swift
-addClip() 
+addClip()
 ```
 
 > Clipping 한 이후에 한 드로잉은 모두 Clipping 한 path 내부에만 남는다.
@@ -323,7 +324,7 @@ let green = UIColor.green
 - Background color of a UIView
 
 ```swift
-var backgroundColor: UIColor 
+var backgroundColor: UIColor
 ```
 
 - Colors can have alpha (transparency)
@@ -355,4 +356,3 @@ var cornerRadius: CGFloat
 var borderWidth: CGFloat
 var borderColor: CGColor?
 ```
-

@@ -19,7 +19,7 @@ YAML은 Ruby 시스템에서 일반적인 포맷이다. 우리는 네비게이�
   link: /about.html
 ```
 
-Jekyll에서는 `site.data.navigation` 을 이용해 해당 데이터 파일을 이용할 수 있다. 
+Jekyll에서는 `site.data.navigation` 을 이용해 해당 데이터 파일을 이용할 수 있다.
 
 `_includes/navigation.html` 에서 각각의 링크를 넣는 것 대신에 반복문을 사용한다.
 

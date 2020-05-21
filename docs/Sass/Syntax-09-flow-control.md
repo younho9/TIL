@@ -68,13 +68,13 @@ div {
 $color: orange;
 div {
   @if $color == strawberry {
-    color: #FE2E2E;
+    color: #fe2e2e;
   } @else if $color == orange {
-    color: #FE9A2E;
+    color: #fe9a2e;
   } @else if $color == banana {
-    color: #FFFF00;
+    color: #ffff00;
   } @else {
-    color: #2A1B0A;
+    color: #2a1b0a;
   }
 }
 ```
@@ -83,7 +83,7 @@ div {
 
 ```css
 div {
-  color: #FE9A2E;
+  color: #fe9a2e;
 }
 ```
 
@@ -117,12 +117,7 @@ div {
 
 ```scss
 @mixin pCenter($w, $h, $p: absolute) {
-  @if
-    $p == absolute
-    or $p == fixed
-    or not $p == relative
-    or not $p == static
-  {
+  @if $p == absolute or $p == fixed or not $p == relative or not $p == static {
     width: if(unitless($w), #{$w}px, $w);
     height: if(unitless($h), #{$h}px, $h);
     position: $p;
@@ -201,14 +196,14 @@ div {
 // 1부터 3번 반복
 @for $i from 1 through 3 {
   .through:nth-child(#{$i}) {
-    width : 20px * $i
+    width: 20px * $i;
   }
 }
 
 // 1부터 3 직전까지만 반복(2번 반복)
 @for $i from 1 to 3 {
   .to:nth-child(#{$i}) {
-    width : 20px * $i
+    width: 20px * $i;
   }
 }
 ```
@@ -216,12 +211,22 @@ div {
 컴파일하면
 
 ```css
-.through:nth-child(1) { width: 20px; }
-.through:nth-child(2) { width: 40px; }
-.through:nth-child(3) { width: 60px; }
+.through:nth-child(1) {
+  width: 20px;
+}
+.through:nth-child(2) {
+  width: 40px;
+}
+.through:nth-child(3) {
+  width: 60px;
+}
 
-.to:nth-child(1) { width: 20px; }
-.to:nth-child(2) { width: 40px; }
+.to:nth-child(1) {
+  width: 20px;
+}
+.to:nth-child(2) {
+  width: 40px;
+}
 ```
 
 `to` 는 주어진 값 직전까지만 반복해야할 경우 사용.
@@ -344,7 +349,7 @@ Map 데이터를 반복할 경우에는 하나의 데이터에 두 개의 변수
 $fruits-data: (
   apple: korea,
   orange: china,
-  banana: japan
+  banana: japan,
 );
 
 @each $fruit, $country in $fruits-data {
@@ -393,9 +398,15 @@ $i: 6;
 컴파일하면
 
 ```css
-.item-6 { width: 12px; }
-.item-4 { width: 8px; }
-.item-2 { width: 4px; }
+.item-6 {
+  width: 12px;
+}
+.item-4 {
+  width: 8px;
+}
+.item-2 {
+  width: 4px;
+}
 ```
 
 ## Reference

@@ -99,7 +99,7 @@ protocol FullName {
 mutating func changeName()
 ```
 
- 메소드가 내용을 변경할 수 있게 메소드 요구 사항을 정의한 경우 참조(클래스) 타입에 해당 프로토콜을 적용할 때에는 메소드에 `mutating` 키워드를 입력할 필요가 없다. `mutating` 키워드는 오직 값(구조체 또는 열거형) 타입에만 사용된다.
+메소드가 내용을 변경할 수 있게 메소드 요구 사항을 정의한 경우 참조(클래스) 타입에 해당 프로토콜을 적용할 때에는 메소드에 `mutating` 키워드를 입력할 필요가 없다. `mutating` 키워드는 오직 값(구조체 또는 열거형) 타입에만 사용된다.
 
 ### 선택 가능한 요구 사항
 
@@ -130,7 +130,7 @@ protocol ProtocolThree: ProtocolOne, ProtocolTwo {
 }
 ```
 
-스위프트에서 프로토콜 상속을 위한 문법은 한 개 이상의 프로토콜을 상속할 수 있다는 점만 제외하면 클래식 상속을 위한 문법과 매우 유사하다. 이제 프로토콜 상속의 동작 방식에 대해 알아보자. 이번에는 앞에서 정의했던 `FullName` 프로토콜을 사용해 `Person ` 이라는 이름의 새로운 프로토콜을 생성한다.
+스위프트에서 프로토콜 상속을 위한 문법은 한 개 이상의 프로토콜을 상속할 수 있다는 점만 제외하면 클래식 상속을 위한 문법과 매우 유사하다. 이제 프로토콜 상속의 동작 방식에 대해 알아보자. 이번에는 앞에서 정의했던 `FullName` 프로토콜을 사용해 `Person` 이라는 이름의 새로운 프로토콜을 생성한다.
 
 ```swift
 protocol Person: FullName {
@@ -145,7 +145,7 @@ struct Student: Person {
 	var firstName = ""
 	var lastName = ""
 	var age = 0
-	
+
 	func getFullName() -> String {
 		return "\(firstName) \(lastName)"
 	}
@@ -211,7 +211,7 @@ myPerson = SwiftProgrammer(firstName: "Jon", lastName: "Hoffman", birthDate: bir
 myPerson = FootballPlayer(firstName: "Dan", lastName: "Marino", birthDate: birthDatePlayer)
 ```
 
- 앞 예에서 보다시피 `Person` 프로토콜은 배열에 대한 타입으로 사용될 수 있으며, 이는 `Person` 프로토콜을 따르는 모든 타입의 인스턴스로 배열을 채울 수 있다는 것을 의미한다. 다음은 이에 관한 예를 보여준다.
+앞 예에서 보다시피 `Person` 프로토콜은 배열에 대한 타입으로 사용될 수 있으며, 이는 `Person` 프로토콜을 따르는 모든 타입의 인스턴스로 배열을 채울 수 있다는 것을 의미한다. 다음은 이에 관한 예를 보여준다.
 
 ```swift
 var programmer = SwiftProgrammer(firstName: "Jon", lastName: "Hoffman", birthDate: birthDateProgrammer)
@@ -259,8 +259,6 @@ people.append(player)
 
 타입의 특정 기능에 접근해야만 하는 경우에는 형 변환을 사용할 수 있다.
 
-
-
 ## 프로토콜과 형 변환
 
 형 변환은 인스턴스의 타입을 확인하거나 인스턴스를 명시된 타입으로 다루기 위한 방법이다. 스위프트에서는 특정 타입의 인스턴스인지를 확인하기 위해 `is` 키워드를 사용하며, 인스턴스를 특정 타입으로 다루기 위해 `as` 키워드를 사용한다.
@@ -294,4 +292,3 @@ if let _ = person as? SwiftProgrammer {
 `as?` 키워드는 옵셔널을 반환하므로, 마지막 예제에서는 형 변환을 수행하기 위해 옵셔널 바인딩을 사용할 수 있다.
 
 이번에는 프로토콜과 함께 연관 타입을 어떻게 사용할 수 있는지 알아보자.
-

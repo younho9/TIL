@@ -27,10 +27,11 @@ Jekyll 사이트는 종종 이 구조를 사용하여 asset을 체계적으로 �
 ```scss
 ---
 ---
+
 @import "main";
 ```
 
-상단에 빈 front matter는 Jekyll에게 이 파일을 처리해야 한다고 알려준다. `@import "main"` 은 Sass에게 웹 사이트 폴더의 루트에 있는 `_sass/` 디렉토리에서 `main.scss` 이라는 파일을 찾아보도록 한다. 
+상단에 빈 front matter는 Jekyll에게 이 파일을 처리해야 한다고 알려준다. `@import "main"` 은 Sass에게 웹 사이트 폴더의 루트에 있는 `_sass/` 디렉토리에서 `main.scss` 이라는 파일을 찾아보도록 한다.
 
 이제 `main.scss` 가 있어야 한다. 이렇게 나누는 것이 규모가 큰 프로젝트에서 CSS를 체계적으로 조직하는데 좋은 방법이다.
 
@@ -47,16 +48,15 @@ Jekyll 사이트는 종종 이 구조를 사용하여 asset을 체계적으로 �
 `_layouts/default.html` 을 열고 스타일시트를 `<head>` 에 추가한다.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
   <body>
-    {% include navigation.html %}
-    {{ content }}
+    {% include navigation.html %} {{ content }}
   </body>
 </html>
 ```

@@ -20,7 +20,7 @@ Sass에서 사용 가능한 연산자 종류
 | `/`  | 나누기 |   오른쪽 값이 반드시 숫자(Number)    |
 | `%`  | 나머지 |                                      |
 
-> ☝️ 10px * 10px = error! , 10px / 2px = error!
+> ☝️ 10px \* 10px = error! , 10px / 2px = error!
 
 비교 연산자:
 
@@ -48,8 +48,8 @@ Sass에서 사용 가능한 연산자 종류
 일반적으로는 절대값을 나타내는 `px` 단위로 연산을 하는데, 상대적 단위( `%` , `em` , `vw` 등)와 `px` 단위를 같이 연산할 경우 CSS의 `calc()` 로 연산해야 한다.
 
 ```scss
-width: 50% - 20px;  // 단위 모순 에러(Incompatible units error)
-width: calc(50% - 20px);  // 연산 가능
+width: 50% - 20px; // 단위 모순 에러(Incompatible units error)
+width: calc(50% - 20px); // 연산 가능
 ```
 
 #### 나누기 연산의 주의사항
@@ -64,10 +64,10 @@ SCSS:
 
 ```scss
 div {
-  width: 20px + 20px;  // 더하기
-  height: 40px - 10px;  // 빼기
-  font-size: 10px * 2;  // 곱하기
-  margin: 30px / 2;  // 나누기
+  width: 20px + 20px; // 더하기
+  height: 40px - 10px; // 빼기
+  font-size: 10px * 2; // 곱하기
+  margin: 30px / 2; // 나누기
 }
 ```
 
@@ -75,10 +75,10 @@ div {
 
 ```css
 div {
-  width: 40px;  /* OK */
-  height: 30px;  /* OK */
-  font-size: 20px;  /* OK */
-  margin: 30px / 2;  /* ?? */
+  width: 40px; /* OK */
+  height: 30px; /* OK */
+  font-size: 20px; /* OK */
+  margin: 30px / 2; /* ?? */
 }
 ```
 
@@ -93,9 +93,9 @@ SCSS:
 ```scss
 div {
   $x: 100px;
-  width: $x / 2;  // 변수에 저장된 값을 나누기
-  height: (100px / 2);  // 괄호로 묶어서 나누기
-  font-size: 10px + 12px / 3;  // 더하기 연산과 같이 사용
+  width: $x / 2; // 변수에 저장된 값을 나누기
+  height: (100px / 2); // 괄호로 묶어서 나누기
+  font-size: 10px + 12px / 3; // 더하기 연산과 같이 사용
 }
 ```
 
@@ -118,7 +118,7 @@ SCSS:
 ```scss
 div::after {
   content: "Hello " + World;
-  flex-flow: row + "-reverse" + " " + wrap
+  flex-flow: row + "-reverse" + " " + wrap;
 }
 ```
 
@@ -143,7 +143,7 @@ div {
   // R: 12 + 34 = 46
   // G: 34 + 56 = 8a
   // B: 56 + 78 = ce
-  background: rgba(50, 100, 150, .5) + rgba(10, 20, 30, .5);
+  background: rgba(50, 100, 150, 0.5) + rgba(10, 20, 30, 0.5);
   // R: 50 + 10 = 60
   // G: 100 + 20 = 120
   // B: 150 + 30 = 180
@@ -162,7 +162,7 @@ div {
 }
 ```
 
-> ☝️ 단, `rgba() ` 에서 Alpha 값은 연산되지 않으며 서로 동일해야 다른 값의 연산이 가능한데,
+> ☝️ 단, `rgba()` 에서 Alpha 값은 연산되지 않으며 서로 동일해야 다른 값의 연산이 가능한데,
 > Alpha 값을 연산하기 위해서 다음과 같은 색상 함수(Color Functions)를 사용할 수 있다.
 
 > 🔗 [opacify()](http://sass-lang.com/documentation/Sass/Script/Functions.html#opacify-instance_method), [transparentize()](http://sass-lang.com/documentation/Sass/Script/Functions.html#transparentize-instance_method)
@@ -170,10 +170,10 @@ div {
 SCSS:
 
 ```scss
-$color: rgba(10, 20, 30, .5);
+$color: rgba(10, 20, 30, 0.5);
 div {
-  color: opacify($color, .3);  // 30% 더 불투명하게 / 0.5 + 0.3
-  background-color: transparentize($color, .2);  // 20% 더 투명하게 / 0.5 - 0.2
+  color: opacify($color, 0.3); // 30% 더 불투명하게 / 0.5 + 0.3
+  background-color: transparentize($color, 0.2); // 20% 더 투명하게 / 0.5 - 0.2
 }
 ```
 
@@ -201,7 +201,7 @@ SCSS:
 ```scss
 $width: 90px;
 div {
-  @if not ($width > 100px) {
+  @if not($width > 100px) {
     height: 300px;
   }
 }
@@ -220,4 +220,3 @@ div {
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
 
 [Sass(SCSS) 완전 정복!](https://heropy.blog/2018/01/31/sass/)
-

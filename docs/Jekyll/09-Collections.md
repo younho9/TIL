@@ -33,6 +33,7 @@ short_name: jill
 name: Jill Smith
 position: Chief Editor
 ---
+
 Jill is an avid fruit grower based in the south of France.
 ```
 
@@ -44,6 +45,7 @@ short_name: ted
 name: Ted Doe
 position: Writer
 ---
+
 Ted has been eating fruit since he was baby.
 ```
 
@@ -58,15 +60,16 @@ Ted has been eating fruit since he was baby.
 layout: default
 title: Staff
 ---
+
 <h1>Staff</h1>
 
 <ul>
   {% for author in site.authors %}
-    <li>
-      <h2>{{ author.name }}</h2>
-      <h3>{{ author.position }}</h3>
-      <p>{{ author.content | markdownify }}</p>
-    </li>
+  <li>
+    <h2>{{ author.name }}</h2>
+    <h3>{{ author.position }}</h3>
+    <p>{{ author.content | markdownify }}</p>
+  </li>
   {% endfor %}
 </ul>
 ```
@@ -90,8 +93,8 @@ content가 Markdown으로 되어 있기 때문에 `markdownify` filter를 적용
 
 ```yaml
 collections:
-	authors:
-		output: true
+authors:
+output: true
 ```
 
 이렇게 하면 `author.url` 을 사용하여 페이지에 접근할 수 있다.
@@ -103,15 +106,16 @@ collections:
 layout: default
 title: Staff
 ---
+
 <h1>Staff</h1>
 
 <ul>
   {% for author in site.authors %}
-    <li>
-      <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
-      <h3>{{ author.position }}</h3>
-      <p>{{ author.content | markdownify }}</p>
-    </li>
+  <li>
+    <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
+    <h3>{{ author.position }}</h3>
+    <p>{{ author.content | markdownify }}</p>
+  </li>
   {% endfor %}
 </ul>
 ```
@@ -124,6 +128,7 @@ title: Staff
 ---
 layout: default
 ---
+
 <h1>{{ page.name }}</h1>
 <h2>{{ page.position }}</h2>
 
@@ -132,7 +137,7 @@ layout: default
 
 ## Front matter defaults
 
-이렇게 만든 `author` 레이아웃을 author들, `jill.md` 와 `ted.md` 의 front matter에 표시해주어야 하지만 이것은 계속 반복되는 작업이다. 따라서 다른 방법을 사용해볼 수 있다. 
+이렇게 만든 `author` 레이아웃을 author들, `jill.md` 와 `ted.md` 의 front matter에 표시해주어야 하지만 이것은 계속 반복되는 작업이다. 따라서 다른 방법을 사용해볼 수 있다.
 
 우리가 원하는 것은 자동적으로 포스트들은 `post` 레이아웃을 사용하고, author들은 `author` 레이아웃을 사용하는 것이다.
 
@@ -176,6 +181,7 @@ defaults:
 ---
 layout: default
 ---
+
 <h1>{{ page.name }}</h1>
 <h2>{{ page.position }}</h2>
 
@@ -183,9 +189,9 @@ layout: default
 
 <h2>Posts</h2>
 <ul>
-  {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
-  {% for post in filtered_posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% assign filtered_posts = site.posts | where: 'author', page.short_name %} {%
+  for post in filtered_posts %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
 ```
@@ -204,13 +210,13 @@ layout: default
 ---
 layout: default
 ---
+
 <h1>{{ page.title }}</h1>
 
 <p>
-  {{ page.date | date_to_string }}
-  {% assign author = site.authors | where: 'short_name', page.author | first %}
-  {% if author %}
-    - <a href="{{ author.url }}">{{ author.name }}</a>
+  {{ page.date | date_to_string }} {% assign author = site.authors | where:
+  'short_name', page.author | first %} {% if author %} -
+  <a href="{{ author.url }}">{{ author.name }}</a>
   {% endif %}
 </p>
 

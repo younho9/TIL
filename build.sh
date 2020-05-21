@@ -4,7 +4,15 @@ cd notion
 pipenv install
 pipenv run python main.py --directory=$1
 cd ..
+echo -------------------------------------------------------
+echo 💄 Apply prettier
+echo -------------------------------------------------------
 npx prettier --write docs/**/*.md
+echo -------------------------------------------------------
+echo ✅ Successfully formatted
+echo -------------------------------------------------------
 cd docs
-echo App
+echo -------------------------------------------------------
+echo 🚗 Run docsify server
+echo -------------------------------------------------------
 docsify serve

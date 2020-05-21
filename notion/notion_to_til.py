@@ -21,8 +21,10 @@ def get_contents_from_notion(token_v2, notion_repo_url, directory_name):
                 text = text + "#### " + block.title + "\n\n"
             # Handles Code Blocks
             if (block.type == "code"):
-                print(block.title + "\n")
-                language = input("Input a language : ")
+                print("\n-------------------------------------------------------")
+                print(block.title)
+                print("-------------------------------------------------------\n")
+                language = input("🗣  Input a language : ")
                 text = text + "```" + language + "\n" + block.title + "\n```\n\n"
             # Handles Images
             if (block.type == "image"):
@@ -42,8 +44,13 @@ def get_contents_from_notion(token_v2, notion_repo_url, directory_name):
             os.mkdir("../docs/" + directory_name)
         except:
             pass
-        print("\nTitle is " + post.title)
-        filename = input("Input filename of TIL content : ")
+        print("\n-------------------------------------------------------")
+        print("Title is " + post.title)
+        print("-------------------------------------------------------\n")
+        filename = input("📝 Input filename of TIL content : ")
+        filename = filename.replace(' ', '-')
         file = open("../docs/" + directory_name + "/" + filename + ".md", "w")
         file.write(text)
+        print("\n-------------------------------------------------------")
         print("✅Successfully exported new TIL content to docs/" + directory_name + "/"+ filename + ".md")
+        print("-------------------------------------------------------\n")

@@ -3,12 +3,12 @@ import sys
 
 from notion.client import NotionClient
 
-def get_contents_from_notion(token_v2, parent_page_url_or_id, directory_name):
+def get_contents_from_notion(token_v2, notion_repo_url, directory_name):
     client = NotionClient(token_v2=token_v2)
-    til_repo = client.get_block(parent_page_url_or_id)
+    notion_repo = client.get_block(notion_repo_url)
     
     # Main Loop
-    for post in til_repo.children:
+    for post in notion_repo.children:
         text = "# %s\n\n" % (post.title)
         for block in post.children:
             # Handles H1

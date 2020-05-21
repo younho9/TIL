@@ -43,7 +43,7 @@ def get_til_contents(token_v2, parent_page_url_or_id, directory_name):
             os.mkdir("../docs/" + directory_name)
         except:
             pass
-        print("Title is " + post.title)
+        print("\nTitle is " + post.title)
         filename = input("Input filename of TIL content : ")
         file = open("../docs/" + directory_name + "/" + filename + ".md", "w")
         file.write(text)

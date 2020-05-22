@@ -1,5 +1,5 @@
-import config
 import argparse
+import os
 import sys
 
 from notion_to_til import get_contents_from_notion
@@ -16,8 +16,8 @@ if __name__ == "__main__":
     if not directory:
         directory = "etc"
 
-    url = config.url
-    token = config.token_v2
+    url = "https://www.notion.so/younho9/TIL-Today-I-Learned-1576d9889f3948f4b5e8d6311e81bc8b"
+    token = os.environ.get("NOTION_TOKEN")
 
     get_contents_from_notion(token, url, directory)
     

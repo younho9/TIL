@@ -36,6 +36,9 @@
   - [실행 컨텍스트와 클로저](/JavaScript/Execution-context-and-closure.md)
   - [객체지향 프로그래밍](/JavaScript/Object-oriented-programming.md)
   - [함수와 프로토타입 체이닝](/JavaScript/Function-and-prototype-chaining.md)
+  - [타입 체크](/JavaScript/Type-check.md)
+  - [DOM](/JavaScript/DOM.md)
+  - [웹 스토리지](/JavaScript/Web-Storage.md)
 
 - 📂 **React**
 

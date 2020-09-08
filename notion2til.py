@@ -84,7 +84,6 @@ def notion2til(token, collection_id):
         if image_type in image_source:
           urllib.request.urlretrieve(image_source, dir_name + "/images/image-" + str(index) + '.' + image_type)
           
-      
     title = post.title.replace(" ", "-")
     file = open(dir_name + "/" + title + ".md", "w")
     print("✅ Successfully exported blog content to" + dir_name + "/" + title + ".md")
@@ -97,6 +96,8 @@ def notion2til(token, collection_id):
     with open('./docs/_sidebar.md', 'r') as f:
       new_sidebar =[]
       for line in f.readlines():
+        if(line.strip() == sidebar_line.strip()):
+          continue
         new_sidebar.append(line.replace(sidebar_category, (sidebar_category + '\n' + sidebar_line).rstrip()))
 
     with open('./docs/_sidebar.md', 'w') as f:

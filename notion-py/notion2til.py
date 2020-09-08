@@ -5,102 +5,100 @@ import urllib.request
 from datetime import datetime
 from notion.client import NotionClient
 
-def notion2til(token, collection_id):
+image_types = ['png', 'jpg', 'jpeg']
+page_status_list = ['🛠 In Progress', '✅ Completed', '🖨 Published']
+
+def notion2til(token, collection_id, target):
   client = NotionClient(token_v2=token)
   contents_collection = client.get_collection(collection_id)
-  posts = contents_collection.get_rows()
+  pages = contents_collection.get_rows()
   
   # Main Loop
-  for post in posts:
-    # Post Filter
-    if(post.status == "🛠 In Progress"):
-      continue
-    # if(post.status == "✅ Completed"):
-    #   continue
-    if(post.status == "🖨 Published"):
+  for page in pages:
+    if(page.status != '✅ Completed'):
       continue
 
-    # Handle title
-    text = "# " + post.title + "\n\n"
+    dir_name = target + '/' + page.tag[0]
+    make_directory(dir_name)
+    file_name = page.title.replace(' ', '-')
+    file_path = dir_name + '/' + file_name
 
-    # Handles Post Image Source
-    image_sources = []
-    image_number = 0
-    image_types = ['png', 'jpg', 'jpeg']
+    post = '# ' + page.title + '\n\n'
+    post = post + parse_notion_contents(page.children)
 
-    # Get blog post
-    for block in post.children:
-      # Handles H1
-      if (block.type == "header"):
-        text = text + "## " + block.title + "\n\n"
-      # Handles H2
-      if (block.type == "sub_header"):
-        text = text + "### " + block.title + "\n\n"
-      # Handles H3
-      if (block.type == "sub_sub_header"):
-        text = text + "#### " + block.title + "\n\n"
-      # Handles Code Blocks
-      if (block.type == "code"):
-        text = text + "```" + block.language.lower() + "\n" + block.title + "\n```\n\n"
-      # Handles Callout Blocks
-      if (block.type == "callout"):
-        text = text + "> " + block.icon + " " + block.title + "\n\n"
-      # Handles Quote Blocks
-      if (block.type == "quote"):
-        text = text + "> " + block.title + "\n\n"
-      # Handles Bookmark Blocks
-      if (block.type == "bookmark"):
-        text = text + "🔗 [" + block.title + "](" + block.link + ")\n\n"
-      # Handles Images
-      if (block.type == "image"):
-        image_sources.append(block.source)
-        for image_type in image_types:
-          if image_type in block.source:
-            text = text + "![image-" + str(image_number) + "](" + "./images/image-" + str(image_number) + '.' + image_type + ")\n\n"
-        image_number += 1
-      # Handles Bullets
-      if (block.type == "bulleted_list"):
-        text = text + "- " + block.title + "\n\n"
-      # Handles Dividers
-      # if (block.type == "divider"):
-      #     text = text + "---" + "\n\n"
-      # Handles Basic Text, Links, Single Line Code
-      if (block.type == "text"):
-        text = text + block.title + "\n\n"
+    write_post(post, file_path)
+    update_sidebar(target, page.tag[0], page.title, file_name)
+    
+    print('✅ Successfully exported blog content to' + file_path + '.md')
 
-    # Make blog post directory
-    dir_name = "../docs/" + str(post.tag[0])
-    try:
-      os.mkdir(dir_name)
-      os.mkdir(dir_name + "/images")
-    except:
-      pass
+def make_directory(dir_name):
+  try:
+    os.mkdir(dir_name)
+    os.mkdir(dir_name + '/images')
+  except:
+    pass
 
-    # Handles post Images
-    for index, image_source in enumerate(image_sources):
+def parse_notion_contents(blocks):
+  image_number = 0
+  contents = ''
+
+  for block in blocks:
+    type = block.type
+    # Handles H1
+    if (type == 'header'):
+      contents += '## ' + block.title + '\n\n'
+    # Handles H2
+    elif (type == 'sub_header'):
+      contents += '### ' + block.title + '\n\n'
+    # Handles H3
+    elif (type == 'sub_sub_header'):
+      contents += '#### ' + block.title + '\n\n'
+    # Handles Code Blocks
+    elif (type == 'code'):
+      contents += '```' + block.language.lower() + '\n' + block.title + '\n```\n\n'
+    # Handles Callout Blocks
+    elif (type == 'callout'):
+      contents += '> ' + block.icon + ' ' + block.title + '\n\n'
+    # Handles Quote Blocks
+    elif (type == 'quote'):
+      contents += '> ' + block.title + '\n\n'
+    # Handles Bookmark Blocks
+    elif (type == 'bookmark'):
+      contents += '🔗 [' + block.title + '](' + block.link + ')\n\n'
+    # Handles Images
+    elif (type == 'image'):
       for image_type in image_types:
-        if image_type in image_source:
-          urllib.request.urlretrieve(image_source, dir_name + "/images/image-" + str(index) + '.' + image_type)
-          
-    title = post.title.replace(" ", "-")
-    file = open(dir_name + "/" + title + ".md", "w")
-    print("✅ Successfully exported blog content to" + dir_name + "/" + title + ".md")
-    file.write(text)
+        if image_type in block.source:
+          image_path = './images/image-' + str(image_number) + '.' + image_type
+          contents += '![image-' + str(image_number) + '](' + image_path + ')\n\n'
+          urllib.request.urlretrieve(block.source, dir_name + image_path)
+      image_number += 1
+    # Handles Bullets
+    elif (type == 'bulleted_list'):
+      contents += '- ' + block.title + '\n\n'
+    # Handles Basic text, Links, Single Line Code
+    elif (type == 'text'):
+      contents += block.title + '\n\n'
+    # Handles Dividers
+    # elif (type == 'divider'):
+    #     contents += '---' + '\n\n'
+  return contents
 
-    # Handles sidebar
-    sidebar_category = '- 📂 **' + post.tag[0] + '**\n';
-    sidebar_line = '  - [' + post.title + ']' + '(/' + post.tag[0] + '/' + title + '.md)'
+def write_post(post, file_path):
+  file = open(file_path + '.md', 'w')
+  file.write(post)
 
-    with open('../docs/_sidebar.md', 'r') as f:
-      new_sidebar =[]
-      for line in f.readlines():
-        if(line.strip() == sidebar_line.strip()):
-          continue
-        new_sidebar.append(line.replace(sidebar_category, (sidebar_category + '\n' + sidebar_line).rstrip()))
+def update_sidebar(target, category, title, file_name):
+  category_title = '- 📂 **' + category + '**\n';
+  post_path = '  - [' + title + ']' + '(/' + category + '/' + file_name + '.md)'
 
-    with open('../docs/_sidebar.md', 'w') as f:
-      for line in new_sidebar:
-        f.writelines(line)
+  with open(target + '/_sidebar.md', 'r') as f:
+    new_sidebar =[]
+    for line in f.readlines():
+      if(line.strip() == post_path.strip()):
+        continue
+      new_sidebar.append(line.replace(category_title, (category_title + '\n' + post_path).rstrip()))
 
-if __name__ == '__main__':
-  notion2til(sys.argv[1], sys.argv[2])
+  with open(target + '/_sidebar.md', 'w') as f:
+    for line in new_sidebar:
+      f.writelines(line)

@@ -20,10 +20,10 @@ Sass는 기본적으로 Sass(또는 SCSS) 파일을 가져오지만, 몇 가지 
 - 미디어쿼리가 있는 경우
 
 ```scss
-@import "hello.css";
-@import "http://hello.com/hello";
+@import 'hello.css';
+@import 'http://hello.com/hello';
 @import url(hello);
-@import "hello" screen;
+@import 'hello' screen;
 ```
 
 ### 여러 파일 가져오기
@@ -33,7 +33,7 @@ Sass는 기본적으로 Sass(또는 SCSS) 파일을 가져오지만, 몇 가지 
 파일 이름은 `,` 로 구분한다.
 
 ```scss
-@import "header", "footer";
+@import 'header', 'footer';
 ```
 
 > ☝️ 확장자 없이 파일 이름만으로 가져오기를 하면, `파일명.scss` , `파일명.sass` , `_파일명.scss` , `_파일명.sass` 이 있는지 검색하고 가져온다. 여러 파일이 존재하면 에러가 발생한다.
@@ -64,7 +64,7 @@ Sass-App
 
 ```scss
 // main.scss
-@import "header", "side-menu";
+@import 'header', 'side-menu';
 ```
 
 `node-sass` 로 컴파일하면
@@ -103,7 +103,7 @@ Sass-App
 
 ```scss
 // main.scss
-@import "header", "side-menu";
+@import 'header', 'side-menu';
 ```
 
 컴파일하면…

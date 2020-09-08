@@ -254,7 +254,7 @@ $fruits: (apple, orange, banana, mango);
 .fruits {
   @each $fruit in $fruits {
     li.#{$fruit} {
-      background: url("/images/#{$fruit}.png");
+      background: url('/images/#{$fruit}.png');
     }
   }
 }
@@ -264,16 +264,16 @@ $fruits: (apple, orange, banana, mango);
 
 ```css
 .fruits li.apple {
-  background: url("/images/apple.png");
+  background: url('/images/apple.png');
 }
 .fruits li.orange {
-  background: url("/images/orange.png");
+  background: url('/images/orange.png');
 }
 .fruits li.banana {
-  background: url("/images/banana.png");
+  background: url('/images/banana.png');
 }
 .fruits li.mango {
-  background: url("/images/mango.png");
+  background: url('/images/mango.png');
 }
 ```
 
@@ -318,7 +318,7 @@ $banana: (banana, japan);
 
 @each $fruit, $country in $apple, $orange, $banana {
   .box-#{$fruit} {
-    background: url("/images/#{$country}.png");
+    background: url('/images/#{$country}.png');
   }
 }
 ```
@@ -327,13 +327,13 @@ $banana: (banana, japan);
 
 ```css
 .box-apple {
-  background: url("/images/korea.png");
+  background: url('/images/korea.png');
 }
 .box-orange {
-  background: url("/images/china.png");
+  background: url('/images/china.png');
 }
 .box-banana {
-  background: url("/images/japan.png");
+  background: url('/images/japan.png');
 }
 ```
 
@@ -354,7 +354,7 @@ $fruits-data: (
 
 @each $fruit, $country in $fruits-data {
   .box-#{$fruit} {
-    background: url("/images/#{$country}.png");
+    background: url('/images/#{$country}.png');
   }
 }
 ```
@@ -363,13 +363,13 @@ $fruits-data: (
 
 ```css
 .box-apple {
-  background: url("/images/korea.png");
+  background: url('/images/korea.png');
 }
 .box-orange {
-  background: url("/images/china.png");
+  background: url('/images/china.png');
 }
 .box-banana {
-  background: url("/images/japan.png");
+  background: url('/images/japan.png');
 }
 ```
 

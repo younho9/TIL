@@ -92,11 +92,7 @@
 
 ```html
 <link rel="stylesheet" href="css/main.css" />
-<link
-  rel="stylesheet"
-  media="all and (max-width: 1024px)"
-  href="css/main_medium.css"
-/>
+<link rel="stylesheet" media="all and (max-width: 1024px)" href="css/main_medium.css" />
 ```
 
 `main.css` 를 연결하고, 반응형이 들어있는 `main_midium.css` 도 연결하는데, 이 때 `midia` 속성을 사용하여 미디어 타입과 특성을 정의해 사용할 수 있다.

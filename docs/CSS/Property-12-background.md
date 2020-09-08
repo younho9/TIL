@@ -24,11 +24,11 @@ background: 색상 이미지경로 반복 위치 스크롤특성;
 
 ```css
 .box1 {
-  background: red url("../img/image.jpg") no-repeat left top scroll;
+  background: red url('../img/image.jpg') no-repeat left top scroll;
   /* 색상 이미지경로 반복 위치 스크롤특성 */
 }
 .box2 {
-  background: url("../img/image.jpg") no-repeat right 100px;
+  background: url('../img/image.jpg') no-repeat right 100px;
   /* 이미지경로 반복 위치 */
 }
 .box3 {
@@ -78,24 +78,23 @@ div {
 ### 사용법
 
 ```css
-background-image: url("경로");
+background-image: url('경로');
 ```
 
 ```css
 .box {
-  background-image: url("../img/image.jpg");
+  background-image: url('../img/image.jpg');
   width: 120px;
   height: 80px;
 }
 .box1 {
   /* 개별 속성 */
-  background-image: url("../img/image1.jpg"), url("../img/image2.jpg"),
-    url("../img/image3.jpg");
+  background-image: url('../img/image1.jpg'), url('../img/image2.jpg'), url('../img/image3.jpg');
 }
 .box2 {
   /* 단축 속성 */
-  background: url("../img/image1.jpg") no-repeat, url("../img/image2.jpg")
-      no-repeat 100px 50px, url("../img/image3.jpg") repeat-x;
+  background: url('../img/image1.jpg') no-repeat, url('../img/image2.jpg') no-repeat 100px 50px,
+    url('../img/image3.jpg') repeat-x;
 }
 ```
 
@@ -124,7 +123,7 @@ background-image: url("경로");
 
 ```css
 .box {
-  background-image: url("https://heropy.blog/css/images/logo.png");
+  background-image: url('https://heropy.blog/css/images/logo.png');
   background-size: 100px;
   background-repeat: no-repeat;
   width: 550px;
@@ -182,7 +181,7 @@ background-position: X축(left, right, center) Y축(top, bottom, center);
   width: 550px;
   height: 300px;
   border: 2px dashed lightgray;
-  background-image: url("https://heropy.blog/css/images/logo.png");
+  background-image: url('https://heropy.blog/css/images/logo.png');
   background-size: 100px;
   background-repeat: no-repeat;
   background-position: center;
@@ -219,13 +218,13 @@ section {
   border: 2px dashed lightgray;
 }
 .section2 {
-  background-image: url("https://www.istarbucks.co.kr/common/img/main/fav_prod_bg_new.jpg");
+  background-image: url('https://www.istarbucks.co.kr/common/img/main/fav_prod_bg_new.jpg');
   background-size: auto 100%;
   background-position: right bottom;
   background-attachment: fixed;
 }
 .section3 {
-  background-image: url("https://www.istarbucks.co.kr/common/img/main/reserve_bg.jpg");
+  background-image: url('https://www.istarbucks.co.kr/common/img/main/reserve_bg.jpg');
   background-size: auto 100%;
   background-position: right bottom;
   background-attachment: fixed;
@@ -247,7 +246,7 @@ section {
   border: 4px solid red;
   margin: 50px;
   overflow: auto;
-  background-image: url("https://heropy.blog/css/images/logo.png");
+  background-image: url('https://heropy.blog/css/images/logo.png');
   background-size: 50%;
   background-attachment: local;
 }
@@ -283,7 +282,7 @@ section {
   height: 300px;
   border: 2px solid red;
   margin: 50px;
-  background-image: url("https://heropy.blog/css/images/logo.png");
+  background-image: url('https://heropy.blog/css/images/logo.png');
   /* 500x500 */
   background-repeat: no-repeat;
   background-size: contain;

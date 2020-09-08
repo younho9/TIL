@@ -144,12 +144,12 @@ var add = (x, y) => x + y;
 
 ```javascript
 // 매개변수가 없는 경우
-var foo = () => console.log("bar");
+var foo = () => console.log('bar');
 foo(); // bar
 
 // 매개변수가 하나인 경우 () 생략 가능
 var foo = (x) => x;
-console.log(foo("bar")); // bar
+console.log(foo('bar')); // bar
 
 // 매개변수가 여러 개인 경우
 var foo = (a, b) => a + b;
@@ -189,7 +189,7 @@ function add(x, y) {
 }
 
 add.result = add(3, 2);
-add.status = "OK";
+add.status = 'OK';
 
 console.log(add.result);
 console.log(add.status);
@@ -236,7 +236,7 @@ var foo = function (func) {
 
 // foo() 함수 실행
 foo(function () {
-  console.log("Function can be used as the argument.");
+  console.log('Function can be used as the argument.');
 });
 ```
 
@@ -246,7 +246,7 @@ foo(function () {
 // 함수를 리턴하는 foo() 함수 정의
 var foo = function () {
   return function () {
-    console.log("this function is the return value.");
+    console.log('this function is the return value.');
   };
 };
 
@@ -310,7 +310,7 @@ console.dir(add);
     <script>
       // 페이지 로드 시 호출될 콜백 함수
       window.onload = function () {
-        alert("This is the callback function.");
+        alert('This is the callback function.');
       };
     </script>
   </body>
@@ -323,8 +323,8 @@ console.dir(add);
 
 ```javascript
 (function (name) {
-  console.log("This is the immediate function -->" + name);
-})("foo");
+  console.log('This is the immediate function -->' + name);
+})('foo');
 ```
 
 [실행 결과]
@@ -435,9 +435,9 @@ JS에서는 함수도 일급 객체이므로 일반 값처럼 함수 자체를 �
 
 ```javascript
 var self = function () {
-  console.log("a");
+  console.log('a');
   return function () {
-    console.log("b");
+    console.log('b');
   };
 };
 self = self(); // a
@@ -513,14 +513,14 @@ JS의 여러 가지 **함수가 호출되는 방식(호출 패턴)** 에 따라 
 
 ```javascript
 var myObject = {
-  name: "foo",
+  name: 'foo',
   sayName: function () {
     console.log(this.name);
   },
 };
 
 var otherObject = {
-  name: "bar",
+  name: 'bar',
 };
 
 otherObject.sayName = myObject.sayName;
@@ -547,7 +547,7 @@ console.log(window.foo); // I'm foo
 함수를 호출할 때 `this` 바인딩
 
 ```javascript
-var test = "This is test";
+var test = 'This is test';
 console.log(window.test);
 
 // sayFoo() 함수
@@ -567,15 +567,15 @@ var myObject = {
   varlue: 1,
   func1: function () {
     this.value += 1;
-    console.log("func1() called. this.value : " + this.value);
+    console.log('func1() called. this.value : ' + this.value);
 
     func2 = function () {
       this.value += 1;
-      console.log("func2 called. this.value : " + this.value);
+      console.log('func2 called. this.value : ' + this.value);
 
       func3 = function () {
         this.value += 1;
-        console.log("func3() called. this.value : " + this.value);
+        console.log('func3() called. this.value : ' + this.value);
       };
       func3();
     };
@@ -606,15 +606,15 @@ var myObject = {
     var that = this;
 
     this.value += 1;
-    console.log("func1() called. this.value : " + this.value);
+    console.log('func1() called. this.value : ' + this.value);
 
     func2 = function () {
       that.value += 1;
-      console.log("func2 called. this.value : " + that.value);
+      console.log('func2 called. this.value : ' + that.value);
 
       func3 = function () {
         that.value += 1;
-        console.log("func3() called. this.value : " + that.value);
+        console.log('func3() called. this.value : ' + that.value);
       };
       func3();
     };
@@ -666,7 +666,7 @@ var Person = function (name) {
 };
 
 // foo 객체 생성
-var foo = new Person("foo");
+var foo = new Person('foo');
 console.log(foo.name); // foo
 ```
 
@@ -679,9 +679,9 @@ console.log(foo.name); // foo
 ```javascript
 // 객체 리터럴 방식으로 foo 객체 생성
 var foo = {
-  name: "foo",
+  name: 'foo',
   age: 35,
-  gender: "man",
+  gender: 'man',
 };
 console.dir(foo);
 
@@ -693,10 +693,10 @@ function Person(name, age, gender, position) {
 }
 
 // Person 생성자 함수를 이용해 bar 객체, baz 객체 생성
-var bar = new Person("bar", 33, "woman");
+var bar = new Person('bar', 33, 'woman');
 console.dir(bar);
 
-var baz = new Person("baz", 25, "woman");
+var baz = new Person('baz', 25, 'woman');
 console.dir(baz);
 ```
 
@@ -729,7 +729,7 @@ function Person(name, age, gender, position) {
   this.gender = gender;
 }
 
-var qux = Person("qux", 20, "man");
+var qux = Person('qux', 20, 'man');
 console.log(qux); // undefined
 
 console.log(window.name); // qux
@@ -788,7 +788,7 @@ function Person(name, age, gender) {
 var foo = {};
 
 // apply() 메소드 호출
-Person.apply(foo, ["foo", 30, "man"]);
+Person.apply(foo, ['foo', 30, 'man']);
 console.dir(foo);
 ```
 
@@ -801,7 +801,7 @@ console.dir(foo);
 `call()` 메소드는 `apply()` 와 기능이 같지만 `apply()` 의 두 번째 인자에서 배열 형태로 넘긴 것을 각각 하나의 인자로 넘긴다.
 
 ```javascript
-Person.call(foo, "foo", 30, "man");
+Person.call(foo, 'foo', 30, 'man');
 ```
 
 `apply()` 와 `call()` 메소드의 대표적인 용도가 `arguments` 객체와 같은 **유사 배열 객체에서 배열 메소드**를 사용하는 경우이다.
@@ -847,10 +847,10 @@ function Person(name, age, gender) {
   this.gender = gender;
 
   // 명시적으로 다른 객체 반환
-  return { name: "bar", age: 20, gender: "woman" };
+  return { name: 'bar', age: 20, gender: 'woman' };
 }
 
-var foo = new Person("foo", 30, "man");
+var foo = new Person('foo', 30, 'man');
 console.dir(foo);
 ```
 
@@ -871,7 +871,7 @@ function Person(name, age, gender) {
   return 100;
 }
 
-var foo = new Person("foo", 30, "man");
+var foo = new Person('foo', 30, 'man');
 console.log(foo); // Person { name: 'foo', age: 30, gender: 'man' }
 ```
 
@@ -917,7 +917,7 @@ function Person(name) {
 }
 
 // foo 객체 생성
-var foo = new Person("foo");
+var foo = new Person('foo');
 
 console.dir(Person);
 console.dir(foo);
@@ -947,15 +947,15 @@ JS의 객체 생성 방식을 다시 한번 정리하면 이렇다.
 
 ```javascript
 var myObject = {
-  name: "foo",
+  name: 'foo',
   sayName: function () {
-    console.log("My Name is " + this.name);
+    console.log('My Name is ' + this.name);
   },
 };
 
 myObject.sayName(); // My Name is foo
-console.log(myObject.hasOwnProperty("name")); // true
-console.log(myObject.hasOwnProperty("nickName")); // false
+console.log(myObject.hasOwnProperty('name')); // true
+console.log(myObject.hasOwnProperty('nickName')); // false
 myObject.sayNickName(); // Uncaught TypeError: Object #<Object> has no method 'sayNickName'
 ```
 
@@ -986,10 +986,10 @@ function Person(name, age, hobby) {
 }
 
 // foo 객체 생성
-var foo = new Person("foo", 30, "tennis");
+var foo = new Person('foo', 30, 'tennis');
 
 // 프로토타입 체이닝
-console.log(foo.hasOwnProperty("name")); // true
+console.log(foo.hasOwnProperty('name')); // true
 
 // Person.prototype 객체 출력
 console.dir(Person.prototype);
@@ -1021,10 +1021,10 @@ JS의 숫자, 문자열, 배열 등에서 사용하는 표준 메소드들의 �
 
 ```javascript
 String.prototype.testMethod = function () {
-  console.log("This is the String.prototype.testMethod()");
+  console.log('This is the String.prototype.testMethod()');
 };
 
-var str = "This is test";
+var str = 'This is test';
 str.testMethod();
 
 console.dir(String.prototype);
@@ -1049,14 +1049,14 @@ function Person(name) {
 }
 
 // foo 객체 생성
-var foo = new Person("foo");
+var foo = new Person('foo');
 
 // foo.sayHello();
 // 이 시점에는 sayHello() 메소드가 foo 객체와 Person.prototype 객체 모두에 정의되어 있지 않으므로 에러가 발생한다.
 
 // Prototype 객체에 sayHello() 메소드 정의
 Person.prototype.sayHello = function () {
-  console.log("Hello");
+  console.log('Hello');
 };
 
 foo.sayHello(); // Hello
@@ -1084,12 +1084,12 @@ Person.prototype.getName = function () {
 };
 
 // foo 객체 생성
-var foo = new Person("foo");
+var foo = new Person('foo');
 
 console.log(foo.getName()); // foo
 
 // Person.prototype 객체에 name 프로퍼티 동적 추가
-Person.prototype.name = "person";
+Person.prototype.name = 'person';
 
 console.log(Person.prototype.getName()); // person
 ```
@@ -1108,17 +1108,17 @@ function Person(name) {
 console.log(Person.prototype.constructor);
 
 // foo 객체 생성
-var foo = new Person("foo");
+var foo = new Person('foo');
 console.log(foo.country);
 
 // 디폴트 프로토타입 객체 변경
 Person.prototype = {
-  country: "korea",
+  country: 'korea',
 };
 console.log(Person.prototype.constructor);
 
 // bar 객체 생성
-var bar = new Person("bar");
+var bar = new Person('bar');
 console.log(foo.country);
 console.log(bar.country);
 console.log(foo.constructor);
@@ -1143,14 +1143,14 @@ function Person(name) {
   this.name = name;
 }
 
-Person.prototype.country = "Korea";
+Person.prototype.country = 'Korea';
 
-var foo = new Person("foo");
-var bar = new Person("bar");
+var foo = new Person('foo');
+var bar = new Person('bar');
 console.log(foo.country); // Korea
 console.log(bar.country); // Korea
 
-foo.country = "USA";
+foo.country = 'USA';
 
 console.log(foo.country); // USA
 console.log(bar.country); // Korea

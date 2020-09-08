@@ -26,7 +26,7 @@ font: 기울기 두께 크기 / 줄높이 글꼴;
 
 ```css
 .box {
-  font: italic bold 20px / 1.5 "Arial", sans-serif;
+  font: italic bold 20px / 1.5 'Arial', sans-serif;
 }
 ```
 
@@ -37,7 +37,7 @@ font: 기울기 두께 크기 / 줄높이 글꼴;
   font: bold sans-serif; /* ERROR */
   font: 30px / 1.5 sans-serif;
   font: bold 30px sans-serif;
-  font: italic 30px / 1.5 "Arial", sans-serif;
+  font: italic 30px / 1.5 'Arial', sans-serif;
 }
 ```
 
@@ -186,7 +186,7 @@ font-family: [글꼴 후보1, 글꼴 후보2, ... ], 글꼴 계열;
 
 ```css
 .box {
-  font-family: Arial, "Open Sans", "돋움", dotum, sans-serif;
+  font-family: Arial, 'Open Sans', '돋움', dotum, sans-serif;
 }
 ```
 

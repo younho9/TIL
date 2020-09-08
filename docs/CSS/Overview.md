@@ -116,7 +116,7 @@ CSS `@import` 를 이용하여 외부 CSS를 불러와 적용하는 방식
 
 ```css
 /* main.css */
-@import url("./main2.css");
+@import url('./main2.css');
 ```
 
 ```css

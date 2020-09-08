@@ -17,11 +17,11 @@
 `App.js`
 
 ```javascript
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class App extends Component {
   render() {
-    const name = "react";
+    const name = 'react';
     return <div classNme="react">{name}</div>;
   }
 }
@@ -46,7 +46,7 @@ export default App;
 `NewComponent.js`
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 const NewComponent = () => {
   return <div>Hello React Component!</div>;
@@ -66,8 +66,8 @@ export default NewComponent;
 그리고 나서 이 컴포넌트를 불러올 다른 컴포넌트에서 import 하려면 다음과 같이 할 수 있다.
 
 ```javascript
-import React from "react";
-import NewComponent from "./NewComponent";
+import React from 'react';
+import NewComponent from './NewComponent';
 
 const App = () => {
   return (
@@ -91,8 +91,8 @@ export default App;
 `App.js`
 
 ```javascript
-import React from "react";
-import NewComponent from "./NewComponent";
+import React from 'react';
+import NewComponent from './NewComponent';
 
 const App = () => {
   return (
@@ -112,7 +112,7 @@ export default App;
 `NewComponent.js`
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 const NewComponent = (props) => {
   return <div>Hello, React Component! I'm {props.name}</div>;
@@ -126,14 +126,14 @@ export default NewComponent;
 만약 해당 컴포넌트를 사용하는 부모 컴포넌트에서 `props` 값을 지정하지 않았을 경우에 `defaultProps` 로 기본값을 설정할 수 있다.
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 const NewComponent = (props) => {
   return <div>Hello, React Component! I'm {props.name}</div>;
 };
 
 NewComponent.defaultProps = {
-  name: "default name",
+  name: 'default name',
 };
 
 export default NewComponent;
@@ -146,8 +146,8 @@ export default NewComponent;
 `App.js`
 
 ```javascript
-import React from "react";
-import NewComponent from "./NewComponent";
+import React from 'react';
+import NewComponent from './NewComponent';
 
 const App = () => {
   return <NewComponent>React</NewComponent>;
@@ -161,7 +161,7 @@ export default App;
 `NewComponent.js`
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 const NewComponent = (props) => {
   return (
@@ -174,7 +174,7 @@ const NewComponent = (props) => {
 };
 
 NewComponent.defaultProps = {
-  name: "default name",
+  name: 'default name',
 };
 
 export default NewComponent;
@@ -187,7 +187,7 @@ export default NewComponent;
 `NewComponent.js`
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 const NewComponent = (props) => {
   const { name, children } = props;
@@ -201,7 +201,7 @@ const NewComponent = (props) => {
 };
 
 NewComponent.defaultProps = {
-  name: "default name",
+  name: 'default name',
 };
 
 export default NewComponent;
@@ -212,7 +212,7 @@ export default NewComponent;
 `NewComponent.js`
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 const NewComponent = ({ name, children }) => {
   return (
@@ -225,7 +225,7 @@ const NewComponent = ({ name, children }) => {
 };
 
 NewComponent.defaultProps = {
-  name: "default name",
+  name: 'default name',
 };
 
 export default NewComponent;
@@ -238,8 +238,8 @@ export default NewComponent;
 `NewComponent.js`
 
 ```javascript
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const NewComponent = ({ name, children }) => {
   return (
@@ -252,7 +252,7 @@ const NewComponent = ({ name, children }) => {
 };
 
 NewComponent.defaultProps = {
-  name: "default name",
+  name: 'default name',
 };
 
 NewComponent.propTypes = {
@@ -293,8 +293,8 @@ PropTypes 에는 배열, 함수, 숫자 등 여러 종류를 설정할 수 있�
 `NewComponent.js`
 
 ```javascript
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class NewComponent extends Component {
   render() {
@@ -310,7 +310,7 @@ class NewComponent extends Component {
 }
 
 NewComponent.defaultProps = {
-  name: "default name",
+  name: 'default name',
 };
 
 NewComponent.propTypes = {
@@ -323,12 +323,12 @@ export default NewComponent;
 클래스형 컴포넌트에서는 `defaultProps` 와 `propTypes` 를 class 내부에서 지정할 수도 있다.
 
 ```javascript
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class NewComponent extends Component {
   static defaultProps = {
-    name: "default name",
+    name: 'default name',
   };
 
   static propTypes = {
@@ -362,7 +362,7 @@ src 디렉터리에 새로운 `Counter.js` 컴포넌트를 만든다.
 `Counter.js`
 
 ```javascript
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class Counter extends Component {
   constructor(props) {
@@ -404,8 +404,8 @@ export default Counter;
 `App.js`
 
 ```javascript
-import React from "react";
-import Counter from "./Counter";
+import React from 'react';
+import Counter from './Counter';
 
 const App = () => {
   return <Counter />;
@@ -421,7 +421,7 @@ export default App;
 앞에서 `constructor` 메소드를 사용했는데 다른 방식으로 간단하게 `state` 의 초기값을 지정할 수 있다.
 
 ```javascript
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class Counter extends Component {
   state = {
@@ -487,7 +487,7 @@ onClick={() => {
         number: prevState.number + 1,
       }),
       () => {
-        console.log("setState가 호출되었습니다.");
+        console.log('setState가 호출되었습니다.');
       }
     );
   }}
@@ -505,12 +505,12 @@ src 디렉토리에 `Say.js` 를 생성한다.
 `Say.js`
 
 ```javascript
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Say = () => {
-  const [message, setMessage] = useState("");
-  const onClickEnter = () => setMessage("Hi!");
-  const onClickLeave = () => setMessage("Bye!");
+  const [message, setMessage] = useState('');
+  const onClickEnter = () => setMessage('Hi!');
+  const onClickLeave = () => setMessage('Bye!');
 
   return (
     <div>
@@ -535,27 +535,27 @@ export default Say;
 `useState` 는 한 컴포넌트에서 여러 번 사용할 수 있다. 색을 관리하는 `color` 를 `state` 에 추가한다.
 
 ```javascript
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Say = () => {
-  const [message, setMessage] = useState("");
-  const onClickEnter = () => setMessage("Hi!");
-  const onClickLeave = () => setMessage("Bye!");
+  const [message, setMessage] = useState('');
+  const onClickEnter = () => setMessage('Hi!');
+  const onClickLeave = () => setMessage('Bye!');
 
-  const [color, setColor] = useState("black");
+  const [color, setColor] = useState('black');
 
   return (
     <div>
       <button onClick={onClickEnter}>Enter</button>
       <button onClick={onClickLeave}>Exit</button>
       <h1 style={{ color }}>{message}</h1>
-      <button style={{ color: "red" }} onClick={() => setColor("red")}>
+      <button style={{ color: 'red' }} onClick={() => setColor('red')}>
         Red
       </button>
-      <button style={{ color: "green" }} onClick={() => setColor("green")}>
+      <button style={{ color: 'green' }} onClick={() => setColor('green')}>
         Green
       </button>
-      <button style={{ color: "blue" }} onClick={() => setColor("blue")}>
+      <button style={{ color: 'blue' }} onClick={() => setColor('blue')}>
         Blue
       </button>
     </div>

@@ -37,13 +37,13 @@ Web Storage에는 `sessionStorage` , `localStorage` 두 가지 메커니즘이 �
 아래의 코드를 브라우저 콘솔에서 실행한다.
 
 ```javascript
-localStorage.setItem("test", "Hello localStorage");
+localStorage.setItem('test', 'Hello localStorage');
 ```
 
 그리고 브라우저를 닫고 연다음 아래의 코드를 실행한다. (다른 창에서 실행해도 된다.)
 
 ```javascript
-alert(localStorage.getItem("test")); // Hello localStorage
+alert(localStorage.getItem('test')); // Hello localStorage
 ```
 
 ### sessionStorage 데모
@@ -51,7 +51,7 @@ alert(localStorage.getItem("test")); // Hello localStorage
 아래의 코드를 브라우저 콘솔에서 실행한다.
 
 ```javascript
-sessionStorage.setItem("test", "Hello sessionStorage");
+sessionStorage.setItem('test', 'Hello sessionStorage');
 ```
 
 그리고 브라우저를 새로고침한 다음 아래의 코드를 실행한다.

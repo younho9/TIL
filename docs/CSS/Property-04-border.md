@@ -212,9 +212,7 @@ border-color: [위, 아래, 좌, 우]; /* 모든 방향 */
 `padding` 과 마찬가지로 `border` 의 값만큼 요소의 크기가 커지는 현상
 
 ```html
-<div>
-  Hello world!
-</div>
+<div>Hello world!</div>
 ```
 
 ```css

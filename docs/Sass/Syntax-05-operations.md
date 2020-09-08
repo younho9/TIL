@@ -117,8 +117,8 @@ SCSS:
 
 ```scss
 div::after {
-  content: "Hello " + World;
-  flex-flow: row + "-reverse" + " " + wrap;
+  content: 'Hello ' + World;
+  flex-flow: row + '-reverse' + ' ' + wrap;
 }
 ```
 
@@ -126,7 +126,7 @@ div::after {
 
 ```css
 div::after {
-  content: "Hello World";
+  content: 'Hello World';
   flex-flow: row-reverse wrap;
 }
 ```

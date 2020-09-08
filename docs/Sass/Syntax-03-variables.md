@@ -14,13 +14,13 @@ $변수이름: 속성값;
 
 ```scss
 $color-primary: #e96900;
-$url-images: "/assets/images/";
+$url-images: '/assets/images/';
 $w: 200px;
 
 .box {
   width: $w;
   margin-left: $w;
-  background: $color-primary url($url-images + "bg.jpg");
+  background: $color-primary url($url-images + 'bg.jpg');
 }
 ```
 
@@ -30,7 +30,7 @@ $w: 200px;
 .box {
   width: 200px;
   margin-left: 200px;
-  background: #e96900 url("/assets/images/bg.jpg");
+  background: #e96900 url('/assets/images/bg.jpg');
 }
 ```
 
@@ -169,14 +169,14 @@ $color-primary: red;
 `#{}` 키워드를 사용해 코드의 공간 어디든지 변수 값을 넣을 수 있다.
 
 ```scss
-$family: unquote("Droid+Sans");
-@import url("http://fonts.googleapis.com/css?family=#{$family}");
+$family: unquote('Droid+Sans');
+@import url('http://fonts.googleapis.com/css?family=#{$family}');
 ```
 
 컴파일하면
 
 ```css
-@import url("http://fonts.googleapis.com/css?family=Droid+Sans");
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans');
 ```
 
 > ☝️ `unquote()` 는 문자에서 따옴표를 제거하는 Sass의 내장 함수.

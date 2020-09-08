@@ -76,12 +76,12 @@ ref는 **"특정 DOM을 꼭 직접적으로 건드려야 할 때"** 사용한다
 `ValidationSample.js`
 
 ```javascript
-import React, { Component } from "react";
-import "./ValidationSample.css";
+import React, { Component } from 'react';
+import './ValidationSample.css';
 
 class ValidationSample extends Component {
   state = {
-    password: "",
+    password: '',
     clicked: false,
     validated: false,
   };
@@ -95,7 +95,7 @@ class ValidationSample extends Component {
   handleButtonClick = () => {
     this.setState({
       clicked: true,
-      validated: this.state.password === "0000",
+      validated: this.state.password === '0000',
     });
   };
 
@@ -106,13 +106,7 @@ class ValidationSample extends Component {
           type="password"
           value={this.state.password}
           onChange={this.handleChange}
-          className={
-            this.state.clicked
-              ? this.state.validated
-                ? "success"
-                : "failure"
-              : ""
-          }
+          className={this.state.clicked ? (this.state.validated ? 'success' : 'failure') : ''}
         />
         <button onClick={this.handleButtonClick}>Validate</button>
       </div>
@@ -132,8 +126,8 @@ App 컴포넌트에서 `ValidationSample` 컴포넌트를 불러와 렌더링해
 `App.js`
 
 ```javascript
-import React, { Component } from "react";
-import ValidationSample from "./ValidationSample";
+import React, { Component } from 'react';
+import ValidationSample from './ValidationSample';
 
 class App extends Component {
   render() {
@@ -179,7 +173,7 @@ ref를 만드는 가장 기본적인 방법은 콜백 함수를 사용하는 것
 리액트에 내장되어 있는 createRef 라는 함수를 사용해 ref를 만들 수도 있다. 이 기능은 리액트 v16.3부터 도입되었다.
 
 ```javascript
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class RefSample extends Component {
   input = React.createRef();
@@ -232,7 +226,7 @@ createRef를 사용하여 ref를 만들려면 먼저 컴포넌트 내부에서 �
 handleButtonClick = () => {
   this.setState({
     clicked: true,
-    validated: this.state.password === "0000",
+    validated: this.state.password === '0000',
   });
   this.input.focus();
 };
@@ -263,22 +257,22 @@ handleButtonClick = () => {
 `ScrollBox.js`
 
 ```javascript
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class ScrollBox extends Component {
   render() {
     const style = {
-      border: "1px solid black",
-      height: "300px",
-      width: "300px",
-      overflow: "auto",
-      position: "relative",
+      border: '1px solid black',
+      height: '300px',
+      width: '300px',
+      overflow: 'auto',
+      position: 'relative',
     };
 
     const innerStyle = {
-      width: "100%",
-      height: "650px",
-      background: "linear-gradient(white, black)",
+      width: '100%',
+      height: '650px',
+      background: 'linear-gradient(white, black)',
     };
 
     return (
@@ -302,8 +296,8 @@ App 컴포넌트에서는 기존 `ValidationSample` 을 지우고 `ScrollBox` �
 `App.js`
 
 ```javascript
-import React, { Component } from "react";
-import ScrollBox from "./ScrollBox";
+import React, { Component } from 'react';
+import ScrollBox from './ScrollBox';
 
 class App extends Component {
   render() {
@@ -338,7 +332,7 @@ export default App;
 `ScrollBox.js`
 
 ```javascript
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class ScrollBox extends Component {
   scrollToBottom = () => {
@@ -347,17 +341,17 @@ class ScrollBox extends Component {
   };
   render() {
     const style = {
-      border: "1px solid black",
-      height: "300px",
-      width: "300px",
-      overflow: "auto",
-      position: "relative",
+      border: '1px solid black',
+      height: '300px',
+      width: '300px',
+      overflow: 'auto',
+      position: 'relative',
     };
 
     const innerStyle = {
-      width: "100%",
-      height: "650px",
-      background: "linear-gradient(white, black)",
+      width: '100%',
+      height: '650px',
+      background: 'linear-gradient(white, black)',
     };
 
     return (
@@ -383,17 +377,15 @@ export default ScrollBox;
 `App.js`
 
 ```javascript
-import React, { Component } from "react";
-import ScrollBox from "./ScrollBox";
+import React, { Component } from 'react';
+import ScrollBox from './ScrollBox';
 
 class App extends Component {
   render() {
     return (
       <div>
         <ScrollBox ref={(ref) => (this.ScrollBox = ref)} />
-        <button onClick={() => this.ScrollBox.scrollToBottom()}>
-          맨 밑으로
-        </button>
+        <button onClick={() => this.ScrollBox.scrollToBottom()}>맨 밑으로</button>
       </div>
     );
   }

@@ -105,9 +105,7 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 속성 값에서 한 종류의 따옴표를 사용했다면 다른 종류의 따옴표로 속성 값을 둘러싸서 오류를 방지할 수 있다.
 
 ```html
-<a href="<http://www.example.com>" title="Isn't this fun?"
-  >A link to my example.</a
->
+<a href="<http://www.example.com>" title="Isn't this fun?">A link to my example.</a>
 ```
 
 하지만 따옴표 안에 같은 종류의 따옴표를 사용하고 싶다면 따옴표를 표시하기 위해 [HTML entities](https://www.freeformatter.com/html-entities.html)를 사용해야 한다.

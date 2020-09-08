@@ -5,7 +5,7 @@
 `null` 을 제외한 원시 타입을 체크하는 것은 가능하지만 객체의 종류를 구분할 수 없다.
 
 ```javascript
-typeof ""; // string
+typeof ''; // string
 typeof 1; // number
 typeof NaN; // number
 typeof true; // boolean
@@ -32,7 +32,7 @@ obj.toString(); // [object Object]
 ```
 
 ```javascript
-console.log(Object.prototype.toString.call("")); // [object String]
+console.log(Object.prototype.toString.call('')); // [object String]
 console.log(Object.prototype.toString.call(new String())); // [object String]
 console.log(Object.prototype.toString.call(1)); // [object Number]
 console.log(Object.prototype.toString.call(new Number())); // [object Number]
@@ -67,7 +67,7 @@ function getType(target) {
 ```
 
 ```javascript
-console.log(getType("")); // String
+console.log(getType('')); // String
 console.log(getType(1)); // Number
 console.log(getType(true)); // Boolean
 console.log(getType(undefined)); // Undefined
@@ -88,43 +88,43 @@ function getType(target) {
 }
 
 function isString(target) {
-  return getType(target) === "String";
+  return getType(target) === 'String';
 }
 
 function isNumber(target) {
-  return getType(target) === "Number";
+  return getType(target) === 'Number';
 }
 
 function isBoolean(target) {
-  return getType(target) === "Boolean";
+  return getType(target) === 'Boolean';
 }
 
 function isNull(target) {
-  return getType(target) === "Null";
+  return getType(target) === 'Null';
 }
 
 function isUndefined(target) {
-  return getType(target) === "Undefined";
+  return getType(target) === 'Undefined';
 }
 
 function isObject(target) {
-  return getType(target) === "Object";
+  return getType(target) === 'Object';
 }
 
 function isArray(target) {
-  return getType(target) === "Array";
+  return getType(target) === 'Array';
 }
 
 function isDate(target) {
-  return getType(target) === "Date";
+  return getType(target) === 'Date';
 }
 
 function isRegExp(target) {
-  return getType(target) === "RegExp";
+  return getType(target) === 'RegExp';
 }
 
 function isFunction(target) {
-  return getType(target) === "Function";
+  return getType(target) === 'Function';
 }
 ```
 
@@ -157,7 +157,7 @@ function isElement(target) {
 ```javascript
 console.log(Array.isArray([])); // true
 console.log(Array.isArray({})); // false
-console.log(Array.isArray("123")); // false
+console.log(Array.isArray('123')); // false
 ```
 
 유사 배열 객체는 length 프로퍼티를 갖고, length 프로퍼티의 최대 값은 2의 53제곱 - 1 이다. 또한 빈문자열 역시 유사 배열이다.
@@ -166,15 +166,15 @@ console.log(Array.isArray("123")); // false
 const isArrayLike = function (collection) {
   const MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
   const length = collection == null ? undefined : collection.length;
-  return typeof length === "number" && length >= 0 && length <= MAX_ARRAY_INDEX;
+  return typeof length === 'number' && length >= 0 && length <= MAX_ARRAY_INDEX;
 };
 
 // true
 console.log(isArrayLike([]));
-console.log(isArrayLike("abc"));
-console.log(isArrayLike(""));
-console.log(isArrayLike(document.querySelectorAll("li")));
-console.log(isArrayLike(document.getElementsByName("li")));
+console.log(isArrayLike('abc'));
+console.log(isArrayLike(''));
+console.log(isArrayLike(document.querySelectorAll('li')));
+console.log(isArrayLike(document.getElementsByName('li')));
 console.log(isArrayLike({ length: 0 }));
 (function () {
   console.log(isArrayLike(arguments));
@@ -182,7 +182,7 @@ console.log(isArrayLike({ length: 0 }));
 
 // false
 console.log(isArrayLike(123));
-console.log(isArrayLike(document.querySelector("li")));
+console.log(isArrayLike(document.querySelector('li')));
 console.log(isArrayLike({ foo: 1 }));
 console.log(isArrayLike());
 console.log(isArrayLike(null));

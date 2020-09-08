@@ -138,7 +138,7 @@ componentDidCatch(error, info) {
 `LifeCycleSample.js` 라는 컴포넌트를 만든다.
 
 ```javascript
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class LifeCycleSample extends Component {
   state = {
@@ -150,11 +150,11 @@ class LifeCycleSample extends Component {
 
   constructor(props) {
     super(props);
-    console.log("constructor");
+    console.log('constructor');
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    console.log("getDerivedStateFromProps");
+    console.log('getDerivedStateFromProps');
     if (nextProps.color !== prevState.color) {
       return { color: nextProps.color };
     }
@@ -162,16 +162,16 @@ class LifeCycleSample extends Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount");
+    console.log('componentDidMount');
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log("shouldComponentUpdate", nextProps, nextState);
+    console.log('shouldComponentUpdate', nextProps, nextState);
     return nextState.number % 10 !== 4;
   }
 
   componentWillUnmount() {
-    console.log("componentWillUnmount");
+    console.log('componentWillUnmount');
   }
 
   handleClick = () => {
@@ -181,7 +181,7 @@ class LifeCycleSample extends Component {
   };
 
   getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log("getSnapshotBeforeUpdate");
+    console.log('getSnapshotBeforeUpdate');
     if (prevProps.color !== this.props.color) {
       return this.myRef.style.color;
     }
@@ -189,14 +189,14 @@ class LifeCycleSample extends Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log("componentDidUpdate", prevProps, prevState);
+    console.log('componentDidUpdate', prevProps, prevState);
     if (snapshot) {
-      console.log("업데이트 되기 직전 색상: ", snapshot);
+      console.log('업데이트 되기 직전 색상: ', snapshot);
     }
   }
 
   render() {
-    console.log("render");
+    console.log('render');
 
     const style = {
       color: this.props.color,
@@ -224,15 +224,15 @@ export default LifeCycleSample;
 `App.js`
 
 ```javascript
-import React, { Component } from "react";
-import LifeCycleSample from "./LifeCycleSample";
+import React, { Component } from 'react';
+import LifeCycleSample from './LifeCycleSample';
 
 function getRandomColor() {
-  return "#" + Math.floor(Math.random() * 16777215).toString(16);
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
 }
 class App extends Component {
   state = {
-    color: "#000000",
+    color: '#000000',
   };
   handleClick = () => {
     this.setState({
@@ -295,7 +295,7 @@ render() {
 `ErrorBoundary.js`
 
 ```javascript
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class ErrorBoundary extends Component {
   state = {
@@ -324,16 +324,16 @@ export default ErrorBoundary;
 `App.js`
 
 ```javascript
-import React, { Component } from "react";
-import LifeCycleSample from "./LifeCycleSample";
-import ErrorBoundary from "./ErrorBoundary";
+import React, { Component } from 'react';
+import LifeCycleSample from './LifeCycleSample';
+import ErrorBoundary from './ErrorBoundary';
 
 function getRandomColor() {
-  return "#" + Math.floor(Math.random() * 16777215).toString(16);
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
 }
 class App extends Component {
   state = {
-    color: "#000000",
+    color: '#000000',
   };
   handleClick = () => {
     this.setState({

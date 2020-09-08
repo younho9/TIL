@@ -52,11 +52,11 @@ Mixin 사용법을 두 가지로 나누면 선언하기( `@mixin` )와 포함하
   color: orange;
 
   &::after {
-    content: "!!";
+    content: '!!';
   }
 
   span.icon {
-    background: url("/images/icon.png");
+    background: url('/images/icon.png');
   }
 }
 ```
@@ -99,10 +99,10 @@ h1 {
   color: orange;
 }
 h1::after {
-  content: "!!";
+  content: '!!';
 }
 h1 span.icon {
-  background: url("/images/icon.png");
+  background: url('/images/icon.png');
 }
 
 div {
@@ -112,10 +112,10 @@ div {
   color: orange;
 }
 div::after {
-  content: "!!";
+  content: '!!';
 }
 div span.icon {
-  background: url("/images/icon.png");
+  background: url('/images/icon.png');
 }
 ```
 
@@ -278,9 +278,9 @@ div {
   @include bg(
     100px,
     200px,
-    url("/images/a.png") no-repeat 10px 20px,
-    url("/images/b.png") no-repeat,
-    url("/images/c.png")
+    url('/images/a.png') no-repeat 10px 20px,
+    url('/images/b.png') no-repeat,
+    url('/images/c.png')
   );
 }
 ```
@@ -291,8 +291,8 @@ div {
 div {
   width: 100px;
   height: 200px;
-  background: url("/images/a.png") no-repeat 10px 20px, url("/images/b.png")
-      no-repeat, url("/images/c.png");
+  background: url('/images/a.png') no-repeat 10px 20px, url('/images/b.png') no-repeat,
+    url('/images/c.png');
 }
 ```
 
@@ -322,7 +322,7 @@ span {
 }
 a {
   // 필요한 값만 맵으로 전달
-  @include font((weight: 900, family: monospace) ...);
+  @include font((weight: 900, family: monospace)...);
 }
 ```
 
@@ -355,11 +355,11 @@ a {
 }
 .icon1 {
   // icon Mixin의 기존 기능만 사용
-  @include icon("/images/icon.png");
+  @include icon('/images/icon.png');
 }
 .icon2 {
   // icon Mixin에 스타일 블록을 추가하여 사용
-  @include icon("/images/icon.png") {
+  @include icon('/images/icon.png') {
     position: absolute;
   }
 }
@@ -369,10 +369,10 @@ a {
 
 ```css
 .icon1::after {
-  content: "/images/icon.png";
+  content: '/images/icon.png';
 }
 .icon2::after {
-  content: "/images/icon.png";
+  content: '/images/icon.png';
   position: absolute;
 }
 ```

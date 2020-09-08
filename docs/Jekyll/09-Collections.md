@@ -152,19 +152,19 @@ collections:
 
 defaults:
   - scope:
-      path: ""
-      type: "authors"
+      path: ''
+      type: 'authors'
     values:
-      layout: "author"
+      layout: 'author'
   - scope:
-      path: ""
-      type: "posts"
+      path: ''
+      type: 'posts'
     values:
-      layout: "post"
+      layout: 'post'
   - scope:
-      path: ""
+      path: ''
     values:
-      layout: "default"
+      layout: 'default'
 ```
 
 이제 모든 `page` 들과 `post` 들의 front matter에서 `layout` 에 관한 부분을 다 지워도 된다.
@@ -189,8 +189,8 @@ layout: default
 
 <h2>Posts</h2>
 <ul>
-  {% assign filtered_posts = site.posts | where: 'author', page.short_name %} {%
-  for post in filtered_posts %}
+  {% assign filtered_posts = site.posts | where: 'author', page.short_name %} {% for post in
+  filtered_posts %}
   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
@@ -214,8 +214,8 @@ layout: default
 <h1>{{ page.title }}</h1>
 
 <p>
-  {{ page.date | date_to_string }} {% assign author = site.authors | where:
-  'short_name', page.author | first %} {% if author %} -
+  {{ page.date | date_to_string }} {% assign author = site.authors | where: 'short_name',
+  page.author | first %} {% if author %} -
   <a href="{{ author.url }}">{{ author.name }}</a>
   {% endif %}
 </p>

@@ -206,7 +206,7 @@ input:focus {
 
 ```css
 ul li::before {
-  content: "숫자";
+  content: '숫자';
   color: red;
 }
 ```
@@ -229,7 +229,7 @@ ul li::before {
 
 ```css
 ul li::after {
-  content: ".0";
+  content: '.0';
 }
 ```
 
@@ -245,7 +245,7 @@ ul li::after {
 
 ```css
 ul li::after {
-  content: url("https://heropy.blog/css/images/logo.png");
+  content: url('https://heropy.blog/css/images/logo.png');
 }
 ```
 
@@ -283,7 +283,7 @@ ul li::after {
 속성 `attr` 을 포함하며 속성 값이 `value` 인 요소 선택
 
 ```css
-[type="password"] {
+[type='password'] {
   opacity: 0.5;
   color: red;
 }
@@ -303,7 +303,7 @@ ul li::after {
 속성 `attr` 을 포함하며 속성 값이 `value` 로 시작하는 요소 선택
 
 ```css
-[class^="btn-"] {
+[class^='btn-'] {
   font-weight: bold;
   border-radius: 20px;
 }
@@ -320,14 +320,14 @@ ul li::after {
 속성 `attr` 을 포함하며 속성 값이 `value` 로 끝나는 요소 선택
 
 ```css
-[class$="btn-"] {
+[class$='btn-'] {
   font-weight: bold;
   border-radius: 20px;
 }
-[class$="success"] {
+[class$='success'] {
   color: green;
 }
-[class$="danger"] {
+[class$='danger'] {
   color: red;
 }
 ```
@@ -405,9 +405,7 @@ ul li::after {
 ```html
 <body>
   <!--인라인 선언방식-->
-  <div id="color_yellow" class="color_green" style="color: orange;">
-    Hello world!
-  </div>
+  <div id="color_yellow" class="color_green" style="color: orange;">Hello world!</div>
 </body>
 ```
 
@@ -503,7 +501,7 @@ body {
 } /* 21pt 클래스+태그+(가상)클래스 */
 
 .box::before {
-  content: "Good ";
+  content: 'Good ';
   color: red;
 } /* 11pt 클래스+(가상 요소)태그 */
 

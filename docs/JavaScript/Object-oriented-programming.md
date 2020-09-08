@@ -29,17 +29,17 @@ function Person(name) {
   };
 }
 
-var me = new Person("zzoon");
+var me = new Person('zzoon');
 console.log(me.getName()); // zzoon
 
-me.setName("iamhjoo");
+me.setName('iamhjoo');
 console.log(me.getName()); // iamhjoo
 ```
 
 여기서 `new` 키워드로 새로운 객체 `me` 를 만든 부분을 주목하자.
 
 ```javascript
-var me = new Person("zzoon");
+var me = new Person('zzoon');
 ```
 
 이 형태는 기존 객체지향 프로그래밍 언어에서 한 클래스의 인스턴스를 생성하는 코드와 매우 유사하다. 함수 `Person` 이 클래스이자 생성자의 역할을 하는 것이다.
@@ -49,9 +49,9 @@ var me = new Person("zzoon");
 하지만 이것은 문제가 많은 예제이다. `Person` 생성자 함수로 여러 객체를 만든다고 해보자.
 
 ```javascript
-var me = new Person("me");
-var you = new Person("you");
-var him = new Person("him");
+var me = new Person('me');
+var you = new Person('you');
+var him = new Person('him');
 ```
 
 이렇게 사용하는 것은 겉으로는 별 문제 없이 작동하지만, 각 객체는 자기 영역에서 공통적으로 사용할 수 있는 `setName()` , `getName()` 함수를 따로 생성하고 있어서, 중복되는 영역을 불필요하게 메모리에 올려놓고 사용하고 있다.
@@ -71,8 +71,8 @@ Person.prototype.setName = function (value) {
   this.name = value;
 };
 
-var me = new Person("me");
-var you = new Person("you");
+var me = new Person('me');
+var you = new Person('you');
 console.log(me.getName());
 console.log(you.getName());
 ```
@@ -96,16 +96,16 @@ function Person(arg) {
   this.name = arg;
 }
 
-Person.method("setName", function (value) {
+Person.method('setName', function (value) {
   this.name = value;
 });
 
-Person.method("getName", function () {
+Person.method('getName', function () {
   return this.name;
 });
 
-var me = new Person("me");
-var you = new Person("you");
+var me = new Person('me');
+var you = new Person('you');
 
 console.log(me.getName()); // me
 console.log(you.getName()); // you
@@ -134,11 +134,11 @@ Person.prototype.getName = function () {
 
 function Student(arg) {}
 
-var you = new Person("iamhjoo");
+var you = new Person('iamhjoo');
 Student.prototype = you;
 
-var me = new Student("zzoon");
-me.setName("zzoon");
+var me = new Student('zzoon');
+me.setName('zzoon');
 console.log(me.getName());
 ```
 

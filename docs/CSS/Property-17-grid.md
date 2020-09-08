@@ -142,9 +142,9 @@ grid-template-columns: [선이름] 1열크기 [선이름] 2열크기 [선이름]
   grid-template-rows: repeat(3, 100px);
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-    "header header header"
-    "main main aside"
-    "footer footer footer";
+    'header header header'
+    'main main aside'
+    'footer footer footer';
 }
 .item {
   border: 10px solid red;
@@ -185,8 +185,8 @@ grid-template-columns: [선이름] 1열크기 [선이름] 2열크기 [선이름]
 ```css
 .container {
   grid-template:
-    [1행시작선이름] "AREAS" 행너비 [1행끝선이름]
-    [2행시작선이름] "AREAS" 행너비 [2행끝선이름]
+    [1행시작선이름] 'AREAS' 행너비 [1행끝선이름]
+    [2행시작선이름] 'AREAS' 행너비 [2행끝선이름]
     / <grid-template-columns>;
 }
 ```
@@ -206,9 +206,9 @@ grid-template-columns: [선이름] 1열크기 [선이름] 2열크기 [선이름]
 .container {
   display: grid;
   grid-template:
-    "header header header" 80px
-    "main main aside" 350px
-    "footer footer footer" 130px
+    'header header header' 80px
+    'main main aside' 350px
+    'footer footer footer' 130px
     / 2fr 100px 1fr;
 }
 .container > * {
@@ -523,8 +523,7 @@ footer {
 
 ```css
 .item {
-  grid-area: <grid-row-start> / <grid-column-start> / <grid-row-end> /
-    <grid-column-end>;
+  grid-area: <grid-row-start> / <grid-column-start> / <grid-row-end> / <grid-column-end>;
   grid-area: 영역이름;
 }
 ```
@@ -625,8 +624,7 @@ footer {
   grid-template-columns: repeat(3, [col-start] 100px [col-end]);
 }
 .container {
-  grid-template: repeat(2, [row-start] 200px [row-end]) / repeat(3, [col-start]
-        100px [col-end]);
+  grid-template: repeat(2, [row-start] 200px [row-end]) / repeat(3, [col-start] 100px [col-end]);
 }
 ```
 

@@ -135,7 +135,7 @@ article .picture {
 
 ```css
 .clearfix::after {
-  content: "";
+  content: '';
   clear: both;
   display: block; /* or table */
 }

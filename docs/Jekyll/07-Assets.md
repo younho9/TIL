@@ -28,7 +28,7 @@ Jekyll 사이트는 종종 이 구조를 사용하여 asset을 체계적으로 �
 ---
 ---
 
-@import "main";
+@import 'main';
 ```
 
 상단에 빈 front matter는 Jekyll에게 이 파일을 처리해야 한다고 알려준다. `@import "main"` 은 Sass에게 웹 사이트 폴더의 루트에 있는 `_sass/` 디렉토리에서 `main.scss` 이라는 파일을 찾아보도록 한다.

@@ -47,12 +47,12 @@ var roots = numbers.map(Math.sqrt); // Math.sqrt는 x의 제곱근을 반환하�
 
 ```javascript
 let map = Array.prototype.map;
-let a = map.call("Hello World", function (x) {
+let a = map.call('Hello World', function (x) {
   return x.charCodeAt(0); // 각 문자의 ASCII 인코딩 값을 가져오는 함수.
 });
 // a = [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 
-var elems = document.querySelectorAll("select option:checked");
+var elems = document.querySelectorAll('select option:checked');
 var values = [].map.call(elems, function (obj) {
   return obj.value;
 });
@@ -63,7 +63,7 @@ var values = [].map.call(elems, function (obj) {
 `map` 에 하나의 인자만 받는 콜백을 사용하는 경우가 많은데, 두 개 이상의 인자를 사용하는 함수를 사용할 때 혼란스러울 수 있다.
 
 ```javascript
-["1", "2", "3"].map(parseInt);
+['1', '2', '3'].map(parseInt);
 ```
 
 이렇게 작성했을 때 결과를 `[1, 2, 3]` 으로 기대하지만 결과는 `[1, NaN, NaN]` 인데, 이는 `parseInt` 함수가 두 개의 인자를 받을 수 있기 때문이다. 첫 번째 인자는 변환하고자 하는 표현이고, 두 번째는 숫자로 변환할 때 사용할 진법(radix)이다.
@@ -81,10 +81,10 @@ var values = [].map.call(elems, function (obj) {
 `IterationSample.js`
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 const IterationSample = () => {
-  const names = ["눈사람", "얼음", "눈", "바람"];
+  const names = ['눈사람', '얼음', '눈', '바람'];
   const nameList = names.map((name) => <li>{name}</li>);
   return <ul>{nameList}</ul>;
 };
@@ -99,8 +99,8 @@ export default IterationSample;
 `App.js`
 
 ```javascript
-import React, { Component } from "react";
-import IterationSample from "./IterationSample";
+import React, { Component } from 'react';
+import IterationSample from './IterationSample';
 
 class App extends Component {
   render() {
@@ -140,10 +140,10 @@ key 값을 설정할 때는 map 함수의 인자로 전달되는 함수 내부�
 `IterationSample.js`
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 const IterationSample = () => {
-  const names = ["눈사람", "얼음", "눈", "바람"];
+  const names = ['눈사람', '얼음', '눈', '바람'];
   const nameList = names.map((name, index) => <li key={index}>{name}</li>);
   return <ul>{nameList}</ul>;
 };
@@ -168,16 +168,16 @@ export default IterationSample;
 `IterationSample` 컴포넌트에서 `useState` 를 사용하여 상태를 설정한다.
 
 ```javascript
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const IterationSample = () => {
   const [names, setNames] = useState([
-    { id: 1, text: "눈사람" },
-    { id: 2, text: "얼음" },
-    { id: 3, text: "눈" },
-    { id: 4, text: "바람" },
+    { id: 1, text: '눈사람' },
+    { id: 2, text: '얼음' },
+    { id: 3, text: '눈' },
+    { id: 4, text: '바람' },
   ]);
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
   const [nextId, setNextId] = useState(5);
 
   const nameList = names.map((name) => <li key={name.id}>{name.text}</li>);
@@ -192,16 +192,16 @@ export default IterationSample;
 ## 추가 기능 구현하기
 
 ```javascript
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const IterationSample = () => {
   const [names, setNames] = useState([
-    { id: 1, text: "눈사람" },
-    { id: 2, text: "얼음" },
-    { id: 3, text: "눈" },
-    { id: 4, text: "바람" },
+    { id: 1, text: '눈사람' },
+    { id: 2, text: '얼음' },
+    { id: 3, text: '눈' },
+    { id: 4, text: '바람' },
   ]);
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
   const [nextId, setNextId] = useState(5);
 
   const onChange = (e) => setInputText(e.target.value);
@@ -212,7 +212,7 @@ const IterationSample = () => {
     });
     setNextId(nextId + 1);
     setNames(nextNames);
-    setInputText("");
+    setInputText('');
   };
 
   const nameList = names.map((name) => <li key={name.id}>{name.text}</li>);
@@ -247,16 +247,16 @@ export default IterationSample;
 [Array.prototype.filter()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
 ```javascript
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const IterationSample = () => {
   const [names, setNames] = useState([
-    { id: 1, text: "눈사람" },
-    { id: 2, text: "얼음" },
-    { id: 3, text: "눈" },
-    { id: 4, text: "바람" },
+    { id: 1, text: '눈사람' },
+    { id: 2, text: '얼음' },
+    { id: 3, text: '눈' },
+    { id: 4, text: '바람' },
   ]);
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
   const [nextId, setNextId] = useState(5);
 
   const onChange = (e) => setInputText(e.target.value);
@@ -267,7 +267,7 @@ const IterationSample = () => {
     });
     setNextId(nextId + 1);
     setNames(nextNames);
-    setInputText("");
+    setInputText('');
   };
   const onRemove = (id) => {
     const nextNames = names.filter((name) => name.id !== id);

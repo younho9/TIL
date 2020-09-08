@@ -25,13 +25,13 @@ ECMAScript에서는 실행 컨텍스트의 생성을 다음처럼 설명한다.
 **"현재 실행되는 컨텍스트에서 이 컨텍스트와 관련 없는 실행 코드가 실행되면, 새로운 컨텍스트가 생성되어 스택에 들어가고 제어권이 그 컨텍스트로 이동한다."**
 
 ```javascript
-var x = "xxx";
+var x = 'xxx';
 
 function foo() {
-  var y = "yyy";
+  var y = 'yyy';
 
   function bar() {
-    var z = "zzz";
+    var z = 'zzz';
     console.log(x + y + z);
   }
   bar();
@@ -141,10 +141,10 @@ console.log(var2); // 2
 #### 예제 1
 
 ```javascript
-var value = "value1";
+var value = 'value1';
 
 function printFunc() {
-  var value = "value2";
+  var value = 'value2';
 
   function printValue() {
     return value;
@@ -165,14 +165,14 @@ printFunc();
 #### 예제 2
 
 ```javascript
-var value = "value1";
+var value = 'value1';
 
 function printValue() {
   return value;
 }
 
 function printFunc(func) {
-  var value = "value2";
+  var value = 'value2';
   console.log(func());
 }
 

@@ -90,7 +90,7 @@ HTML의 이미지 태그를 사용시에는 이렇게 alt를 사용해 대체 �
   width: 100px;
   height: 100px;
   text-indent: -9999px;
-  background: url("이미지 링크");
+  background: url('이미지 링크');
 }
 ```
 

@@ -37,9 +37,9 @@ yarn start # 또는 npm start
 `src/App.js`
 
 ```javascript
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
@@ -122,12 +122,7 @@ function App() {
 
 ```javascript
 function App() {
-  return React.createElement(
-    "div",
-    null,
-    "Hello ",
-    React.createElement("b", null, "react")
-  );
+  return React.createElement('div', null, 'Hello ', React.createElement('b', null, 'react'));
 }
 ```
 
@@ -146,7 +141,7 @@ JSX는 HTML 코드와 비슷해 가독성이 높고 작성하기도 쉽다.
 HTML 태그 뿐만 아니라 리액트 컴포넌트를 JSX 안에서 작성할 수 있다. `App.js` 에서 만든 App 컴포넌트를 `src/index.js` 에서는 마치 HTML 태그 쓰듯이 작성한다.
 
 ```javascript
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 > `index.js` 의 이 코드는 App 컴포넌트를 `public/index.html` 파일에 작성된 `id="root"` 인 요소 안에 렌더링하는 역할을 한다.
@@ -179,7 +174,7 @@ Virtual DOM에서 컴포넌트 변화를 감지할 때 효율적으로 비교하
 `src/App.js`
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 function App() {
   return (
@@ -202,7 +197,7 @@ export default App;
 `src/App.js`
 
 ```javascript
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
 function App() {
   return (
@@ -221,7 +216,7 @@ Fragment를 이렇게도 표현할 수 있다.
 `src/App.js`
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 function App() {
   return (
@@ -246,10 +241,10 @@ JSX 안에서는 JS 표현식을 쓸 수 있다. JSX 내부에 코드를 `{}` �
 `src/App.js`
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 function App() {
-  const name = "React";
+  const name = 'React';
   return (
     <>
       <h1>Hello World!</h1>
@@ -293,11 +288,11 @@ JSX 밖에서 if 문을 사용할 수 있지만, JSX 내부에서는 조건부 �
 `src/App.js`
 
 ```javascript
-import React from "react";
+import React from 'react';
 
 function App() {
-  const name = "Reaaaact";
-  return <div>{name === "React" ? <h1>Hello React!</h1> : null}</div>;
+  const name = 'Reaaaact';
+  return <div>{name === 'React' ? <h1>Hello React!</h1> : null}</div>;
 }
 
 export default App;
@@ -331,8 +326,8 @@ return number && <div>내용</div>;
 `src/App.js`
 
 ```javascript
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
 
 function App() {
   const name = undefined;

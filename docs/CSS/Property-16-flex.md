@@ -45,7 +45,7 @@
 
 ```css
 .clearfix::after {
-  content: "";
+  content: '';
   display: block;
   clear: both;
 }

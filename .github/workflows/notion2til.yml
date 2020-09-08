@@ -15,6 +15,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
+      
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -23,6 +24,16 @@ jobs:
       - name: Get posts from notion
         run: python notion2til.py ${{ secrets.NOTION_TOKEN }} ${{ secrets.COLLECTION_ID }}
 
+      - name: Set up Node 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      
+      - name: Format
+        run: |
+          npm ci
+          npm run format
+      
       - name: Git auto commit action
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

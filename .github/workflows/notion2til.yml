@@ -1,0 +1,30 @@
+name: Get posts from notion and publish it on TIL
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+
+jobs:
+  get-posts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Get posts from notion
+        run: python notion2til.py ${{ secrets.NOTION_TOKEN }} ${{ secrets.COLLECTION_ID }}
+
+  auto-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git auto commit action
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update docs
+          file_pattern: docs/**/*.md

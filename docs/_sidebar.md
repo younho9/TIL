@@ -60,6 +60,7 @@
 
 - 📂 **Daily**
 
+  - [Copy of SSR vs CSR](/Daily/Copy-of-SSR-vs-CSR.md)
   - [SSR vs CSR](/Daily/SSR-vs-CSR.md)
   - [2월](/Daily/2020/02/README.md)
   - [3월](/Daily/2020/03/README.md)

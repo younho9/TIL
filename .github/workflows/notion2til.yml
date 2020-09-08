@@ -18,11 +18,14 @@ jobs:
 
       - name: Install dependencies
         run: |
+          cd notion-py
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Get posts from notion
-        run: python notion2til.py ${{ secrets.NOTION_TOKEN }} ${{ secrets.COLLECTION_ID }}
+        run: |
+          cd notion-py
+          python notion2til.py ${{ secrets.NOTION_TOKEN }} ${{ secrets.COLLECTION_ID }}
 
       - name: Set up Node 12.x
         uses: actions/setup-node@v1
@@ -31,6 +34,7 @@ jobs:
 
       - name: Format
         run: |
+          cd docs
           npm ci
           npm run format
 

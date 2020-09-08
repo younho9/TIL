@@ -1,22 +1,14 @@
 {
-  "name": "TIL",
+  "name": "til-docs",
   "version": "1.0.0",
   "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/1e35c998-4b16-4905-930a-b3621572c080/deploy-status)](https://app.netlify.com/sites/younho9-til/deploys) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyounho9%2FTIL)](https://hits.seeyoufarm.com)",
   "dependencies": {
     "prettier": "2.1.1"
   },
+  "devDependencies": {},
   "scripts": {
     "format": "prettier --write ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/younho9/TIL.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/younho9/TIL/issues"
-  },
-  "homepage": "https://github.com/younho9/TIL#readme"
+  "author": "younho9",
+  "license": "MIT"
 }

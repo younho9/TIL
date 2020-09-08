@@ -69,7 +69,7 @@ def notion2til(token, collection_id):
         text = text + block.title + "\n\n"
 
     # Make blog post directory
-    dir_name = "./docs/" + str(post.tag[0])
+    dir_name = "../docs/" + str(post.tag[0])
     try:
       os.mkdir(dir_name)
       os.mkdir(dir_name + "/images")
@@ -91,14 +91,14 @@ def notion2til(token, collection_id):
     sidebar_category = '- 📂 **' + post.tag[0] + '**\n';
     sidebar_line = '  - [' + post.title + ']' + '(/' + post.tag[0] + '/' + title + '.md)'
 
-    with open('./docs/_sidebar.md', 'r') as f:
+    with open('../docs/_sidebar.md', 'r') as f:
       new_sidebar =[]
       for line in f.readlines():
         if(line.strip() == sidebar_line.strip()):
           continue
         new_sidebar.append(line.replace(sidebar_category, (sidebar_category + '\n' + sidebar_line).rstrip()))
 
-    with open('./docs/_sidebar.md', 'w') as f:
+    with open('../docs/_sidebar.md', 'w') as f:
       for line in new_sidebar:
         f.writelines(line)
 

@@ -4,7 +4,7 @@ echo 🧱 Start build
 
 echo -------------------------------------------------------
 echo 📝 Get TIL contents from notion
-python3 notion_to_til.py
+python3 notion2til.py
 
 echo -------------------------------------------------------
 echo 💄 Apply prettier

@@ -1,7 +1,7 @@
 name: Get posts from notion and publish it on TIL
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '0 22 * * *'
 
 jobs:
   get-posts:

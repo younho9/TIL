@@ -39,6 +39,10 @@
   - [타입 체크](/JavaScript/Type-check.md)
   - [DOM](/JavaScript/DOM.md)
   - [웹 스토리지](/JavaScript/Web-Storage.md)
+  - [자바스크립트란 무엇인가](/JavaScript/자바스크립트란-무엇인가.md)
+  - [HTML 속의 자바스크립트](/JavaScript/HTML-속의-자바스크립트.md)
+  - [변수와 스코프 메모리](/JavaScript/변수와-스코프-메모리.md)
+  - [언어의 기초](/JavaScript/언어의-기초.md)
 
 - 📂 **React**
 

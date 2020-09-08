@@ -12,9 +12,3 @@ npx prettier --write docs/**/*.md
 npx prettier --write docs/*.md
 
 echo ✅ Successfully formatted
-cd docs
-
-echo -------------------------------------------------------
-echo 🚗 Run docsify server
-
-docsify serve

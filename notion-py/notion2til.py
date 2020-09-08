@@ -1,5 +1,6 @@
 import os
 import sys
+import config
 import urllib.request
 
 from datetime import datetime
@@ -24,7 +25,7 @@ def notion2til(token, collection_id, target):
     file_path = dir_name + '/' + file_name
 
     post = '# ' + page.title + '\n\n'
-    post = post + parse_notion_contents(page.children)
+    post = post + parse_notion_contents(page.children, dir_name)
 
     write_post(post, file_path)
     update_sidebar(target, page.tag[0], page.title, file_name)
@@ -34,11 +35,14 @@ def notion2til(token, collection_id, target):
 def make_directory(dir_name):
   try:
     os.mkdir(dir_name)
+  except:
+    pass
+  try:
     os.mkdir(dir_name + '/images')
   except:
     pass
 
-def parse_notion_contents(blocks):
+def parse_notion_contents(blocks, dir_name):
   image_number = 0
   contents = ''
 
@@ -69,9 +73,9 @@ def parse_notion_contents(blocks):
     elif (type == 'image'):
       for image_type in image_types:
         if image_type in block.source:
-          image_path = './images/image-' + str(image_number) + '.' + image_type
+          image_path = 'images/image-' + str(image_number) + '.' + image_type
           contents += '![image-' + str(image_number) + '](' + image_path + ')\n\n'
-          urllib.request.urlretrieve(block.source, dir_name + image_path)
+          urllib.request.urlretrieve(block.source, dir_name + '/' + image_path)
       image_number += 1
     # Handles Bullets
     elif (type == 'bulleted_list'):

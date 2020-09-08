@@ -62,6 +62,7 @@
 
   - [2월](/Daily/2020/02/README.md)
   - [3월](/Daily/2020/03/README.md)
+  - [7월](/Daily/2020/07/README.md)
 
 - 📂 **Sass**
 

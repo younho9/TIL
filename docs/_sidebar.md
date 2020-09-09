@@ -31,6 +31,8 @@
   - [CSS 속성 17. grid](/CSS/Property-17-grid.md)
   - [반응형 디자인 1.Media queries](/CSS/Responsive-design-01-Media-queries.md)
 
+- 📂 **Algorithms**
+
 - 📂 **JavaScript**
 
   - [실행 컨텍스트와 클로저](/JavaScript/Execution-context-and-closure.md)

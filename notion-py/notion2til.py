@@ -87,9 +87,11 @@ def parse_notion_contents(token, blocks, dir_name, offset):
     if block.children:
       if type == 'page':
         continue
-      contents += parse_notion_contents(token, block.children, dir_name, offset + '\t')
-      if type == 'toggle':
+      elif type == 'toggle':
+        contents += parse_notion_contents(token, block.children, dir_name, offset)
         contents += offset + '</details>\n\n'
+      else:
+        contents += parse_notion_contents(token, block.children, dir_name, offset + '\t')
     
   return contents
 

@@ -25,7 +25,7 @@ def notion2til(token, collection_id, target):
     file_path = dir_name + '/' + file_name
 
     post = '# ' + page.title + '\n\n'
-    post = post + parse_notion_contents(page.children, dir_name)
+    post = post + parse_notion_contents(token, page.children, dir_name, '')
 
     write_post(post, file_path)
     update_sidebar(target, page.tag[0], page.title, file_name)
@@ -42,7 +42,7 @@ def make_directory(dir_name):
   except:
     pass
 
-def parse_notion_contents(blocks, dir_name):
+def parse_notion_contents(token, blocks, dir_name, offset):
   image_number = 0
   contents = ''
 
@@ -50,42 +50,47 @@ def parse_notion_contents(blocks, dir_name):
     type = block.type
     # Handles H1
     if (type == 'header'):
-      contents += '## ' + block.title + '\n\n'
+      contents += offset + '## ' + block.title + '\n\n'
     # Handles H2
     elif (type == 'sub_header'):
-      contents += '### ' + block.title + '\n\n'
+      contents += offset + '### ' + block.title + '\n\n'
     # Handles H3
     elif (type == 'sub_sub_header'):
-      contents += '#### ' + block.title + '\n\n'
+      contents += offset + '#### ' + block.title + '\n\n'
     # Handles Code Blocks
     elif (type == 'code'):
-      contents += '```' + block.language.lower() + '\n' + block.title + '\n```\n\n'
+      contents += offset + '```' + block.language.lower() + '\n' + block.title + '\n```\n\n'
     # Handles Callout Blocks
     elif (type == 'callout'):
-      contents += '> ' + block.icon + ' ' + block.title + '\n\n'
+      contents += offset + '> ' + block.icon + ' ' + block.title + '\n\n'
     # Handles Quote Blocks
     elif (type == 'quote'):
-      contents += '> ' + block.title + '\n\n'
+      contents += offset + '> ' + block.title + '\n\n'
     # Handles Bookmark Blocks
     elif (type == 'bookmark'):
-      contents += '🔗 [' + block.title + '](' + block.link + ')\n\n'
+      contents += offset + '🔗 [' + block.title + '](' + block.link + ')\n\n'
     # Handles Images
     elif (type == 'image'):
       for image_type in image_types:
         if image_type in block.source:
           image_path = 'images/image-' + str(image_number) + '.' + image_type
-          contents += '![image-' + str(image_number) + '](' + image_path + ')\n\n'
+          contents += offset + '![image-' + str(image_number) + '](' + image_path + ')\n\n'
           urllib.request.urlretrieve(block.source, dir_name + '/' + image_path)
       image_number += 1
     # Handles Bullets
     elif (type == 'bulleted_list'):
-      contents += '- ' + block.title + '\n\n'
+      contents += offset + '- ' + block.title + '\n\n'
     # Handles Basic text, Links, Single Line Code
     elif (type == 'text'):
-      contents += block.title + '\n\n'
+      contents += offset + block.title + '\n\n'
     # Handles Dividers
     # elif (type == 'divider'):
-    #     contents += '---' + '\n\n'
+    #     contents += offset + '---' + '\n\n'
+
+    # Handles block children
+    if block.children:
+      contents += parse_notion_contents(token, block.children, dir_name, offset + '\t')
+  
   return contents
 
 def write_post(post, file_path):

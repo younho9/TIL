@@ -6,10 +6,10 @@ import urllib.request
 from datetime import datetime
 from notion.client import NotionClient
 
-image_types = ['png', 'jpg', 'jpeg']
 page_status_list = ['🛠 In Progress', '✅ Completed', '🖨 Published']
+target = '../docs'
 
-def notion2til(token, collection_id, target):
+def notion2til(token, collection_id):
   client = NotionClient(token_v2=token)
   contents_collection = client.get_collection(collection_id)
   pages = contents_collection.get_rows()
@@ -27,7 +27,7 @@ def notion2til(token, collection_id, target):
     post = post + parse_notion_contents(token, page.children, dir_name, '')
 
     write_post(post, file_path)
-    update_sidebar(target, page.tag[0], page.title, file_name)
+    update_sidebar(page.tag[0], page.title, file_name)
     
     print('✅ Successfully exported blog content to' + file_path + '.md')
 
@@ -65,11 +65,7 @@ def parse_notion_contents(token, blocks, dir_name, offset):
     elif (type == 'page'):
       contents += '🔗 [' + block.title + '](' + block.get_browseable_url() + ')'
     elif (type == 'image'):
-      for image_type in image_types:
-        if image_type in block.source:
-          image_path = 'images/image-' + str(image_number) + '.' + image_type
-          contents += '![image-' + str(image_number) + '](' + image_path + ')'
-          urllib.request.urlretrieve(block.source, dir_name + '/' + image_path)
+      contents += save_and_get_image_path(block.source, dir_name, image_number)
       image_number += 1
     elif (type == 'bulleted_list'):
       contents += '- ' + block.title
@@ -96,6 +92,14 @@ def parse_notion_contents(token, blocks, dir_name, offset):
         contents += offset + '</details>\n\n'
     
   return contents
+
+def save_and_get_image_path(source, dir_name, image_number):
+  types = ['png', 'jpg', 'jpeg']
+  type = filter(lambda i: i in source, types)
+  path = 'images/image-' + str(image_number) + '.' + ''.join(type)
+  urllib.request.urlretrieve(source, dir_name + '/' + path)
+  
+  return '![image-' + str(image_number) + '](' + path + ')'
 
 def parse_notion_collection(token, collection_id, offset):
   client = NotionClient(token_v2=token)
@@ -135,7 +139,7 @@ def write_post(post, file_path):
   file = open(file_path + '.md', 'w')
   file.write(post)
 
-def update_sidebar(target, category, title, file_name):
+def update_sidebar(category, title, file_name):
   category_title = '- 📂 **' + category + '**\n';
   post_path = '  - [' + title + ']' + '(/' + category + '/' + file_name + '.md)'
 

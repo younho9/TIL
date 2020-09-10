@@ -69,6 +69,9 @@ def parse_notion_contents(token, blocks, dir_name, offset):
     # Handles Bookmark Blocks
     elif (type == 'bookmark'):
       contents += offset + '🔗 [' + block.title + '](' + block.link + ')\n\n'
+    # Handles Linked Notion Page
+    elif (type == 'page'):
+      contents += offset + '🔗 [' + block.title + '](' + block.get_browseable_url() + ')\n\n'
     # Handles Images
     elif (type == 'image'):
       for image_type in image_types:
@@ -80,6 +83,15 @@ def parse_notion_contents(token, blocks, dir_name, offset):
     # Handles Bullets
     elif (type == 'bulleted_list'):
       contents += offset + '- ' + block.title + '\n\n'
+    # Handles Numbered List
+    elif (type == 'numbered_list'):
+      contents += offset + '1. ' + block.title + '\n\n'
+    # Handles ToDo
+    elif (type == 'to_do'):
+      contents += offset + '- [ ] ' + block.title + '\n\n'
+    # Handles Toggle
+    elif (type == 'toggle'):
+      contents += offset + '<details><summary> ' + block.title + '</summary>\n\n'
     # Handles Basic text, Links, Single Line Code
     elif (type == 'text'):
       contents += offset + block.title + '\n\n'
@@ -89,7 +101,11 @@ def parse_notion_contents(token, blocks, dir_name, offset):
 
     # Handles block children
     if block.children:
+      if(type == 'page'):
+        continue
       contents += parse_notion_contents(token, block.children, dir_name, offset + '\t')
+      if(type == 'toggle'):
+        contents += offset + '</details>\n\n'
   
   return contents
 

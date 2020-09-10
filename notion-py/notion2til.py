@@ -48,59 +48,62 @@ def parse_notion_contents(token, blocks, dir_name, offset):
 
   for block in blocks:
     type = block.type
+    contents += offset
     # Handles H1
     if (type == 'header'):
-      contents += offset + '## ' + block.title + '\n\n'
+      contents += '## ' + block.title
     # Handles H2
     elif (type == 'sub_header'):
-      contents += offset + '### ' + block.title + '\n\n'
+      contents += '### ' + block.title
     # Handles H3
     elif (type == 'sub_sub_header'):
-      contents += offset + '#### ' + block.title + '\n\n'
+      contents += '#### ' + block.title
     # Handles Code Blocks
     elif (type == 'code'):
-      contents += offset + '```' + block.language.lower() + '\n' + block.title + '\n```\n\n'
+      contents += '```' + block.language.lower() + '\n' + block.title + '\n```'
     # Handles Callout Blocks
     elif (type == 'callout'):
-      contents += offset + '> ' + block.icon + ' ' + block.title + '\n\n'
+      contents += '> ' + block.icon + ' ' + block.title
     # Handles Quote Blocks
     elif (type == 'quote'):
-      contents += offset + '> ' + block.title + '\n\n'
+      contents += '> ' + block.title
     # Handles Bookmark Blocks
     elif (type == 'bookmark'):
-      contents += offset + '🔗 [' + block.title + '](' + block.link + ')\n\n'
+      contents += '🔗 [' + block.title + '](' + block.link + ')'
     # Handles Linked Notion Page
     elif (type == 'page'):
-      contents += offset + '🔗 [' + block.title + '](' + block.get_browseable_url() + ')\n\n'
+      contents += '🔗 [' + block.title + '](' + block.get_browseable_url() + ')'
     # Handles Images
     elif (type == 'image'):
       for image_type in image_types:
         if image_type in block.source:
           image_path = 'images/image-' + str(image_number) + '.' + image_type
-          contents += offset + '![image-' + str(image_number) + '](' + image_path + ')\n\n'
+          contents += '![image-' + str(image_number) + '](' + image_path + ')'
           urllib.request.urlretrieve(block.source, dir_name + '/' + image_path)
       image_number += 1
     # Handles Bullets
     elif (type == 'bulleted_list'):
-      contents += offset + '- ' + block.title + '\n\n'
+      contents += '- ' + block.title
     # Handles Numbered List
     elif (type == 'numbered_list'):
-      contents += offset + '1. ' + block.title + '\n\n'
+      contents += '1. ' + block.title
     # Handles ToDo
     elif (type == 'to_do'):
-      contents += offset + '- [ ] ' + block.title + '\n\n'
+      contents += '- [ ] ' + block.title
     # Handles Toggle
     elif (type == 'toggle'):
-      contents += offset + '<details><summary> ' + block.title + '</summary>\n\n'
+      contents += '<details><summary> ' + block.title + '</summary>'
     # Handles Basic text, Links, Single Line Code
     elif (type == 'text'):
-      contents += offset + block.title + '\n\n'
+      contents += block.title
     # Handles Table
     elif (type == 'collection_view'):
-      contents += offset + parse_notion_collection(token, block.collection.id, offset) + '\n\n'
+      contents += parse_notion_collection(token, block.collection.id, offset)
     # Handles Dividers
     # elif (type == 'divider'):
-    #     contents += offset + '---' + '\n\n'
+    #     contents += '---'
+    
+    contents += '\n\n'
 
     # Handles block children
     if block.children:
@@ -109,41 +112,41 @@ def parse_notion_contents(token, blocks, dir_name, offset):
       contents += parse_notion_contents(token, block.children, dir_name, offset + '\t')
       if(type == 'toggle'):
         contents += offset + '</details>\n\n'
-
+    
   return contents
 
 def parse_notion_collection(token, collection_id, offset):
   client = NotionClient(token_v2=token)
   table = client.get_collection(collection_id)
   columns = list(map(lambda i: { 'id': i['id'], 'slug': i['slug'], 'type': i['type'] }, table.get_schema_properties()))
-  contents = ''
-
-  for column in columns:
-    contents += '| ' + column['slug'] + ' '
   
-  contents += '|\n' + offset + '|---' * len(columns) + '|'
+  contents = '| ' + ' | '.join(map(lambda i: i['slug'], columns)) + ' |\n'
+  contents += offset + '| ' + ' | '.join(map(lambda i: '---', columns)) + ' |\n'
   
   for row in table.get_rows():
-    contents += '\n' + offset + '| '
+    contents += offset
     for column in columns:
+      contents += '| '
       data = row.get_property(column['id'])
       if data is None or not data:
-        contents += '    | '
+        contents += '   '
       elif column['type'] == 'date' : 
-        contents += ('' if data.start is None else str(data.start)) + ('' if data.end is None else ' -> ' + str(data.end)) + ' | '
+        contents += ('' if data.start is None else str(data.start)) + ('' if data.end is None else ' -> ' + str(data.end))
       elif column['type'] == 'person' :
-        contents += ', '.join(map(lambda i: i.full_name, data)) + ' | '
+        contents += ', '.join(map(lambda i: i.full_name, data))
       elif column['type'] == 'file' :
-        contents += ', '.join(map(lambda i: '[link](' + i + ')', data)) + ' | '
+        contents += ', '.join(map(lambda i: '[link](' + i + ')', data))
       elif column['type'] == 'select' :
-        contents += str([data]) + ' | '
+        contents += str([data])
       elif column['type'] == 'multi_select' :
-        contents += ', '.join(map(lambda i: '[' + i +']', data)) + ' | '
+        contents += ', '.join(map(lambda i: '[' + i +']', data))
       elif column['type'] == 'checkbox' :
-        contents += ( '✅' if data else '⬜️') + ' | '
+        contents += ( '✅' if data else '⬜️')
       else:
-        contents += str(data) + ' | '
-  
+        contents += str(data)
+      contents += ' '
+    contents += '|\n'
+
   return contents
 
 def write_post(post, file_path):

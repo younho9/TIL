@@ -33,6 +33,8 @@
 
 - 📂 **Algorithms**
 
+  - [2020 카카오 인턴십 - 경주로 건설](/Algorithms/2020-카카오-인턴십---경주로-건설.md)
+
 - 📂 **JavaScript**
 
   - [실행 컨텍스트와 클로저](/JavaScript/Execution-context-and-closure.md)
@@ -62,6 +64,7 @@
 
 - 📂 **Daily**
 
+  - [test](/Daily/test.md)
   - [2월](/Daily/2020/02/README.md)
   - [3월](/Daily/2020/03/README.md)
   - [7월](/Daily/2020/07/README.md)

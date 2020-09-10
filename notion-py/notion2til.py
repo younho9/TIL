@@ -95,6 +95,9 @@ def parse_notion_contents(token, blocks, dir_name, offset):
     # Handles Basic text, Links, Single Line Code
     elif (type == 'text'):
       contents += offset + block.title + '\n\n'
+    # Handles Table
+    elif (type == 'collection_view'):
+      contents += offset + parse_notion_collection(token, block.collection.id, offset) + '\n\n'
     # Handles Dividers
     # elif (type == 'divider'):
     #     contents += offset + '---' + '\n\n'
@@ -106,6 +109,40 @@ def parse_notion_contents(token, blocks, dir_name, offset):
       contents += parse_notion_contents(token, block.children, dir_name, offset + '\t')
       if(type == 'toggle'):
         contents += offset + '</details>\n\n'
+
+  return contents
+
+def parse_notion_collection(token, collection_id, offset):
+  client = NotionClient(token_v2=token)
+  table = client.get_collection(collection_id)
+  columns = list(map(lambda i: { 'id': i['id'], 'slug': i['slug'], 'type': i['type'] }, table.get_schema_properties()))
+  contents = ''
+
+  for column in columns:
+    contents += '| ' + column['slug'] + ' '
+  
+  contents += '|\n' + offset + '|---' * len(columns) + '|'
+  
+  for row in table.get_rows():
+    contents += '\n' + offset + '| '
+    for column in columns:
+      data = row.get_property(column['id'])
+      if data is None or not data:
+        contents += '    | '
+      elif column['type'] == 'date' : 
+        contents += ('' if data.start is None else str(data.start)) + ('' if data.end is None else ' -> ' + str(data.end)) + ' | '
+      elif column['type'] == 'person' :
+        contents += ', '.join(map(lambda i: i.full_name, data)) + ' | '
+      elif column['type'] == 'file' :
+        contents += ', '.join(map(lambda i: '[link](' + i + ')', data)) + ' | '
+      elif column['type'] == 'select' :
+        contents += str([data]) + ' | '
+      elif column['type'] == 'multi_select' :
+        contents += ', '.join(map(lambda i: '[' + i +']', data)) + ' | '
+      elif column['type'] == 'checkbox' :
+        contents += ( '✅' if data else '⬜️') + ' | '
+      else:
+        contents += str(data) + ' | '
   
   return contents
 

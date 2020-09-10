@@ -48,47 +48,47 @@ def parse_notion_contents(token, blocks, dir_name, offset):
   for block in blocks:
     type = block.type
     contents += offset
-    if (type == 'header'):
+    if type == 'header':
       contents += '## ' + block.title
-    elif (type == 'sub_header'):
+    elif type == 'sub_header':
       contents += '### ' + block.title
-    elif (type == 'sub_sub_header'):
+    elif type == 'sub_sub_header':
       contents += '#### ' + block.title
-    elif (type == 'code'):
+    elif type == 'code':
       contents += '```' + block.language.lower() + '\n' + block.title + '\n```'
-    elif (type == 'callout'):
+    elif type == 'callout':
       contents += '> ' + block.icon + ' ' + block.title
-    elif (type == 'quote'):
+    elif type == 'quote':
       contents += '> ' + block.title
-    elif (type == 'bookmark'):
+    elif type == 'bookmark':
       contents += '🔗 [' + block.title + '](' + block.link + ')'
-    elif (type == 'page'):
+    elif type == 'page':
       contents += '🔗 [' + block.title + '](' + block.get_browseable_url() + ')'
-    elif (type == 'image'):
+    elif type == 'image':
       contents += save_and_get_image_path(block.source, dir_name, image_number)
       image_number += 1
-    elif (type == 'bulleted_list'):
+    elif type == 'bulleted_list':
       contents += '- ' + block.title
-    elif (type == 'numbered_list'):
+    elif type == 'numbered_list':
       contents += '1. ' + block.title
-    elif (type == 'to_do'):
+    elif type == 'to_do':
       contents += '- [ ] ' + block.title
-    elif (type == 'toggle'):
-      contents += '<details><summary> ' + block.title + '</summary>'
-    elif (type == 'text'):
+    elif type == 'toggle':
+      contents += '<details><summary>' + block.title + '</summary>'
+    elif type == 'text':
       contents += block.title
-    elif (type == 'collection_view'):
+    elif type == 'collection_view':
       contents += parse_notion_collection(token, block.collection.id, offset)
-    # elif (type == 'divider'):
+    # elif type == 'divider':
     #     contents += '---'
     
     contents += '\n\n'
 
     if block.children:
-      if(type == 'page'):
+      if type == 'page':
         continue
       contents += parse_notion_contents(token, block.children, dir_name, offset + '\t')
-      if(type == 'toggle'):
+      if type == 'toggle':
         contents += offset + '</details>\n\n'
     
   return contents
@@ -116,17 +116,17 @@ def parse_notion_collection(token, collection_id, offset):
       data = row.get_property(column['id'])
       if data is None or not data:
         contents += '   '
-      elif column['type'] == 'date' : 
+      elif column['type'] == 'date': 
         contents += ('' if data.start is None else str(data.start)) + ('' if data.end is None else ' -> ' + str(data.end))
-      elif column['type'] == 'person' :
+      elif column['type'] == 'person':
         contents += ', '.join(map(lambda i: i.full_name, data))
-      elif column['type'] == 'file' :
+      elif column['type'] == 'file':
         contents += ', '.join(map(lambda i: '[link](' + i + ')', data))
-      elif column['type'] == 'select' :
+      elif column['type'] == 'select':
         contents += str([data])
-      elif column['type'] == 'multi_select' :
+      elif column['type'] == 'multi_select':
         contents += ', '.join(map(lambda i: '[' + i +']', data))
-      elif column['type'] == 'checkbox' :
+      elif column['type'] == 'checkbox':
         contents += ( '✅' if data else '⬜️')
       else:
         contents += str(data)

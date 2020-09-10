@@ -14,7 +14,6 @@ def notion2til(token, collection_id, target):
   contents_collection = client.get_collection(collection_id)
   pages = contents_collection.get_rows()
   
-  # Main Loop
   for page in pages:
     if(page.status != '✅ Completed'):
       continue
@@ -49,31 +48,22 @@ def parse_notion_contents(token, blocks, dir_name, offset):
   for block in blocks:
     type = block.type
     contents += offset
-    # Handles H1
     if (type == 'header'):
       contents += '## ' + block.title
-    # Handles H2
     elif (type == 'sub_header'):
       contents += '### ' + block.title
-    # Handles H3
     elif (type == 'sub_sub_header'):
       contents += '#### ' + block.title
-    # Handles Code Blocks
     elif (type == 'code'):
       contents += '```' + block.language.lower() + '\n' + block.title + '\n```'
-    # Handles Callout Blocks
     elif (type == 'callout'):
       contents += '> ' + block.icon + ' ' + block.title
-    # Handles Quote Blocks
     elif (type == 'quote'):
       contents += '> ' + block.title
-    # Handles Bookmark Blocks
     elif (type == 'bookmark'):
       contents += '🔗 [' + block.title + '](' + block.link + ')'
-    # Handles Linked Notion Page
     elif (type == 'page'):
       contents += '🔗 [' + block.title + '](' + block.get_browseable_url() + ')'
-    # Handles Images
     elif (type == 'image'):
       for image_type in image_types:
         if image_type in block.source:
@@ -81,31 +71,23 @@ def parse_notion_contents(token, blocks, dir_name, offset):
           contents += '![image-' + str(image_number) + '](' + image_path + ')'
           urllib.request.urlretrieve(block.source, dir_name + '/' + image_path)
       image_number += 1
-    # Handles Bullets
     elif (type == 'bulleted_list'):
       contents += '- ' + block.title
-    # Handles Numbered List
     elif (type == 'numbered_list'):
       contents += '1. ' + block.title
-    # Handles ToDo
     elif (type == 'to_do'):
       contents += '- [ ] ' + block.title
-    # Handles Toggle
     elif (type == 'toggle'):
       contents += '<details><summary> ' + block.title + '</summary>'
-    # Handles Basic text, Links, Single Line Code
     elif (type == 'text'):
       contents += block.title
-    # Handles Table
     elif (type == 'collection_view'):
       contents += parse_notion_collection(token, block.collection.id, offset)
-    # Handles Dividers
     # elif (type == 'divider'):
     #     contents += '---'
     
     contents += '\n\n'
 
-    # Handles block children
     if block.children:
       if(type == 'page'):
         continue

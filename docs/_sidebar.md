@@ -33,10 +33,12 @@
 
 - 📂 **Algorithms**
 
+  - [2020 카카오 인턴십 - 동굴 탐험](/Algorithms/2020-카카오-인턴십---동굴-탐험.md)
   - [2020 카카오 인턴십 - 경주로 건설](/Algorithms/2020-카카오-인턴십---경주로-건설.md)
 
 - 📂 **JavaScript**
 
+  - [NodeJS, Jest, VSCode debugging](/JavaScript/NodeJS,-Jest,-VSCode-debugging.md)
   - [실행 컨텍스트와 클로저](/JavaScript/Execution-context-and-closure.md)
   - [객체지향 프로그래밍](/JavaScript/Object-oriented-programming.md)
   - [함수와 프로토타입 체이닝](/JavaScript/Function-and-prototype-chaining.md)

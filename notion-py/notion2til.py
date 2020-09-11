@@ -24,7 +24,7 @@ def notion2til(token, collection_id):
     file_path = dir_name + '/' + file_name
 
     post = '# ' + page.title + '\n\n'
-    post = post + parse_notion_contents(token, page.children, dir_name, '')
+    post = post + parse_notion_contents(token, page.children, dir_name, file_name, '')
 
     write_post(post, file_path)
     update_sidebar(page.tag[0], page.title, file_name)
@@ -41,7 +41,7 @@ def make_directory(dir_name):
   except:
     pass
 
-def parse_notion_contents(token, blocks, dir_name, offset):
+def parse_notion_contents(token, blocks, dir_name, file_name, offset):
   image_number = 0
   contents = ''
 
@@ -65,7 +65,7 @@ def parse_notion_contents(token, blocks, dir_name, offset):
     elif type == 'page':
       contents += '🔗 [' + block.title + '](' + block.get_browseable_url() + ')'
     elif type == 'image':
-      contents += save_and_get_image_path(block.source, dir_name, image_number)
+      contents += save_and_get_image_path(block.source, dir_name, file_name, image_number)
       image_number += 1
     elif type == 'bulleted_list':
       contents += '- ' + block.title
@@ -88,20 +88,20 @@ def parse_notion_contents(token, blocks, dir_name, offset):
       if type == 'page':
         continue
       elif type == 'toggle':
-        contents += parse_notion_contents(token, block.children, dir_name, offset)
+        contents += parse_notion_contents(token, block.children, dir_name, file_name, offset)
         contents += offset + '</details>\n\n'
       else:
-        contents += parse_notion_contents(token, block.children, dir_name, offset + '\t')
+        contents += parse_notion_contents(token, block.children, dir_name, file_name, offset + '\t')
     
   return contents
 
-def save_and_get_image_path(source, dir_name, image_number):
+def save_and_get_image_path(source, dir_name, file_name, image_number):
   types = ['png', 'jpg', 'jpeg']
   type = filter(lambda i: i in source, types)
-  path = 'images/image-' + str(image_number) + '.' + ''.join(type)
+  path = 'images/' + file_name + '-image-' + str(image_number) + '.' + ''.join(type)
   urllib.request.urlretrieve(source, dir_name + '/' + path)
   
-  return '![image-' + str(image_number) + '](' + path + ')'
+  return '![' + file_name + '-image-' + str(image_number) + '](' + path + ')'
 
 def parse_notion_collection(token, collection_id, offset):
   client = NotionClient(token_v2=token)

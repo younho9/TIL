@@ -106,9 +106,9 @@ def save_and_get_image_path(source, dir_name, file_name, image_number):
 def parse_notion_collection(token, collection_id, offset):
   client = NotionClient(token_v2=token)
   table = client.get_collection(collection_id)
-  columns = list(map(lambda i: { 'id': i['id'], 'slug': i['slug'], 'type': i['type'] }, table.get_schema_properties()))
+  columns = list(map(lambda i: { 'id': i['id'], 'name': i['name'], 'type': i['type'] }, table.get_schema_properties()))
   
-  contents = '| ' + ' | '.join(map(lambda i: i['slug'], columns)) + ' |\n'
+  contents = '| ' + ' | '.join(map(lambda i: i['name'], columns)) + ' |\n'
   contents += offset + '| ' + ' | '.join(map(lambda i: '---', columns)) + ' |\n'
   
   for row in table.get_rows():

@@ -86,8 +86,6 @@ def parse_notion_contents(token, blocks, dir_name, file_name, offset):
             contents += block.title
         elif type == "collection_view":
             contents += parse_notion_collection(token, block.collection.id, offset)
-        # elif type == 'divider':
-        #     contents += '---'
 
         contents += "\n\n"
 

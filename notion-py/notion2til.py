@@ -33,6 +33,7 @@ def notion2til(token, collection_id):
         update_sidebar(page.tag[0], page.title, file_name)
 
         print("✅ Successfully exported blog content to" + file_path + ".md")
+        page.status = "🖨 Published"
 
 
 def make_directory(dir_name):

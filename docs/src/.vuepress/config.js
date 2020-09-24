@@ -1,3 +1,4 @@
+const { getFilesOf, getDirectoriesOf } = require('./util');
 const { description } = require('../../package');
 
 module.exports = {
@@ -6,10 +7,7 @@ module.exports = {
   head: [
     ['meta', { name: 'theme-color', content: '#D14376' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    [
-      'meta',
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
-    ],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
   ],
 
   themeConfig: {
@@ -18,8 +16,6 @@ module.exports = {
     docsDir: 'docs',
     editLinkText: '🖋 Edit this page',
     lastUpdated: 'Last Updated',
-    nextLinks: true,
-    prevLinks: true,
     nav: [
       {
         text: 'Frontend',
@@ -30,38 +26,41 @@ module.exports = {
         link: '/Algorithms/',
       },
       {
+        text: 'CS',
+        link: '/CS/',
+      },
+      {
         text: 'Daily',
         link: '/Daily/',
       },
     ],
     sidebar: {
-      '/Frontend/': [
-        {
-          title: 'Frontend',
-          collapsable: false,
-          sidebarDepth: 1,
-          children: ['introduction/', 'using-vue/'],
-        },
-      ],
+      '/Frontend/': getDirectoriesOf('src/Frontend').map(dir => ({
+        title: dir,
+        collapsable: true,
+        sidebarDepth: 1,
+        children: getFilesOf('src/Frontend', dir),
+      })),
       '/Algorithms/': [
         {
           title: 'Algorithms',
           collapsable: false,
           sidebarDepth: 1,
-          children: [
-            'Programmers-42576. 완주하지 못한 선수/',
-            'Programmers-42577. 전화번호 목록/',
-          ],
+          children: getFilesOf('src', 'Algorithms'),
         },
       ],
-      '/Daily/': [
-        {
-          title: 'Daily',
-          collapsable: false,
-          sidebarDepth: 1,
-          children: [],
-        },
-      ],
+      '/CS/': getDirectoriesOf('src/CS').map(dir => ({
+        title: dir,
+        collapsable: true,
+        sidebarDepth: 1,
+        children: getFilesOf('src/CS', dir),
+      })),
+      '/Daily/': getDirectoriesOf('src/Daily').map(dir => ({
+        title: dir,
+        collapsable: true,
+        sidebarDepth: 1,
+        children: getFilesOf('src/Daily', dir),
+      })),
     },
   },
 

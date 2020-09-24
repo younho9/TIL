@@ -1,0 +1,97 @@
+# CSS 속성 02. margin
+
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
+
+### `margin`
+
+요소의 ’외부(바깥) 여백’을 지정 - 단축 속성 (위 오른쪽 아래 왼쪽)
+
+> 음수 값도 사용할 수 있다.
+
+#### 속성 값
+
+| 기본값 | 의미                                | 값   |
+| ------ | ----------------------------------- | ---- |
+|        | px , em , cm 등 단위로 지정         | 단위 |
+|        | 브라우저가 너비를 계산              | auto |
+|        | 부모 요소의 너비에 대한 비율로 지정 | %    |
+
+> % 를 margin 의 값으로 사용할 경우 부모 요소의 가로 너비에 대한 비율로 margin 을 사용하게 된다.
+
+#### 사용법
+
+```
+margin: 위 우 아래 좌;       /* 시계 방향 */margin: 위 [좌, 우] 아래;    /* 위 아래 방향 */margin: [위, 아래] [좌, 우]; /* 위,아래 + 좌,우 */margin: [위, 아래, 좌, 우];  /* 모든 방향 */
+```
+
+```
+.box {margin: 10px 20px 30px 40px;margin: 10px 20px 40px;margin: 10px 40px;margin: 10px;}
+```
+
+### `margin-top, right, bottom, left`
+
+요소의 ’외부(바깥 위쪽 여백)’을 지정
+
+```
+.box1 {margin: 10px 20px 30px 40px;  /* 단축 속성 */}.box2 {/* 개별 속성 */margin-top: 10px;margin-right: 20px;margin-bottom: 10px;margin-left: 10px;}
+```
+
+### 마진 중복(병합, Collapse)
+
+마진의 특정 값들이 ’중복’되어 합쳐지는 현상
+
+1. 형제 요소들의 `margin-top` 과 `margin-bottom` 이 만났을 때
+
+1. 부모 요소의 `margin-top` 과 자식 요소의 `margin-top` 이 만났을 때
+
+1. 부모 요소의 `margin-bottom` 과 자식 요소의 `margin-bottom` 이 만났을 때
+
+> ’마진 중복’은 버그(오류)가 아니다. 현상을 우회하거나 응용할 수 있다.
+
+#### 형제 요소끼리 만났을 때
+
+```
+<div class="parent"><div class="child"></div><div class="child"></div><div class="child"></div></div>
+```
+
+```
+.parent {}.child {width: 100px;height: 100px;background: tomato;float: left; /* 블록 요소가 수평으로 쌓이게 해줌 */margin: 20px;}
+```
+
+위의 예제에서 형제 요소들의 `margin-right` 와 `margin-left` 는 `20px` 이 더해져 `40px` 이 된다.
+
+```
+.parent {}.child {width: 100px;height: 100px;background: tomato;margin: 20px;}
+```
+
+하지만 `float: left;` 속성을 제거하면, 블록 요소가 수직으로 쌓이게 되는데 이 때 형제 요소들의 `margin-top` 과 `margin-bottom` 이 만나면서 `margin` 이 `40px` 이 되는 것이 아니라 그대로 `20px` 임을 확인할 수 있다. 이것이 마진 중복이다.
+
+#### 부모 요소와 자식 요소가 만났을 때
+
+```
+<div class="parent"><div class="child"></div></div>
+```
+
+```
+.parent {width: 300px;height: 200px;background: cyan;}.child {width: 100px;height: 100px;background: tomato;margin-top: 50px;}
+```
+
+위의 예제에서 자식 요소의 `margin-top` 이 `50px` 로, 부모 요소로부터 `50px` 의 `margin` 이 들어가길 기대했으나, 부모 요소 역시 `50px` 의 `margin` 이 들어가는 것을 확인할 수 있다. 이것은 `margin-bottom` 일 때도 마찬가지이다.
+
+이렇게 부모 요소의 `margin-top` 과 자식 요소의 `margin-top` 이 만나있다면 자식 요소의 `margin-top` 이 합쳐지게 된다.
+
+> 부모 요소의 margin-top 과 자식 요소의 margin-top 이 만나지 않도록 부모 요소에 padding: 10px; 을 추가하면 마진 중복이 발생하지 않는다.
+
+#### 마진 중복 계산법
+
+마진 중복 현상이 발생 시, 중복 값을 계산하는 방법
+
+| 요소B 마진 | 요소A 마진 | 중복 값 | 계산법              | 조건             |
+| ---------- | ---------- | ------- | ------------------- | ---------------- |
+| 10px       | 30px       | 30px    | 더 큰 값으로 중복   | 둘 다 양수       |
+| -10px      | -30px      | -30px   | 더 작은 값으로 중복 | 둘 다 음수       |
+| 10px       | -30px      | -20px   | -30 + 10 = -20      | 각각 양수와 음수 |
+
+### Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

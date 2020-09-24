@@ -1,0 +1,39 @@
+# CSS 속성 08. opacity
+
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
+
+### `opacity`
+
+요소의 투명도를 지정
+
+#### 속성 값
+
+| 기본값 | 의미                        | 값   |
+| ------ | --------------------------- | ---- |
+| 1      | 0 부터 1 사이의 소숫점 숫자 | 숫자 |
+
+#### 사용법
+
+```
+opacity: 투명도;
+```
+
+```
+.harf {opacity: 0.5;  /* 50% 투명도, 반투명 */}.transparent {opacity: 0;    /* 0% 투명도, 투명 */}.box {opacity: .75;  /* 75% 투명도, 반투명 (0 생략 가능) */}
+```
+
+#### 예제
+
+```
+<div class="parent"><div class="child">123</div></div>
+```
+
+```
+.parent {width: 300px;height: 250px;background: cyan;}.parent .child {width: 150px;height: 100px;background: tomato;font-size: 50px;opacity: .5;}
+```
+
+> display: none; : 요소가 완벽히 존재하지 않는 것처럼 만들어준다.opacity: 0; : 요소가 존재하지만 보이지 않게만 만들어준다.
+
+### Reference
+
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

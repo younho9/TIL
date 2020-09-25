@@ -11,10 +11,11 @@
 
 <br>
 
-<kbd>
-    <div align="center">
+
+<div align="center">
+    <kbd>
         <a href="https://til.younho9.dev">
             <img width="800" alt="TIL" src="https://user-images.githubusercontent.com/48426991/94286445-f986f900-ff8f-11ea-8308-af62b10c8693.png">
         </a>
-    </div>
-</kbd>
+    </kbd>
+</div>

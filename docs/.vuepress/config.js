@@ -5,9 +5,15 @@ module.exports = {
   title: '📝 TIL(Today I Learned)',
   description: description,
   head: [
+    ['link', { rel: 'icon', href: '/assets/favicon.png' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#D14376' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'apple-touch-icon', href: '/images/icons/152.png' }],
+    ['link', { rel: 'mask-icon', href: '/images/icons/favicon.svg', color: '#0A72F0' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/images/icons/144.png' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#D14376' }],
   ],
 
   themeConfig: {
@@ -19,19 +25,19 @@ module.exports = {
     nav: [
       {
         text: 'Frontend',
-        link: '/Frontend/',
+        link: '/Frontend/Bootstrap/Bootstrap-getting-started',
       },
       {
         text: 'Algorithms',
-        link: '/Algorithms/',
+        link: '/Algorithms/2020-카카오-인턴십-경주로-건설',
       },
       {
         text: 'CS',
-        link: '/CS/',
+        link: '/CS/System-Programming/SIC-XE-Machine-Architecture',
       },
       {
         text: 'Daily',
-        link: '/Daily/',
+        link: '/Daily/Daily/0205',
       },
     ],
     sidebar: {

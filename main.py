@@ -1,15 +1,18 @@
 import sys
-from config import token, url
+import config
 from notion2github.exporter import NotionExporter
 
 if __name__ == "__main__":
     if len(sys.argv) == 3:
         token = sys.argv[1]
-        url = sys.argv[2]
+        database_url = sys.argv[2]
+    else:
+        token = config.token
+        database_url = config.database_url
 
     # Get Frontend contents from database
     NotionExporter(token, "./docs/Frontend").get_notion_pages_from_database(
-        url=url,
+        url=database_url,
         category_column_name="Category",
         status_column_name="Status",
         current_status="✅ Completed",
@@ -20,7 +23,7 @@ if __name__ == "__main__":
 
     # Get Algorithms contents from database
     NotionExporter(token, "./docs").get_notion_pages_from_database(
-        url=url,
+        url=database_url,
         category_column_name="Category",
         status_column_name="Status",
         current_status="✅ Completed",
@@ -31,7 +34,7 @@ if __name__ == "__main__":
 
     # Get CS contents from database
     NotionExporter(token, "./docs/CS").get_notion_pages_from_database(
-        url=url,
+        url=database_url,
         category_column_name="Category",
         status_column_name="Status",
         current_status="✅ Completed",
@@ -42,7 +45,7 @@ if __name__ == "__main__":
 
     # Get Daily contents from database
     NotionExporter(token, "./docs/Daily").get_notion_pages_from_database(
-        url=url,
+        url=database_url,
         category_column_name="Category",
         status_column_name="Status",
         current_status="✅ Completed",

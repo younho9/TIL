@@ -63,6 +63,11 @@ module.exports = {
       })),
     },
   },
+  markdown: {
+    extendMarkdown: md => {
+      md.use(require('markdown-it-disable-url-encode'));
+    },
+  },
 
   plugins: ['@vuepress/plugin-back-to-top', '@vuepress/plugin-medium-zoom'],
 };

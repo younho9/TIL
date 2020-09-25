@@ -39,6 +39,11 @@ module.exports = {
         text: 'Daily',
         link: '/Daily/Daily/0205',
       },
+      {
+        text: 'Notion',
+        link:
+          'https://www.notion.so/107dc84223664f60b21a61f55b2700a4?v=e848ff1783f44fc7b1d499740e16c46c',
+      },
     ],
     sidebar: {
       '/Frontend/': getDirectoriesOf('docs/Frontend').map(dir => ({

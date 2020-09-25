@@ -6,6 +6,8 @@
 
 요소의 크기 계산 기준을 지정
 
+![CSS-속성-05-box-sizing-image-0](./images/CSS-속성-05-box-sizing-image-0.png)
+
 #### 속성 값
 
 | 기본값      | 의미                                                                                              | 값          |
@@ -14,8 +16,6 @@
 |             | 너비( width , height )에 안쪽 여백( padding )과 테두리 선( border )를 포함하여 요소의 크기를 계산 | border-box  |
 
 > ☝️ 속성 값으로 padding-box 가 있기는 하지만, 브라우저 호환성이 매우 떨어지므로 사실상 사용이 불가능하다.
-
-![CSS-속성-05-box-sizing-image-0](./images/box-model.png)
 
 box-model
 

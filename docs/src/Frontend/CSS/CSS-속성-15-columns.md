@@ -4,7 +4,7 @@
 
 일반 블록 레이아웃을 확장하여 여러 텍스트 다단으로 쉽게 정리하며, 가독성 확보
 
-![CSS-속성-15-columns-image-0](./images/columns.png)
+![CSS-속성-15-columns-image-0](./images/CSS-속성-15-columns-image-0.png)
 
 columns
 
@@ -22,11 +22,11 @@ columns
 
 #### 사용법
 
-```
+```plain text
 columns: 너비 개수;
 ```
 
-```
+```plain text
 .text {columns: 100px 2;}
 ```
 
@@ -43,7 +43,7 @@ columns: 너비 개수;
 
 #### 사용법
 
-```
+```plain text
 column-width: 너비;
 ```
 
@@ -62,7 +62,7 @@ column-width: 너비;
 
 #### 사용법
 
-```
+```plain text
 column-count: 개수;
 ```
 
@@ -79,7 +79,7 @@ column-count: 개수;
 
 #### 사용법
 
-```
+```plain text
 column-gap: 간격;
 ```
 
@@ -95,7 +95,7 @@ column-gap: 간격;
 
 #### 사용법
 
-```
+```plain text
 column-rule: 두께 종류 색상;
 ```
 

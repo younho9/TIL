@@ -17,11 +17,11 @@ CSS 속성의 시작과 끝을 지정(전환 효과)하여 중간 값을 애니�
 
 #### 예제
 
-```
+```plain text
 <div class="box"></div>
 ```
 
-```
+```plain text
 .box {width: 100px;height: 100px;background: tomato;margin: 50px;transition: width 1s, background 2s;}.box:hover {width: 300px;background: dodgerblue;}
 ```
 
@@ -117,11 +117,11 @@ CSS 속성의 시작과 끝을 지정(전환 효과)하여 중간 값을 애니�
 
 #### 사용법
 
-```
+```plain text
 transform: 변환함수1 변환함수2 변환함수3 ...;transform: 원근법 이동 크기 회전 기울임;
 ```
 
-```
+```plain text
 .box {transform: rotate(20deg) translate(10px, 0);}
 ```
 
@@ -129,11 +129,11 @@ transform: 변환함수1 변환함수2 변환함수3 ...;transform: 원근법 �
 
 #### 2D 예제
 
-```
+```plain text
 <div class="box">123</div>
 ```
 
-```
+```plain text
 .box {width: 200px;height: 200px;background: tomato;display: flex;justify-content: center;align-items: center;font-size: 30px;transition: 1s;}.box:hover {transform: translate(30px, 30px);}
 ```
 
@@ -141,11 +141,11 @@ transform: 변환함수1 변환함수2 변환함수3 ...;transform: 원근법 �
 
 #### 3D 예제
 
-```
+```plain text
 <img src="https://heropy.blog/css/images/logo.png" alt="HEROPY">
 ```
 
-```
+```plain text
 img {width: 300px;border: 1px solid lightgray;transform: perspective(500px) rotateX(45deg);}
 ```
 
@@ -175,11 +175,11 @@ img {width: 300px;border: 1px solid lightgray;transform: perspective(500px) rota
 
 #### 예제
 
-```
+```plain text
 <img src="https://heropy.blog/css/images/logo.png" alt="HEROPY">
 ```
 
-```
+```plain text
 img {width: 200px;border: 1px solid lightgray;transition: 1s;transform: rotate(45deg);transform-origin: 100% 100%;}
 ```
 
@@ -196,11 +196,11 @@ img {width: 200px;border: 1px solid lightgray;transition: 1s;transform: rotate(4
 
 #### 예제
 
-```
+```plain text
 <div class="perspective"><div class="grand-parent"><div class="parent"><img src="https://heropy.blog/css/images/logo.png" alt="HEROPY"></div></div></div>
 ```
 
-```
+```plain text
 .perspective {width: 200px;perspective: 500px;padding: 70px;}.grand-parent{width: 200px;border: 3px solid dodgerblue;transition: 1s;transform: rotateX(-45deg);transform-style: preserve-3d;}.parent {width: 200px;border: 3px solid tomato;transition: 1s;transform: rotateY(45deg);transform-style: preserve-3d;}img {width: 200px;border: 3px solid lightgray;transition: 1s;transform: rotateX(45deg);}
 ```
 
@@ -247,9 +247,9 @@ img {width: 200px;border: 1px solid lightgray;transition: 1s;transform: rotate(4
 
 요소의 2차원 변환(Transforms) 효과를 지정
 
-`scale()` , `skew()` , `translate()` , `rotate()` 를 지정
+![CSS-속성-13-transition-transform-image-0](./images/CSS-속성-13-transition-transform-image-0.png)
 
-![CSS-속성-13-transition-transform-image-0](./images/matrix-function.png)
+`scale()` , `skew()` , `translate()` , `rotate()` 를 지정
 
 matrix-function
 

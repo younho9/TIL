@@ -1,11 +1,12 @@
 const fs = require('fs');
 const { isBuffer } = require('util');
 
-function getFilesOf(base, directory) {
+function getFilesOf(directory) {
   return fs
-    .readdirSync(`${base}/${directory}`)
+    .readdirSync(directory)
     .reduce(
-      (acc, fileName) => (fileName === 'images' ? acc : [...acc, `${directory}/${fileName}`]),
+      (acc, fileName) =>
+        fileName === 'images' || fileName === 'README.md' ? acc : [...acc, fileName],
       [],
     );
 }

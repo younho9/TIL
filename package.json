@@ -11,11 +11,14 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "format": "prettier --write ."
+    "format": "cd docs && prettier --write ."
   },
   "license": "MIT",
   "devDependencies": {
     "markdown-it-disable-url-encode": "1.0.1",
     "vuepress": "^1.5.3"
+  },
+  "dependencies": {
+    "prettier": "2.1.2"
   }
 }

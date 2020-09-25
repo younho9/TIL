@@ -1,6 +1,6 @@
 .DS_Store
 
-config.py
+config.json
 .vscode/
 
 __pycache__/

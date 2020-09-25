@@ -1,5 +1,5 @@
 import sys
-import config
+import json
 from notion2github.exporter import NotionExporter
 
 if __name__ == "__main__":
@@ -7,8 +7,10 @@ if __name__ == "__main__":
         token = sys.argv[1]
         database_url = sys.argv[2]
     else:
-        token = config.token
-        database_url = config.database_url
+        with open("config.json", "r") as f:
+            config = json.load(f)
+        token = config["TOKEN"]
+        database_url = config["DATABASE_URL"]
 
     # Get Frontend contents from database
     NotionExporter(token, "./docs/Frontend").get_notion_pages_from_database(

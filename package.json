@@ -9,8 +9,8 @@
   },
   "repository": "https://github.com/younho9/TIL.git",
   "scripts": {
-    "dev": "vuepress dev src",
-    "build": "vuepress build src",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
     "format": "prettier --write ."
   },
   "license": "MIT",

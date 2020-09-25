@@ -35,31 +35,31 @@ module.exports = {
       },
     ],
     sidebar: {
-      '/Frontend/': getDirectoriesOf('src/Frontend').map(dir => ({
+      '/Frontend/': getDirectoriesOf('docs/Frontend').map(dir => ({
         title: dir,
         collapsable: true,
         sidebarDepth: 1,
-        children: getFilesOf(`src/Frontend/${dir}`).map(fileName => `${dir}/${fileName}`),
+        children: getFilesOf(`docs/Frontend/${dir}`).map(fileName => `${dir}/${fileName}`),
       })),
       '/Algorithms/': [
         {
           title: 'Algorithms',
           collapsable: false,
           sidebarDepth: 1,
-          children: getFilesOf('src/Algorithms'),
+          children: getFilesOf('docs/Algorithms'),
         },
       ],
-      '/CS/': getDirectoriesOf('src/CS').map(dir => ({
+      '/CS/': getDirectoriesOf('docs/CS').map(dir => ({
         title: dir,
         collapsable: true,
         sidebarDepth: 1,
-        children: getFilesOf(`src/CS/${dir}`).map(fileName => `${dir}/${fileName}`),
+        children: getFilesOf(`docs/CS/${dir}`).map(fileName => `${dir}/${fileName}`),
       })),
-      '/Daily/': getDirectoriesOf('src/Daily').map(dir => ({
+      '/Daily/': getDirectoriesOf('docs/Daily').map(dir => ({
         title: dir,
         collapsable: true,
         sidebarDepth: 1,
-        children: getFilesOf(`src/Daily/${dir}`).map(fileName => `${dir}/${fileName}`),
+        children: getFilesOf(`docs/Daily/${dir}`).map(fileName => `${dir}/${fileName}`),
       })),
     },
   },

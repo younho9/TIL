@@ -8,7 +8,7 @@ if __name__ == "__main__":
         url = sys.argv[2]
 
     # Get Frontend contents from database
-    NotionExporter(token, "./docs/src/Frontend").get_notion_pages_from_database(
+    NotionExporter(token, "./docs/Frontend").get_notion_pages_from_database(
         url=url,
         category_column_name="Category",
         status_column_name="Status",
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     )
 
     # Get Algorithms contents from database
-    NotionExporter(token, "./docs/src").get_notion_pages_from_database(
+    NotionExporter(token, "./docs").get_notion_pages_from_database(
         url=url,
         category_column_name="Category",
         status_column_name="Status",
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     )
 
     # Get CS contents from database
-    NotionExporter(token, "./docs/src/CS").get_notion_pages_from_database(
+    NotionExporter(token, "./docs/CS").get_notion_pages_from_database(
         url=url,
         category_column_name="Category",
         status_column_name="Status",
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     )
 
     # Get Daily contents from database
-    NotionExporter(token, "./docs/src/Daily").get_notion_pages_from_database(
+    NotionExporter(token, "./docs/Daily").get_notion_pages_from_database(
         url=url,
         category_column_name="Category",
         status_column_name="Status",

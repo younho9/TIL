@@ -4,7 +4,7 @@
 
 일반 블록 레이아웃을 확장하여 여러 텍스트 다단으로 쉽게 정리하며, 가독성 확보
 
-![CSS-속성-15-columns-image-0](images/columns.png)
+![CSS-속성-15-columns-image-0](./images/columns.png)
 
 columns
 

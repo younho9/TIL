@@ -1,16 +1,12 @@
 # [리액트를 다루는 기술] 5장 - ref: DOM에 이름 달기
 
-![-리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-0](images/-리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-0.png)
+![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-0](./images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-0.png)
 
 > 이 글은 김민준(velopert)님의 [리액트를 다루는 기술](http://www.yes24.com/Product/Goods/78233628?Acode=101)을 참조하여 작성한 글입니다.
 
 > 📌 Table of Contents
 
-
-
-
-
-일반 HTML에서 DOM 요소에 이름을 달 때 id를 사용한다. 
+일반 HTML에서 DOM 요소에 이름을 달 때 id를 사용한다.
 
 ```html
 <div id="my-element"></div>
@@ -20,14 +16,12 @@
 
 HTML에서 id를 사용하는 것처럼, 리액트 내부에서 DOM에 이름을 다는 방법이 있는데 그것이 ref(reference)의 개념이다.
 
-> 리액트 컴포넌트 안에서도 id를 사용할 수 있지만, HTML에서 DOM의 id는 유일해야 하는데, 컴포넌트가 여러 번 사용되면 중복 id가 생기니 잘못된 사용이다. 
-ref는 전역적으로 작동하지 않고, 컴포넌트 내부에서만 작동하기 때문에 문제가 발생하지 않는다.
-
-
+> 리액트 컴포넌트 안에서도 id를 사용할 수 있지만, HTML에서 DOM의 id는 유일해야 하는데, 컴포넌트가 여러 번 사용되면 중복 id가 생기니 잘못된 사용이다.
+> ref는 전역적으로 작동하지 않고, 컴포넌트 내부에서만 작동하기 때문에 문제가 발생하지 않는다.
 
 ## ref는 어떤 상황에서 사용해야 할까?
 
-ref는 __"특정 DOM을 꼭 직접적으로 건드려야 할 때"__ 사용한다. 순수 자바스크립트 혹은 jQuery로 만든 웹사이트에서 input 을 검증할 때는 다음과 같이 작성한다.
+ref는 **"특정 DOM을 꼭 직접적으로 건드려야 할 때"** 사용한다. 순수 자바스크립트 혹은 jQuery로 만든 웹사이트에서 input 을 검증할 때는 다음과 같이 작성한다.
 
 ```html
 <!DOCTYPE html>
@@ -63,11 +57,7 @@ ref는 __"특정 DOM을 꼭 직접적으로 건드려야 할 때"__ 사용한다
 </html>
 ```
 
-
-
-![-리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-1](images/-리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-1.png)
-
-
+![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-1](./images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-1.png)
 
 리액트에서는 이런 작업이 굳이 DOM에 접근하지 않아도 `state` 로 구현할 수 있다. src 디렉토리에 `ValidationSample.css` 와 `ValidationSample.js` 를 만들어보자.
 
@@ -83,8 +73,6 @@ ref는 __"특정 DOM을 꼭 직접적으로 건드려야 할 때"__ 사용한다
 }
 ```
 
-
-
 `ValidationSample.js`
 
 ```javascript
@@ -95,19 +83,19 @@ class ValidationSample extends Component {
   state = {
     password: '',
     clicked: false,
-    validated: false
+    validated: false,
   };
 
   handleChange = e => {
     this.setState({
-      password: e.target.value
+      password: e.target.value,
     });
   };
 
   handleButtonClick = () => {
     this.setState({
       clicked: true,
-      validated: this.state.password === '0000'
+      validated: this.state.password === '0000',
     });
   };
 
@@ -118,13 +106,7 @@ class ValidationSample extends Component {
           type="password"
           value={this.state.password}
           onChange={this.handleChange}
-          className={
-            this.state.clicked
-              ? this.state.validated
-                ? 'success'
-                : 'failure'
-              : ''
-          }
+          className={this.state.clicked ? (this.state.validated ? 'success' : 'failure') : ''}
         />
         <button onClick={this.handleButtonClick}>Validate</button>
       </div>
@@ -156,9 +138,7 @@ class App extends Component {
 export default App;
 ```
 
-
-
-![-리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-2](images/-리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-2.png)
+![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-2](./images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-2.png)
 
 원하는 결과가 잘 나타나는 것을 확인할 수 있다. 이렇게 자바스크립트에서는 DOM에 접근해야 했던 기능을 리액트에서는 state를 사용하여 구현할 수 있다. 하지만 state 만으로 해결할 수 없는 기능들이 있다.
 
@@ -172,21 +152,23 @@ export default App;
 
 이렇게 DOM에 직접 접근해야 하는 상황을 위해 ref를 사용한다.
 
-
-
 ## ref 사용
 
 ref를 사용하는 방법은 두 가지이다.
 
 ### 콜백 함수를 통한 ref 설정
 
-ref를 만드는 가장 기본적인 방법은 콜백 함수를 사용하는 것이다. ref를 달고자 하는 요소에 콜백 함수 ref를 props로 전달해주면 된다. 이 콜백 함수는 ref 값을 파라미터로 받고, ref를 컴포넌트의 멤버 변수로 설정해준다. 
+ref를 만드는 가장 기본적인 방법은 콜백 함수를 사용하는 것이다. ref를 달고자 하는 요소에 콜백 함수 ref를 props로 전달해주면 된다. 이 콜백 함수는 ref 값을 파라미터로 받고, ref를 컴포넌트의 멤버 변수로 설정해준다.
 
 ```javascript
-<input ref={(ref) => {this.input=ref}} />
+<input
+  ref={ref => {
+    this.input = ref;
+  }}
+/>
 ```
 
-이렇게 하면 `this.input` 이 input 요소의 DOM을 가리키게 된다. 이 때, 이름은 `this.input` 뿐만 아니라 원하는 것으로 자유롭게 설정할 수 있다. 
+이렇게 하면 `this.input` 이 input 요소의 DOM을 가리키게 된다. 이 때, 이름은 `this.input` 뿐만 아니라 원하는 것으로 자유롭게 설정할 수 있다.
 
 ### createRef를 통한 ref 설정
 
@@ -200,7 +182,7 @@ class RefSample extends Component {
 
   handleFocus = () => {
     this.input.current.focus();
-  }
+  };
 
   render() {
     return (
@@ -246,15 +228,13 @@ createRef를 사용하여 ref를 만들려면 먼저 컴포넌트 내부에서 �
 handleButtonClick = () => {
   this.setState({
     clicked: true,
-    validated: this.state.password === '0000'
+    validated: this.state.password === '0000',
   });
   this.input.focus();
 };
 ```
 
 이제 코드를 실행해보면 버튼 클릭시 포커스가 input 요소로 넘어가는 것을 볼 수 있다.
-
-
 
 ## 컴포넌트에 ref 달기
 
@@ -264,7 +244,9 @@ handleButtonClick = () => {
 
 ```javascript
 <MyComponent
-  ref={(ref) => {this.myComponent=ref}}
+  ref={ref => {
+    this.myComponent = ref;
+  }}
 />
 ```
 
@@ -286,13 +268,13 @@ class ScrollBox extends Component {
       height: '300px',
       width: '300px',
       overflow: 'auto',
-      position: 'relative'
+      position: 'relative',
     };
 
     const innerStyle = {
       width: '100%',
       height: '650px',
-      background: 'linear-gradient(white, black)'
+      background: 'linear-gradient(white, black)',
     };
 
     return (
@@ -310,8 +292,6 @@ class ScrollBox extends Component {
 
 export default ScrollBox;
 ```
-
-
 
 App 컴포넌트에서는 기존 `ValidationSample` 을 지우고 `ScrollBox` 컴포넌트를 렌더링한다.
 
@@ -334,9 +314,7 @@ class App extends Component {
 export default App;
 ```
 
-
-
-![-리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-3](images/-리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-3.png)
+![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-3](./images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-3.png)
 
 코드를 저장하면, 웹 브라우저에 스크롤 박스가 잘 렌더링된다.
 
@@ -348,12 +326,8 @@ export default App;
 
 - `clientHeight` : 스크롤이 있는 박스의 높이
 
-
-
 > 스크롤을 내려야 볼 수 있는 박스 내부의 긴 콘텐츠 → `scrollHeight`
-긴 콘텐츠를 스크롤바로 감싸는 박스 → `clientHeight`
-
-
+> 긴 콘텐츠를 스크롤바로 감싸는 박스 → `clientHeight`
 
 스크롤바의 위치 `scrollTop` 은 0부터 (박스 내부의 긴 콘텐츠 - 스크롤바로 감싸고 있는 바깥의 박스)의 크기 값을 가진다. (바깥의 박스가 300이고 내부의 콘텐츠가 650이라면 스크롤바의 위치가 0~350)
 
@@ -375,13 +349,13 @@ class ScrollBox extends Component {
       height: '300px',
       width: '300px',
       overflow: 'auto',
-      position: 'relative'
+      position: 'relative',
     };
 
     const innerStyle = {
       width: '100%',
       height: '650px',
-      background: 'linear-gradient(white, black)'
+      background: 'linear-gradient(white, black)',
     };
 
     return (
@@ -400,8 +374,6 @@ class ScrollBox extends Component {
 export default ScrollBox;
 ```
 
-
-
 `ScrollBox` 컴포넌트에서, `this.box` 로 스크롤바가 있는 박스 DOM에 접근할 수 있고, `scrollToBottom` 이라는 메소드가 이 DOM에 접근하여 스크롤바의 위치 `scrollTop` 를 맨 아래로 변경한다.
 
 이렇게 만들고 나서 부모 컴포넌트인 App 컴포넌트에서 `ScrollBox` 컴포넌트에 ref를 달고, 버튼을 만든 다음, `onClick` 이벤트에 `ScrollBox` 컴포넌트의 메소드인 `scrollToBottom` 를 실행하도록 한다.
@@ -417,9 +389,7 @@ class App extends Component {
     return (
       <div>
         <ScrollBox ref={ref => (this.ScrollBox = ref)} />
-        <button onClick={() => this.ScrollBox.scrollToBottom()}>
-          맨 밑으로
-        </button>
+        <button onClick={() => this.ScrollBox.scrollToBottom()}>맨 밑으로</button>
       </div>
     );
   }
@@ -428,19 +398,13 @@ class App extends Component {
 export default App;
 ```
 
-
-
-![-리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-4](images/-리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-4.png)
+![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-4](./images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-4.png)
 
 맨 밑으로 버튼을 눌렀을 때 스크롤바가 맨 밑으로 이동하는 것을 확인할 수 있다.
-
-
 
 그런데 주의할 점이 있는데, button 요소에 `onClick` 이벤트를 등록할 때, `onClick = {this.scrollBox.scrollToBottom}` 으로 작성하는 것이 문법상으로 틀린 것은 아니다. 하지만 컴포넌트가 처음 렌더링 될 때는 `this.scrollBox` 값이 undefined 이다. (ref 등록이 콜백함수 이므로)
 
 따라서 화살표 함수 문법으로 새로운 함수를 만들고, 그 내부에서 `this.scrollBox.scrollToBottom` 메소드를 실행하면 버튼을 누를 때, (이미 한번 렌더링을 거쳐 `this.scrollBox` 를 설정한 시점) `this.scrollBox.scrollTobottom` 값을 읽어 와서 실행하므로 오류가 발생하지 않는다.
-
-
 
 ## 정리
 
@@ -448,9 +412,6 @@ export default App;
 
 서로 다른 컴포넌트끼리 데이터를 교류할 때 ref를 사용하는 것이라고 오해할 수 있는데, 그렇게 하는 것은 애플리케이션의 구조를 꼬이게 만들 수 있는 위험한 방법이다. 따라서 데이터를 교류할 때는 언제나 부모 - 자식 흐름으로 교류하는 것이 좋다.
 
-
-
 ## 같이 읽기
 
 [Ref와 DOM - React](https://ko.reactjs.org/docs/refs-and-the-dom.html#gatsby-focus-wrapper)
-

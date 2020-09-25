@@ -2,13 +2,11 @@
 
 > 📌 Table of Contents
 
-
-
 ## DOM(Document Object Model)
 
 ### DOM tree
 
-![DOM-image-0](images/DOM-image-0.png)
+![DOM-image-0](./images/DOM-image-0.png)
 
 DOM tree는 네 종류의 노드로 구성된다.
 
@@ -69,7 +67,7 @@ elem.className = 'red';
 
 - 결과
 
-![DOM-image-1](images/DOM-image-1.png)
+![DOM-image-1](./images/DOM-image-1.png)
 
 #### document.querySelector(cssSelector)
 
@@ -82,7 +80,7 @@ const elem = document.querySelector('#sphinx');
 elem.className = 'red';
 ```
 
-![DOM-image-2](images/DOM-image-2.png)
+![DOM-image-2](./images/DOM-image-2.png)
 
 #### 여러 개의 요소 노드 선택(DOM Query)
 
@@ -101,7 +99,7 @@ for (let i = 0; i < elems.length; i++) {
 
 - 결과
 
-![DOM-image-3](images/DOM-image-3.png)
+![DOM-image-3](./images/DOM-image-3.png)
 
 위 예제의 실행 결과가 이상한 것을 볼 수 있는데, getElementsByClassName 메소드의 반환값인 HTMLCollection이 **실시간으로 Node의 상태 변경을 반영하기 때문**이다.
 
@@ -127,12 +125,12 @@ while (elems.length > 0) {
 ```javascript
 const elems = document.getElementsByClassName('black');
 
-[...elems].forEach((elem) => (elem.className = 'red'));
+[...elems].forEach(elem => (elem.className = 'red'));
 ```
 
 - querySelectorAll 메소드를 사용한다.
 
-![DOM-image-4](images/DOM-image-4.png)
+![DOM-image-4](./images/DOM-image-4.png)
 
 #### document.getElementsByTagName(tagName)
 
@@ -144,7 +142,7 @@ const elems = document.getElementsByClassName('black');
 
 ```javascript
 const elems = document.querySelectorAll('.black');
-elems.forEach((elem) => (elem.className = 'red'));
+elems.forEach(elem => (elem.className = 'red'));
 ```
 
 #### document.getElementsByTagName(tagName)
@@ -155,7 +153,7 @@ elems.forEach((elem) => (elem.className = 'red'));
 
 ```javascript
 const elems = document.getElementsByTagName('li');
-[...elems].forEach((elem) => (elem.className = 'red'));
+[...elems].forEach(elem => (elem.className = 'red'));
 ```
 
 #### DOM Traversing(탐색)
@@ -192,16 +190,18 @@ elem.lastChild.className = 'black';
 - HTML의 공백을 제거한다.
 
 ```html
-<ul><li id="cocker" class="red">코카</li>
+<ul>
+  <li id="cocker" class="red">코카</li>
   <li id="sichu" class="red">시츄</li>
-  <li id="poodle" class="red">푸들</li></ul>
+  <li id="poodle" class="red">푸들</li>
+</ul>
 ```
 
 - jQuery: .prev() 와 jQuery: .next() 를 사용한다.
 
 - 또는 firstElementChild, lastElementChild를 사용한다.
 
-![DOM-image-5](images/DOM-image-5.png)
+![DOM-image-5](./images/DOM-image-5.png)
 
 #### hasChildNodes()
 
@@ -228,11 +228,11 @@ if (elem.hasChildNodes()) {
   console.log(elem.childNodes);
 
   console.log(elem.children);
-  [...elem.children].forEach((el) => console.log(el));
+  [...elem.children].forEach(el => console.log(el));
 }
 ```
 
-![DOM-image-6](images/DOM-image-6.png)
+![DOM-image-6](./images/DOM-image-6.png)
 
 #### previousSibling, nextSibling
 
@@ -252,33 +252,30 @@ if (elem.hasChildNodes()) {
 
 #### nodeName
 
-| 프로퍼티 값 | 노드 |
-| --- | --- |
-| #document | 문서 노드(document node) |
-| 태그 이름(영어로 대문자) | 요소 노드(element node) |
-| 속성 이름 | 속성 노드(attribute node) |
-| #text | 텍스트 노드(text node) |
-
+| 프로퍼티 값              | 노드                      |
+| ------------------------ | ------------------------- |
+| #document                | 문서 노드(document node)  |
+| 태그 이름(영어로 대문자) | 요소 노드(element node)   |
+| 속성 이름                | 속성 노드(attribute node) |
+| #text                    | 텍스트 노드(text node)    |
 
 #### nodeType
 
-| 프로퍼티 값 | 노드 |
-| --- | --- |
-| 1 | 요소 노드(element node) |
-| 2 | 속성 노드(attribute node) |
-| 3 | 텍스트 노드(text node) |
-| 8 | 주석 노드(comment node) |
-| 9 | 문서 노드(document node) |
-
+| 프로퍼티 값 | 노드                      |
+| ----------- | ------------------------- |
+| 1           | 요소 노드(element node)   |
+| 2           | 속성 노드(attribute node) |
+| 3           | 텍스트 노드(text node)    |
+| 8           | 주석 노드(comment node)   |
+| 9           | 문서 노드(document node)  |
 
 #### nodeValue
 
-| 프로퍼티 값 | 노드 |
-| --- | --- |
-| null | 요소 노드(element node) |
+| 프로퍼티 값         | 노드                      |
+| ------------------- | ------------------------- |
+| null                | 요소 노드(element node)   |
 | 해당 속성의 속성 값 | 속성 노드(attribute node) |
-| 해당 텍스트 문자열 | 텍스트 노드(text node) |
-
+| 해당 텍스트 문자열  | 텍스트 노드(text node)    |
 
 #### 텍스트 노드에의 접근/수정
 
@@ -311,9 +308,9 @@ console.log(textNode.nodeValue); // 코카
 textNode.nodeValue = '포메리안';
 ```
 
-![DOM-image-7](images/DOM-image-7.png)
+![DOM-image-7](./images/DOM-image-7.png)
 
-![DOM-image-8](images/DOM-image-8.png)
+![DOM-image-8](./images/DOM-image-8.png)
 
 #### 속성 노드에의 접근/수정
 
@@ -326,14 +323,14 @@ class 속성의 값을 취득 또는 변경한다. className 프로퍼티에 값
 ```javascript
 const elems = document.querySelectorAll('li');
 
-[...elems].forEach((elem) => {
+[...elems].forEach(elem => {
   if (elem.className === 'red') {
     elem.className = 'black';
   }
 });
 ```
 
-![DOM-image-9](images/DOM-image-9.png)
+![DOM-image-9](./images/DOM-image-9.png)
 
 #### classList
 
@@ -342,14 +339,14 @@ add, remove, item, toggle, contains, replace 메소드를 제공한다.
 ```javascript
 const elems = document.querySelectorAll('li');
 
-[...elems].forEach((elem) => {
+[...elems].forEach(elem => {
   if (elem.classList.contains('black')) {
     elem.classList.replace('black', 'red');
   }
 });
 ```
 
-![DOM-image-10](images/DOM-image-10.png)
+![DOM-image-10](./images/DOM-image-10.png)
 
 #### id
 
@@ -392,7 +389,7 @@ console.log(heading.id); // heading
 ```javascript
 const elems = document.querySelectorAll('li');
 
-elems.forEach((elem) => {
+elems.forEach(elem => {
   if (elem.hasAttribute('class')) {
     console.log(elem.getAttribute('id'));
   }
@@ -406,7 +403,7 @@ sichu.removeAttribute('class');
 console.log(sichu.hasAttribute('class'));
 ```
 
-![DOM-image-11](images/DOM-image-11.png)
+![DOM-image-11](./images/DOM-image-11.png)
 
 #### HTML 콘텐츠 조작(Manipulation)
 
@@ -428,7 +425,7 @@ cocker.textContent = '<li>코카스 파니엘</li>';
 console.log(cocker.textContent);
 ```
 
-![DOM-image-12](images/DOM-image-12.png)
+![DOM-image-12](./images/DOM-image-12.png)
 
 #### innerText
 
@@ -452,7 +449,7 @@ cocker.innerHTML = '<li>코카스 파니엘</li>';
 console.log(cocker.innerHTML);
 ```
 
-![DOM-image-13](images/DOM-image-13.png)
+![DOM-image-13](./images/DOM-image-13.png)
 
 innerHTML 프로퍼티를 사용하여 마크업이 포함된 새로운 요소를 DOM에 추가할 수 있다.
 
@@ -461,7 +458,7 @@ const cocker = document.getElementById('cocker');
 cocker.innerHTML += '<li id="york" class="red">요크</li>';
 ```
 
-![DOM-image-14](images/DOM-image-14.png)
+![DOM-image-14](./images/DOM-image-14.png)
 
 하지만 이렇게 마크업이 포함된 콘텐츠를 추가하는 것은 크로스 스크립팅 공격에 취약하다
 
@@ -525,7 +522,7 @@ const removeDog = document.getElementById('sichu');
 console.log(container.removeChild(removeDog));
 ```
 
-![DOM-image-15](images/DOM-image-15.png)
+![DOM-image-15](./images/DOM-image-15.png)
 
 #### insertAdjacentHTML(position, string)
 
@@ -552,39 +549,33 @@ console.log(container.removeChild(removeDog));
 ```javascript
 const dogList = document.querySelector('ul');
 dogList.insertAdjacentHTML('afterbegin', '<li id="york" class="dog">요크</li>');
-dogList.insertAdjacentHTML(
-  'beforeend',
-  '<li id="dober" class="dog">도베르만</li>',
-);
+dogList.insertAdjacentHTML('beforeend', '<li id="dober" class="dog">도베르만</li>');
 ```
 
-![DOM-image-16](images/DOM-image-16.png)
+![DOM-image-16](./images/DOM-image-16.png)
 
 #### innerHTML vs DOM 조작 방식 vs insertAdjacentHTML()
 
 #### innerHTML
 
-| 단점 | 장점 |
-| --- | --- |
-| XSS공격에 취약점이 있기 때문에 사용자로 부터 입력받은 콘텐츠(untrusted data: 댓글, 사용자 이름 등)를 추가할 때 주의하여야 한다. | DOM 조작 방식에 비해 빠르고 간편하다. |
-| 해당 요소의 내용을 덮어 쓴다. 즉, HTML을 다시 파싱한다. 이것은 비효율적이다. | 간편하게 문자열로 정의한 여러 요소를 DOM에 추가할 수 있다. |
-|     | 콘텐츠를 취득할 수 있다. |
-
+| 단점                                                                                                                            | 장점                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| XSS공격에 취약점이 있기 때문에 사용자로 부터 입력받은 콘텐츠(untrusted data: 댓글, 사용자 이름 등)를 추가할 때 주의하여야 한다. | DOM 조작 방식에 비해 빠르고 간편하다.                      |
+| 해당 요소의 내용을 덮어 쓴다. 즉, HTML을 다시 파싱한다. 이것은 비효율적이다.                                                    | 간편하게 문자열로 정의한 여러 요소를 DOM에 추가할 수 있다. |
+|                                                                                                                                 | 콘텐츠를 취득할 수 있다.                                   |
 
 #### DOM 조작 방식
 
-| 단점 | 장점 |
-| --- | --- |
+| 단점                                          | 장점                                                                 |
+| --------------------------------------------- | -------------------------------------------------------------------- |
 | innerHTML보다 느리고 더 많은 코드가 필요하다. | 특정 노드 한 개(노드, 텍스트, 데이터 등)를 DOM에 추가할 때 적합하다. |
-
 
 #### insertAdjacentHTML()
 
-| 단점 | 장점 |
-| --- | --- |
+| 단점                                                                                                                            | 장점                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | XSS공격에 취약점이 있기 때문에 사용자로 부터 입력받은 콘텐츠(untrusted data: 댓글, 사용자 이름 등)를 추가할 때 주의하여야 한다. | 간편하게 문자열로 정의된 여러 요소를 DOM에 추가할 수 있다. |
-|     | 삽입되는 위치를 선정할 수 있다. |
-
+|                                                                                                                                 | 삽입되는 위치를 선정할 수 있다.                            |
 
 #### 결론
 
@@ -597,10 +588,7 @@ style 속성을 사용하면 inline 스타일 선언을 생성한다. 특정 요
 ```javascript
 const dogList = document.querySelector('ul');
 dogList.insertAdjacentHTML('afterbegin', '<li id="york" class="dog">요크</li>');
-dogList.insertAdjacentHTML(
-  'beforeend',
-  '<li id="dober" class="dog">도베르만</li>',
-);
+dogList.insertAdjacentHTML('beforeend', '<li id="dober" class="dog">도베르만</li>');
 
 const york = document.getElementById('york');
 const dober = document.getElementById('dober');
@@ -609,7 +597,7 @@ york.style.color = 'red';
 dober.style.color = 'red';
 ```
 
-![DOM-image-17](images/DOM-image-17.png)
+![DOM-image-17](./images/DOM-image-17.png)
 
 style 프로퍼티 값을 취득하려면 window.getComputedStyle을 사용한다. 이 메소드는 인자로 주어진 요소의 모든 CSS 프로퍼티 값을 반환한다.
 
@@ -640,4 +628,3 @@ function getStyle(elem, prop) {
 ### 참고자료
 
 🔗 [문서 객체 모델(Document Object Model)](https://poiemaweb.com/js-dom)
-

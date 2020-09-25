@@ -249,7 +249,7 @@ img {width: 200px;border: 1px solid lightgray;transition: 1s;transform: rotate(4
 
 `scale()` , `skew()` , `translate()` , `rotate()` 를 지정
 
-![CSS-속성-13-transition-transform-image-0](images/matrix-function.png)
+![CSS-속성-13-transition-transform-image-0](./images/matrix-function.png)
 
 matrix-function
 

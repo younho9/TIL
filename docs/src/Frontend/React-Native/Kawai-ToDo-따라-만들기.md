@@ -5,26 +5,26 @@
 [Dimensions · React Native](https://reactnative.dev/docs/dimensions)
 
 ```javascript
-import {Dimensions} from 'react-native';
+import { Dimensions } from 'react-native';
 ```
 
 ```javascript
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-or
+or;
 
-const { height, width } = Dimensions.get("window");
+const { height, width } = Dimensions.get('window');
 ```
 
 사용하는 핸드폰(윈도우 객체)의 가로 너비, 세로 너비를 구할 수 있다.
 
-### `Platform Specific Code` 
+### `Platform Specific Code`
 
 [Platform Specific Code · React Native](https://reactnative.dev/docs/platform-specific-code)
 
 ```javascript
-import {Platform, StyleSheet} from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   height: Platform.OS === 'ios' ? 200 : 100,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
 ```
 
 ```javascript
-import {Platform, StyleSheet} from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
 
 ```javascript
 <ScrollView>
-	<ToDo />
+  <ToDo />
 </ScrollView>
 ```
 
@@ -93,12 +93,10 @@ const styles = StyleSheet.create({
 - `returnKeyType` : 키보드 레이아웃에서 표시될 문구
 
 ```javascript
-<TextInput 
-  returnKeyType={"done"}
-/>
+<TextInput returnKeyType={'done'} />
 ```
 
-![Kawai-ToDo-따라-만들기-image-0](images/Kawai-ToDo-따라-만들기-image-0.png)
+![Kawai-ToDo-따라-만들기-image-0](./images/Kawai-ToDo-따라-만들기-image-0.png)
 
 ### `setState`
 
@@ -112,7 +110,7 @@ const styles = StyleSheet.create({
 _toggleComplete = () => {
   this.setState(prevState => {
     return {
-      isCompleted: !prevState.isCompleted
+      isCompleted: !prevState.isCompleted,
     };
   });
 };
@@ -123,6 +121,3 @@ _toggleComplete = () => {
 - `setState` 함수의 파라미터로 함수를 넣는 것이 어떤 의미인가?
 
 - `setState` 함수로 전달되는 함수의 파라미터는 어디서 받아오는 것인가?
-
-
-

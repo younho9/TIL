@@ -22,7 +22,7 @@
 
 #### 다운로드 방법
 
-![Bootstrap-getting-started-image-0](images/Bootstrap-getting-started-image-0.png)
+![Bootstrap-getting-started-image-0](./images/Bootstrap-getting-started-image-0.png)
 
 bootstrap download
 
@@ -48,13 +48,11 @@ bootstrap download
 
 ### 레이아웃
 
-| 표현 | 화면 사이즈 |
-| --- | --- |
-| col-sm- | 768px 보다 클 때 |
-| col-md- | 970px 보다 클 때 |
-| col-lg- | 1170px 보다 클 때 |
+| 표현    | 화면 사이즈        |
+| ------- | ------------------ |
+| col-sm- | 768px 보다 클 때   |
+| col-md- | 970px 보다 클 때   |
+| col-lg- | 1170px 보다 클 때  |
 | col-xs- | 768px 보다 작을 때 |
 
-
 뒤에는 12 컬럼을 기준으로 차지하고 싶은 만큼 숫자를 대입하여 사용함.
-

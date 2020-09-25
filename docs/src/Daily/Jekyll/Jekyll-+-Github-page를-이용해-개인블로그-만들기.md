@@ -6,7 +6,7 @@
 
 [Jekyll on macOS](https://jekyllrb.com/docs/installation/macos/)
 
-![Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-0](images/Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-0.png)
+![Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-0](./images/Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-0.png)
 
 맥에는 루비가 기본적으로 설치되어 있지만, Jekyll 홈페이지의 설명대로 아래의 명령을 입력하면 오류가 발생한다.
 
@@ -15,9 +15,7 @@
 gem install jekyll bundler
 ```
 
-![Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-1](images/Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-1.png)
-
-
+![Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-1](./images/Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-1.png)
 
 #### Gem::FilePermissionError
 
@@ -27,8 +25,6 @@ rbenv라는 ruby version 관리자를 통해 여러 버전의 루비를 맥에 �
 시스템 루비가 아닌 다른 루비를 rbenv를 통해 설치하여 jekyll 환경을 만들 수 있다.
 
 [Troubleshooting](https://jekyllrb.com/docs/troubleshooting/)
-
-
 
 #### brew
 
@@ -45,7 +41,7 @@ brew install rbenv ruby-build
 rbenv versions
 ```
 
-![Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-2](images/Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-2.png)
+![Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-2](./images/Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-2.png)
 
 아래의 명령으로 설치가능한 루비 버전 목록을 보고 원하는 버전을 설치한다.
 
@@ -65,7 +61,7 @@ rbenv global 2.6.5
 
 다시 버전을 확인해본다.
 
-![Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-3](images/Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-3.png)
+![Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-3](./images/Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-3.png)
 
 이제 Jekyll과 bundler를 설치할 수 있다.
 
@@ -73,8 +69,6 @@ rbenv global 2.6.5
 # RubyGems를 통해 Jekyll과 bundler를 설치한다
 gem install jekyll bundler
 ```
-
-
 
 ### Jekyll 사이트 만들고 Github page로 호스팅하기
 
@@ -95,11 +89,9 @@ bundle exec jekyll serve
 # 이제 브라우저로 http://localhost:4000에 접속한다
 ```
 
-
-
 #### GitHub에 username.github.io로 repository 만들기
 
-![Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-4](images/Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-4.png)
+![Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-4](./images/Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-4.png)
 
 Github에서 username.github.io로 repository를 만든다
 
@@ -133,6 +125,3 @@ git push -u origin master
 ```
 
 이제 username.github.io에서 만든 사이트를 볼 수 있다.
-
-
-

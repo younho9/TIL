@@ -80,7 +80,7 @@ npm install --save-dev parcel-bundler
 npx parcel index.html
 ```
 
-![Overview-image-0](images/Overview-image-0.png)
+![Overview-image-0](./images/Overview-image-0.png)
 
 terminal-output-parcel
 

@@ -26,7 +26,7 @@
 article .picture {width: 200px;height: 150px;background: tomato;float: left;margin-right: 20px;margin-bottom: 10px;}
 ```
 
-![CSS-속성-11-float-position-image-0](images/float-left.png)
+![CSS-속성-11-float-position-image-0](./images/float-left.png)
 
 float-left
 
@@ -42,13 +42,13 @@ float-left
 .box {width: 150px;height: 100px;background: tomato;color: white;font-size: 30px;margin: 10px;float: left;}
 ```
 
-![CSS-속성-11-float-position-image-1](images/float-horizon-left.png)
+![CSS-속성-11-float-position-image-1](./images/float-horizon-left.png)
 
 float-horizon
 
 `float: right;` 로 변경 시 쌓이는 순서 또한 변경된다.
 
-![CSS-속성-11-float-position-image-2](images/float-horizon-right.png)
+![CSS-속성-11-float-position-image-2](./images/float-horizon-right.png)
 
 float-horizon-right
 
@@ -178,7 +178,7 @@ float-horizon-right
 .grand-parent {width: 400px;height: 300px;padding: 30px 100px 100px 30px;border: 4px dashed lightgray;}.parent {width: 400px;height: 300px;border: 4px dashed gray;position: relative;}.child {width: 120px;height: 80px;background: tomato;border: 4px dashed red;border-radius: 10px;font-size: 30px;display: flex;justify-content: center;align-items: center;}.absolute {position: absolute;bottom: 50px;right: 50px;}
 ```
 
-![CSS-속성-11-float-position-image-3](images/position-absolute.png)
+![CSS-속성-11-float-position-image-3](./images/position-absolute.png)
 
 position-absolute
 

@@ -4,13 +4,11 @@
 
 웹 사이트는 일반적으로 하나 이상의 페이지를 갖고 있다.
 
-Jekyll은 페이지에 대해서 HTML 뿐만 아니라 Markdown을 지원한다. Markdown은 단락, 제목, 이미지 등의 콘텐츠들을 HTML보다 쉽게 구성할 수 있기 때문에 페이지를 만드는데 좋은 선택이다. 
+Jekyll은 페이지에 대해서 HTML 뿐만 아니라 Markdown을 지원한다. Markdown은 단락, 제목, 이미지 등의 콘텐츠들을 HTML보다 쉽게 구성할 수 있기 때문에 페이지를 만드는데 좋은 선택이다.
 
 [`about.md`](http://about.md) 를 root 디렉토리에 만든다.
 
 구조를 위해서 `index.html` 을 복사하고 about 페이지에 맞게 수정할 수 있지만, 이렇게 하는 것은 코드의 중복을 만든다. 만약 사이트에 스타일시트를 추가하고 싶다면 우리는 사이트에 있는 모든 페이지의 `<head>` 요소 마다 스타일시트를 추가해야 할 것이다.
-
-
 
 ### 레이아웃 만들기
 
@@ -21,10 +19,10 @@ Jekyll은 페이지에 대해서 HTML 뿐만 아니라 Markdown을 지원한다.
 `_layouts/default.html` 에 아래의 코드를 넣는다.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>{{ page.title }}</title>
   </head>
   <body>
@@ -44,12 +42,11 @@ Jekyll은 페이지에 대해서 HTML 뿐만 아니라 Markdown을 지원한다.
 layout: default
 title: Home
 ---
+
 <h1>{{ "Hello World!" | downcase }}</h1>
 ```
 
-레이아웃에서는 `page` 를 이용해서 front matter에 접근할 수 있다. `{{ page.title }}` 을 이용해 `index.html` 의 title에 접근 했다.
-
-
+레이아웃에서는 `page` 를 이용해서 front matter에 접근할 수 있다. `page.title` 을 이용해 `index.html` 의 title에 접근 했다.
 
 ### About 페이지
 
@@ -64,10 +61,8 @@ title: Home
 layout: default
 title: About
 ---
-# About page
 
-This page tells you a little bit about me.
+# About page This page tells you a little bit about me.
 ```
 
 이렇게 하면 Markdown으로 만들어진 페이지 역시 `layout` 을 적용할 수 있다.
-

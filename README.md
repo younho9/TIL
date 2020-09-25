@@ -9,8 +9,10 @@
     </a>
 </div>
 
+<br>
+
 <div align="center">
     <a href="https://til.younho9.dev">
-        <img width="450" alt="TIL" src="https://user-images.githubusercontent.com/48426991/94285232-61d4db00-ff8e-11ea-8282-10775f2ae1ab.png">
+        <img width="450" alt="TIL" src="https://user-images.githubusercontent.com/48426991/94286445-f986f900-ff8f-11ea-8308-af62b10c8693.png">
     </a>
 </div>

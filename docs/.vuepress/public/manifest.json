@@ -53,8 +53,8 @@
       "sizes": "512x512"
     }
   ],
-  "theme_color": "#8dd6f9",
+  "theme_color": "#D14376",
   "background_color": "#ffffff",
   "display": "standalone",
-  "start_url": "/webpack-guide/"
+  "start_url": "/"
 }

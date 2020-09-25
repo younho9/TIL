@@ -10,9 +10,9 @@ module.exports = {
     ['meta', { name: 'theme-color', content: '#D14376' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['link', { rel: 'apple-touch-icon', href: '/images/icons/152.png' }],
-    ['link', { rel: 'mask-icon', href: '/images/icons/favicon.svg', color: '#0A72F0' }],
-    ['meta', { name: 'msapplication-TileImage', content: '/images/icons/144.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/assets/icons/152.png' }],
+    ['link', { rel: 'mask-icon', href: '/assets/icons/favicon.svg', color: '#0A72F0' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/assets/icons/144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#D14376' }],
   ],
 
@@ -75,5 +75,15 @@ module.exports = {
     },
   },
 
-  plugins: ['@vuepress/plugin-back-to-top', '@vuepress/plugin-medium-zoom'],
+  plugins: [
+    [
+      '@vuepress/pwa',
+      {
+        serviceWorker: true,
+        updatePopup: true,
+      },
+      '@vuepress/plugin-back-to-top',
+      '@vuepress/plugin-medium-zoom',
+    ],
+  ],
 };

@@ -46,7 +46,7 @@ Sass에서 기본적으로 제공하는 내장 함수에는 많은 종류가 있
 
 [str-index($string, $substring)](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_index-instance_method) : 문자에서 특정 문자의 첫 index를 반환
 
-[str-slice(\$string, _s__t__a__r_*t* − *a*_t_, [end-at])](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method) : 문자에서 특정 문자(몇 번째 글자부터 몇 번째 글자까지)를 추출
+[str-slice(\$string, start − at, [end-at])](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method): 문자에서 특정 문자(몇 번째 글자부터 몇 번째 글자까지)를 추출
 
 [to-upper-case(\$string)](http://sass-lang.com/documentation/Sass/Script/Functions.html#to_upper_case-instance_method) : 문자를 대문자로 변환
 
@@ -80,7 +80,7 @@ Sass에서 기본적으로 제공하는 내장 함수에는 많은 종류가 있
 
 [set-nth($list, $n, \$value)](http://sass-lang.com/documentation/Sass/Script/Functions.html#set_nth-instance_method) : List에서 n번째 값을 다른 값으로 변경합니다.
 
-[join(\$list1, _l__i__s_*t*2, [separator])](http://sass-lang.com/documentation/Sass/Script/Functions.html#join-instance_method) : 두 개의 List를 하나로 결합합니다.
+[join(\$list1, _l**i**s_*t*2, [separator])](http://sass-lang.com/documentation/Sass/Script/Functions.html#join-instance_method) : 두 개의 List를 하나로 결합합니다.
 
 [zip(\$lists…)](http://sass-lang.com/documentation/Sass/Script/Functions.html#zip-instance_method) : 여러 List들을 하나의 다차원 List로 결합합니다.
 

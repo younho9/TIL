@@ -1,14 +1,20 @@
 {
-  "name": "til-docs",
-  "version": "1.0.0",
-  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/1e35c998-4b16-4905-930a-b3621572c080/deploy-status)](https://app.netlify.com/sites/younho9-til/deploys) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyounho9%2FTIL)](https://hits.seeyoufarm.com)",
-  "dependencies": {
-    "prettier": "2.1.1"
+  "name": "younho9-til",
+  "version": "0.0.1",
+  "description": "하루동안 공부한 것들을 기록하는 공간",
+  "main": "index.js",
+  "authors": {
+    "name": "younho9",
+    "email": "younho9.choo@gmail.com"
   },
-  "devDependencies": {},
+  "repository": "https://github.com/younho9/TIL.git",
   "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src",
     "format": "prettier --write ."
   },
-  "author": "younho9",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
 }

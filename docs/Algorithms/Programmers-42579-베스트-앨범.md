@@ -2,12 +2,9 @@
 
 [코딩테스트 연습 - 베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
 
-
-
-| 걸린 시간 | 해결 유무(✅/❌) | 난이도 | 문제 유형 |
-| --- | --- | --- | --- |
-| 1시간 | ✅ | Level 3 | 해시 |
-
+| 걸린 시간 | 해결 유무(✅/❌) | 난이도  | 문제 유형 |
+| --------- | ---------------- | ------- | --------- |
+| 1시간     | ✅               | Level 3 | 해시      |
 
 ## 설계 방법
 
@@ -19,35 +16,33 @@
 
 ```javascript
 function solution(genres, plays) {
-    const hashMap = genres.reduce((hash, genre, i) => {
-        if (hash.has(genre)) {
-            const info = hash.get(genre);
-            if (plays[info.first] < plays[i]) {
-                info.second = info.first;
-                info.first = i;
-            } else if (info.second === null || plays[info.second] < plays[i]) {
-                info.second = i;
-            }
-            info.sum += plays[i];
-        } else {
-            hash.set(genre, {
-                first: i,
-                second: null,
-                sum: plays[i],
-            });
-        }
-        return hash;
-    }, new Map());
+  const hashMap = genres.reduce((hash, genre, i) => {
+    if (hash.has(genre)) {
+      const info = hash.get(genre);
+      if (plays[info.first] < plays[i]) {
+        info.second = info.first;
+        info.first = i;
+      } else if (info.second === null || plays[info.second] < plays[i]) {
+        info.second = i;
+      }
+      info.sum += plays[i];
+    } else {
+      hash.set(genre, {
+        first: i,
+        second: null,
+        sum: plays[i],
+      });
+    }
+    return hash;
+  }, new Map());
 
-    return [...hashMap.values()]
-        .sort((a, b) => b.sum - a.sum)
-        .reduce(
-            (album, genre) =>
-                genre.second === null
-                    ? [...album, genre.first]
-                    : [...album, genre.first, genre.second],
-            [],
-        );
+  return [...hashMap.values()]
+    .sort((a, b) => b.sum - a.sum)
+    .reduce(
+      (album, genre) =>
+        genre.second === null ? [...album, genre.first] : [...album, genre.first, genre.second],
+      [],
+    );
 }
 ```
 
@@ -68,4 +63,3 @@ function solution(genres, plays) {
 ## 참고자료
 
 - [MDN - Map](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Map)
-

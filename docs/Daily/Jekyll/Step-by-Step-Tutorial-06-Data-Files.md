@@ -6,8 +6,6 @@ Jekyll은 `_data` 디렉토리에 위치한 YAML, JSON, CSV 파일로부터 데�
 
 이번 단계에서는 네비게이션의 콘텐츠를 데이터 파일로 보관하고, 네비게이션에 포함된 것들을 반복문을 이용해 사용할 것이다.
 
-
-
 ### 데이터 파일 사용법
 
 ---
@@ -23,7 +21,7 @@ YAML은 Ruby 시스템에서 일반적인 포맷이다. 우리는 네비게이�
 	link: /about.html
 ```
 
-Jekyll에서는 `site.data.navigation` 을 이용해 해당 데이터 파일을 이용할 수 있다. 
+Jekyll에서는 `site.data.navigation` 을 이용해 해당 데이터 파일을 이용할 수 있다.
 
 `_includes/navigation.html` 에서 각각의 링크를 넣는 것 대신에 반복문을 사용한다.
 
@@ -38,6 +36,3 @@ Jekyll에서는 `site.data.navigation` 을 이용해 해당 데이터 파일을 
 ```
 
 결과물은 동일하지만, 이 구조는 새로운 네비게이션을 추가하거나 변경할 때 편리하다는 차이가 있다.
-
-
-

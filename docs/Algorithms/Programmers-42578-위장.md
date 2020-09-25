@@ -2,12 +2,9 @@
 
 [코딩테스트 연습 - 위장](https://programmers.co.kr/learn/courses/30/lessons/42578)
 
-
-
 | 걸린 시간 | 해결 유무(✅/❌) | 난이도 | 문제 유형 |
-| --- | --- | --- | --- |
-| 2시간 | ✅ | lv.2 | 해시 |
-
+| --------- | ---------------- | ------ | --------- |
+| 2시간     | ✅               | lv.2   | 해시      |
 
 ## 설계 방법
 
@@ -35,60 +32,53 @@
 
 ```javascript
 function solution(clothes) {
-    const hashMap = clothes.reduce(
-        (acc, cur) => acc.set(cur[1], (acc.get(cur[1]) || 0) + 1),
-        new Map(),
-    );
+  const hashMap = clothes.reduce(
+    (acc, cur) => acc.set(cur[1], (acc.get(cur[1]) || 0) + 1),
+    new Map(),
+  );
 
-    let answer = getAllCombinations([...hashMap.values()]).reduce(
-        (acc, cur) =>
-            acc +
-            cur.reduce(
-                (acc, cur, idx) => (idx === 0 ? acc + cur : acc * cur),
-                0,
-            ),
-        0,
-    );
+  let answer = getAllCombinations([...hashMap.values()]).reduce(
+    (acc, cur) => acc + cur.reduce((acc, cur, idx) => (idx === 0 ? acc + cur : acc * cur), 0),
+    0,
+  );
 
-    return answer;
+  return answer;
 }
 
 const getKCombinations = (set, k) => {
-    const results = [];
-    if (k === 1) {
-        return set.map((i) => [i]);
-    }
+  const results = [];
+  if (k === 1) {
+    return set.map(i => [i]);
+  }
 
-    set.forEach((fixed, i, set) => {
-        const combinations = getKCombinations(set.slice(i + 1), k - 1);
-        results.push(
-            ...combinations.map((combination) => [fixed, ...combination]),
-        );
-    });
+  set.forEach((fixed, i, set) => {
+    const combinations = getKCombinations(set.slice(i + 1), k - 1);
+    results.push(...combinations.map(combination => [fixed, ...combination]));
+  });
 
-    return results;
+  return results;
 };
 
-const getAllCombinations = (set) => {
-    const results = [];
-    for (let k = 1; k <= set.length; k++) {
-        const kCombinations = getKCombinations(set, k);
-        results.push(...kCombinations);
-    }
-    return results;
+const getAllCombinations = set => {
+  const results = [];
+  for (let k = 1; k <= set.length; k++) {
+    const kCombinations = getKCombinations(set, k);
+    results.push(...kCombinations);
+  }
+  return results;
 };
 ```
 
 ### 성공
 
 ```javascript
-const solution = (clothes) =>
-    Object.values(
-        clothes.reduce((acc, cur) => {
-            acc[cur[1]] = (acc[cur[1]] || 1) + 1;
-            return acc;
-        }, {}),
-    ).reduce((acc, cur) => (acc === 0 ? acc + cur : acc * cur), 0) - 1;
+const solution = clothes =>
+  Object.values(
+    clothes.reduce((acc, cur) => {
+      acc[cur[1]] = (acc[cur[1]] || 1) + 1;
+      return acc;
+    }, {}),
+  ).reduce((acc, cur) => (acc === 0 ? acc + cur : acc * cur), 0) - 1;
 
 module.exports = solution;
 ```
@@ -122,4 +112,3 @@ O(N)+ O(M)
 - [axelpale/combinations.js](https://gist.github.com/axelpale/3118596)
 
 - [[Algorithm]순열과 조합](https://codemcd.github.io/algorithm/Algorithm-%EC%88%9C%EC%97%B4%EA%B3%BC-%EC%A1%B0%ED%95%A9/)
-

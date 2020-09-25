@@ -2,12 +2,9 @@
 
 [코딩테스트 연습 - 완주하지 못한 선수](https://programmers.co.kr/learn/courses/30/lessons/42576)
 
-
-
 | 걸린 시간 | 난이도 | 문제 유형 |
-| --- | --- | --- |
-| 30분 | lv.1 | 해시 |
-
+| --------- | ------ | --------- |
+| 30분      | lv.1   | 해시      |
 
 ## 설계 방법
 
@@ -23,20 +20,20 @@
 
 ```javascript
 function solution(participant, completion) {
-    const hashMap = completion.reduce((acc, cur) => {
-        acc.has(cur) ? acc.set(cur, acc.get(cur) + 1) : acc.set(cur, 1);
-        return acc;
-    }, new Map());
+  const hashMap = completion.reduce((acc, cur) => {
+    acc.has(cur) ? acc.set(cur, acc.get(cur) + 1) : acc.set(cur, 1);
+    return acc;
+  }, new Map());
 
-    return participant.find((person) => {
-        if (hashMap.get(person)) {
-            hashMap.set(person, hashMap.get(person) - 1);
-        } else {
-            return true;
-        }
-    });
+  return participant.find(person => {
+    if (hashMap.get(person)) {
+      hashMap.set(person, hashMap.get(person) - 1);
+    } else {
+      return true;
+    }
+  });
 
-    return answer;
+  return answer;
 }
 ```
 
@@ -55,10 +52,13 @@ O(n)
 - 다른 사람의 한 줄 짜리 풀이를 봤는데 이해하기 어려웠음
 
 ```javascript
-var solution=(_,$)=>_.find(_=>!$[_]--,$.map(_=>$[_]=($[_]|0)+1))
+var solution = (_, $) =>
+  _.find(
+    _ => !$[_]--,
+    $.map(_ => ($[_] = ($[_] | 0) + 1)),
+  );
 ```
 
 ### 참고자료
 
 - [MDN - Map](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Map)
-

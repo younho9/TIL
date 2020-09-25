@@ -11,15 +11,11 @@
 }
 ```
 
-
-
 #### 선택자(Selector)의 역할
 
 속성과 값을 지정할 대상을 검색
 
 ex) `<div>` 태그에 적용하겠다.
-
-
 
 #### 속성(Property)과 값(Value)의 역할
 
@@ -27,20 +23,17 @@ ex) `<div>` 태그에 적용하겠다.
 
 ex)색깔을 빨갛게 하겠다.
 
-
-
 #### 주석(Comment)
 
 문서 내 수정사항이나 설명등을 작성
 
 일반적인 에디터에서 단축키 `⌘` + `/`
 
-
-
 #### 기본 예제
 
 ```html
-<div>Hello</div>   <!--RED-->
+<div>Hello</div>
+<!--RED-->
 <span>Hello</span>
 ```
 
@@ -55,8 +48,6 @@ div {
 /* 글자두께: 두껍게; */
 ```
 
-
-
 ### 선언 방식
 
 #### 인라인(in-line) 방식
@@ -66,8 +57,6 @@ HTML 요소(태그)의 `style` 속성에 직접 작성하는 방식
 ```html
 <div style="color: red; font-size: 20px; font-weight: bold;">Hello</div>
 ```
-
-
 
 #### 내장(embedded) 방식
 
@@ -80,7 +69,7 @@ HTML `<style></style>` 안에 작성하는 방식
       color: red;
       font-size: 20px;
       font-weight: bold;
-    }    
+    }
   </style>
 </head>
 <body>
@@ -88,18 +77,16 @@ HTML `<style></style>` 안에 작성하는 방식
 </body>
 ```
 
-
-
 #### 링크(link) 방식
 
 HTML `<link>` 를 이용하여 외부 CSS를 불러와 적용하는 방식
 
 ```html
 <head>
-	<link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-	<div>Hello</div>
+  <div>Hello</div>
 </body>
 ```
 
@@ -112,8 +99,6 @@ div {
 }
 ```
 
-
-
 #### `@import` 방식
 
 CSS `@import` 를 이용하여 외부 CSS를 불러와 적용하는 방식
@@ -122,7 +107,7 @@ CSS `@import` 를 이용하여 외부 CSS를 불러와 적용하는 방식
 
 ```html
 <head>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
   <div>Hello</div>
@@ -131,7 +116,7 @@ CSS `@import` 를 이용하여 외부 CSS를 불러와 적용하는 방식
 
 ```css
 /* main.css */
-@import url("./main2.css");
+@import url('./main2.css');
 ```
 
 ```css
@@ -145,11 +130,6 @@ div {
 
 > 주의사항 : 링크(link) 방식은 병렬적으로 외부 문서를 가져오지만, @import 방식은 직렬적, 순차적으로 외부 문서를 가져와 성능 측면에서 좋지 않을 수 있다.
 
-
-
 ### Reference
 
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
-
-
-

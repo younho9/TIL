@@ -2,12 +2,9 @@
 
 [코딩테스트 연습 - 전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577)
 
-
-
 | 난이도 | 걸린 시간 | 해결 유무(✅/❌) | 문제 유형 |
-| --- | --- | --- | --- |
-| lv.1 | 30분 | ✅ | 해시 |
-
+| ------ | --------- | ---------------- | --------- |
+| lv.1   | 30분      | ✅               | 해시      |
 
 ## 설계 방법
 
@@ -15,7 +12,7 @@
 
 - `phone_book`을 먼저 정렬함.
 
-   - `['119', '97674223', '1195524421'] -> ['119', '1195524421', '97674223']` 로 정렬됨.
+  - `['119', '97674223', '1195524421'] -> ['119', '1195524421', '97674223']` 로 정렬됨.
 
 - `sort`된 배열을 `reduce`로 순회하며 현재 값이 그 이전 값으로 `startsWith` 하는지 판단함.
 
@@ -27,20 +24,20 @@
 
 ```javascript
 function solution(phone_book) {
-    let answer = true;
+  let answer = true;
 
-    phone_book
-        .sort()
-        .slice(0)
-        .reduce((short, long, _, arr) => {
-            if (long.startsWith(short)) {
-                answer = false;
-                arr.splice(1);
-            }
-            return long;
-        });
+  phone_book
+    .sort()
+    .slice(0)
+    .reduce((short, long, _, arr) => {
+      if (long.startsWith(short)) {
+        answer = false;
+        arr.splice(1);
+      }
+      return long;
+    });
 
-    return answer;
+  return answer;
 }
 ```
 
@@ -76,4 +73,3 @@ O(NlogN) + O(N) 맞나..?
 - [Time & Space Complexity of Array.sort in V8](https://blog.shovonhasan.com/time-space-complexity-of-array-sort-in-v8/)
 
 - [MDN - startsWith](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith)
-

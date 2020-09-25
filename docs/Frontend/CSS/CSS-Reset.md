@@ -9,18 +9,13 @@
 [jsDelivr - A free, fast, and reliable Open Source CDN for npm and GitHub](https://www.jsdelivr.com/package/npm/reset-css)
 
 ```html
-<link rel="stylesheet" href="<https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css>">
+<link rel="stylesheet" href="<https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css>" />
 ```
 
 > 주의사항 : 이 스타일시트가 스타일시트 중에 가장 먼저 와야한다. 초기화가 먼저 진행된 이후에 직접 만든 스타일시트가 적용되어야 하기 때문이다.
 
 이렇게 모든 브라우저가 가진 기본적인 스타일을 없애고 우리가 만든 스타일시트를 모든 브라우저에서 동일하게 볼 수 있도록 만들 수 있다.
 
-
-
 ### Reference
 
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
-
-
-

@@ -4,15 +4,11 @@
 
 > ❗️ 해당 글은 [HTML 시작하기](https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started) - MDN 문서를 보면서 공부한 기록입니다.
 
-
-
 ### HTML이란?
 
 ---
 
 HTML(Hypertext Markup Language)는 문서의 특정 텍스트 영역이 문단인지 목록인지 표의 일부인지 구분할 수 있도록 의미를 부여하거나 논리적으로 구조화하는 [마크업 언어](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EC%97%85_%EC%96%B8%EC%96%B4)이다. (프로그래밍 언어 X)
-
-
 
 ### HTML 요소(Element)
 
@@ -22,17 +18,15 @@ HTML은 요소(elements)로 구성되어 있는데 요소의 구조는 다음과
 
 ![HTML-시작하기-image-0](https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png)
 
-1. __여는 태그(Opening tag) :__ 요소의 시작을 알리는 태그, 꺽쇠 `<` , `>` 와 태그 이름으로 구성된다.
+1. **여는 태그(Opening tag) :** 요소의 시작을 알리는 태그, 꺽쇠 `<` , `>` 와 태그 이름으로 구성된다.
 
-1. __닫는 태그(Closing tag) :__ 요소의 끝을 알리는 태그, 여는 태그와 이름이 같고 앞에 슬래시 `/` 가 붙는다. 태그 중에는 [빈 태그(Empty Tags)](https://www.notion.so/younho9/HTML-d91ec3ccc5294cada5200032cb9758a6#bf101e078e824d289e58b9496b1f41b1)라고 하여 닫는 태그를 생략할 수 있는 요소가 있다.
+1. **닫는 태그(Closing tag) :** 요소의 끝을 알리는 태그, 여는 태그와 이름이 같고 앞에 슬래시 `/` 가 붙는다. 태그 중에는 [빈 태그(Empty Tags)](https://www.notion.so/younho9/HTML-d91ec3ccc5294cada5200032cb9758a6#bf101e078e824d289e58b9496b1f41b1)라고 하여 닫는 태그를 생략할 수 있는 요소가 있다.
 
-1. __내용(Content):__ 요소의 내용.
+1. **내용(Content):** 요소의 내용.
 
-1. __요소(Element):__ 여는 태그, 닫는 태그, 내용을 통틀어 부르는 용어.
+1. **요소(Element):** 여는 태그, 닫는 태그, 내용을 통틀어 부르는 용어.
 
 > HTML 요소는 대소문자를 구분하지 않는다. `<title>`, `<Title>`, `<TITLE>` 모두 가능. 하지만 대개 소문자로 작성한다.
-
-
 
 #### 중첩 요소(Nesting elements)
 
@@ -46,8 +40,6 @@ HTML은 요소(elements)로 구성되어 있는데 요소의 구조는 다음과
 <p>My cat is <strong>very grumpy.</p></strong>
 ```
 
-
-
 #### 블럭 레벨(Block level) 요소 vs 인라인(Inline) 요소
 
 HTML의 요소는 크게 두 가지 종류로 나눌 수 있다.
@@ -58,8 +50,6 @@ HTML의 요소는 크게 두 가지 종류로 나눌 수 있다.
 
 > HTML5에서 요소 분류를 재정의 했다. 하지만 "블럭"과 "인라인"의 분류를 고수한다. [Element content categories](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories)
 
-
-
 #### 빈 요소(Empty elements)
 
 여는 태그와 닫는 태그 패턴이 아닌 단일 태그(Single tag)를 사용하는 요소. Void 요소로 불리기도 한다.
@@ -69,10 +59,10 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 둘 다 사용 가능하지만, 한 문서에서 혼용하지 않는 것이 좋다.
 
 ```html
-<img src="[https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png](https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png)">
+<img
+  src="[https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png](https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png)"
+/>
 ```
-
-
 
 ### HTML 속성(Attributes)
 
@@ -94,23 +84,19 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 
 요소 마다 여러 속성을 가질 수 있지만, 요소 마다 주로 사용되는 속성들이 있다.
 
-
-
 #### 참, 거짓 속성(Boolean attributes)
 
 불 속성은 참, 거짓만을 가지는 속성으로 값(Value)이 없거나, 속성의 이름과 동일한 하나의 값만을 가질 수 있다.
 
 ```html
-<input type="text" disable="disabled">
+<input type="text" disable="disabled" />
 ```
 
 또는
 
 ```html
-<input type="text" disable>
+<input type="text" disable />
 ```
-
-
 
 #### 속성 값(Value)의 따옴표 생략
 
@@ -128,8 +114,6 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 
 이것은 `href`, `title`, `Mozilla`, `homepage`의 속성을 가지는 것으로 해석한다.
 
-
-
 #### 작은 따옴표와 큰 따옴표
 
 속성 값의 따옴표는 작은 따옴표와 큰 따옴표가 모두 가능하다. 이것은 스타일의 문제로 좋아하는 방법을 사용하면 된다. 하지만 역시 주의해야 할 점은 두 개를 섞어서 쓰면 안된다.
@@ -142,8 +126,6 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 
 하지만 따옴표 안에 같은 종류의 따옴표를 사용하고 싶다면 따옴표를 표시하기 위해 [HTML entities](https://www.freeformatter.com/html-entities.html)를 사용해야 한다.
 
-
-
 ### HTML 문서의 구조
 
 ---
@@ -153,17 +135,15 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>My test page</title>
-    </head>
-    <body>
-        <p>This is my page</p>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+  </body>
 </html>
 ```
-
-
 
 1. `<!DOCTYPE html>` : 웹 브라우저에게 HTML 버전의 해석 방식을 알려주는 역할을 한다.
 
@@ -177,8 +157,6 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 
 1. `<body></body>` : `<body>` 요소. 이 요소는 페이지 이용자들에게 보여지는 모든 것이 담긴다.
 
-
-
 ### 이미지
 
 ---
@@ -186,7 +164,7 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 `<img>` 요소를 살펴본다.
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 여기서 `src`, `alt` 속성이 사용되었다.
@@ -195,13 +173,11 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 
 - `alt` (alternative) : 이미지를 볼 수 없는 경우를 위한 설명문(descriptive text).
 
-   - 시각 장애자인 경우, 대체 택스트를 읽어주는 스크린 리더라는 도구를 사용한다.
+  - 시각 장애자인 경우, 대체 택스트를 읽어주는 스크린 리더라는 도구를 사용한다.
 
-   - 이미지를 표시할 수 없는 경우. ex) 이미지 파일의 경로가 잘못된 경우
+  - 이미지를 표시할 수 없는 경우. ex) 이미지 파일의 경로가 잘못된 경우
 
-   - [웹 접근성](https://developer.mozilla.org/en-US/docs/Web/Accessibility)의 측면에서 중요한 속성.
-
-   
+  - [웹 접근성](https://developer.mozilla.org/en-US/docs/Web/Accessibility)의 측면에서 중요한 속성.
 
 ### 문자
 
@@ -213,8 +189,6 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 
 `<h1>`은 문서에서 제일 중요한 제목(헤드라인)에 한 번만 사용하는 것이 좋다.
 
-
-
 #### 문단
 
 `<p>` 요소를 사용해 문자의 문단을 표현한다.
@@ -222,8 +196,6 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 ```html
 <p>This is a single paragraph.</p>
 ```
-
-
 
 #### 목록
 
@@ -235,17 +207,15 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 
 ```html
 <p>At Mozilla, we’re a global community of</p>
-    
-<ul> 
+
+<ul>
   <li>technologists</li>
   <li>thinkers</li>
   <li>builders</li>
 </ul>
 
-<p>working together ... </p>
+<p>working together ...</p>
 ```
-
-
 
 ### 연결
 
@@ -259,13 +229,6 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 
 > `href` : **h**ypertext **ref**erence
 
-
-
 ### Reference
 
 [HTML 시작하기](https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-
-
-
-
-

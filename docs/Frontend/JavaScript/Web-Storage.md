@@ -2,8 +2,6 @@
 
 > 📌 Table of Contents
 
-
-
 ## Web Storage API
 
 Web Storage API는 브라우저가 key/value 쌍을 쿠키보다 훨씬 직관적인 방식으로 저장할 수 있는 메커니즘을 제공한다.
@@ -34,7 +32,7 @@ Web Storage에는 `sessionStorage` , `localStorage` 두 가지 메커니즘이 �
 
 - `key(index)` : index에 해당하는 key를 받아옴
 
-- `length` : 저장된 항목의 개수를 얻음 
+- `length` : 저장된 항목의 개수를 얻음
 
 ### localStorage 데모
 
@@ -79,7 +77,7 @@ Storage의 키를 얻거나 설정할 때 일반 객체와 유사한 방법을 �
 localStorage.test = 2;
 
 // 키 얻기
-alert( localStorage.test ); // 2
+alert(localStorage.test); // 2
 
 // 키 삭제하기
 delete localStorage.test;
@@ -99,7 +97,7 @@ delete localStorage.test;
 Storage 객체는 iterable 객체가 아니다. 대신 배열처럼 다뤄 전체 key/value 를 얻을 수 있다.
 
 ```javascript
-for(let i=0; i<localStorage.length; i++) {
+for (let i = 0; i < localStorage.length; i++) {
   let key = localStorage.key(i);
   alert(`${key}: ${localStorage.getItem(key)}`);
 }
@@ -109,7 +107,7 @@ for(let i=0; i<localStorage.length; i++) {
 
 ```javascript
 // 좋지 않은 방법
-for(let key in localStorage) {
+for (let key in localStorage) {
   alert(key); // getItem, setItem 같은 내장 필드까지 출력됩니다.
 }
 ```
@@ -117,7 +115,7 @@ for(let key in localStorage) {
 `hasOwnProperty` 를 사용하면 프로토타입에서 상속받은 필드를 골라낼 수 있다.
 
 ```javascript
-for(let key in localStorage) {
+for (let key in localStorage) {
   if (!localStorage.hasOwnProperty(key)) {
     continue; // setItem, getItem 등의 키를 건너뜁니다.
   }
@@ -129,7 +127,7 @@ for of 문을 사용하는 방법도 있다.
 
 ```javascript
 let keys = Object.keys(localStorage);
-for(let key of keys) {
+for (let key of keys) {
   alert(`${key}: ${localStorage.getItem(key)}`);
 }
 ```
@@ -143,4 +141,3 @@ for(let key of keys) {
 [localStorage와 sessionStorage](https://ko.javascript.info/localstorage)
 
 [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
-

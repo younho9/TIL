@@ -2,12 +2,9 @@
 
 [코딩테스트 연습 - 주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584)
 
-
-
 | 걸린 시간 | 해결 유무(✅/❌) | 난이도 | 문제 유형 |
-| --- | --- | --- | --- |
-| 1시간 | ✅ | lv.2 | 스택/큐 |
-
+| --------- | ---------------- | ------ | --------- |
+| 1시간     | ✅               | lv.2   | 스택/큐   |
 
 ## 설계 방법
 
@@ -15,13 +12,13 @@
 
 - 초 단위 시점을 담을 스택을 만든다.
 
-   - `s.top()` 은 바로 전 시점이다.
+  - `s.top()` 은 바로 전 시점이다.
 
 - `prices` 를 순회하며 현재 가격보다 이전 가격보다 떨어졌다면,
 
-   - 이전 시점의 `answer` 는 현재 시간 ( `i` ) - 바로 전 시점 ( `s.top()` )이다.
+  - 이전 시점의 `answer` 는 현재 시간 ( `i` ) - 바로 전 시점 ( `s.top()` )이다.
 
-   - 스택을 반복하며 그 전 시점에 대해서도 반복한다.
+  - 스택을 반복하며 그 전 시점에 대해서도 반복한다.
 
 - 현재 시점 ( `i` )를 스택에 넣는다.
 
@@ -49,45 +46,45 @@ def solution(prices):
 
 ```javascript
 function solution(prices) {
-    const answer = Array(prices.length);
-    const s = new Stack();
+  const answer = Array(prices.length);
+  const s = new Stack();
 
-    prices.forEach((price, i) => {
-        while (!s.isEmpty() && prices[s.top()] > price) {
-            answer[s.top()] = i - s.top();
-            s.pop();
-        }
-        s.push(i);
-    });
-
-    while (!s.isEmpty()) {
-        answer[s.top()] = prices.length - s.top() - 1;
-        s.pop();
+  prices.forEach((price, i) => {
+    while (!s.isEmpty() && prices[s.top()] > price) {
+      answer[s.top()] = i - s.top();
+      s.pop();
     }
+    s.push(i);
+  });
 
-    return answer;
+  while (!s.isEmpty()) {
+    answer[s.top()] = prices.length - s.top() - 1;
+    s.pop();
+  }
+
+  return answer;
 }
 
 class Stack {
-    constructor() {
-        this._arr = [];
-    }
+  constructor() {
+    this._arr = [];
+  }
 
-    push(value) {
-        this._arr.push(value);
-    }
+  push(value) {
+    this._arr.push(value);
+  }
 
-    pop() {
-        return this._arr.pop();
-    }
+  pop() {
+    return this._arr.pop();
+  }
 
-    top() {
-        return this._arr[this._arr.length - 1];
-    }
+  top() {
+    return this._arr[this._arr.length - 1];
+  }
 
-    isEmpty() {
-        return this._arr.length === 0;
-    }
+  isEmpty() {
+    return this._arr.length === 0;
+  }
 }
 
 module.exports = solution;
@@ -99,7 +96,7 @@ module.exports = solution;
 
 - 스택 순회 : O(M)
 
-- 잘 모르겠다. 
+- 잘 모르겠다.
 
 ## 어려웠던 점
 
@@ -115,12 +112,12 @@ class Stack {
     this._items = [];
 
     if (items.length > 0) {
-      items.forEach((item) => this._items.push(item));
+      items.forEach(item => this._items.push(item));
     }
   }
 
   push(...items) {
-    items.forEach((item) => this._items.push(item));
+    items.forEach(item => this._items.push(item));
     return this._items;
   }
 
@@ -161,7 +158,7 @@ class Queue {
   }
 
   enqueue(...items) {
-    items.forEach((item) => this._items.push(item));
+    items.forEach(item => this._items.push(item));
     this.end += items.length;
   }
 
@@ -204,6 +201,3 @@ class Queue {
 - [gist - Queue.ts](https://gist.github.com/tbjgolden/142f2e0b2c1670812959e3588c4fa8a2)
 
 - [Data Structures: Improving Time Complexity on Stacks and Queues](https://medium.com/better-programming/improving-time-complexity-on-stacks-and-queues-7396ab7b5a2b)
-
-
-

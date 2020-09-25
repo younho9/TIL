@@ -19,8 +19,6 @@ a:hover {
 <a href="<https://google.com>">Google!</a>
 ```
 
-
-
 #### Active
 
 요소를 마우스로 클릭하는 동안에만 선택
@@ -40,8 +38,6 @@ a:hover {
 <div class="box"></div>
 ```
 
-
-
 #### Focus
 
 요소가 포커스 된 동안에만 선택
@@ -56,12 +52,10 @@ input:focus {
 ```
 
 ```html
-<input type="text">
+<input type="text" />
 ```
 
 > hover, active, focus는 선택자이지만 JS에서의 이벤트 개념과 헷갈릴 소지가 있다. (? 아직 모르는 내용)
-
-
 
 #### First child
 
@@ -75,14 +69,13 @@ input:focus {
 
 ```html
 <ul class="fruits">
-  <li>딸기</li>   <!--선택-->
+  <li>딸기</li>
+  <!--선택-->
   <li>사과</li>
   <li>오렌지</li>
   <li>망고</li>
 </ul>
 ```
-
-
 
 #### Last child
 
@@ -99,11 +92,10 @@ input:focus {
   <li>딸기</li>
   <li>사과</li>
   <li>오렌지</li>
-  <li>망고</li>   <!--선택-->
+  <li>망고</li>
+  <!--선택-->
 </ul>
 ```
-
-
 
 #### N-th child
 
@@ -111,47 +103,47 @@ input:focus {
 
 - `n` 키워드 미사용시
 
-   ```css
-   .fruits li:nth-child(2) {
-     color: red;
-   }
-   ```
+  ```css
+  .fruits li:nth-child(2) {
+    color: red;
+  }
+  ```
 
-   ```html
-   <ul class="fruits">
-     <li>딸기</li>
-     <li>사과</li>   <!--선택-->
-     <li>오렌지</li>
-     <li>망고</li>
-   </ul>
-   ```
+  ```html
+  <ul class="fruits">
+    <li>딸기</li>
+    <li>사과</li>
+    <!--선택-->
+    <li>오렌지</li>
+    <li>망고</li>
+  </ul>
+  ```
 
 - `n` 키워드 사용시
 
-   ```css
-   .fruits li:nth-child(n+3) {
-     color: red;
-   }
-   /* n은 0부터 시작이므로 3이상의 모든 요소 */
-   ```
+  ```css
+  .fruits li:nth-child(n + 3) {
+    color: red;
+  }
+  /* n은 0부터 시작이므로 3이상의 모든 요소 */
+  ```
 
-   ```html
-   <ul class="fruits">
-     <li>딸기</li>
-     <li>사과</li>   
-     <li>오렌지</li>   <!--선택-->
-     <li>망고</li>   <!--선택-->
-   </ul>
-   ```
+  ```html
+  <ul class="fruits">
+    <li>딸기</li>
+    <li>사과</li>
+    <li>오렌지</li>
+    <!--선택-->
+    <li>망고</li>
+    <!--선택-->
+  </ul>
+  ```
 
 > :xxx-child 유의사항 :
 
-- `p:nth-child(1)` 인 경우 - `p` 인 태그 중에서 형제 요소 중 첫 번째 요소인 것이 아니라 형제 요소 중 첫 번째 요소가 `p` 태그이면 선택으로 해석되는 것 → 전자의 설명은 *[nth-of-type](https://www.notion.so/younho9/Selector-fc1bdee29ad1462084b335cf04cb3ce1#5f648b6658364df3a22026a9e53b28a1)*  *참조
--* 기본, 후손, 자식 선택자와의 혼합 사용시 주의요함.
+- `p:nth-child(1)` 인 경우 - `p` 인 태그 중에서 형제 요소 중 첫 번째 요소인 것이 아니라 형제 요소 중 첫 번째 요소가 `p` 태그이면 선택으로 해석되는 것 → 전자의 설명은 _[nth-of-type](https://www.notion.so/younho9/Selector-fc1bdee29ad1462084b335cf04cb3ce1#5f648b6658364df3a22026a9e53b28a1)_ _참조 -_ 기본, 후손, 자식 선택자와의 혼합 사용시 주의요함.
 
 - `.fruits :nth-child(1)` 인 경우 - `class="fruits"` 인 요소의 후손 중, 형제 요소 중 첫 번째인 요소는 모두 선택됨.
-
-
 
 #### N-th of type
 
@@ -169,7 +161,8 @@ input:focus {
 ```html
 <div class="fruits">
   <div>딸기</div>
-  <p>사과</p> <!--선택-->
+  <p>사과</p>
+  <!--선택-->
   <p>망고</p>
   <span>오렌지</span>
 </div>
@@ -178,8 +171,6 @@ input:focus {
 > :nth-of-type() 유의사항 :
 
 - 타입(tag)의 n번째를 찾는 것이기 때문에 class 또는 id 선택자를 넣으면 각 타입 중 n번째 중에서 class 또는 id 선택자로 선택하는 것이지, class 또는 id 선택자를 갖는 요소 중 n번째를 찾는 것이 아니다.
-
-
 
 #### 부정 선택자(Negation Selector)
 
@@ -196,18 +187,19 @@ input:focus {
 
 ```html
 <ul class="fruits">
-  <li>오렌지</li>   <!--선택-->
+  <li>오렌지</li>
+  <!--선택-->
   <li class="strawberry">딸기</li>
-  <li>망고</li>   <!--선택-->
-  <li>사과</li>   <!--선택-->
+  <li>망고</li>
+  <!--선택-->
+  <li>사과</li>
+  <!--선택-->
 </ul>
 ```
 
-
-
 ### 가상 요소 선택자(Pseudo-Elements Selectors)
 
-> emmit 문법 : ul>li{$}*10
+> emmit 문법 : ul>li{\$}\*10
 
 #### Before
 
@@ -215,7 +207,7 @@ input:focus {
 
 ```css
 ul li::before {
-  content: "숫자";
+  content: '숫자';
   color: red;
 }
 ```
@@ -229,10 +221,8 @@ ul li::before {
 ```
 
 > 유의사항
-content 속성을 설정하지 않으면 아무것도 보이지 않는다.
-빈 내용을 넣고 싶다면 content: ""; 를 추가해야한다.
-
-
+> content 속성을 설정하지 않으면 아무것도 보이지 않는다.
+> 빈 내용을 넣고 싶다면 content: ""; 를 추가해야한다.
 
 #### After
 
@@ -240,7 +230,7 @@ content 속성을 설정하지 않으면 아무것도 보이지 않는다.
 
 ```css
 ul li::after {
-  content: ".0";
+  content: '.0';
 }
 ```
 
@@ -256,7 +246,7 @@ ul li::after {
 
 ```css
 ul li::after {
-  content: url("<https://heropy.blog/css/images/logo.png>");
+  content: url('<https://heropy.blog/css/images/logo.png>');
 }
 ```
 
@@ -269,9 +259,7 @@ ul li::after {
 ```
 
 > 유의사항
-:before , :after 도 동작하지만, 이는 과거에 가상 클래스 선택자, 가상 요소 선택자 개념이 분리되기 전에 사용되던 것으로 현재는 ::before , ::after 로 사용하는 것이 표준이다.
-
-
+> :before , :after 도 동작하지만, 이는 과거에 가상 클래스 선택자, 가상 요소 선택자 개념이 분리되기 전에 사용되던 것으로 현재는 ::before , ::after 로 사용하는 것이 표준이다.
 
 ### 속성 선택자(Attribute Selectors)
 
@@ -286,41 +274,37 @@ ul li::after {
 ```
 
 ```html
-<input type="text" value="HEROPY">
-<input type="password" value="1234">
-<input type="text" value="disabled text" disabled>
+<input type="text" value="HEROPY" />
+<input type="password" value="1234" />
+<input type="text" value="disabled text" disabled />
 ```
-
-
 
 #### Attr=Value
 
 속성 `attr` 을 포함하며 속성 값이 `value` 인 요소 선택
 
 ```css
-[type=password] {
+[type='password'] {
   opacity: 0.5;
   color: red;
 }
 ```
 
 ```html
-<input type="text" value="HEROPY">
-<input type="password" value="1234">
-<input type="text" value="disabled text" disabled>
+<input type="text" value="HEROPY" />
+<input type="password" value="1234" />
+<input type="text" value="disabled text" disabled />
 ```
 
 > value 에는 따옴표를 붙일 수도 붙이지 않을 수도 있다.
-type=password or type="password"
-
-
+> type=password or type="password"
 
 #### Attr^=Value
 
 속성 `attr` 을 포함하며 속성 값이 `value` 로 시작하는 요소 선택
 
 ```css
-[class^="btn-"] {
+[class^='btn-'] {
   font-weight: bold;
   border-radius: 20px;
 }
@@ -332,21 +316,19 @@ type=password or type="password"
 <button>Normal</button>
 ```
 
-
-
-#### Attr$=Value
+#### Attr\$=Value
 
 속성 `attr` 을 포함하며 속성 값이 `value` 로 끝나는 요소 선택
 
 ```css
-[class$="btn-"] {
+[class$='btn-'] {
   font-weight: bold;
   border-radius: 20px;
 }
-[class$=success] {
+[class$='success'] {
   color: green;
 }
-[class$=danger] {
+[class$='danger'] {
   color: red;
 }
 ```
@@ -356,8 +338,6 @@ type=password or type="password"
 <button class="btn-danger">Danger</button>
 <button>Normal</button>
 ```
-
-
 
 ### 상속(Inheritance)
 
@@ -368,8 +348,10 @@ type=password or type="password"
 ```
 
 ```html
-<div class="ecosystem">생태계
-  <div class="animal">동물
+<div class="ecosystem">
+  생태계
+  <div class="animal">
+    동물
     <div class="tiger">호랑이</div>
     <div class="lion">사자</div>
     <div class="elephant">코끼리</div>
@@ -380,23 +362,21 @@ type=password or type="password"
 
 > 생태계(.ecosystem)에 적용된 색상이 하위 요소들에 모두 적용된다.
 
-
-
 #### 상속되는 속성들(properties)
 
 글자를 다루는 속성들이 기본적으로 상속이 된다. 나머지 속성들은 상속이 되지 않는다.
 
 - font
 
-   - font-size
+  - font-size
 
-   - font-weight
+  - font-weight
 
-   - font-style
+  - font-style
 
-   - line-height
+  - line-height
 
-   - font-family
+  - font-family
 
 - color
 
@@ -411,8 +391,6 @@ type=password or type="password"
 - opacity
 
 - etc...
-
-
 
 #### 강제 상속
 
@@ -435,8 +413,6 @@ type=password or type="password"
 
 > 상속되지 않는 속성도 inherit 이라는 값을 사용해서 부모에서 자식으로 강제 상속시킬 수 있다. 자식을 제외한 후손에게는 적용되지 않으며, 모든 속성이 강제 상속을 사용할 수 있는 것은 아니다.
 
-
-
 ### 우선순위(Priority)
 
 ```html
@@ -447,23 +423,33 @@ type=password or type="password"
 ```
 
 ```css
-div { color: red !important; } /* !important */
+div {
+  color: red !important;
+} /* !important */
 
-#color_yellow { color: yellow; } /* id 선택자 */
+#color_yellow {
+  color: yellow;
+} /* id 선택자 */
 
-.color_green { color: green; } /* class 선택자 */
+.color_green {
+  color: green;
+} /* class 선택자 */
 
-div { color: blue; } /* tag 선택자 */
+div {
+  color: blue;
+} /* tag 선택자 */
 
-* { color: darkblue; } /* 전체 선택자 */
+* {
+  color: darkblue;
+} /* 전체 선택자 */
 
-body { color: violet; } /* 상속 */
+body {
+  color: violet;
+} /* 상속 */
 ```
 
 > 하나의 요소를 가르키는 여러 선언들.
-어떤 것이 선택될까?
-
-
+> 어떤 것이 선택될까?
 
 #### 우선순위 결정
 
@@ -479,15 +465,11 @@ body { color: violet; } /* 상속 */
 
 > 우선순위에는 '중요도, 명시도, 선언 순서'의 개념이 있다.
 
-
-
 #### 1. 가장중요( `!important` )
 
 모든 선언을 무시하고 가장 우선
 
 점수 : `∞` pt
-
-
 
 #### 2. 인라인 선언 방식(Style Attribute)
 
@@ -495,15 +477,11 @@ body { color: violet; } /* 상속 */
 
 점수 : `1000` pt
 
-
-
 #### 3. Id 선택자(ID Selector)
 
 아이디 선택자
 
 점수 : `100` pt
-
-
 
 #### 4. 클래스 선택자(Class Selector)
 
@@ -511,23 +489,17 @@ body { color: violet; } /* 상속 */
 
 점수 : `10` pt
 
-
-
 #### 5. 태그 선택자(Tag Selector)
 
 태그 선택자
 
 점수 : `1` pt
 
-
-
 #### 6. 전체 선택자(Universal Selector)
 
 전체 선택자
 
 점수 : `0` pt
-
-
 
 #### 7. 상속(CSS Inheritance)
 
@@ -536,29 +508,43 @@ body { color: violet; } /* 상속 */
 점수 : 계산하지 않음
 
 ```css
-.list li.item { color: red; } /* 21pt 클래스+태그+클래스 */
+.list li.item {
+  color: red;
+} /* 21pt 클래스+태그+클래스 */
 
-.list li:hover { color: red; } /* 21pt 클래스+태그+(가상)클래스 */
+.list li:hover {
+  color: red;
+} /* 21pt 클래스+태그+(가상)클래스 */
 
-.box::before { content: "Good "; color: red; } /* 11pt 클래스+(가상 요소)태그 */
+.box::before {
+  content: 'Good ';
+  color: red;
+} /* 11pt 클래스+(가상 요소)태그 */
 
-#submit span { color: red; } /* 101pt 아이디+태그 */
+#submit span {
+  color: red;
+} /* 101pt 아이디+태그 */
 
-header .menu li:nth-child(2) { color: red; } /* 22pt 태그+클래스+태그+(가상)클래스 */
+header .menu li:nth-child(2) {
+  color: red;
+} /* 22pt 태그+클래스+태그+(가상)클래스 */
 
-h1 { color: red; } /* 1pt 태그 */
+h1 {
+  color: red;
+} /* 1pt 태그 */
 
-:not(.box) { color: red; } /* 10pt 클래스 */
+:not(.box) {
+  color: red;
+} /* 10pt 클래스 */
 
-:not(span) { color: red; } /* 1pt 태그 */
+:not(span) {
+  color: red;
+} /* 1pt 태그 */
 ```
 
-> :hover 와 같은 '가상 클래스'는 '클래스' 선택자 점수( 10pt )를 가지며 '가상 요소'는 '태그'  선택자 점수( 1pt )를 가진다.
-부정 선택자 :not() 는 점수를 가지지 않는다.
-
-
+> :hover 와 같은 '가상 클래스'는 '클래스' 선택자 점수( 10pt )를 가지며 '가상 요소'는 '태그' 선택자 점수( 1pt )를 가진다.
+> 부정 선택자 :not() 는 점수를 가지지 않는다.
 
 ### Reference
 
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
-

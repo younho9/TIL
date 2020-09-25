@@ -6,7 +6,7 @@
 
 요소의 크기 계산 기준을 지정
 
-![CSS-속성-05-box-sizing-image-0](./images/CSS-속성-05-box-sizing-image-0.png)
+![CSS-속성-05-box-sizing-image-0](images/CSS-속성-05-box-sizing-image-0.png)
 
 #### 속성 값
 

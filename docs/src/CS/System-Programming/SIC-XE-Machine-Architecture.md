@@ -54,7 +54,7 @@ Character는 8비트(ASCII), Integer는 24비트
 
 ### 명령어 포맷(Instruction format)
 
-![SIC-XE-Machine-Architecture-image-1](./images/SIC-XE-Machine-Architecture-image-1.png)
+![SIC-XE-Machine-Architecture-image-1](images/SIC-XE-Machine-Architecture-image-1.png)
 
 - opcode(8비트) : 명령어를 구분하기 위한 부분
 
@@ -172,13 +172,13 @@ SIC/XE는 SIC의 업그레이드판으로 많은 기능들은 동일하다. 동�
 
 SIC가 가진 5개의 레지스터에 더해 4개가 더 추가되어 9개가 되었다. F 레지스터만 48비트이고 나머지는 모두 24비트이다.
 
-![SIC-XE-Machine-Architecture-image-2](./images/SIC-XE-Machine-Architecture-image-2.jpg)
+![SIC-XE-Machine-Architecture-image-2](images/SIC-XE-Machine-Architecture-image-2.jpg)
 
 ### 데이터 포맷
 
 48비트 부동소수점(Floating-point data type)이 추가되었다. 이것은 다음의 포맷을 가진다.
 
-![SIC-XE-Machine-Architecture-image-3](./images/SIC-XE-Machine-Architecture-image-3.jpg)
+![SIC-XE-Machine-Architecture-image-3](images/SIC-XE-Machine-Architecture-image-3.jpg)
 
 ### 명령어 포맷
 
@@ -190,11 +190,11 @@ SIC와는 달리 명령어를 처리하는 포맷이 존재한다.
 
 - Format 3 (3 byte) (_Flag e = 0_) : Opcode(6bits) + | n | i | x | b | p | e | + address(12bits)
 
-![SIC-XE-Machine-Architecture-image-4](./images/SIC-XE-Machine-Architecture-image-4.png)
+![SIC-XE-Machine-Architecture-image-4](images/SIC-XE-Machine-Architecture-image-4.png)
 
 - Format 4 (4 byte) (_Flag e = 1_) : Opcode(6bits) + | n | i | x | b | p | e | + address(20bits)
 
-![SIC-XE-Machine-Architecture-image-5](./images/SIC-XE-Machine-Architecture-image-5.png)
+![SIC-XE-Machine-Architecture-image-5](images/SIC-XE-Machine-Architecture-image-5.png)
 
 #### Addressing Modes
 

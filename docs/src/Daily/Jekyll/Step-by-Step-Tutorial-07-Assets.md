@@ -6,7 +6,7 @@ Jekyll에서는 CSS, JS, 이미지, 다른 asset들을 직접적으로 사용할
 
 Jekyll 사이트는 종종 이 구조를 사용하여 asset을 체계적으로 관리한다.
 
-![Step-by-Step-Tutorial-07-Assets-image-0](./images/Step-by-Step-Tutorial-07-Assets-image-0.png)
+![Step-by-Step-Tutorial-07-Assets-image-0](images/Step-by-Step-Tutorial-07-Assets-image-0.png)
 
 ### Sass
 

@@ -45,7 +45,7 @@ bundle
 
 `Gemfile.lock` 파일이 생성된 것을 확인할 수 있다.
 
-![Step-by-Step-Tutorial-01-Setup-image-0](./images/Step-by-Step-Tutorial-01-Setup-image-0.png)
+![Step-by-Step-Tutorial-01-Setup-image-0](images/Step-by-Step-Tutorial-01-Setup-image-0.png)
 
 ### 사이트 만들기
 

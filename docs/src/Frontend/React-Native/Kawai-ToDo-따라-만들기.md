@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
 <TextInput returnKeyType={'done'} />
 ```
 
-![Kawai-ToDo-따라-만들기-image-0](./images/Kawai-ToDo-따라-만들기-image-0.png)
+![Kawai-ToDo-따라-만들기-image-0](images/Kawai-ToDo-따라-만들기-image-0.png)
 
 ### `setState`
 

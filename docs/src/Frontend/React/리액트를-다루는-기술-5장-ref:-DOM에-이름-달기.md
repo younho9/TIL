@@ -1,6 +1,6 @@
 # [리액트를 다루는 기술] 5장 - ref: DOM에 이름 달기
 
-![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-0](./images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-0.png)
+![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-0](images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-0.png)
 
 > 이 글은 김민준(velopert)님의 [리액트를 다루는 기술](http://www.yes24.com/Product/Goods/78233628?Acode=101)을 참조하여 작성한 글입니다.
 
@@ -57,7 +57,7 @@ ref는 **"특정 DOM을 꼭 직접적으로 건드려야 할 때"** 사용한다
 </html>
 ```
 
-![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-1](./images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-1.png)
+![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-1](images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-1.png)
 
 리액트에서는 이런 작업이 굳이 DOM에 접근하지 않아도 `state` 로 구현할 수 있다. src 디렉토리에 `ValidationSample.css` 와 `ValidationSample.js` 를 만들어보자.
 
@@ -138,7 +138,7 @@ class App extends Component {
 export default App;
 ```
 
-![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-2](./images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-2.png)
+![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-2](images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-2.png)
 
 원하는 결과가 잘 나타나는 것을 확인할 수 있다. 이렇게 자바스크립트에서는 DOM에 접근해야 했던 기능을 리액트에서는 state를 사용하여 구현할 수 있다. 하지만 state 만으로 해결할 수 없는 기능들이 있다.
 
@@ -314,7 +314,7 @@ class App extends Component {
 export default App;
 ```
 
-![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-3](./images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-3.png)
+![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-3](images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-3.png)
 
 코드를 저장하면, 웹 브라우저에 스크롤 박스가 잘 렌더링된다.
 
@@ -398,7 +398,7 @@ class App extends Component {
 export default App;
 ```
 
-![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-4](./images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-4.png)
+![리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-4](images/리액트를-다루는-기술-5장-ref:-DOM에-이름-달기-image-4.png)
 
 맨 밑으로 버튼을 눌렀을 때 스크롤바가 맨 밑으로 이동하는 것을 확인할 수 있다.
 

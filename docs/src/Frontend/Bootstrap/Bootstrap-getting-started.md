@@ -22,7 +22,7 @@
 
 #### 다운로드 방법
 
-![Bootstrap-getting-started-image-0](./images/Bootstrap-getting-started-image-0.png)
+![Bootstrap-getting-started-image-0](images/Bootstrap-getting-started-image-0.png)
 
 bootstrap download
 

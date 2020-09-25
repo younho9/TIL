@@ -1,6 +1,6 @@
 # [리액트를 다루는 기술] 8장 - Hooks
 
-![리액트를-다루는-기술-8장-Hooks-image-0](./images/리액트를-다루는-기술-8장-Hooks-image-0.png)
+![리액트를-다루는-기술-8장-Hooks-image-0](images/리액트를-다루는-기술-8장-Hooks-image-0.png)
 
 > 이 글은 김민준(velopert)님의 [리액트를 다루는 기술](http://www.yes24.com/Product/Goods/78233628?Acode=101)을 참조하여 작성한 글입니다.
 

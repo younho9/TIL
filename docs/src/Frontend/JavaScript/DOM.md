@@ -6,7 +6,7 @@
 
 ### DOM tree
 
-![DOM-image-0](./images/DOM-image-0.png)
+![DOM-image-0](images/DOM-image-0.png)
 
 DOM tree는 네 종류의 노드로 구성된다.
 
@@ -67,7 +67,7 @@ elem.className = 'red';
 
 - 결과
 
-![DOM-image-1](./images/DOM-image-1.png)
+![DOM-image-1](images/DOM-image-1.png)
 
 #### document.querySelector(cssSelector)
 
@@ -80,7 +80,7 @@ const elem = document.querySelector('#sphinx');
 elem.className = 'red';
 ```
 
-![DOM-image-2](./images/DOM-image-2.png)
+![DOM-image-2](images/DOM-image-2.png)
 
 #### 여러 개의 요소 노드 선택(DOM Query)
 
@@ -99,7 +99,7 @@ for (let i = 0; i < elems.length; i++) {
 
 - 결과
 
-![DOM-image-3](./images/DOM-image-3.png)
+![DOM-image-3](images/DOM-image-3.png)
 
 위 예제의 실행 결과가 이상한 것을 볼 수 있는데, getElementsByClassName 메소드의 반환값인 HTMLCollection이 **실시간으로 Node의 상태 변경을 반영하기 때문**이다.
 
@@ -130,7 +130,7 @@ const elems = document.getElementsByClassName('black');
 
 - querySelectorAll 메소드를 사용한다.
 
-![DOM-image-4](./images/DOM-image-4.png)
+![DOM-image-4](images/DOM-image-4.png)
 
 #### document.getElementsByTagName(tagName)
 
@@ -201,7 +201,7 @@ elem.lastChild.className = 'black';
 
 - 또는 firstElementChild, lastElementChild를 사용한다.
 
-![DOM-image-5](./images/DOM-image-5.png)
+![DOM-image-5](images/DOM-image-5.png)
 
 #### hasChildNodes()
 
@@ -232,7 +232,7 @@ if (elem.hasChildNodes()) {
 }
 ```
 
-![DOM-image-6](./images/DOM-image-6.png)
+![DOM-image-6](images/DOM-image-6.png)
 
 #### previousSibling, nextSibling
 
@@ -308,9 +308,9 @@ console.log(textNode.nodeValue); // 코카
 textNode.nodeValue = '포메리안';
 ```
 
-![DOM-image-7](./images/DOM-image-7.png)
+![DOM-image-7](images/DOM-image-7.png)
 
-![DOM-image-8](./images/DOM-image-8.png)
+![DOM-image-8](images/DOM-image-8.png)
 
 #### 속성 노드에의 접근/수정
 
@@ -330,7 +330,7 @@ const elems = document.querySelectorAll('li');
 });
 ```
 
-![DOM-image-9](./images/DOM-image-9.png)
+![DOM-image-9](images/DOM-image-9.png)
 
 #### classList
 
@@ -346,7 +346,7 @@ const elems = document.querySelectorAll('li');
 });
 ```
 
-![DOM-image-10](./images/DOM-image-10.png)
+![DOM-image-10](images/DOM-image-10.png)
 
 #### id
 
@@ -403,7 +403,7 @@ sichu.removeAttribute('class');
 console.log(sichu.hasAttribute('class'));
 ```
 
-![DOM-image-11](./images/DOM-image-11.png)
+![DOM-image-11](images/DOM-image-11.png)
 
 #### HTML 콘텐츠 조작(Manipulation)
 
@@ -425,7 +425,7 @@ cocker.textContent = '<li>코카스 파니엘</li>';
 console.log(cocker.textContent);
 ```
 
-![DOM-image-12](./images/DOM-image-12.png)
+![DOM-image-12](images/DOM-image-12.png)
 
 #### innerText
 
@@ -449,7 +449,7 @@ cocker.innerHTML = '<li>코카스 파니엘</li>';
 console.log(cocker.innerHTML);
 ```
 
-![DOM-image-13](./images/DOM-image-13.png)
+![DOM-image-13](images/DOM-image-13.png)
 
 innerHTML 프로퍼티를 사용하여 마크업이 포함된 새로운 요소를 DOM에 추가할 수 있다.
 
@@ -458,7 +458,7 @@ const cocker = document.getElementById('cocker');
 cocker.innerHTML += '<li id="york" class="red">요크</li>';
 ```
 
-![DOM-image-14](./images/DOM-image-14.png)
+![DOM-image-14](images/DOM-image-14.png)
 
 하지만 이렇게 마크업이 포함된 콘텐츠를 추가하는 것은 크로스 스크립팅 공격에 취약하다
 
@@ -522,7 +522,7 @@ const removeDog = document.getElementById('sichu');
 console.log(container.removeChild(removeDog));
 ```
 
-![DOM-image-15](./images/DOM-image-15.png)
+![DOM-image-15](images/DOM-image-15.png)
 
 #### insertAdjacentHTML(position, string)
 
@@ -552,7 +552,7 @@ dogList.insertAdjacentHTML('afterbegin', '<li id="york" class="dog">요크</li>'
 dogList.insertAdjacentHTML('beforeend', '<li id="dober" class="dog">도베르만</li>');
 ```
 
-![DOM-image-16](./images/DOM-image-16.png)
+![DOM-image-16](images/DOM-image-16.png)
 
 #### innerHTML vs DOM 조작 방식 vs insertAdjacentHTML()
 
@@ -597,7 +597,7 @@ york.style.color = 'red';
 dober.style.color = 'red';
 ```
 
-![DOM-image-17](./images/DOM-image-17.png)
+![DOM-image-17](images/DOM-image-17.png)
 
 style 프로퍼티 값을 취득하려면 window.getComputedStyle을 사용한다. 이 메소드는 인자로 주어진 요소의 모든 CSS 프로퍼티 값을 반환한다.
 

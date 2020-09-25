@@ -4,51 +4,43 @@
 
 `flex` 는 웹 페이지에서 수평 구조 레이아웃을 쉽고 명확하게 구성할 수 있는 방법이다.
 
-
-
 ### `flex` 이전의 방법들과의 비교
 
 #### `inline-block`
 
-```plain text
+```
 <div class="container"><div class="item">1</div><div class="item">2</div><div class="item">3</div></div>
 ```
 
-```plain text
+```
 .container {border: 2px solid red;font-size: 0;}.container .item {width: 100px;height: 100px;border: 2px solid;border-radius: 10px;display: inline-block;font-size: 16px;}
 ```
 
 > ☝️ inline-block 은 block 요소를 inline 요소(텍스트)처럼 다루게 되고, 이는 요소 사이의 공백을 제거하기 위한 font-size 수정을 불러오는 등 좋지 않은 방법이다.
 
-
-
 #### `float` 속성
 
-```plain text
+```
 <div class="container clearfix"><div class="item">1</div><div class="item">2</div><div class="item">3</div></div>
 ```
 
-```plain text
+```
 .clearfix::after {content: "";display: block;clear: both;}.container {border: 2px solid red;}.container .item {width: 100px;height: 100px;border: 2px solid;border-radius: 10px;float: left;}
 ```
 
 > ☝️ float 이라는 속성이 요소를 수평화하는데 전문적으로 사용되는 속성이 아니다.
 
-
-
 #### `flex`
 
-```plain text
+```
 <div class="container"><div class="item">1</div><div class="item">2</div><div class="item">3</div></div>
 ```
 
-```plain text
+```
 .container {border: 2px solid red;display: flex;}.container .item {width: 100px;height: 100px;border: 2px solid;border-radius: 10px;float: left;}
 ```
 
 > ☝️ flex 가 수평 구조를 만드는 가장 간편하고 명확한 방법이다.
-
-
 
 ### CSS3 Flexible Box
 
@@ -64,22 +56,19 @@
 
 container-items
 
-
-
 ### `flex container`
 
 #### 속성
 
-| 의미 | 속성 |
-| --- | --- |
-| flex container 를 정의 | display |
-| flex-direction 와 flex-wrap 의 단축 속성 | flex-flow |
-| flex items 의 주 축(main-axis)을 설정 | flex-direction |
-| flex items 의 여러 줄 묶음(줄 바꿈) 설정 | flex-wrap |
-| 주 축(main-axis)의 정렬 방법을 설정 | justify-content |
-| 교차 축(cross-axis)의 정렬 방법을 설정(2줄 이상) | align-content |
-| 교차 축(cross-axis)에서 items 의 정렬 방법을 설정(1줄) | align-items |
-
+| 의미                                                   | 속성            |
+| ------------------------------------------------------ | --------------- |
+| flex container 를 정의                                 | display         |
+| flex-direction 와 flex-wrap 의 단축 속성               | flex-flow       |
+| flex items 의 주 축(main-axis)을 설정                  | flex-direction  |
+| flex items 의 여러 줄 묶음(줄 바꿈) 설정               | flex-wrap       |
+| 주 축(main-axis)의 정렬 방법을 설정                    | justify-content |
+| 교차 축(cross-axis)의 정렬 방법을 설정(2줄 이상)       | align-content   |
+| 교차 축(cross-axis)에서 items 의 정렬 방법을 설정(1줄) | align-items     |
 
 #### `display`
 
@@ -87,15 +76,12 @@ container-items
 
 보통 `display: block;` , `display: inline` , `display: inline-block` , `display: none;` 으로 사용했었는데, ( [Property-06-display](./Property-06-display.md) 참조) `display: flex;` 또는 `display: inline-flex;` 도 사용할 수 있다.
 
-
-
 #### 속성 값
 
-| 의미 | 기본값 | 값 |
-| --- | --- | --- |
-| Block 특성의 flex container 를 정의 |     | flex |
-| Inline 특성의 flex container 를 정의 |     | inline-flex |
-
+| 의미                                 | 기본값 | 값          |
+| ------------------------------------ | ------ | ----------- |
+| Block 특성의 flex container 를 정의  |        | flex        |
+| Inline 특성의 flex container 를 정의 |        | inline-flex |
 
 `flex` 와 `inline-flex` 의 차이는 다음과 같다.
 
@@ -109,55 +95,43 @@ flex-display
 
 > ☝️ flex 와 inline-flex 의 내부에 items 가 쌓이는 방식은 둘이 완전히 같다.
 
-
-
 #### `flex-flow`
 
 `flex items` 의 주 축(main-axis)와 `items` 의 여러 줄 묶음(줄 바꿈) 설정 - 단축 속성
 
-
-
 #### 속성 값
 
-| 기본값 | 의미 | 값 |
-| --- | --- | --- |
-| row | items 의 주 축(main-axis)을 설정 | flex-direction |
-| nowrap | items의 여러 줄 묶음(줄 바꿈) 설정 | flex-wrap |
-
+| 기본값 | 의미                               | 값             |
+| ------ | ---------------------------------- | -------------- |
+| row    | items 의 주 축(main-axis)을 설정   | flex-direction |
+| nowrap | items의 여러 줄 묶음(줄 바꿈) 설정 | flex-wrap      |
 
 #### 사용법
 
-```plain text
+```
 flex-flow: 주축 여러줄묶음;
 ```
 
-```plain text
+```
 .flex-container {flex-flow: row-reverse wrap;}
 ```
-
-
 
 #### `flex-direction`
 
 `Items` 의 주 축(main-axis) 설정
 
-
-
 #### 속성 값
 
-| 기본값 | 의미 | 값 |
-| --- | --- | --- |
-| row | Items 를 수평축(왼쪽에서 오른쪽으로)으로 표시 | row |
-|     | Items 를 row 의 반대 축으로 표시 | row-reverse |
-|     | Items 를 수직축(위에서 아래로)으로 표시 | column |
-|     | Items 를 column 의 반대 축으로 표시 | column-reverse |
-
+| 기본값 | 의미                                          | 값             |
+| ------ | --------------------------------------------- | -------------- |
+| row    | Items 를 수평축(왼쪽에서 오른쪽으로)으로 표시 | row            |
+|        | Items 를 row 의 반대 축으로 표시              | row-reverse    |
+|        | Items 를 수직축(위에서 아래로)으로 표시       | column         |
+|        | Items 를 column 의 반대 축으로 표시           | column-reverse |
 
 ![CSS-속성-16-flex-image-2](https://heropy.blog/images/screenshot/css-flexible-box/flex-direction.jpg)
 
 flex-direction
-
-
 
 #### 주 축(main-axis)과 교차 축(cross-axis)
 
@@ -170,8 +144,6 @@ flex-direction
 ![CSS-속성-16-flex-image-3](https://heropy.blog/images/screenshot/css-flexible-box/flex-direction-main-axis.jpg)
 
 flex-direction-main-axis
-
-
 
 #### 시작점(flex-start)과 끝점(flex-end)
 
@@ -189,22 +161,17 @@ flex-direction-cross-start
 
 > ☝️ 교차축의 시작점(flex-start)과 끝점(flex-end)은 달라지지 않는다.
 
-
-
 #### `flex-wrap`
 
 `items` 의 여러 줄 묶음(줄 바꿈)을 설정한다.
 
-
-
 #### 속성 값
 
-| 의미 | 기본값 | 값 |
-| --- | --- | --- |
-| 모든 items 를 여러 줄로 묶지 않음(한 줄에 표시) | nowrap | nowrap |
-| items 를 여러 줄로 묶음 |     | wrap |
-| items 를 wrap 의 역 방향으로 여러 줄로 묶음 |     | wrap-reverse |
-
+| 의미                                            | 기본값 | 값           |
+| ----------------------------------------------- | ------ | ------------ |
+| 모든 items 를 여러 줄로 묶지 않음(한 줄에 표시) | nowrap | nowrap       |
+| items 를 여러 줄로 묶음                         |        | wrap         |
+| items 를 wrap 의 역 방향으로 여러 줄로 묶음     |        | wrap-reverse |
 
 > ☝️ 기본값으로 nowrap 이 설정되어 있기 때문에 items 는 한 줄에서만 표시되고 줄 바꿈 되지 않으며 지정된 크기(주 축에 따라 width 나 height )를 무시하고 한 줄 안에서만 가변한다.
 
@@ -212,54 +179,43 @@ flex-direction-cross-start
 
 flex-wrap
 
-
-
 #### 예제
 
-```plain text
+```
 <div class="container"><div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div></div>
 ```
 
-```plain text
+```
 .container {border: 4px solid;display: flex;flex-wrap: wrap;}.container .item {width: 150px;height: 100px;background: tomato;border: 4px dashed red;}
 ```
-
-
 
 #### `justify-content`
 
 주 축(main-axis)의 정렬 방법을 설정한다.
 
-
-
 #### 속성 값
 
-| 의미 | 기본값 | 값 |
-| --- | --- | --- |
-| items 를 시작점(flex-start)으로 정렬 | flex-start | flex-start |
-| items 를 끝점(flex-end)으로 정렬 |     | flex-end |
-| items 를 가운데 정렬 |     | center |
-| 시작 item 은 시작점에, 마지막 item 은 끝점에 정렬되고, 나머지 items 는 사이에 고르게 정렬됨 |     | space-between |
-| items 를 균등한 여백을 포함하여 정렬 |     | space-around |
-
+| 의미                                                                                        | 기본값     | 값            |
+| ------------------------------------------------------------------------------------------- | ---------- | ------------- |
+| items 를 시작점(flex-start)으로 정렬                                                        | flex-start | flex-start    |
+| items 를 끝점(flex-end)으로 정렬                                                            |            | flex-end      |
+| items 를 가운데 정렬                                                                        |            | center        |
+| 시작 item 은 시작점에, 마지막 item 은 끝점에 정렬되고, 나머지 items 는 사이에 고르게 정렬됨 |            | space-between |
+| items 를 균등한 여백을 포함하여 정렬                                                        |            | space-around  |
 
 ![CSS-속성-16-flex-image-7](https://heropy.blog/images/screenshot/css-flexible-box/flex-justify-content.jpg)
 
 flex-justify-content
 
-
-
 #### 예제
 
-```plain text
+```
 <div class="container"><div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div></div>
 ```
 
-```plain text
+```
 .container {border: 4px solid;display: flex;justify-content: center;}.container .item {width: 100px;height: 100px;background: tomato;border: 4px dashed red;border-radius: 10px;}
 ```
-
-
 
 #### `align-content`
 
@@ -269,19 +225,16 @@ flex-justify-content
 
 > ☝️ items 가 한 줄일 경우 align-items 를 사용
 
-
-
 #### 속성 값
 
-| 기본값 | 의미 | 값 |
-| --- | --- | --- |
-| stretch | container 의 교차 축을 채우기 위해 items 를 늘림 | stretch |
-|     | items 를 시작점(flex-start)으로 정렬 | flex-start |
-|     | items 를 끝점(flex-end)으로 정렬 | flex-end |
-|     | items 를 가운데 정렬 | center |
-|     | 시작 item 은 시작점에, 마지막 item 은 끝점에 정렬되고 나머지 items 는 사이에 고르게 정렬됨 | space-between |
-|     | items 를 균등한 여백을 포함하여 정렬 | space-around |
-
+| 기본값  | 의미                                                                                       | 값            |
+| ------- | ------------------------------------------------------------------------------------------ | ------------- |
+| stretch | container 의 교차 축을 채우기 위해 items 를 늘림                                           | stretch       |
+|         | items 를 시작점(flex-start)으로 정렬                                                       | flex-start    |
+|         | items 를 끝점(flex-end)으로 정렬                                                           | flex-end      |
+|         | items 를 가운데 정렬                                                                       | center        |
+|         | 시작 item 은 시작점에, 마지막 item 은 끝점에 정렬되고 나머지 items 는 사이에 고르게 정렬됨 | space-between |
+|         | items 를 균등한 여백을 포함하여 정렬                                                       | space-around  |
 
 > ☝️ stretch 는 교차 축에 해당하는 너비(속성 width 혹은 height )가 값이 auto (기본값)일 경우 교차 축을 채우기 위해 자동으로 늘어난다.
 
@@ -289,19 +242,15 @@ flex-justify-content
 
 flex-align-content
 
-
-
 #### 예제
 
-```plain text
+```
 <div class="container"><div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div><div class="item">F</div></div>
 ```
 
-```plain text
+```
 .container {height: 400px;border: 4px solid;display: flex;flex-wrap: wrap;align-content: center;}.container .item {width: 120px;height: 100px;background: tomato;border: 4px dashed red;border-radius: 10px;}
 ```
-
-
 
 #### `align-items`
 
@@ -311,50 +260,42 @@ flex-align-content
 
 > ☝️ items 가 flex-wrap 을 통해 여러 줄(2줄 이상)일 경우에는 align-content 속성이 우선한다.따라서 align-items 를 사용하려면 align-content 속성을 기본값( stretch )으로 설정해야 한다.
 
-
-
 #### 속성 값
 
-| 기본값 | 의미 | 값 |
-| --- | --- | --- |
-| stretch | container 의 교차 축을 채우기 위해 items 를 늘림 | stretch |
-|     | items 를 시작점(flex-start)으로 정렬 | flex-start |
-|     | items 를 끝점(flex-end)으로 정렬 | flex-end |
-|     | items 를 가운데 정렬 | center |
-|     | items 를 문자 기준선에 정렬 | baseline |
-
+| 기본값  | 의미                                             | 값         |
+| ------- | ------------------------------------------------ | ---------- |
+| stretch | container 의 교차 축을 채우기 위해 items 를 늘림 | stretch    |
+|         | items 를 시작점(flex-start)으로 정렬             | flex-start |
+|         | items 를 끝점(flex-end)으로 정렬                 | flex-end   |
+|         | items 를 가운데 정렬                             | center     |
+|         | items 를 문자 기준선에 정렬                      | baseline   |
 
 ![CSS-속성-16-flex-image-9](https://heropy.blog/images/screenshot/css-flexible-box/flex-align-items.jpg)
 
 flex-align-items
 
-
-
 #### 예제
 
-```plain text
+```
 <div class="container"><div class="item">A</div><div class="item">B</div><div class="item">C</div><div class="item">D</div><div class="item">E</div><div class="item">F</div></div>
 ```
 
-```plain text
+```
 .container {height: 400px;border: 4px solid;display: flex;flex-wrap: wrap;align-items: baseline;}.container .item {width: 120px;height: 100px;background: tomato;border: 4px dashed red;border-radius: 10px;font-size: 30px;}.container .item:nth-child(3n) {font-size: 50px;}
 ```
-
-
 
 ### `flex items`
 
 #### 속성
 
-| 의미 | 속성 |
-| --- | --- |
-| flex item 의 순서를 설정 | order |
-| flex-grow , flex-shrink , flex-basis 의 단축 속성 | flex |
-| flex item 의 증가 너비 비율을 설정 | flex-grow |
-| flex item 의 감소 너비 비율을 설정 | flex-shrink |
-| flex item 의 (공간 배분 전) 기본 너비 설정 | flex-basis |
-| 교차 축(cross-axis)에서 item 의 정렬 방법을 설정 | align-self |
-
+| 의미                                              | 속성        |
+| ------------------------------------------------- | ----------- |
+| flex item 의 순서를 설정                          | order       |
+| flex-grow , flex-shrink , flex-basis 의 단축 속성 | flex        |
+| flex item 의 증가 너비 비율을 설정                | flex-grow   |
+| flex item 의 감소 너비 비율을 설정                | flex-shrink |
+| flex item 의 (공간 배분 전) 기본 너비 설정        | flex-basis  |
+| 교차 축(cross-axis)에서 item 의 정렬 방법을 설정  | align-self  |
 
 #### `order`
 
@@ -364,49 +305,39 @@ flex-align-items
 
 > ☝️ HTML 구조보다 우선해서 순서를 변경할 수 있기 때문에 유용order 의 숫자가 같으면 HTML 구조에 따라 정렬된다
 
-
-
 #### 속성 값
 
-| 기본값 | 의미 | 값 |
-| --- | --- | --- |
-|     | item 의 순서를 설정 | 숫자 |
-
+| 기본값 | 의미                | 값   |
+| ------ | ------------------- | ---- |
+|        | item 의 순서를 설정 | 숫자 |
 
 ![CSS-속성-16-flex-image-10](https://heropy.blog/images/screenshot/css-flexible-box/flex-order.jpg)
 
 flex-order
 
-
-
 #### `flex`
 
 `item` 의 너비(증가, 감소, 기본)를 설정 - 단축 속성
 
-
-
 #### 속성 값
 
-| 의미 | 기본값 | 값 |
-| --- | --- | --- |
-| item 의 증가 너비 비율을 설정 | 0 | flex-grow |
-| item 의 감소 너비 비율을 설정 | 1 | flex-shrink |
-| item (공간 배분 전) 기본 너비 설정 | auto | flex-basis |
-
+| 의미                               | 기본값 | 값          |
+| ---------------------------------- | ------ | ----------- |
+| item 의 증가 너비 비율을 설정      | 0      | flex-grow   |
+| item 의 감소 너비 비율을 설정      | 1      | flex-shrink |
+| item (공간 배분 전) 기본 너비 설정 | auto   | flex-basis  |
 
 #### 사용법
 
-```plain text
+```
 flex: 증가너비 감소너비 기본너비;
 ```
 
-```plain text
+```
 .item {flex: 1 1 20px; /* 증가너비 감소너비 기본너비 */flex: 1 1; /* 증가너비 감소너비 */flex: 1 20px; /* 증가너비 기본너비 (단위를 사용하면 flex-basis가 적용 */flex: 1; /* 증가너비 */}
 ```
 
 > ☝️ flex 단축 속성을 사용한 경우, flex-basis 의 기본값은 0 이다. (개별 속성을 사용하면 auto )
-
-
 
 #### `flex-grow`
 
@@ -416,14 +347,11 @@ flex: 증가너비 감소너비 기본너비;
 
 `item` 이 가변 너비가 아니거나, 값이 `0` 일 경우 효과가 없다.
 
-
-
 #### 속성 값
 
-| 기본값 | 의미 | 값 |
-| --- | --- | --- |
-|     | item 의 증가 너비 비율을 설정 | 숫자 |
-
+| 기본값 | 의미                          | 값   |
+| ------ | ----------------------------- | ---- |
+|        | item 의 증가 너비 비율을 설정 | 숫자 |
 
 ![CSS-속성-16-flex-image-11](https://heropy.blog/images/screenshot/css-flexible-box/flex-grow.jpg)
 
@@ -447,33 +375,29 @@ flex-grow
 
 세 번째 `item` 은 총 너비의 33.3% (1/3)를 가진다.
 
-
-
 #### 예제
 
-```plain text
+```
 <div class="container"><div class="item item1">1</div><div class="item item2">2</div><div class="item item3">3</div></div>
 ```
 
-```plain text
+```
 .container {border: 4px solid;display: flex;}.container .item {width: 100px; /* 모든 아이템의 기본 너비가 지정되어 있는 상태 */height: 100px;background: tomato;border: 4px dashed red;border-radius: 10px;}.item1 {flex-grow: 1;}.item2 {flex-grow: 2;}
 ```
 
 > ☝️ 아이템의 기본 너비가 지정되어 있는 상태일 경우 위 예제처럼 item1 과 item2 의 flex-grow 값이 1 , 2 이라고해서 정확하게 2배 차이가 나는 것이 아니다.
 
-```plain text
+```
 .container {border: 4px solid;display: flex;}.container .item {/*   width: 100px; */height: 100px;background: tomato;border: 4px dashed red;border-radius: 10px;}.item1 {flex-grow: 1;}.item2 {flex-grow: 2;}.item3 {width: 100px;}
 ```
 
 > ☝️ 위 예제를 이렇게 바꾸면 정확히 2배 차이가 나게 된다.하지만 가로 너비를 지정하는 width 와 요소의 기본 너비를 지정해주는 flex-basis 속성의 영향을 받을 수 있기 때문에 flex-grow 는 완벽하게 2배, 3배의 크기를 지정하기 위해 사용하는 개념은 아니고 증가 너비 비율을 설정하는 개념이다.
 
-```plain text
+```
 .container {border: 4px solid;display: flex;}.container .item {height: 100px;background: tomato;border: 4px dashed red;border-radius: 10px;}.item1 {flex-grow: 1;}.item2 {width: 100px;}
 ```
 
 > 💡 이렇게 한 item 은 고정 너비 width 를 지정하고 한 item 은 flex-grow 속성을 지정하면, container 의 사이즈가 변할 때 지정한 item 만 가변 사이즈를 지니도록 만들 수 있다.
-
-
 
 #### `flex-shrink`
 
@@ -483,22 +407,17 @@ flex-grow
 
 `item` 이 가변 너비가 아니거나, 값이 `0` 일 경우 효과가 없다.
 
-
-
 #### 속성 값
 
-| 의미 | 기본값 | 값 |
-| --- | --- | --- |
-| item 의 감소 너비 비율을 설정 | 1 | 숫자 |
-
+| 의미                          | 기본값 | 값   |
+| ----------------------------- | ------ | ---- |
+| item 의 감소 너비 비율을 설정 | 1      | 숫자 |
 
 ![CSS-속성-16-flex-image-12](https://heropy.blog/images/screenshot/css-flexible-box/flex-shrink.jpg)
 
 flex-shrink
 
 > ☝️ 오른쪽 그림처럼 기본 너비( flex-basis )의 크기에 따라 비율 계산이 달라진다.
-
-
 
 #### `flex-basis`
 
@@ -508,15 +427,12 @@ flex-shrink
 
 하지만 단위 값이 주어진 경우 설정할 수 없다.
 
-
-
 #### 속성 값
 
-| 기본값 | 의미 | 값 |
-| --- | --- | --- |
-| auto | 가변 item 과 같은 너비 | auto |
-|     | px , em , cm 등 단위로 지정 | 단위 |
-
+| 기본값 | 의미                        | 값   |
+| ------ | --------------------------- | ---- |
+| auto   | 가변 item 과 같은 너비      | auto |
+|        | px , em , cm 등 단위로 지정 | 단위 |
 
 > ☝️ flex 단축 속성에서 flex-basis 를 생략하면 값이 0 이 된다.
 
@@ -526,21 +442,17 @@ flex-basis
 
 > ☝️ item 전체가 비율대로( flex-grow ) 증가하려면 flex-basis 가 0 인 것이 중요하다.
 
-
-
 #### 예제
 
-```plain text
+```
 <div class="container"><div class="item item1">Good job!</div><div class="item item2">A</div><div class="item item3">Hello world!</div></div>
 ```
 
-```plain text
+```
 .container {border: 4px solid;display: flex;}.container .item {height: 100px;background: tomato;border: 4px dashed red;border-radius: 10px;flex-grow: 1;flex-basis: 0;}
 ```
 
 > ☝️ flex-basis: auto; 이면 콘텐츠를 제외한 영역의 비율에 따라 item 의 너비가 설정된다. flex-basis: 0; 이면 item 전체가 비율에 따라 설정된다.
-
-
 
 #### `align-self`
 
@@ -550,29 +462,23 @@ flex-basis
 
 이 속성은 `align-items` 속성보다 우선한다.
 
-
-
 #### 속성 값
 
-| 기본값 | 의미 | 값 |
-| --- | --- | --- |
-| auto | Container 의 align-items 속성을 상속받음 | auto |
-|     | Container 의 교차 축을 채우기 위해 item을 늘림 | stretch |
-|     | item 을 각 줄의 시작점(flex-start)으로 정렬 | flex-start |
-|     | item 을 각 줄의 끝점(flex-end)으로 정렬 | flex-end |
-|     | item 을 가운데 정렬 | center |
-|     | item 을 문자 기준선에 정렬 | baseline |
-
+| 기본값 | 의미                                           | 값         |
+| ------ | ---------------------------------------------- | ---------- |
+| auto   | Container 의 align-items 속성을 상속받음       | auto       |
+|        | Container 의 교차 축을 채우기 위해 item을 늘림 | stretch    |
+|        | item 을 각 줄의 시작점(flex-start)으로 정렬    | flex-start |
+|        | item 을 각 줄의 끝점(flex-end)으로 정렬        | flex-end   |
+|        | item 을 가운데 정렬                            | center     |
+|        | item 을 문자 기준선에 정렬                     | baseline   |
 
 ![CSS-속성-16-flex-image-14](https://heropy.blog/images/screenshot/css-flexible-box/flex-align-self.jpg)
 
 flex-align-self
-
-
 
 ### Reference
 
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
 
 [CSS Flex(Flexible Box) 완벽 가이드](https://heropy.blog/2018/11/24/css-flexible-box/)
-

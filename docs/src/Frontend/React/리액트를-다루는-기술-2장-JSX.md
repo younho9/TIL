@@ -1,6 +1,6 @@
 # [리액트를 다루는 기술] 2장 - JSX
 
-![리액트를-다루는-기술-2장-JSX-image-0](./images/리액트를-다루는-기술-2장-JSX-image-0.png)
+![리액트를-다루는-기술-2장-JSX-image-0](images/리액트를-다루는-기술-2장-JSX-image-0.png)
 
 > 이 글은 김민준(velopert)님의 [리액트를 다루는 기술](http://www.yes24.com/Product/Goods/78233628?Acode=101)을 참조하여 작성한 글입니다.
 
@@ -26,11 +26,11 @@ yarn start # 또는 npm start
 
 터미널에 이러한 결과가 나오면 성공적으로 서버가 구동된 것이다.
 
-![리액트를-다루는-기술-2장-JSX-image-1](./images/리액트를-다루는-기술-2장-JSX-image-1.png)
+![리액트를-다루는-기술-2장-JSX-image-1](images/리액트를-다루는-기술-2장-JSX-image-1.png)
 
 터미널에 나와있는 대로 브라우저에서 [http://localhost:3000](http://localhost:3000에)에 접속하면 리액트 페이지를 볼 수 있다
 
-![리액트를-다루는-기술-2장-JSX-image-2](./images/리액트를-다루는-기술-2장-JSX-image-2.png)
+![리액트를-다루는-기술-2장-JSX-image-2](images/리액트를-다루는-기술-2장-JSX-image-2.png)
 
 맥의 경우 터미널에서 `^ + C` 로 서버를 종료할 수 있다.
 
@@ -192,7 +192,7 @@ export default App;
 
 하지만 이렇게 했을 때 불필요하게 상위에 `<div>` 요소가 추가된다.
 
-![리액트를-다루는-기술-2장-JSX-image-3](./images/리액트를-다루는-기술-2장-JSX-image-3.png)
+![리액트를-다루는-기술-2장-JSX-image-3](images/리액트를-다루는-기술-2장-JSX-image-3.png)
 
 이를 해결하기 위해 리액트의 Fragment 기능을 사용할 수 있다.
 
@@ -232,7 +232,7 @@ function App() {
 export default App;
 ```
 
-![리액트를-다루는-기술-2장-JSX-image-4](./images/리액트를-다루는-기술-2장-JSX-image-4.png)
+![리액트를-다루는-기술-2장-JSX-image-4](images/리액트를-다루는-기술-2장-JSX-image-4.png)
 
 이렇게 불필요한 `<div>` 요소 추가를 막을 수 있다.
 
@@ -335,7 +335,7 @@ export default App;
 
 이 코드는 에러가 발생한다.
 
-![리액트를-다루는-기술-2장-JSX-image-5](./images/리액트를-다루는-기술-2장-JSX-image-5.png)
+![리액트를-다루는-기술-2장-JSX-image-5](images/리액트를-다루는-기술-2장-JSX-image-5.png)
 
 어떤 값이 undefined일 수 있는 상황을 OR(||) 연산자를 사용해 막을 수 있다.
 

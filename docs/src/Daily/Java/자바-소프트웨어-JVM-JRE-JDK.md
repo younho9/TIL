@@ -1,6 +1,6 @@
 # 자바 소프트웨어 (JVM, JRE, JDK)
 
-![자바-소프트웨어-JVM-JRE-JDK-image-0](./images/자바-소프트웨어-JVM-JRE-JDK-image-0.png)
+![자바-소프트웨어-JVM-JRE-JDK-image-0](images/자바-소프트웨어-JVM-JRE-JDK-image-0.png)
 
 > 📌 Table Of Contents
 
@@ -10,15 +10,13 @@
 
 > 🔗 _[Java SE 다운로드 페이지](https://www.oracle.com/technetwork/java/javase/downloads/index.html)_
 
-      ![자바-소프트웨어-JVM-JRE-JDK-image-1](./images/자바-소프트웨어-JVM-JRE-JDK-image-1.png)
+      ![자바-소프트웨어-JVM-JRE-JDK-image-1](images/자바-소프트웨어-JVM-JRE-JDK-image-1.png)
 
 
 
 
 
-      ![자바-소프트웨어-JVM-JRE-JDK-image-2](./images/자바-소프트웨어-JVM-JRE-JDK-image-2.png)
-
-
+      ![자바-소프트웨어-JVM-JRE-JDK-image-2](images/자바-소프트웨어-JVM-JRE-JDK-image-2.png)
 
 왼쪽은 현재 가장 최신 버전인 듯한 13.0.1이고, 오른쪽은 보편적으로 많이 쓰인다고 하는 8버전이다. 그런데 왜 표기법이 하나는 13.0.1이고, 하나는 8u231인가?
 
@@ -46,7 +44,7 @@
 
 8버전의 경우 JDK 1.8이라고 하기도 한다.
 
-![자바-소프트웨어-JVM-JRE-JDK-image-3](./images/자바-소프트웨어-JVM-JRE-JDK-image-3.png)
+![자바-소프트웨어-JVM-JRE-JDK-image-3](images/자바-소프트웨어-JVM-JRE-JDK-image-3.png)
 
 근데 JDK가 무슨 뜻인가?
 
@@ -98,7 +96,7 @@ JVM은 다음과 같은 역할을 한다.
 
 ---
 
-![자바-소프트웨어-JVM-JRE-JDK-image-4](./images/자바-소프트웨어-JVM-JRE-JDK-image-4.png)
+![자바-소프트웨어-JVM-JRE-JDK-image-4](images/자바-소프트웨어-JVM-JRE-JDK-image-4.png)
 
 그림으로 요약하자면 이러하다.
 

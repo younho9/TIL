@@ -25,7 +25,7 @@ jobs:
       - name: Get posts from notion
         run: |
           cd notion-py
-          python main.py ${{ secrets.NOTION_TOKEN }} ${{ secrets.COLLECTION_ID }}
+          python main.py ${{ secrets.NOTION_TOKEN }} ${{ secrets.DATABASE_URL }}
 
       - name: Set up Node 12.x
         uses: actions/setup-node@v1

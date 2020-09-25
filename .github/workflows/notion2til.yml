@@ -18,13 +18,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd notion-py
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Get posts from notion
         run: |
-          cd notion-py
           python main.py ${{ secrets.NOTION_TOKEN }} ${{ secrets.DATABASE_URL }}
 
       - name: Set up Node 12.x
@@ -34,11 +32,10 @@ jobs:
 
       - name: Format
         run: |
-          cd docs
           npm ci
           npm run format
 
       - name: Git auto commit action
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update docs
+          commit_message: 'docs: Update docs (auto)'

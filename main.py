@@ -12,8 +12,8 @@ if __name__ == "__main__":
         url=url,
         category_column_name="Category",
         status_column_name="Status",
-        current_status="",
-        next_status="",
+        current_status="✅ Completed",
+        next_status="🖨 Published",
         filters={"Main Category": "Frontend"},
         create_page_directory=False,
     )
@@ -23,8 +23,8 @@ if __name__ == "__main__":
         url=url,
         category_column_name="Category",
         status_column_name="Status",
-        current_status="",
-        next_status="",
+        current_status="✅ Completed",
+        next_status="🖨 Published",
         filters={"Main Category": "Algorithms"},
         create_page_directory=False,
     )
@@ -34,8 +34,8 @@ if __name__ == "__main__":
         url=url,
         category_column_name="Category",
         status_column_name="Status",
-        current_status="",
-        next_status="",
+        current_status="✅ Completed",
+        next_status="🖨 Published",
         filters={"Main Category": "CS"},
         create_page_directory=False,
     )
@@ -45,8 +45,8 @@ if __name__ == "__main__":
         url=url,
         category_column_name="Category",
         status_column_name="Status",
-        current_status="",
-        next_status="",
+        current_status="✅ Completed",
+        next_status="🖨 Published",
         filters={"Main Category": "Daily"},
         create_page_directory=False,
     )

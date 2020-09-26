@@ -1,1 +1,1 @@
-notion2github==1.0.6
+narkdown==1.0.6

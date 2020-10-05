@@ -1,4 +1,4 @@
-# **Programmers-**42626. 더 맵게
+# Programmers-42626. 더 맵게
 
 [코딩테스트 연습 - 더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626)
 

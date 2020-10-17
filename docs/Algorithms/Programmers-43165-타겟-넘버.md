@@ -20,6 +20,8 @@
 
 ### 코드
 
+- 1차 풀이
+
 ```javascript
 function solution(numbers, target) {
   return bfs(numbers, target);
@@ -35,6 +37,28 @@ function bfs(numbers, target) {
   const lastNumber = clone.pop();
 
   return bfs(clone, target - lastNumber) + bfs(clone, target + lastNumber);
+}
+```
+
+- 2차 풀이
+
+> ☝ 다시 보니 이건 먼저 실행하는 함수부터 깊이 우선 탐색하기 때문에 dfs 였다.
+> 그리고 `numbers.length === 0` 일 때 까지 반복하는 것이 코드 가독성이 높았다.
+> 배열은 참조형이기 때문에 매개변수로 받은 배열을 pop 하면 원본 배열도 변하므로 복사본을 넘겨주었다.
+
+```javascript
+function solution(numbers, target) {
+  return dfs(numbers, target);
+}
+
+function dfs(numbers, target) {
+  if (!numbers.length) {
+    return target === 0 ? 1 : 0;
+  }
+
+  const lastNumber = numbers.pop();
+
+  return dfs([...numbers], target - lastNumber) + dfs([...numbers], target + lastNumber);
 }
 ```
 

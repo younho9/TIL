@@ -1,5 +1,5 @@
 module.exports = {
-  title: '📝 TIL(Today I Learned)',
+  title: 'TIL(Today I Learned)',
   tagline: '하루동안 공부한 것들을 기록하는 공간',
   url: 'https://til.younho9.dev',
   baseUrl: '/',

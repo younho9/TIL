@@ -70,7 +70,7 @@ module.exports = {
           ],
         },
         {
-          title: 'Personal',
+          title: 'Personal Links',
           items: [
             {
               label: 'younho9.dev',
@@ -98,7 +98,7 @@ module.exports = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
+              label: 'Log',
               to: 'blog',
             },
             {

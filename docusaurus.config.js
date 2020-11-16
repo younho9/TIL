@@ -122,11 +122,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/younho9/til/edit/master/docs/',
+          editUrl: 'https://github.com/younho9/til/edit/master/',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/younho9/til/edit/master/blog/',
+          editUrl: 'https://github.com/younho9/til/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

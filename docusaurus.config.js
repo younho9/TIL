@@ -3,7 +3,7 @@ module.exports = {
   tagline: '하루동안 공부한 것들을 기록하는 공간',
   url: 'https://til.younho9.dev',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'error',
   favicon: 'img/logo.png',
   organizationName: 'younho9',
   projectName: 'til',

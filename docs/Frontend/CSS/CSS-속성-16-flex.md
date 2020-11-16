@@ -87,7 +87,7 @@ container-items
 
 `display` 속성으로 `flex container` 를 정의한다.
 
-보통 `display: block;` , `display: inline` , `display: inline-block` , `display: none;` 으로 사용했었는데, ( [Property-06-display](./Property-06-display) 참조) `display: flex;` 또는 `display: inline-flex;` 도 사용할 수 있다.
+보통 `display: block;` , `display: inline` , `display: inline-block` , `display: none;` 으로 사용했었는데, ( [Property-06-display](./CSS-속성-06-display) 참조) `display: flex;` 또는 `display: inline-flex;` 도 사용할 수 있다.
 
 <br/>
 

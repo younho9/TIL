@@ -8,6 +8,9 @@ module.exports = {
   organizationName: 'younho9',
   projectName: 'til',
   themeConfig: {
+    prism: {
+      theme: require('prism-react-renderer/themes/nightOwl'),
+    },
     navbar: {
       title: 'Today I Learned',
       logo: {

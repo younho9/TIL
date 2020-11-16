@@ -15,8 +15,6 @@ title: 'SIC/XE Machine Architecture'
 
    - 예를 들어, 어셈블러의 일반적인 설계와 로직은 다른 머신 아키텍쳐에서 거의 동일하다.
 
-<br/>
-
 ## SIC와 SIC/XE
 
 실제 머신은 매우 복잡하여 학습하기 좋지 않고, 가장 기본적인 기능에 충실할 수 없으므로, SIC와 SIC/XE를 통해 이해하도록 한다. SIC와 SIC/XE는 가상의 컴퓨터(hypothetical computer)로 실제 머신에서 볼 수 있는 하드웨어의 기능들을 포함하고, 일반적이지 않고 관련 없는 복잡성들은 제거했다.
@@ -24,8 +22,6 @@ title: 'SIC/XE Machine Architecture'
 > 구체적인 세부사항으로부터 떨어져서 시스템 소프트웨어의 기본적인 컨셉을 이해하도록 한다.
 
 SIC는 Simplified Instructional Computer로 가상 컴퓨터의 표준적인 모델이고, SIC/XE는 SIC의 확장된 버전(the eXtra Equipment(or Expensive))이다. SIC에서 작동하는 프로그램은 모두 SIC/XE에서 정상적으로 동작하는 상위호환(upward compatibility)을 보장한다. 하지만 SIC/XE에서 작동하는 프로그램이 SIC에서 작동된다는 하위호환(backward compatibility)은 보장하지 않는다.
-
-<br/>
 
 ## SIC Machine Architecture
 
@@ -90,8 +86,6 @@ Character는 8비트(ASCII), Integer는 24비트
 - Subroutine Linkage
 
 - I/O
-
-<br/>
 
 > 명령어 표기법
 
@@ -168,8 +162,6 @@ SW 레지스터의 Condition code에 따라 점프하는 명령어이다.
 `RD` _`m`_ : A[rightmost byte] ← data from device specified by (_m_)
 
 `WD` _`m`_ : Device specified by (_m_) ← (A)[rightmost byte]
-
-<br/>
 
 ## SIC/XE Machine Architecture
 

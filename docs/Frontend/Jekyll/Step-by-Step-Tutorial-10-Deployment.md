@@ -5,11 +5,7 @@ title: '[Step by Step Tutorial] 10. Deployment'
 
 [Deployment](https://jekyllrb.com/docs/step-by-step/10-deployment/)
 
-<br/>
-
 이제 마지막 단계로 사이트를 배포할 준비가 되었다.
-
-<br/>
 
 ### Gemfile
 
@@ -34,8 +30,6 @@ bundle exec jekyll serve
 ```
 
 이것은 `Gemfile` 에 정해진 gem들만 사용하도록 Ruby 환경을 제한한다.
-
-<br/>
 
 ### Plugins
 
@@ -97,8 +91,6 @@ plugins:
 
 Jekyll 서버를 재시작하고 `<head>` 에 태그가 잘 추가되었는지 확인한다.
 
-<br/>
-
 ### Environments
 
 ---
@@ -118,8 +110,6 @@ JEKYLL_ENV=production bundle exec jekyll build
 <script src="my-analytics-script.js"></script>
 {% endif %}
 ```
-
-<br/>
 
 ### Deployment
 

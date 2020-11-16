@@ -3,8 +3,6 @@ id: Web-Storage
 title: 'Web Storage'
 ---
 
-> 📌 Table of Contents
-
 ## Web Storage API
 
 Web Storage API는 브라우저가 key/value 쌍을 쿠키보다 훨씬 직관적인 방식으로 저장할 수 있는 메커니즘을 제공한다.

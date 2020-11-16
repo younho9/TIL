@@ -11,8 +11,6 @@ title: 'CSS 속성 10. text'
 
 > ☝️ 요소의 색상은 background-color
 
-<br/>
-
 #### 속성 값
 
 | 기본값       | 의미               | 값   |
@@ -32,8 +30,6 @@ title: 'CSS 속성 10. text'
 
 > ☝️ 색상이름은 브라우저 별로 상이할 수 있으므로, 정확한 색상 값을 위해서는 사용하지 않는 것을 추천함.✌️ 위 표는 색상을 이용하는 모든 속성(property)의 값으로 사용할 수 있음.RGBA : Red, Green, Blue, Alpha channelHSLA : Hue, Saturation, Lightness, Alpha channel
 
-<br/>
-
 ### `text-align`
 
 문자 정렬 방식을 지정
@@ -46,8 +42,6 @@ title: 'CSS 속성 10. text'
 | 양쪽 맞춤   |        | justify |
 
 > ☝️ direction 속성(텍스트 방향 및 쓰기 방향 지정 / ltr , rtl )의 값에 의해서 text-align 속성의 ’기본값’이 변경될 수 있다.✌️ 일반적으로 left 가 기본값으로 사용된다.
-
-<br/>
 
 ### `text-decoration`
 
@@ -70,8 +64,6 @@ title: 'CSS 속성 10. text'
 div {text-indent: -10px;}
 ```
 
-<br/>
-
 #### `background: url("");` 로 이미지 삽입 시 `alt` 입력법
 
 ```plain text
@@ -92,13 +84,9 @@ HTML의 이미지 태그를 사용시에는 이렇게 alt를 사용해 대체 �
 
 > ☝️ HTML 요소의 내용에 대체 텍스트를 입력하고 text-indent: -9999px; 로 텍스트를 들여쓰기하면 ’명시적’으로 텍스트를 보이지 않게 하겠다는 의미로 사용가능하다.
 
-<br/>
-
 ### `letter-spacing`
 
 문자의 자간(글자 사이 간격)을 설정
-
-<br/>
 
 #### 속성 값
 
@@ -109,13 +97,9 @@ HTML의 이미지 태그를 사용시에는 이렇게 alt를 사용해 대체 �
 
 > ☝️ normal 은 단위로 보면 0 에 해당하고 폰트마다 다르게 보일 수 있다.음수 값도 가능하다.
 
-<br/>
-
 ### `word-spacing`
 
 단어 사이(띄어쓰기)의 간격을 설정
-
-<br/>
 
 #### 속성 값
 
@@ -125,8 +109,6 @@ HTML의 이미지 태그를 사용시에는 이렇게 alt를 사용해 대체 �
 |        | px , em , cm 등 단위로 지정 | 단위   |
 
 > ☝️ normal 은 마찬가지로 단위로 보면 0 에 해당하는데, 띄어쓰기의 너비가 0 이라는 뜻이 아니라 ‘기본 띄어쓰기 너비 + 0’ 이라는 뜻이다
-
-<br/>
 
 ### Reference
 

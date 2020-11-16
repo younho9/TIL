@@ -5,29 +5,23 @@ title: '자바 소프트웨어 (JVM, JRE, JDK)'
 
 ![자바-소프트웨어-JVM-JRE-JDK-image-0](images/자바-소프트웨어-JVM-JRE-JDK-image-0.png)
 
-> 📌 Table Of Contents
-
 ## Java를 설치하려는데...
 
 컴퓨터를 초기화하여 Java를 다시 설치하려고 했다.
 
 > 🔗 _[Java SE 다운로드 페이지](https://www.oracle.com/technetwork/java/javase/downloads/index.html)_
 
-<br/>
-
       ![자바-소프트웨어-JVM-JRE-JDK-image-1](images/자바-소프트웨어-JVM-JRE-JDK-image-1.png)
 
-      <br/>
+
 
 
 
       ![자바-소프트웨어-JVM-JRE-JDK-image-2](images/자바-소프트웨어-JVM-JRE-JDK-image-2.png)
 
-      <br/>
+
 
 왼쪽은 현재 가장 최신 버전인 듯한 13.0.1이고, 오른쪽은 보편적으로 많이 쓰인다고 하는 8버전이다. 그런데 왜 표기법이 하나는 13.0.1이고, 하나는 8u231인가?
-
-<br/>
 
 ### 자바 버전 표기법
 
@@ -57,8 +51,6 @@ title: '자바 소프트웨어 (JVM, JRE, JDK)'
 
 근데 JDK가 무슨 뜻인가?
 
-<br/>
-
 ### JDK가 뭔데?
 
 ---
@@ -71,8 +63,6 @@ Java로 프로그램을 만들기 위해서는 **반드시 JDK로 설치해야 �
 
 그럼 JRE는?
 
-<br/>
-
 ### JRE는 뭔데?
 
 ---
@@ -84,8 +74,6 @@ JRE는 JVM 이 자바 프로그램을 동작시킬 때 필요한 라이브러리
 요약하면 JVM + 런타임에 사용하는 다른 파일들(라이브러리)
 
 그럼 JVM은?
-
-<br/>
 
 ### JVM은 뭔데?
 
@@ -107,8 +95,6 @@ JVM은 다음과 같은 역할을 한다.
 
 > 💡 어떠한 장비에서든지 실행될 수 있도록 기본 환경을 제공해 준다.
 
-<br/>
-
 ### 그림으로 정리
 
 ---
@@ -116,8 +102,6 @@ JVM은 다음과 같은 역할을 한다.
 ![자바-소프트웨어-JVM-JRE-JDK-image-4](images/자바-소프트웨어-JVM-JRE-JDK-image-4.png)
 
 그림으로 요약하자면 이러하다.
-
-<br/>
 
 ## Reference
 
@@ -130,7 +114,5 @@ JVM은 다음과 같은 역할을 한다.
 🔗*[[JAVA 자바] JDK, JRE, JVM 차이](https://arer.tistory.com/156)*
 
 🔗*[JDK, JRE, 그리고 JVM의 차이](https://tworab.tistory.com/13)*
-
-<br/>
 
 ![자바-소프트웨어-JVM-JRE-JDK-image-5](https://notion-ga.ohwhos.now.sh/collect?tid=UA-159972507-1&host=www.notion.so&page=/JVM-JRE-JDK-6735f56995594cb8b0ce80ddeebb1f53)

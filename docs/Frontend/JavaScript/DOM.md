@@ -3,8 +3,6 @@ id: DOM
 title: 'DOM'
 ---
 
-> 📌 Table of Contents
-
 ## DOM(Document Object Model)
 
 ### DOM tree

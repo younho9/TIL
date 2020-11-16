@@ -9,8 +9,6 @@ Liquid는 Jekyll이 사용하고 있는 템플릿 언어이다.
 
 크게 Objects, tags, filters의 3가지 메인 파트로 구성된다.
 
-<br/>
-
 ### Objects
 
 ---
@@ -24,8 +22,6 @@ Liquid는 Jekyll이 사용하고 있는 템플릿 언어이다.
 ```
 
 `page.title` 에서 호출된 변수를 출력한다.
-
-<br/>
 
 ### Tags
 
@@ -43,8 +39,6 @@ Liquid는 Jekyll이 사용하고 있는 템플릿 언어이다.
 
 `page.show_sidebar` 가 참이면 사이드바가 출력된다.
 
-<br/>
-
 ### Filters
 
 ---
@@ -58,8 +52,6 @@ Liquid는 Jekyll이 사용하고 있는 템플릿 언어이다.
 ```
 
 `Hi` 로 출력된다.
-
-<br/>
 
 ### Liquid를 사용해보자
 
@@ -82,5 +74,3 @@ Jekyll에게 해당 문서가 Liquid를 사용하고 있음을 알리기 위해�
 ```
 
 `Hello World!` 가 소문자로 `hello world!` 로 출력된다.
-
-<br/>

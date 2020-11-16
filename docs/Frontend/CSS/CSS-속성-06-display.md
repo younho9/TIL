@@ -21,8 +21,6 @@ title: 'CSS 속성 06. display'
 
 > ☝️ inline-block 은 기본적으로 inline 으로 수평으로 쌓이는데, width , height 를 사용할 수 있고 margin , padding 의 top , bottom 을 사용할 수 있는 block 의 특성을 갖고 있다
 
-<br/>
-
 #### 인라인(Inline) 요소과 블록(Block) 요소의 `margin` `padding`
 
 - 인라인 요소
@@ -67,13 +65,9 @@ input {width: 100px;height: 100px;margin: 50px 0;padding: 10px 0;}
 
 인라인-블록 요소인 `input` 태그는 인라인 요소가 갖지 못하는 `width` , `height` , `margin-top` , `margin-bottom` , `padding-top` , `padding-bottom` 의 속성을 모두 가질 수 있다.
 
-<br/>
-
 #### `display: none;`
 
 `display: none;` 은 `opacity: 0;` 가 존재하지만 보이지 않게만 하는 것과는 달리 요소가 완벽히 존재하지 않는 것처럼 만들어준다.
-
-<br/>
 
 ### Reference
 

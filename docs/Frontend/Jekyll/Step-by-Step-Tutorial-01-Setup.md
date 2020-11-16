@@ -7,8 +7,6 @@ title: '[Step by Step Tutorial] 01. Setup'
 
 이 튜토리얼의 목적은 프론트엔드 웹 개발 경험이 없어도 기본 gem 기반 테마에 의존하지 않고 처음부터 Jekyll 사이트를 구축하도록 하는 것이다.
 
-<br/>
-
 ### 설치
 
 ---
@@ -52,8 +50,6 @@ bundle
 
 ![Step-by-Step-Tutorial-01-Setup-image-0](images/Step-by-Step-Tutorial-01-Setup-image-0.png)
 
-<br/>
-
 ### 사이트 만들기
 
 ---
@@ -73,8 +69,6 @@ bundle
 </html>
 ```
 
-<br/>
-
 ### 빌드
 
 ---
@@ -82,5 +76,3 @@ bundle
 - `jekyll build` - jekyll이 빌드하여 static한 site를 `_site` 디렉토리에 내보낸다.
 
 - `jekyll serve` - 빌드를 하고, 로컬 웹 서버를 실행한다. 브라우저에서 [`http://localhost:4000/`](http://127.0.0.1:4000/) 로 접속하면 결과를 볼 수 있다.
-
-<br/>

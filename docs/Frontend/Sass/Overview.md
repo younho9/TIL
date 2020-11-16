@@ -92,5 +92,3 @@ terminal-output-parcel
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
 
 [Sass(SCSS) 완전 정복!](https://heropy.blog/2018/01/31/sass/)
-
-<br/>

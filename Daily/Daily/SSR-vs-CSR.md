@@ -9,6 +9,4 @@ title: 'SSR vs CSR'
 
 ## Head
 
-<br/>
-
 ### Reference

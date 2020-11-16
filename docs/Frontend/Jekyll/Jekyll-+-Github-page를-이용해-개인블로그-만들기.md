@@ -20,8 +20,6 @@ gem install jekyll bundler
 
 ![Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-1](images/Jekyll-+-Github-page를-이용해-개인블로그-만들기-image-1.png)
 
-<br/>
-
 #### Gem::FilePermissionError
 
 맥은 시스템 ruby를 사용하고 있다. sudo를 통해 root 권한으로 실행하면 설치가 가능하지만, 보안상 이유로 권장하지 않는 설치법이라고 한다.
@@ -30,8 +28,6 @@ rbenv라는 ruby version 관리자를 통해 여러 버전의 루비를 맥에 �
 시스템 루비가 아닌 다른 루비를 rbenv를 통해 설치하여 jekyll 환경을 만들 수 있다.
 
 [Troubleshooting](https://jekyllrb.com/docs/troubleshooting/)
-
-<br/>
 
 #### brew
 
@@ -77,8 +73,6 @@ rbenv global 2.6.5
 gem install jekyll bundler
 ```
 
-<br/>
-
 ### Jekyll 사이트 만들고 Github page로 호스팅하기
 
 ---
@@ -97,8 +91,6 @@ bundle exec jekyll serve
 
 # 이제 브라우저로 http://localhost:4000에 접속한다
 ```
-
-<br/>
 
 #### GitHub에 username.github.io로 repository 만들기
 
@@ -136,5 +128,3 @@ git push -u origin master
 ```
 
 이제 username.github.io에서 만든 사이트를 볼 수 있다.
-
-<br/>

@@ -21,8 +21,6 @@ source .venv/bin/activate
 which python
 ```
 
-<br/>
-
 ### 참고자료
 
 [파이썬에서 venv로 가상 환경 사용하기](https://www.daleseo.com/python-venv/)

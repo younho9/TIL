@@ -11,13 +11,9 @@ title: 'CSS 속성 15. columns'
 
 columns
 
-<br/>
-
 ### `columns`
 
 다단을 정의 - 단축 속성
-
-<br/>
 
 #### 속성 값
 
@@ -37,13 +33,9 @@ columns: 너비 개수;
 .text {columns: 100px 2;}
 ```
 
-<br/>
-
 ### `column-width`
 
 단의 최적 너비를 설정 - 개별 속성
-
-<br/>
 
 #### 속성 값
 
@@ -60,13 +52,9 @@ column-width: 너비;
 
 > ☝️ 각 단이 줄어들 수 있는 최적 너비(최소 너비)를 설정하며, 요소의 너비가 가변하 하나의 단이 최적 너비보다 줄어들 경우 단의 개수가 조정된다.
 
-<br/>
-
 ### `column-count`
 
 단의 개수를 설정 - 개별 속성
-
-<br/>
 
 #### 속성 값
 
@@ -81,13 +69,9 @@ column-width: 너비;
 column-count: 개수;
 ```
 
-<br/>
-
 ### `column-gap`
 
 단과 단 사이의 간격 설정
-
-<br/>
 
 #### 속성 값
 
@@ -101,8 +85,6 @@ column-count: 개수;
 ```plain text
 column-gap: 간격;
 ```
-
-<br/>
 
 ### `column-rule`
 
@@ -119,8 +101,6 @@ column-gap: 간격;
 ```plain text
 column-rule: 두께 종류 색상;
 ```
-
-<br/>
 
 ### Reference
 

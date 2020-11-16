@@ -22,8 +22,6 @@ a:hover {
 <a href="<https://google.com>">Google!</a>
 ```
 
-<br/>
-
 #### Active
 
 요소를 마우스로 클릭하는 동안에만 선택
@@ -43,8 +41,6 @@ a:hover {
 <div class="box"></div>
 ```
 
-<br/>
-
 #### Focus
 
 요소가 포커스 된 동안에만 선택
@@ -63,8 +59,6 @@ input:focus {
 ```
 
 > hover, active, focus는 선택자이지만 JS에서의 이벤트 개념과 헷갈릴 소지가 있다. (? 아직 모르는 내용)
-
-<br/>
 
 #### First child
 
@@ -86,8 +80,6 @@ input:focus {
 </ul>
 ```
 
-<br/>
-
 #### Last child
 
 형제 요소 중 마지막 요소인 모든 요소 중에서 선택
@@ -107,8 +99,6 @@ input:focus {
   <!--선택-->
 </ul>
 ```
-
-<br/>
 
 #### N-th child
 
@@ -158,8 +148,6 @@ input:focus {
 
 - `.fruits :nth-child(1)` 인 경우 - `class="fruits"` 인 요소의 후손 중, 형제 요소 중 첫 번째인 요소는 모두 선택됨.
 
-<br/>
-
 #### N-th of type
 
 형제 요소 중 타입(tag)의 n번째 요소 선택( `n` 키워드 사용시 0부터 해석(Zero-base))
@@ -187,8 +175,6 @@ input:focus {
 
 - 타입(tag)의 n번째를 찾는 것이기 때문에 class 또는 id 선택자를 넣으면 각 타입 중 n번째 중에서 class 또는 id 선택자로 선택하는 것이지, class 또는 id 선택자를 갖는 요소 중 n번째를 찾는 것이 아니다.
 
-<br/>
-
 #### 부정 선택자(Negation Selector)
 
 해당 선택자가 아닌 요소를 선택
@@ -213,8 +199,6 @@ input:focus {
   <!--선택-->
 </ul>
 ```
-
-<br/>
 
 ### 가상 요소 선택자(Pseudo-Elements Selectors)
 
@@ -242,8 +226,6 @@ ul li::before {
 > 유의사항
 > content 속성을 설정하지 않으면 아무것도 보이지 않는다.
 > 빈 내용을 넣고 싶다면 content: ""; 를 추가해야한다.
-
-<br/>
 
 #### After
 
@@ -282,8 +264,6 @@ ul li::after {
 > 유의사항
 > :before , :after 도 동작하지만, 이는 과거에 가상 클래스 선택자, 가상 요소 선택자 개념이 분리되기 전에 사용되던 것으로 현재는 ::before , ::after 로 사용하는 것이 표준이다.
 
-<br/>
-
 ### 속성 선택자(Attribute Selectors)
 
 #### Attr
@@ -301,8 +281,6 @@ ul li::after {
 <input type="password" value="1234" />
 <input type="text" value="disabled text" disabled />
 ```
-
-<br/>
 
 #### Attr=Value
 
@@ -324,8 +302,6 @@ ul li::after {
 > value 에는 따옴표를 붙일 수도 붙이지 않을 수도 있다.
 > type=password or type="password"
 
-<br/>
-
 #### Attr^=Value
 
 속성 `attr` 을 포함하며 속성 값이 `value` 로 시작하는 요소 선택
@@ -342,8 +318,6 @@ ul li::after {
 <button class="btn-danger">Danger</button>
 <button>Normal</button>
 ```
-
-<br/>
 
 #### Attr\$=Value
 
@@ -368,8 +342,6 @@ ul li::after {
 <button>Normal</button>
 ```
 
-<br/>
-
 ### 상속(Inheritance)
 
 ```css
@@ -392,8 +364,6 @@ ul li::after {
 ```
 
 > 생태계(.ecosystem)에 적용된 색상이 하위 요소들에 모두 적용된다.
-
-<br/>
 
 #### 상속되는 속성들(properties)
 
@@ -425,8 +395,6 @@ ul li::after {
 
 - etc...
 
-<br/>
-
 #### 강제 상속
 
 원래는 상속되지 않는 속성을 강제적으로 상속시킬 수 있다.
@@ -447,8 +415,6 @@ ul li::after {
 ```
 
 > 상속되지 않는 속성도 inherit 이라는 값을 사용해서 부모에서 자식으로 강제 상속시킬 수 있다. 자식을 제외한 후손에게는 적용되지 않으며, 모든 속성이 강제 상속을 사용할 수 있는 것은 아니다.
-
-<br/>
 
 ### 우선순위(Priority)
 
@@ -488,8 +454,6 @@ body {
 > 하나의 요소를 가르키는 여러 선언들.
 > 어떤 것이 선택될까?
 
-<br/>
-
 #### 우선순위 결정
 
 같은 요소가 여러 선언의 대상이 될 경우, 어떤 선언의 CSS 속성(property)을 우선 적용할지 결정하는 방법
@@ -504,15 +468,11 @@ body {
 
 > 우선순위에는 '중요도, 명시도, 선언 순서'의 개념이 있다.
 
-<br/>
-
 #### 1. 가장중요( `!important` )
 
 모든 선언을 무시하고 가장 우선
 
 점수 : `∞` pt
-
-<br/>
 
 #### 2. 인라인 선언 방식(Style Attribute)
 
@@ -520,15 +480,11 @@ body {
 
 점수 : `1000` pt
 
-<br/>
-
 #### 3. Id 선택자(ID Selector)
 
 아이디 선택자
 
 점수 : `100` pt
-
-<br/>
 
 #### 4. 클래스 선택자(Class Selector)
 
@@ -536,23 +492,17 @@ body {
 
 점수 : `10` pt
 
-<br/>
-
 #### 5. 태그 선택자(Tag Selector)
 
 태그 선택자
 
 점수 : `1` pt
 
-<br/>
-
 #### 6. 전체 선택자(Universal Selector)
 
 전체 선택자
 
 점수 : `0` pt
-
-<br/>
 
 #### 7. 상속(CSS Inheritance)
 
@@ -597,8 +547,6 @@ h1 {
 
 > :hover 와 같은 '가상 클래스'는 '클래스' 선택자 점수( 10pt )를 가지며 '가상 요소'는 '태그' 선택자 점수( 1pt )를 가진다.
 > 부정 선택자 :not() 는 점수를 가지지 않는다.
-
-<br/>
 
 ### Reference
 

@@ -9,8 +9,6 @@ title: 'CSS 속성 12. background'
 
 요소의 배경을 설정 - 단축 속성
 
-<br/>
-
 #### 속성 값
 
 | 기본값      | 의미                            | 값                    |
@@ -31,13 +29,9 @@ background: 색상 이미지경로 반복 위치 스크롤특성;
 .box1 {background: red url("../img/image.jpg") no-repeat left top scroll;/* 색상 이미지경로 반복 위치 스크롤특성 */}.box2 {background: url("../img/image.jpg") no-repeat right 100px;/* 이미지경로 반복 위치 */}.box3 {background: red;/* 색상 */}
 ```
 
-<br/>
-
 ### `background-color`
 
 요소의 배경 색상을 지정 - 개별 속성
-
-<br/>
 
 #### 속성 값
 
@@ -47,8 +41,6 @@ background: 색상 이미지경로 반복 위치 스크롤특성;
 | 투명             | transparent | transparent |
 
 > ☝️ 기본값이 transparent 이기 때문에 요소에 사이즈만 설정할 경우 보이지 않았다.
-
-<br/>
 
 #### 예제
 
@@ -60,13 +52,9 @@ background: 색상 이미지경로 반복 위치 스크롤특성;
 div {width: 200px;height: 100px;background-color: tomato;}
 ```
 
-<br/>
-
 ### `background-image`
 
 요소의 배경에 하나 이상의 이미지를 삽입 - 개별 요소
-
-<br/>
 
 #### 속성 값
 
@@ -87,13 +75,9 @@ background-image: url("경로");
 
 > ☝️ 배경 이미지 삽입 시, 요소의 크기가 설정되어 있어야 배경 이미지가 보일 수 있다.✌️ 하나 이상의 배경 이미지를 삽입할 경우 , 로 구분한다. 먼저 작성된 이미지가 더 위에 쌓인다. 이런 ’다중 배경 이미지’는 IE8 이하 버전에 사용할 수 없다.
 
-<br/>
-
 ### `background-repeat`
 
 배경 이미지의 반복을 설정 - 개별 요소
-
-<br/>
 
 #### 속성 값
 
@@ -114,13 +98,9 @@ background-image: url("경로");
 .box {background-image:url("https://heropy.blog/css/images/logo.png");background-size: 100px;background-repeat: no-repeat;width: 550px;height: 300px;border: 2px dashed lightgray;}
 ```
 
-<br/>
-
 ### `background-position`
 
 배경 이미지의 위치를 설정 - 개별 요소
-
-<br/>
 
 #### 속성 값
 
@@ -156,8 +136,6 @@ background-position: X축(left, right, center) Y축(top, bottom, center);
 
 > ☝️ 단위와 방향을 혼합해서 사용할 경우 left , right 와 같은 X축 방향을 첫 번째로, top , bottom 같은 Y축 방향을 두 번째로 작성해야 한다. center 는 X축과 Y축 위치에 따라 동작한다.
 
-<br/>
-
 #### 예제
 
 ```plain text
@@ -168,13 +146,9 @@ background-position: X축(left, right, center) Y축(top, bottom, center);
 .box {width: 550px;height: 300px;border: 2px dashed lightgray;background-image:url("https://heropy.blog/css/images/logo.png");background-size: 100px;background-repeat: no-repeat;background-position: center;}
 ```
 
-<br/>
-
 ### `background-attachment`
 
 요소가 스크롤될 때 배경 이미지의 스크롤 여부(특성) 설정 - 개별 속성
-
-<br/>
 
 #### 속성 값
 
@@ -208,13 +182,9 @@ section {height: 300px;border: 2px dashed lightgray;}.section2 {background-image
 
 > 사용 빈도 낮음.
 
-<br/>
-
 ### `background-size`
 
 배경 이미지의 크기를 지정 - 개별 속성
-
-<br/>
 
 #### 속성 값
 
@@ -234,8 +204,6 @@ section {height: 300px;border: 2px dashed lightgray;}.section2 {background-image
 ```plain text
 .box {width: 400px;height: 300px;border: 2px solid red;margin: 50px;background-image:url("https://heropy.blog/css/images/logo.png");/* 500x500 */background-repeat: no-repeat;background-size: contain;}
 ```
-
-<br/>
 
 ### Reference
 

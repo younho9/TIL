@@ -9,8 +9,6 @@ title: 'CSS 속성 07. overflow'
 
 요소의 크기 이상으로 내용(자식요소)이 넘쳤을 때, 내용의 보여짐을 제어 - 단축 속성
 
-<br/>
-
 #### 속성 값
 
 | 의미                                                                | 기본값  | 값      |
@@ -26,8 +24,6 @@ title: 'CSS 속성 07. overflow'
 overflow: visible;overflow: hidden;overflow: scroll;overflow: auto
 ```
 
-<br/>
-
 #### 예제
 
 ```plain text
@@ -39,8 +35,6 @@ overflow: visible;overflow: hidden;overflow: scroll;overflow: auto
 ```
 
 > ☝️ scroll 은 overflow가 발생하지 않는 경우에도 스크롤 바를 생성한다. 반면 auto 는 overflow가 발생하는 경우에만 스크롤 바를 생성한다.
-
-<br/>
 
 ### `overflow-x` , `overflow-y`
 
@@ -63,8 +57,6 @@ overflow-x: auto;
 ```plain text
 overflow-y: auto;
 ```
-
-<br/>
 
 ### Reference
 

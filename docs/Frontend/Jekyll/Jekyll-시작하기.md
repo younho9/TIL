@@ -7,8 +7,6 @@ title: 'Jekyll 시작하기'
 
 Jekyll Docs의 Getting Started를 읽고 시도해본 기록.
 
-<br/>
-
 ### 빠른 시작
 
 ---
@@ -19,13 +17,9 @@ Markdown, HTML 등 원하는 markup language로 static한 웹사이트를 만들
 
 URL의 모습과 사이트에 데이터를 원하는 대로 표시할 수 있다.
 
-<br/>
-
 #### 선수 조건
 
 [Installation](https://jekyllrb.com/docs/installation/#requirements)
-
-<br/>
 
 #### Instructions
 
@@ -57,15 +51,11 @@ URL의 모습과 사이트에 데이터를 원하는 대로 표시할 수 있다
 
 1. [http://localhost:4000](http://localhost:4000/) 주소로 접속하기
 
-<br/>
-
 ### Ruby101
 
 ---
 
 Jekyll은 Ruby로 작성되었다.
-
-<br/>
 
 #### Gems
 
@@ -83,8 +73,6 @@ gem은 다음과 같은 기능을 수행할 수 있다.
 
 - Jekyll 자체 역시 gem이고, jekyll-feed, jekyll-seo-tag, jekyll-archives와 같은 Jekyll 플러그인들 또한 gem이다.
 
-<br/>
-
 #### Gemfile
 
 Gemfile은 사이트에 필요한 gems의 리스트를 기록해놓은 파일이다. 단순한 Jekyll site라면
@@ -100,8 +88,6 @@ group :jekyll_plugins do
 end
 ```
 
-<br/>
-
 ### Bundler
 
 아직 이해하지 못했다.
@@ -116,8 +102,6 @@ For more information about how to use Bundler in your Jekyll project, this [tut
 
 [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)
 
-<br/>
-
 ### Jekyll 커뮤니티
 
 ---
@@ -125,5 +109,3 @@ For more information about how to use Bundler in your Jekyll project, this [tut
 Jekyll 프로젝트에 Contribute 할 수 있는 방법과 문서 모음, Jekyller들과 대화할 수 있는 커뮤니티 모음들이다.
 
 [Community](https://jekyllrb.com/docs/community/)
-
-<br/>

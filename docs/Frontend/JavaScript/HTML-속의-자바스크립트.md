@@ -3,8 +3,6 @@ id: HTML-속의-자바스크립트
 title: 'HTML 속의 자바스크립트'
 ---
 
-> 📌 Table of Contents
-
 JavaScript는 출현 즉시 웹의 지배적인 언어인 HTML에 포함되었다. 넷스케이프는 JavaScript가 다른 브라우저의 HTML 페이지 렌더링을 방해하지 않으면서 공존할 길을 모색했다. 이러한 초기 작업의 대부분이 오늘날까지 살아남았고 HTML 명세에서 공식적으로 문서화되었다.
 
 ### `<script>` 요소

@@ -7,8 +7,6 @@ title: 'CSS 속성 16. flex'
 
 `flex` 는 웹 페이지에서 수평 구조 레이아웃을 쉽고 명확하게 구성할 수 있는 방법이다.
 
-<br/>
-
 ### `flex` 이전의 방법들과의 비교
 
 #### `inline-block`
@@ -23,8 +21,6 @@ title: 'CSS 속성 16. flex'
 
 > ☝️ inline-block 은 block 요소를 inline 요소(텍스트)처럼 다루게 되고, 이는 요소 사이의 공백을 제거하기 위한 font-size 수정을 불러오는 등 좋지 않은 방법이다.
 
-<br/>
-
 #### `float` 속성
 
 ```plain text
@@ -37,8 +33,6 @@ title: 'CSS 속성 16. flex'
 
 > ☝️ float 이라는 속성이 요소를 수평화하는데 전문적으로 사용되는 속성이 아니다.
 
-<br/>
-
 #### `flex`
 
 ```plain text
@@ -50,8 +44,6 @@ title: 'CSS 속성 16. flex'
 ```
 
 > ☝️ flex 가 수평 구조를 만드는 가장 간편하고 명확한 방법이다.
-
-<br/>
 
 ### CSS3 Flexible Box
 
@@ -66,8 +58,6 @@ title: 'CSS 속성 16. flex'
 ![CSS-속성-16-flex-image-0](https://heropy.blog/images/screenshot/css-flexible-box/flex-base.jpg)
 
 container-items
-
-<br/>
 
 ### `flex container`
 
@@ -89,8 +79,6 @@ container-items
 
 보통 `display: block;` , `display: inline` , `display: inline-block` , `display: none;` 으로 사용했었는데, ( [Property-06-display](./CSS-속성-06-display) 참조) `display: flex;` 또는 `display: inline-flex;` 도 사용할 수 있다.
 
-<br/>
-
 #### 속성 값
 
 | 의미                                 | 기본값 | 값          |
@@ -110,13 +98,9 @@ flex-display
 
 > ☝️ flex 와 inline-flex 의 내부에 items 가 쌓이는 방식은 둘이 완전히 같다.
 
-<br/>
-
 #### `flex-flow`
 
 `flex items` 의 주 축(main-axis)와 `items` 의 여러 줄 묶음(줄 바꿈) 설정 - 단축 속성
-
-<br/>
 
 #### 속성 값
 
@@ -135,13 +119,9 @@ flex-flow: 주축 여러줄묶음;
 .flex-container {flex-flow: row-reverse wrap;}
 ```
 
-<br/>
-
 #### `flex-direction`
 
 `Items` 의 주 축(main-axis) 설정
-
-<br/>
 
 #### 속성 값
 
@@ -156,8 +136,6 @@ flex-flow: 주축 여러줄묶음;
 
 flex-direction
 
-<br/>
-
 #### 주 축(main-axis)과 교차 축(cross-axis)
 
 `row` 는 `items` 를 수평축으로 표시하므로 주 축이 수평이며 교차 축은 수직이 된다.
@@ -169,8 +147,6 @@ flex-direction
 ![CSS-속성-16-flex-image-3](https://heropy.blog/images/screenshot/css-flexible-box/flex-direction-main-axis.jpg)
 
 flex-direction-main-axis
-
-<br/>
 
 #### 시작점(flex-start)과 끝점(flex-end)
 
@@ -188,13 +164,9 @@ flex-direction-cross-start
 
 > ☝️ 교차축의 시작점(flex-start)과 끝점(flex-end)은 달라지지 않는다.
 
-<br/>
-
 #### `flex-wrap`
 
 `items` 의 여러 줄 묶음(줄 바꿈)을 설정한다.
-
-<br/>
 
 #### 속성 값
 
@@ -210,8 +182,6 @@ flex-direction-cross-start
 
 flex-wrap
 
-<br/>
-
 #### 예제
 
 ```plain text
@@ -222,13 +192,9 @@ flex-wrap
 .container {border: 4px solid;display: flex;flex-wrap: wrap;}.container .item {width: 150px;height: 100px;background: tomato;border: 4px dashed red;}
 ```
 
-<br/>
-
 #### `justify-content`
 
 주 축(main-axis)의 정렬 방법을 설정한다.
-
-<br/>
 
 #### 속성 값
 
@@ -244,8 +210,6 @@ flex-wrap
 
 flex-justify-content
 
-<br/>
-
 #### 예제
 
 ```plain text
@@ -256,8 +220,6 @@ flex-justify-content
 .container {border: 4px solid;display: flex;justify-content: center;}.container .item {width: 100px;height: 100px;background: tomato;border: 4px dashed red;border-radius: 10px;}
 ```
 
-<br/>
-
 #### `align-content`
 
 교차 축(cross-axis)의 정렬 방법을 설정
@@ -265,8 +227,6 @@ flex-justify-content
 `flex-wrap` 속성을 통해 `items` 가 여러 줄(2줄 이상)이고 여백이 있을 경우만 사용할 수 있다.
 
 > ☝️ items 가 한 줄일 경우 align-items 를 사용
-
-<br/>
 
 #### 속성 값
 
@@ -285,8 +245,6 @@ flex-justify-content
 
 flex-align-content
 
-<br/>
-
 #### 예제
 
 ```plain text
@@ -297,8 +255,6 @@ flex-align-content
 .container {height: 400px;border: 4px solid;display: flex;flex-wrap: wrap;align-content: center;}.container .item {width: 120px;height: 100px;background: tomato;border: 4px dashed red;border-radius: 10px;}
 ```
 
-<br/>
-
 #### `align-items`
 
 교차 축(cross-axis)에서 `items` 의 정렬 방법을 설정한다.
@@ -306,8 +262,6 @@ flex-align-content
 `items` 가 한 줄일 경우 많이 사용한다.
 
 > ☝️ items 가 flex-wrap 을 통해 여러 줄(2줄 이상)일 경우에는 align-content 속성이 우선한다.따라서 align-items 를 사용하려면 align-content 속성을 기본값( stretch )으로 설정해야 한다.
-
-<br/>
 
 #### 속성 값
 
@@ -323,8 +277,6 @@ flex-align-content
 
 flex-align-items
 
-<br/>
-
 #### 예제
 
 ```plain text
@@ -334,8 +286,6 @@ flex-align-items
 ```plain text
 .container {height: 400px;border: 4px solid;display: flex;flex-wrap: wrap;align-items: baseline;}.container .item {width: 120px;height: 100px;background: tomato;border: 4px dashed red;border-radius: 10px;font-size: 30px;}.container .item:nth-child(3n) {font-size: 50px;}
 ```
-
-<br/>
 
 ### `flex items`
 
@@ -358,8 +308,6 @@ flex-align-items
 
 > ☝️ HTML 구조보다 우선해서 순서를 변경할 수 있기 때문에 유용order 의 숫자가 같으면 HTML 구조에 따라 정렬된다
 
-<br/>
-
 #### 속성 값
 
 | 기본값 | 의미                | 값   |
@@ -370,13 +318,9 @@ flex-align-items
 
 flex-order
 
-<br/>
-
 #### `flex`
 
 `item` 의 너비(증가, 감소, 기본)를 설정 - 단축 속성
-
-<br/>
 
 #### 속성 값
 
@@ -398,8 +342,6 @@ flex: 증가너비 감소너비 기본너비;
 
 > ☝️ flex 단축 속성을 사용한 경우, flex-basis 의 기본값은 0 이다. (개별 속성을 사용하면 auto )
 
-<br/>
-
 #### `flex-grow`
 
 `item` 의 증가 너비 비율을 설정.
@@ -407,8 +349,6 @@ flex: 증가너비 감소너비 기본너비;
 숫자가 크면 더 많은 너비를 가짐
 
 `item` 이 가변 너비가 아니거나, 값이 `0` 일 경우 효과가 없다.
-
-<br/>
 
 #### 속성 값
 
@@ -438,8 +378,6 @@ flex-grow
 
 세 번째 `item` 은 총 너비의 33.3% (1/3)를 가진다.
 
-<br/>
-
 #### 예제
 
 ```plain text
@@ -464,8 +402,6 @@ flex-grow
 
 > 💡 이렇게 한 item 은 고정 너비 width 를 지정하고 한 item 은 flex-grow 속성을 지정하면, container 의 사이즈가 변할 때 지정한 item 만 가변 사이즈를 지니도록 만들 수 있다.
 
-<br/>
-
 #### `flex-shrink`
 
 `item` 의 감소 너비 비율을 설정.
@@ -473,8 +409,6 @@ flex-grow
 숫자가 크면 더 많은 너비가 감소
 
 `item` 이 가변 너비가 아니거나, 값이 `0` 일 경우 효과가 없다.
-
-<br/>
 
 #### 속성 값
 
@@ -488,8 +422,6 @@ flex-shrink
 
 > ☝️ 오른쪽 그림처럼 기본 너비( flex-basis )의 크기에 따라 비율 계산이 달라진다.
 
-<br/>
-
 #### `flex-basis`
 
 `item` 의 (공간 배분 전) 기본 너비를 설정.
@@ -497,8 +429,6 @@ flex-shrink
 값이 `auto` 일 경우 `width` , `height` 등의 속성으로 `item` 의 너비를 설정할 수 있다.
 
 하지만 단위 값이 주어진 경우 설정할 수 없다.
-
-<br/>
 
 #### 속성 값
 
@@ -515,8 +445,6 @@ flex-basis
 
 > ☝️ item 전체가 비율대로( flex-grow ) 증가하려면 flex-basis 가 0 인 것이 중요하다.
 
-<br/>
-
 #### 예제
 
 ```plain text
@@ -529,8 +457,6 @@ flex-basis
 
 > ☝️ flex-basis: auto; 이면 콘텐츠를 제외한 영역의 비율에 따라 item 의 너비가 설정된다. flex-basis: 0; 이면 item 전체가 비율에 따라 설정된다.
 
-<br/>
-
 #### `align-self`
 
 교차 축(cross-axis)에서 개별 `item` 의 정렬 방법을 설정
@@ -538,8 +464,6 @@ flex-basis
 `align-items` 는 `container` 내 모든 `item` 의 정렬 방법을 설정하는데, 필요에 의해 일부 `item` 만 정렬 방법을 변경하려고 할 경우 `align-self` 를 사용할 수 있다.
 
 이 속성은 `align-items` 속성보다 우선한다.
-
-<br/>
 
 #### 속성 값
 
@@ -555,8 +479,6 @@ flex-basis
 ![CSS-속성-16-flex-image-14](https://heropy.blog/images/screenshot/css-flexible-box/flex-align-self.jpg)
 
 flex-align-self
-
-<br/>
 
 ### Reference
 

@@ -13,8 +13,6 @@ title: '어셈블러(Asembler)'
 
 - 매크로(Macro) : 반복되는 명령어를 하나의 명령어로 표현한다.
 
-<br/>
-
 ## Actual Machine Architecture
 
 ### CISC(Complex Instruction Set Computers)
@@ -26,8 +24,6 @@ title: '어셈블러(Asembler)'
 - 다양한 어드레싱 모드
 
 - 하드웨어 구현이 어려움
-
-<br/>
 
 ### RISC(Reduced Instruction Set Computers)
 
@@ -43,8 +39,6 @@ title: '어셈블러(Asembler)'
 
   - 신뢰성을 높이고 빠른 인스트럭션 실행 시간
 
-   <br/>
-
 ## Assembler란
 
 - 어셈블리 언어로 작성된 프로그램을 머신 코드(오브젝트 코드)로 번역하는 시스템 소프트웨어
@@ -57,8 +51,6 @@ title: '어셈블러(Asembler)'
 
   - 머신 아키텍쳐와 직접 관련이 없다.
 
-   <br/>
-
 ### Example of a SIC assembler language program
 
 사용되는 어셈블러 지시어(directives)
@@ -70,8 +62,6 @@ title: '어셈블러(Asembler)'
 - BYTE, WORD : character 또는 constant를 생성
 
 - RESB, RESW : 데이터 영역의 byte/word를 예약함
-
-<br/>
 
 ### Forward reference
 
@@ -97,5 +87,3 @@ LOC     Source statement              Object code
 - Text
 
 - End
-
-<br/>

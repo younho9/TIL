@@ -29,13 +29,9 @@ border: 두께 종류 색상;border: 두께 색상 종류;border: 종류 두께 
 .box {border: 1px solid red;}
 ```
 
-<br/>
-
 ### `border-top, right, bottom, left`
 
 요소의 해당하는 위치의 ’테두리 선’을 지정 - 단축 속성 (두께, 종류, 색상)
-
-<br/>
 
 #### 속성 값
 
@@ -58,13 +54,9 @@ border-top: 두께 종류 색상;border-top: 두께 색상 종류;border-top: �
 .box {border-top: 1px solid red;}
 ```
 
-<br/>
-
 ### `border-width`
 
 선의 두께(너비)를 지정 - 단축 (위 오른쪽 아래 왼쪽), 개별 속성
-
-<br/>
 
 #### 속성 값
 
@@ -89,13 +81,9 @@ border-width: 위 우 아래 좌;       /* 시계 방향 */border-width: 위 [�
 .box1 {border-width: 10px 20px 30px 40px;    /* 단축 속성 */}.box2 {/* 개별 속성 */border-top-width: 10px;border-right-width: 20px;border-bottom-width: 10px;border-left-width: 10px;}
 ```
 
-<br/>
-
 ### `border-style`
 
 선의 종류를 지정 - 단축 (위 오른쪽 아래 왼쪽), 개별 속성
-
-<br/>
 
 #### 속성 값
 
@@ -126,13 +114,9 @@ border-style: 위 우 아래 좌;       /* 시계 방향 */border-style: 위 [�
 .box1 {border-style: solid dotted double inset;  /* 단축 속성 */}.box2 {/* 개별 속성 */border-top-style: solid;border-right-style: dotted;border-bottom-style: double;border-left-style: inset;}
 ```
 
-<br/>
-
 ### `border-color`
 
 선의 색상을 지정 - 단축 (위 오른쪽 아래 왼쪽), 개별 속성
-
-<br/>
 
 #### 속성 값
 
@@ -155,8 +139,6 @@ border-color: 위 우 아래 좌;       /* 시계 방향 */border-color: 위 [�
 .box1 {border-color: red green blue yellow;  /* 단축 속성 */}.box2 {/* 개별 속성 */border-top-color: red;border-right-color: green;border-bottom-color: blue;border-left-color: yellow;}
 ```
 
-<br/>
-
 ### 크기 증가
 
 `padding` 과 마찬가지로 `border` 의 값만큼 요소의 크기가 커지는 현상
@@ -171,8 +153,6 @@ div {width: 100px;height: 100px;background: tomato;border: 20px;}
 
 `width` 와 `height` 를 `100px` 로 지정하였으나, `border` 값이 `20px` 로 설정되어 총 `140px` 의 정사각형이 나타나게 되었다.
 
-<br/>
-
 #### 직접 계산
 
 ```plain text
@@ -181,8 +161,6 @@ div {width: 100px;height: 100px;background: tomato;border: 20px;}
 
 100 x 100 (px) 크기의 요소를 만들기 위해 직접 계산했다.
 
-<br/>
-
 #### 자동 계산
 
 ```plain text
@@ -190,8 +168,6 @@ div {width: 100px;height: 100px;background: tomato;border: 20px;}
 ```
 
 `box-sizing: border-box;` 는 100 x 100 크기의 요소를 만들고 그 안에서 `border` 이 들어가도록 자동 계산해준다.
-
-<br/>
 
 ### Reference
 

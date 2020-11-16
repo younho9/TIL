@@ -35,8 +35,6 @@ title: 'CSS 속성 01. width, height'
 
 > 블록 요소에서는 height: auto; 가 height: 0(px); 을 의미하고, 내부에 내용의 크기에 따라 height 가 커지게 되고, height: 100px; 과 같이 직접 크기를 지정할 수도 있다.하지만 인라인 요소에서는 width: auto; height: auto; 는 모두 width: 0(px); height: 0(px); 을 의미하며, 내용의 크기에따라 반응할 뿐, 직접 크기를 지정할 수 없다.
 
-<br/>
-
 ### `max-width`
 
 요소의 최대 가로 너비를 지정

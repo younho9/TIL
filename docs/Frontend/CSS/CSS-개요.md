@@ -14,15 +14,11 @@ title: 'CSS 개요'
 }
 ```
 
-<br/>
-
 #### 선택자(Selector)의 역할
 
 속성과 값을 지정할 대상을 검색
 
 ex) `<div>` 태그에 적용하겠다.
-
-<br/>
 
 #### 속성(Property)과 값(Value)의 역할
 
@@ -30,15 +26,11 @@ ex) `<div>` 태그에 적용하겠다.
 
 ex)색깔을 빨갛게 하겠다.
 
-<br/>
-
 #### 주석(Comment)
 
 문서 내 수정사항이나 설명등을 작성
 
 일반적인 에디터에서 단축키 `⌘` + `/`
-
-<br/>
 
 #### 기본 예제
 
@@ -59,8 +51,6 @@ div {
 /* 글자두께: 두껍게; */
 ```
 
-<br/>
-
 ### 선언 방식
 
 #### 인라인(in-line) 방식
@@ -70,8 +60,6 @@ HTML 요소(태그)의 `style` 속성에 직접 작성하는 방식
 ```html
 <div style="color: red; font-size: 20px; font-weight: bold;">Hello</div>
 ```
-
-<br/>
 
 #### 내장(embedded) 방식
 
@@ -91,8 +79,6 @@ HTML `<style></style>` 안에 작성하는 방식
   <div>Hello</div>
 </body>
 ```
-
-<br/>
 
 #### 링크(link) 방식
 
@@ -115,8 +101,6 @@ div {
   font-weight: bold;
 }
 ```
-
-<br/>
 
 #### `@import` 방식
 
@@ -149,10 +133,6 @@ div {
 
 > 주의사항 : 링크(link) 방식은 병렬적으로 외부 문서를 가져오지만, @import 방식은 직렬적, 순차적으로 외부 문서를 가져와 성능 측면에서 좋지 않을 수 있다.
 
-<br/>
-
 ### Reference
 
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
-
-<br/>

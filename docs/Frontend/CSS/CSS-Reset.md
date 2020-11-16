@@ -19,10 +19,6 @@ title: 'CSS Reset'
 
 이렇게 모든 브라우저가 가진 기본적인 스타일을 없애고 우리가 만든 스타일시트를 모든 브라우저에서 동일하게 볼 수 있도록 만들 수 있다.
 
-<br/>
-
 ### Reference
 
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
-
-<br/>

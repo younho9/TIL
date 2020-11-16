@@ -11,8 +11,6 @@ title: 'CSS 속성 11. float-position'
 
 > ☝️ CSS3에서 Flexible box 라는 개념이 등장하면서 최근에는 float 보다 Flexible box 를 이용한 수평 정렬을 하는 편이다.
 
-<br/>
-
 #### 속성 값
 
 | 기본값 | 의미            | 값    |
@@ -34,8 +32,6 @@ article .picture {width: 200px;height: 150px;background: tomato;float: left;marg
 ![CSS-속성-11-float-position-image-0](images/CSS-속성-11-float-position-image-0.png)
 
 float-left
-
-<br/>
 
 #### 수평 정렬 사용법
 
@@ -59,8 +55,6 @@ float-horizon
 
 float-horizon-right
 
-<br/>
-
 #### `float` 해제
 
 `float` 속성이 적용된 요소의 주위로 다른 요소들이 흐르게 되는데 이를 방지하기 위해 속성을 해제해야 한다.
@@ -70,8 +64,6 @@ float-horizon-right
 1. 부모 요소에 `overflow: (hidden, auto)` 추가하여 해제
 
 1. 부모 요소에 `clearfix` 클래스 추가하여 해제 (**추천!**)
-
-<br/>
 
 #### 형제 요소에서 해제
 
@@ -87,8 +79,6 @@ float-horizon-right
 
 > ☝️ 항상 다음 요소를 만들어주어야 한다는 문제점
 
-<br/>
-
 #### 부모 요소에서 해제 - `overflow`
 
 `float` 속성이 추가된 요소의 부모 요소에 `overflow` 속성을 추가해 보이지 않게 하는 방법.
@@ -103,8 +93,6 @@ float-horizon-right
 
 > ☝️ 다음 요소를 만들지 않아도 되는 장점이 있지만 관련 없는 속성으로 해결하는 일종의 ’편법’으로 사용을 권장하지 않음
 
-<br/>
-
 #### 부모 요소에서 해제2 (추천!)
 
 `float` 속성이 추가된 요소의 부모 요소에 미리 지정된 `clearfix` 클래스 추가
@@ -118,8 +106,6 @@ float-horizon-right
 ```plain text
 .clearfix::after {content: "";clear: both;display: block; /* or table */}.child {float: left;}
 ```
-
-<br/>
 
 #### `display` 수정
 
@@ -144,8 +130,6 @@ float-horizon-right
 
 > ☝️ 대부분의 값이 block 으로 변경되는데 flex , inline-flex 의 경우 변경되지 않는다.
 
-<br/>
-
 ### `clear`
 
 `float` 속성이 적용되지 않도록 지정(해제)
@@ -162,8 +146,6 @@ float-horizon-right
 ### `position`
 
 요소의 위치 지정 방법의 유형(기준)을 설정
-
-<br/>
 
 #### 속성 값
 
@@ -189,8 +171,6 @@ float-horizon-right
 
 > ☝️ relative 속성값을 가진 요소는 자기 자신이 원래 있었던 위치에서 주변 요소에 영향을 준다.
 
-<br/>
-
 #### `absolute`
 
 ```plain text
@@ -207,13 +187,9 @@ position-absolute
 
 > 💡 위치상 부모 요소 - 조상 요소 중 position 속성이 부여되어 있는 요소 ( static 제외 )조상 요소에 없다면 -> body (일반적으로 없음) -> html (일반적으로 없음) -> window 객체 (뷰포트)
 
-<br/>
-
 #### `fixed`
 
 브라우저(뷰포트)를 기준으로 함 - 스크롤을 내려도 해당 위치에 고정됨.
-
-<br/>
 
 #### `sticky`
 
@@ -224,8 +200,6 @@ position-absolute
 ```
 
 > ☝️ top , bottom , left , right 중 하나 이상의 요소 사용.IE 지원 불가.
-
-<br/>
 
 #### 요소 쌓임 순서(Stack order)
 
@@ -244,8 +218,6 @@ position > z-index > HTML 마지막 코드
 ```
 
 > ☝️ z-index 는 position 속성이 설정된 요소에 대해서만 의미를 갖는다.
-
-<br/>
 
 #### `display` 수정
 
@@ -279,8 +251,6 @@ position > z-index > HTML 마지막 코드
 |                     | 부모(위치 상의 부모(조상)) 요소의 가로 또는 세로 너비의 비율로 지정, 음수 값 허용 | %    |
 
 > ☝️ 위의 네 요소는 position 속성이 지정되어 있을 때만 사용할 수 있다.
-
-<br/>
 
 ### Reference
 

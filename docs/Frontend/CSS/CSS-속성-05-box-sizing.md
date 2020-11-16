@@ -11,8 +11,6 @@ title: 'CSS 속성 05. box-sizing'
 
 ![CSS-속성-05-box-sizing-image-0](images/CSS-속성-05-box-sizing-image-0.png)
 
-<br/>
-
 #### 속성 값
 
 | 기본값      | 의미                                                                                              | 값          |
@@ -25,8 +23,6 @@ title: 'CSS 속성 05. box-sizing'
 box-model
 
 > 파란색 부분 : content-box노란색 부분 : border-box
-
-<br/>
 
 ### Reference
 

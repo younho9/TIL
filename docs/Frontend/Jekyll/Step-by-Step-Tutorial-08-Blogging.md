@@ -7,8 +7,6 @@ title: '[Step by Step Tutorial] 08. Blogging'
 
 이제 데이터베이스 없이 어떻게 블로그를 만들 수 있는지 궁금할 것이다. Jekyll 스타일에서 오로지 text 파일만으로 blogging하는 것이 가능하다.
 
-<br/>
-
 ### Posts
 
 ---
@@ -34,8 +32,6 @@ when ripe.
 
 이것은 어떻게 보면 `about.md` 파일과 비슷해 보이는데, `author` 라는 커스텀 변수가 있고(꼭 필요한 것은 아니고 `creator` 라는 이름으로 사용할 수도 있다.) `layout` 이 다르다.
 
-<br/>
-
 ### Layout
 
 ---
@@ -55,8 +51,6 @@ layout: default
 이것은 레이아웃의 상속의 예이다. `post` 레이아웃은 `title` , `date` , `author` , `content` 를 표시하고 이것은 `default` 레이아웃으로 감싸진다.
 
 또한 `date_to_string` 필터는 날짜를 보기 좋은 형식으로 표시해준다.
-
-<br/>
 
 ### List posts
 
@@ -104,8 +98,6 @@ title: Blog
   link: /blog.html
 ```
 
-<br/>
-
 ### More posts
 
 ---
@@ -144,5 +136,3 @@ texture, with a sweet and unique flavor.
 ```
 
 [http://localhost:4000](http://localhost:4000/)를 열어 확인해본다.
-
-<br/>

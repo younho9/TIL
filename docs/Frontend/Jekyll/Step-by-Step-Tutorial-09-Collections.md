@@ -9,8 +9,6 @@ title: '[Step by Step Tutorial] 09. Collections'
 
 이것을 위해서 컬렉션(Collection)을 사용해야 한다. 컬렉션은 콘텐츠를 날짜별로 그룹화하지 않아도 된다는 점을 제외하면 포스트와 유사하다.
 
-<br/>
-
 ### 구성
 
 ---
@@ -25,8 +23,6 @@ collections:
 ```
 
 > `_config.yml` 파일을 수정한 후에 변경사항을 반영하기 위해서는 Jekyll 서버를 재시작해야 한다. `Ctrl` + `C` 를 통해 서버를 멈추고 `jekyll serve` 로 시작할 수 있다.
-
-<br/>
 
 ### 저자 추가하기
 
@@ -57,8 +53,6 @@ position: Writer
 ---
 Ted has been eating fruit since he was baby.
 ```
-
-<br/>
 
 ### Staff 페이지
 
@@ -148,8 +142,6 @@ layout: default
 {{ content }}
 ```
 
-<br/>
-
 ### Front matter defaults
 
 ---
@@ -188,8 +180,6 @@ defaults:
 
 > `_config.yml` 파일을 수정하면 Jekyll 서버를 재시작해야 한다는 것을 명심하라.
 
-<br/>
-
 ### List author's posts
 
 ---
@@ -219,8 +209,6 @@ layout: default
 
 > `| where: 'author', page.short_name` 이 필터. (이후에 더 공부)
 
-<br/>
-
 ### Link to authors page
 
 ---
@@ -248,5 +236,3 @@ layout: default
 ```
 
 [http://localhost:4000](http://localhost:4000)에 접속해서 staff page가 잘 작동하는지, 그리고 포스트의 author로 가는 링크가 잘 작동하는지 확인해보자.
-
-<br/>

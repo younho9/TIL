@@ -9,8 +9,6 @@ title: 'CSS 속성 08. opacity'
 
 요소의 투명도를 지정
 
-<br/>
-
 #### 속성 값
 
 | 기본값 | 의미                        | 값   |
@@ -27,8 +25,6 @@ opacity: 투명도;
 .harf {opacity: 0.5;  /* 50% 투명도, 반투명 */}.transparent {opacity: 0;    /* 0% 투명도, 투명 */}.box {opacity: .75;  /* 75% 투명도, 반투명 (0 생략 가능) */}
 ```
 
-<br/>
-
 #### 예제
 
 ```plain text
@@ -40,8 +36,6 @@ opacity: 투명도;
 ```
 
 > display: none; : 요소가 완벽히 존재하지 않는 것처럼 만들어준다.opacity: 0; : 요소가 존재하지만 보이지 않게만 만들어준다.
-
-<br/>
 
 ### Reference
 

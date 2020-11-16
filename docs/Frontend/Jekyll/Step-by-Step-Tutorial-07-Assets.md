@@ -11,8 +11,6 @@ Jekyll 사이트는 종종 이 구조를 사용하여 asset을 체계적으로 �
 
 ![Step-by-Step-Tutorial-07-Assets-image-0](images/Step-by-Step-Tutorial-07-Assets-image-0.png)
 
-<br/>
-
 ### Sass
 
 ---
@@ -66,5 +64,3 @@ Jekyll 사이트는 종종 이 구조를 사용하여 asset을 체계적으로 �
   </body>
 </html>
 ```
-
-<br/>

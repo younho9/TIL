@@ -1,6 +1,6 @@
 ---
-id: 메타데이터-`<meta>`-요소
-title: '메타데이터 - `<meta>` 요소'
+id: 메타데이터-<meta>-요소
+title: '메타데이터 - <meta> 요소'
 ---
 
 [head 태그에는 무엇이 있을까? HTML의 메타데이터](https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)

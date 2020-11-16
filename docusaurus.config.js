@@ -35,7 +35,7 @@ module.exports = {
         },
         { to: 'blog', label: 'Log', position: 'right' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/younho9/til',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',

@@ -16,7 +16,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/Algorithms/2020-카카오-인턴십-경주로-건설',
+          to: 'docs/Algorithms/Programmers/2020-카카오-인턴십-경주로-건설',
           activeBasePath: 'docs/Algorithms',
           label: 'Algorithms',
           position: 'right',
@@ -57,7 +57,7 @@ module.exports = {
           items: [
             {
               label: 'Algorithms',
-              to: 'docs/Algorithms/2020-카카오-인턴십-경주로-건설',
+              to: 'docs/Algorithms/Programmers/2020-카카오-인턴십-경주로-건설',
             },
             {
               label: 'CS',

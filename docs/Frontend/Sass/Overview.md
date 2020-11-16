@@ -1,4 +1,7 @@
-# Overview
+---
+id: Overview
+title: 'Overview'
+---
 
 ## Sass(SCSS) 개요
 
@@ -20,7 +23,7 @@ Sass(Syntactically Awesome Style Sheets)의 3버전부터 등장한 SCSS(Sassy C
 
 CSS호환성을 갖춰 **CSS가 지원하는 모든 문법과 기능을** SCSS에서 그대로 사용할 수 있다.
 
-```
+```plain text
 // Sass
 .box
   width: 100px
@@ -30,7 +33,7 @@ CSS호환성을 갖춰 **CSS가 지원하는 모든 문법과 기능을** SCSS�
     float: left
 ```
 
-```
+```plain text
 // SCSS
 .box {
   width: 100px;
@@ -64,19 +67,19 @@ CSS와의 호환성 때문에 SCSS의 방식이 선호된다.
 
 프로젝트에서
 
-```
+```plain text
 npm init -y
 ```
 
 이후 Parcel을 설치한다
 
-```
+```plain text
 npm install --save-dev parcel-bundler
 ```
 
 그리고 `<link>` 로 Sass 파일이 연결되어 있는 `index.html` 을 실행해본다.
 
-```
+```plain text
 npx parcel index.html
 ```
 
@@ -89,3 +92,5 @@ terminal-output-parcel
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
 
 [Sass(SCSS) 완전 정복!](https://heropy.blog/2018/01/31/sass/)
+
+<br/>

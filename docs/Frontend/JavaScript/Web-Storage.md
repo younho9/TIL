@@ -1,4 +1,7 @@
-# Web Storage
+---
+id: Web-Storage
+title: 'Web Storage'
+---
 
 > 📌 Table of Contents
 

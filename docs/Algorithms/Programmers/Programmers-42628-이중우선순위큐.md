@@ -1,0 +1,164 @@
+---
+id: Programmers-42628-이중우선순위큐
+title: 'Programmers-42628. 이중우선순위큐'
+---
+
+[코딩테스트 연습 - 이중우선순위큐](https://programmers.co.kr/learn/courses/30/lessons/42628)
+
+<br/>
+
+| 해결 유무(✅/❌) | 걸린 시간  | 난이도 | 문제 유형 |
+| ---------------- | ---------- | ------ | --------- |
+| ✅               | 1시간 30분 | lv.3   | 힙        |
+
+### **설계 방법**
+
+- minHeap과 음수로 저장하는 maxHeap을 동시에 사용.
+
+- length 변수를 하나 두고, length가 1일 때 D op를 받으면 두 힙을 모두 초기화 시켜버림.
+
+- 결과를 제출할 때에도 length가 0이면 [0, 0]을 리턴하게 끔 바꾼다.
+
+### 코드
+
+```javascript
+function solution(operations) {
+  const minHeap = new MinHeap();
+  const maxHeap = new MinHeap();
+  let length = 0;
+
+  operations.forEach(op => {
+    const [opcode, num] = op.split(' ');
+
+    if (opcode === 'I') {
+      minHeap.insert(parseInt(num));
+      maxHeap.insert(-parseInt(num));
+      length++;
+    } else if (length === 0) {
+    } else if (length === 1) {
+      minHeap.reset();
+      maxHeap.reset();
+      length = 0;
+    } else if (num === '1') {
+      maxHeap.remove();
+      length--;
+    } else if (num === '-1') {
+      minHeap.remove();
+      length--;
+    }
+  });
+
+  if (!length) {
+    return [0, 0];
+  } else {
+    return [-maxHeap.remove(), minHeap.remove()];
+  }
+}
+
+class MinHeap {
+  constructor() {
+    this.heap = [null];
+  }
+
+  getMin() {
+    return this.heap[1];
+  }
+
+  size() {
+    return this.heap.length - 1;
+  }
+
+  insert(node) {
+    this.heap.push(node);
+
+    if (this.heap.length > 1) {
+      let current = this.heap.length - 1;
+
+      while (current > 1 && this.heap[Math.floor(current / 2)] > this.heap[current]) {
+        [this.heap[Math.floor(current / 2)], this.heap[current]] = [
+          this.heap[current],
+          this.heap[Math.floor(current / 2)],
+        ];
+        current = Math.floor(current / 2);
+      }
+    }
+  }
+
+  remove() {
+    let smallest = this.heap[1];
+
+    if (this.heap.length > 2) {
+      this.heap[1] = this.heap[this.heap.length - 1];
+      this.heap.splice(this.heap.length - 1);
+
+      if (this.heap.length === 3) {
+        if (this.heap[1] > this.heap[2]) {
+          [this.heap[1], this.heap[2]] = [this.heap[2], this.heap[1]];
+        }
+        return smallest;
+      }
+
+      let current = 1;
+      let leftChildIndex = current * 2;
+      let rightChildIndex = current * 2 + 1;
+
+      while (
+        this.heap[leftChildIndex] !== undefined &&
+        this.heap[rightChildIndex] !== undefined &&
+        (this.heap[current] > this.heap[leftChildIndex] ||
+          this.heap[current] > this.heap[rightChildIndex])
+      ) {
+        if (this.heap[leftChildIndex] < this.heap[rightChildIndex]) {
+          [this.heap[current], this.heap[leftChildIndex]] = [
+            this.heap[leftChildIndex],
+            this.heap[current],
+          ];
+          current = leftChildIndex;
+        } else {
+          [this.heap[current], this.heap[rightChildIndex]] = [
+            this.heap[rightChildIndex],
+            this.heap[current],
+          ];
+          current = rightChildIndex;
+        }
+
+        leftChildIndex = current * 2;
+        rightChildIndex = current * 2 + 1;
+      }
+    } else if (this.heap.length === 2) {
+      this.heap.splice(1);
+    } else {
+      return null;
+    }
+
+    return smallest;
+  }
+
+  reset() {
+    this.heap = [null];
+  }
+}
+```
+
+### **시간 복잡도**
+
+O(NlogN)
+
+### **어려웠던 점**
+
+- JS에서 힙을 직접 구현해서 사용했었는데, 이 힙 자체가 문제가 있었다.
+
+- 0이 노드로 들어갔을 떄 0인 노드를 null로 판단해서 remove, insert 연산시 이 노드에 대해 연산을 수행하지 않았고, 이를 찾는데 오래걸렸다.
+
+- 다음과 같이 힙을 수정해서 통과했는데, 역시나 모듈을 불러와서 쓰는게 아니라 직접 구현하다보니 언제 문제가 발생할지 모른다는 어려움이 있다.
+
+```javascript
+while (
+  this.heap[leftChildIndex] !== undefined &&
+  this.heap[rightChildIndex] !== undefined &&
+  (this.heap[current] > this.heap[leftChildIndex] ||
+  this.heap[current] > this.heap[rightChildIndex])
+)
+```
+
+<br/>

@@ -1,4 +1,7 @@
-# CSS 속성 05. box-sizing
+---
+id: CSS-속성-05-box-sizing
+title: 'CSS 속성 05. box-sizing'
+---
 
 > ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
@@ -7,6 +10,8 @@
 요소의 크기 계산 기준을 지정
 
 ![CSS-속성-05-box-sizing-image-0](images/CSS-속성-05-box-sizing-image-0.png)
+
+<br/>
 
 #### 속성 값
 
@@ -20,6 +25,8 @@
 box-model
 
 > 파란색 부분 : content-box노란색 부분 : border-box
+
+<br/>
 
 ### Reference
 

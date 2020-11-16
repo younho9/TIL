@@ -1,4 +1,7 @@
-# Syntax-05-operations
+---
+id: Syntax-05-operations
+title: 'Syntax-05-operations'
+---
 
 ## Sass(SCSS) Syntax - 5. 연산(Operations)
 
@@ -49,7 +52,7 @@ Sass에서 사용 가능한 연산자 종류
 
 일반적으로는 절대값을 나타내는 `px` 단위로 연산을 하는데, 상대적 단위( `%` , `em` , `vw` 등)와 `px` 단위를 같이 연산할 경우 CSS의 `calc()` 로 연산해야 한다.
 
-```
+```plain text
 width: 50% - 20px;  // 단위 모순 에러(Incompatible units error)
 width: calc(50% - 20px);  // 연산 가능
 ```
@@ -64,7 +67,7 @@ CSS는 속성 값의 숫자를 분리하는 방법으로 `/` 를 허용하기 �
 
 SCSS:
 
-```
+```plain text
 div {
   width: 20px + 20px;  // 더하기
   height: 40px - 10px;  // 빼기
@@ -75,7 +78,7 @@ div {
 
 컴파일하면,
 
-```
+```plain text
 div {width: 40px;  /* OK */height: 30px;  /* OK */font-size: 20px;  /* OK */margin: 30px / 2;  /* ?? */}
 ```
 
@@ -89,7 +92,7 @@ div {width: 40px;  /* OK */height: 30px;  /* OK */font-size: 20px;  /* OK */marg
 
 SCSS:
 
-```
+```plain text
 div {
   $x: 100px;
   width: $x / 2;  // 변수에 저장된 값을 나누기
@@ -100,7 +103,7 @@ div {
 
 컴파일하면,
 
-```
+```plain text
 div {width: 50px;height: 50px;font-size: 14px;}
 ```
 
@@ -110,7 +113,7 @@ div {width: 50px;height: 50px;font-size: 14px;}
 
 SCSS:
 
-```
+```plain text
 div::after {
   content: "Hello " + World;
   flex-flow: row + "-reverse" + " " + wrap
@@ -119,7 +122,7 @@ div::after {
 
 컴파일하면,
 
-```
+```plain text
 div::after {content: "Hello World";flex-flow: row-reverse wrap;}
 ```
 
@@ -129,7 +132,7 @@ div::after {content: "Hello World";flex-flow: row-reverse wrap;}
 
 SCSS:
 
-```
+```plain text
 div {
   color: #123456 + #345678;
   // R: 12 + 34 = 46
@@ -147,7 +150,7 @@ div {
 
 컴파일하면,
 
-```
+```plain text
 div {
   color: #468ace;
   background: rgba(60, 120, 180, 0.5);
@@ -160,7 +163,7 @@ div {
 
 SCSS:
 
-```
+```plain text
 $color: rgba(10, 20, 30, .5);
 div {
   color: opacify($color, .3);  // 30% 더 불투명하게 / 0.5 + 0.3
@@ -170,7 +173,7 @@ div {
 
 컴파일하면,
 
-```
+```plain text
 div {color: rgba(10, 20, 30, 0.8);background-color: rgba(10, 20, 30, 0.3);}
 ```
 
@@ -186,7 +189,7 @@ Sass의 `@if` 조건문에서 사용되는 논리(Boolean) 연산에는 ‘그�
 
 SCSS:
 
-```
+```plain text
 $width: 90px;
 div {
   @if not ($width > 100px) {
@@ -197,7 +200,7 @@ div {
 
 컴파일하면,
 
-```
+```plain text
 div {height: 300px;}
 ```
 

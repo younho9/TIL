@@ -1,4 +1,7 @@
-# Syntax-10-built-in-functions
+---
+id: Syntax-10-built-in-functions
+title: 'Syntax-10-built-in-functions'
+---
 
 ## Sass(SCSS) Syntax - 10. 내장 함수(Built-in Functions)
 
@@ -32,9 +35,9 @@ Sass에서 기본적으로 제공하는 내장 함수에는 많은 종류가 있
 
 [rgba($color, $alpha)](http://sass-lang.com/documentation/Sass/Script/Functions.html#rgba-instance_method) : 색상의 투명도 변경
 
-[opacify($color, *amount*)/*fade* − *in*(color, $amount)](https://sass-lang.com/documentation/modules/color#opacify) : 색상을 더 불투명하게
+[opacify(\$color,](https://sass-lang.com/documentation/modules/color#opacify) _[amount](https://sass-lang.com/documentation/modules/color#opacify)_ [)/](https://sass-lang.com/documentation/modules/color#opacify)_[fade](https://sass-lang.com/documentation/modules/color#opacify)_  [−](https://sass-lang.com/documentation/modules/color#opacify) *[in](https://sass-lang.com/documentation/modules/color#opacify)* [(color, \$amount)](https://sass-lang.com/documentation/modules/color#opacify) : 색상을 더 불투명하게
 
-[transparentize($color, *amount*)/*fade* − *out*(color, $amount)](https://sass-lang.com/documentation/modules/color#transparentize) : 색상을 더 투명하게
+[transparentize(\$color,](https://sass-lang.com/documentation/modules/color#transparentize) _[amount](https://sass-lang.com/documentation/modules/color#transparentize)_ [)/](https://sass-lang.com/documentation/modules/color#transparentize)_[fade](https://sass-lang.com/documentation/modules/color#transparentize)_  [−](https://sass-lang.com/documentation/modules/color#transparentize) *[out](https://sass-lang.com/documentation/modules/color#transparentize)* [(color, \$amount)](https://sass-lang.com/documentation/modules/color#transparentize) : 색상을 더 투명하게
 
 #### 문자(String) 함수
 
@@ -46,7 +49,7 @@ Sass에서 기본적으로 제공하는 내장 함수에는 많은 종류가 있
 
 [str-index($string, $substring)](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_index-instance_method) : 문자에서 특정 문자의 첫 index를 반환
 
-[str-slice(\$string, *start* − *at*, [end-at])](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method) : 문자에서 특정 문자(몇 번째 글자부터 몇 번째 글자까지)를 추출
+[str-slice(\$string,](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method) _[start](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method)_  [−](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method) *[at](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method)* [, [end-at])](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method) : 문자에서 특정 문자(몇 번째 글자부터 몇 번째 글자까지)를 추출
 
 [to-upper-case(\$string)](http://sass-lang.com/documentation/Sass/Script/Functions.html#to_upper_case-instance_method) : 문자를 대문자로 변환
 
@@ -80,7 +83,7 @@ Sass에서 기본적으로 제공하는 내장 함수에는 많은 종류가 있
 
 [set-nth($list, $n, \$value)](http://sass-lang.com/documentation/Sass/Script/Functions.html#set_nth-instance_method) : List에서 n번째 값을 다른 값으로 변경합니다.
 
-[join(\$list1, _l**i**s_*t*2, [separator])](http://sass-lang.com/documentation/Sass/Script/Functions.html#join-instance_method) : 두 개의 List를 하나로 결합합니다.
+[join(\$list1, _l__i__s_*t*2, [separator])](http://sass-lang.com/documentation/Sass/Script/Functions.html#join-instance_method) : 두 개의 List를 하나로 결합합니다.
 
 [zip(\$lists…)](http://sass-lang.com/documentation/Sass/Script/Functions.html#zip-instance_method) : 여러 List들을 하나의 다차원 List로 결합합니다.
 

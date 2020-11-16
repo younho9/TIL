@@ -1,4 +1,7 @@
-# Syntax-07-extend
+---
+id: Syntax-07-extend
+title: 'Syntax-07-extend'
+---
 
 ## Sass(SCSS) Syntax - 7. 확장(Extend)
 
@@ -8,7 +11,7 @@
 
 다른 선택자의 모든 스타일을 그대로 가져오면서 몇 가지 스타일을 추가해야하는 경우, 확장을 사용할 수 있다.
 
-```
+```plain text
 .btn {
   padding: 10px;
   margin: 10px;
@@ -24,7 +27,7 @@
 
 컴파일하면
 
-```
+```plain text
 .btn, .btn-danger {padding: 10px;margin: 10px;background: blue;}.btn-danger {background: red;}
 ```
 
@@ -32,7 +35,7 @@
 
 다중 선택자로 만들어지는 개념이기 때문에 문제가 발생할 수 있다.
 
-```
+```plain text
 .container {
   width: 300px;
   height: 300px;
@@ -56,7 +59,7 @@
 
 컴파일하면
 
-```
+```plain text
 .container {width: 300px;height: 300px;background: red;}.container .item {width: 200px;height: 200px;background: blue;}.container .item .icon, .container .item .new-icon {width: 100px;height: 100px;background: green;}
 ```
 

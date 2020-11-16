@@ -1,4 +1,7 @@
-# Syntax-09-flow-control
+---
+id: Syntax-09-flow-control
+title: 'Syntax-09-flow-control'
+---
 
 ## Sass(SCSS) Syntax - 9. 흐름 제어(Flow Control)
 
@@ -16,11 +19,11 @@ JS의 조건부 삼항 연산자(conditional ternary operator)와 비슷한 개�
 
 조건의 값이 `false` 이면 `표현식2` 를 실행한다.
 
-```
+```plain text
 if(조건, 표현식1, 표현식2)
 ```
 
-```
+```plain text
 $width: 555px;
 div {
   width: if($width > 300px, $width, null);
@@ -29,7 +32,7 @@ div {
 
 컴파일하면
 
-```
+```plain text
 div {width: 555px;}
 ```
 
@@ -39,7 +42,7 @@ div {width: 555px;}
 
 같이 사용할 수 있는 지시어로는 `@else` , `@else if` 가 있다.
 
-```
+```plain text
 // @if
 @if (조건) {
   /* 조건이 참일 때 구문 */
@@ -64,7 +67,7 @@ div {width: 555px;}
 
 조건에 `()` 는 생략 가능하다.
 
-```
+```plain text
 $color: orange;
 div {
   @if $color == strawberry {
@@ -81,13 +84,13 @@ div {
 
 컴파일하면
 
-```
+```plain text
 div {color: #FE9A2E;}
 ```
 
 논리 연산자 `and` , `or` , `not` 을 사용할 수 있다.
 
-```
+```plain text
 @function limitSize($size) {
   @if $size >= 0 and $size <= 200px {
     @return 200px;
@@ -104,13 +107,13 @@ div {
 
 컴파일하면
 
-```
+```plain text
 div {width: 200px;height: 800px;}
 ```
 
 내장 함수 `unitless()` (숫자에 단위가 있는지 여부를 반환하는 함수)를 사용하는 예제
 
-```
+```plain text
 @mixin pCenter($w, $h, $p: absolute) {
   @if
     $p == absolute
@@ -142,7 +145,7 @@ div {width: 200px;height: 800px;}
 
 컴파일하면
 
-```
+```plain text
 .box1 {width: 10px;height: 20px;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;}.box2 {width: 50px;height: 50px;position: fixed;top: 0;bottom: 0;left: 0;right: 0;margin: auto;}
 ```
 
@@ -154,7 +157,7 @@ div {width: 200px;height: 800px;}
 
 두 형식은 종료 조건이 해석되는 방식이 다르다.
 
-```
+```plain text
 // through
 // 종료 만큼 반복
 @for $변수 from 시작 through 종료 {
@@ -172,7 +175,7 @@ div {width: 200px;height: 800px;}
 
 변수는 관례상 `$i` 를 사용한다.
 
-```
+```plain text
 // 1부터 3번 반복
 @for $i from 1 through 3 {
   .through:nth-child(#{$i}) {
@@ -190,7 +193,7 @@ div {width: 200px;height: 800px;}
 
 컴파일하면
 
-```
+```plain text
 .through:nth-child(1) { width: 20px; }.through:nth-child(2) { width: 40px; }.through:nth-child(3) { width: 60px; }.to:nth-child(1) { width: 20px; }.to:nth-child(2) { width: 40px; }
 ```
 
@@ -204,7 +207,7 @@ div {width: 200px;height: 800px;}
 
 `for in` 문과 유사하다.
 
-```
+```plain text
 @each $변수 in 데이터 {
   // 반복 내용
 }
@@ -212,7 +215,7 @@ div {width: 200px;height: 800px;}
 
 List 데이터를 반복하는 예제.
 
-```
+```plain text
 // List Data
 $fruits: (apple, orange, banana, mango);
 
@@ -227,13 +230,13 @@ $fruits: (apple, orange, banana, mango);
 
 컴파일하면
 
-```
+```plain text
 .fruits li.apple {background: url("/images/apple.png");}.fruits li.orange {background: url("/images/orange.png");}.fruits li.banana {background: url("/images/banana.png");}.fruits li.mango {background: url("/images/mango.png");}
 ```
 
 매번 반복마다 `Index` 값이 필요할 경우에 `index()` 내장 함수를 사용할 수 있다.
 
-```
+```plain text
 $fruits: (apple, orange, banana, mango);
 
 .fruits {
@@ -248,13 +251,13 @@ $fruits: (apple, orange, banana, mango);
 
 컴파일하면
 
-```
+```plain text
 .fruits li:nth-child(1) {left: 50px;}.fruits li:nth-child(2) {left: 100px;}.fruits li:nth-child(3) {left: 150px;}.fruits li:nth-child(4) {left: 200px;}
 ```
 
 동시에 여러 개의 List 데이터를 반복 처리할 수도 있다.
 
-```
+```plain text
 $apple: (apple, korea);
 $orange: (orange, china);
 $banana: (banana, japan);
@@ -268,19 +271,19 @@ $banana: (banana, japan);
 
 컴파일하면
 
-```
+```plain text
 .box-apple {background: url("/images/korea.png");}.box-orange {background: url("/images/china.png");}.box-banana {background: url("/images/japan.png");}
 ```
 
 Map 데이터를 반복할 경우에는 하나의 데이터에 두 개의 변수가 필요하다.
 
-```
+```plain text
 @each $key변수, $value변수 in 데이터 {
   // 반복 내용
 }
 ```
 
-```
+```plain text
 $fruits-data: (
   apple: korea,
   orange: china,
@@ -296,7 +299,7 @@ $fruits-data: (
 
 컴파일하면
 
-```
+```plain text
 .box-apple {background: url("/images/korea.png");}.box-orange {background: url("/images/china.png");}.box-banana {background: url("/images/japan.png");}
 ```
 
@@ -304,13 +307,13 @@ $fruits-data: (
 
 `@while` 은 조건이 `false` 로 평가될 때까지 내용을 반복한다. `while` 문과 유사하게 잘못된 조건으로 인해 컴파일 중 무한 루프에 빠질 수 있다.
 
-```
+```plain text
 @while 조건 {
   // 반복 내용
 }
 ```
 
-```
+```plain text
 $i: 6;
 
 @while $i > 0 {
@@ -323,7 +326,7 @@ $i: 6;
 
 컴파일하면
 
-```
+```plain text
 .item-6 { width: 12px; }.item-4 { width: 8px; }.item-2 { width: 4px; }
 ```
 

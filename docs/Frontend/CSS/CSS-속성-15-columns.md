@@ -1,4 +1,7 @@
-# CSS 속성 15. columns
+---
+id: CSS-속성-15-columns
+title: 'CSS 속성 15. columns'
+---
 
 > ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
@@ -8,9 +11,13 @@
 
 columns
 
+<br/>
+
 ### `columns`
 
 다단을 정의 - 단축 속성
+
+<br/>
 
 #### 속성 값
 
@@ -22,17 +29,21 @@ columns
 
 #### 사용법
 
-```
+```plain text
 columns: 너비 개수;
 ```
 
-```
+```plain text
 .text {columns: 100px 2;}
 ```
+
+<br/>
 
 ### `column-width`
 
 단의 최적 너비를 설정 - 개별 속성
+
+<br/>
 
 #### 속성 값
 
@@ -43,15 +54,19 @@ columns: 너비 개수;
 
 #### 사용법
 
-```
+```plain text
 column-width: 너비;
 ```
 
 > ☝️ 각 단이 줄어들 수 있는 최적 너비(최소 너비)를 설정하며, 요소의 너비가 가변하 하나의 단이 최적 너비보다 줄어들 경우 단의 개수가 조정된다.
 
+<br/>
+
 ### `column-count`
 
 단의 개수를 설정 - 개별 속성
+
+<br/>
 
 #### 속성 값
 
@@ -62,13 +77,17 @@ column-width: 너비;
 
 #### 사용법
 
-```
+```plain text
 column-count: 개수;
 ```
+
+<br/>
 
 ### `column-gap`
 
 단과 단 사이의 간격 설정
+
+<br/>
 
 #### 속성 값
 
@@ -79,9 +98,11 @@ column-count: 개수;
 
 #### 사용법
 
-```
+```plain text
 column-gap: 간격;
 ```
+
+<br/>
 
 ### `column-rule`
 
@@ -95,9 +116,11 @@ column-gap: 간격;
 
 #### 사용법
 
-```
+```plain text
 column-rule: 두께 종류 색상;
 ```
+
+<br/>
 
 ### Reference
 

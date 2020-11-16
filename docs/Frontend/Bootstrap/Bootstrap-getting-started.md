@@ -1,4 +1,7 @@
-# Bootstrap-getting-started
+---
+id: Bootstrap-getting-started
+title: 'Bootstrap-getting-started'
+---
 
 ## Bootstrap 시작하기
 

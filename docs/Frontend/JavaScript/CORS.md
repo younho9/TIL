@@ -1,4 +1,7 @@
-# CORS
+---
+id: CORS
+title: 'CORS'
+---
 
 ## 배경
 

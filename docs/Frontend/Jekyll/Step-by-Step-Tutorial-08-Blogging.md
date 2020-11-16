@@ -32,7 +32,7 @@ starch covered with a rind, which may be green, yellow, red, purple, or brown
 when ripe.
 ```
 
-이것은 어떻게 보면 [`about.md`](http://about.md) 파일과 비슷해 보이는데, `author` 라는 커스텀 변수가 있고(꼭 필요한 것은 아니고 `creator` 라는 이름으로 사용할 수도 있다.) `layout` 이 다르다.
+이것은 어떻게 보면 `about.md` 파일과 비슷해 보이는데, `author` 라는 커스텀 변수가 있고(꼭 필요한 것은 아니고 `creator` 라는 이름으로 사용할 수도 있다.) `layout` 이 다르다.
 
 <br/>
 

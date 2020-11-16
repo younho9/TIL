@@ -9,7 +9,7 @@ title: '[Step by Step Tutorial] 04. Layouts'
 
 Jekyll은 페이지에 대해서 HTML 뿐만 아니라 Markdown을 지원한다. Markdown은 단락, 제목, 이미지 등의 콘텐츠들을 HTML보다 쉽게 구성할 수 있기 때문에 페이지를 만드는데 좋은 선택이다.
 
-[`about.md`](http://about.md) 를 root 디렉토리에 만든다.
+`about.md` 를 root 디렉토리에 만든다.
 
 구조를 위해서 `index.html` 을 복사하고 about 페이지에 맞게 수정할 수 있지만, 이렇게 하는 것은 코드의 중복을 만든다. 만약 사이트에 스타일시트를 추가하고 싶다면 우리는 사이트에 있는 모든 페이지의 `<head>` 요소 마다 스타일시트를 추가해야 할 것이다.
 
@@ -61,7 +61,7 @@ title: Home
 
 이제 about 페이지를 만들 것인데, about 페이지는 Markdown으로 만들어본다.
 
-[`about.md`](http://about.md) 는 이러하다.
+`about.md` 는 이러하다.
 
 ```html
 ---

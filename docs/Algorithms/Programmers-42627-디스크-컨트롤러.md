@@ -1,6 +1,11 @@
-# Programmers-42627. 디스크 컨트롤러
+---
+id: Programmers-42627-디스크-컨트롤러
+title: 'Programmers-42627. 디스크 컨트롤러'
+---
 
 [코딩테스트 연습 - 디스크 컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627?language=javascript)
+
+<br/>
 
 | 걸린 시간 | 해결 유무(✅/❌) | 난이도 | 문제 유형 |
 | --------- | ---------------- | ------ | --------- |
@@ -164,6 +169,8 @@ class MinHeap {
   }
 }
 ```
+
+<br/>
 
 시간 복잡도
 

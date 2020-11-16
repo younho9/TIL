@@ -1,4 +1,7 @@
-# Syntax-08-functions
+---
+id: Syntax-08-functions
+title: 'Syntax-08-functions'
+---
 
 ## Sass(SCSS) Syntax - 8. 함수(Functions)
 
@@ -12,7 +15,7 @@
 
 함수는 보통 연산된(Computed) 값을 `@return` 지시어를 통해 반환한다.
 
-```
+```plain text
 // Mixins
 @mixin 믹스인이름($매개변수) {
   스타일;
@@ -28,7 +31,7 @@
 
 함수는 함수이름으로 바로 사용한다.
 
-```
+```plain text
 // Mixin
 @include 믹스인이름(인수);
 
@@ -36,7 +39,7 @@
 함수이름(인수)
 ```
 
-```
+```plain text
 $max-width: 980px;
 
 @function columns($number: 1, $columns: 12) {
@@ -60,7 +63,7 @@ $max-width: 980px;
 
 컴파일하면
 
-```
+```plain text
 .box_group {/* 총 너비 */width: 980px;}.box_group .box1 {/* 총 너비의 약 8.3% */width: 81.66667px;}.box_group .box2 {/* 총 너비의 약 66.7% */width: 653.33333px;}.box_group .box3 {/* 총 너비의 25% */width: 245px;}
 ```
 
@@ -72,7 +75,7 @@ $max-width: 980px;
 
 같은 이름을 사용하면 이름이 충돌하기 때문에 별도의 접두어를 붙여 `extract-red()` 같은 이름을 만든다.
 
-```
+```plain text
 // 내가 정의한 함수
 @function extract-red($color) {
   // 내장 함수

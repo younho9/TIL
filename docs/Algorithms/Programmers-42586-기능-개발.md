@@ -1,6 +1,11 @@
-# Programmers-42586. 기능 개발
+---
+id: Programmers-42586-기능-개발
+title: 'Programmers-42586. 기능 개발'
+---
 
 [코딩테스트 연습 - 기능개발](https://programmers.co.kr/learn/courses/30/lessons/42586)
+
+<br/>
 
 | 걸린 시간 | 난이도 | 해결 유무(✅/❌) | 문제 유형 |
 | --------- | ------ | ---------------- | --------- |

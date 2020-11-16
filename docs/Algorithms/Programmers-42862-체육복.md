@@ -1,6 +1,11 @@
-# Programmers-42862. 체육복
+---
+id: Programmers-42862-체육복
+title: 'Programmers-42862. 체육복'
+---
 
 [코딩테스트 연습 - 체육복](https://programmers.co.kr/learn/courses/30/lessons/42862)
+
+<br/>
 
 | 해결 유무(✅/❌) | 걸린 시간 | 난이도 | 문제 유형      |
 | ---------------- | --------- | ------ | -------------- |

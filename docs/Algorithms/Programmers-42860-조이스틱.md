@@ -1,6 +1,11 @@
-# Programmers-42860. 조이스틱
+---
+id: Programmers-42860-조이스틱
+title: 'Programmers-42860. 조이스틱'
+---
 
 [코딩테스트 연습 - 조이스틱](https://programmers.co.kr/learn/courses/30/lessons/42860)
+
+<br/>
 
 | 해결 유무(✅/❌) | 걸린 시간  | 난이도 | 문제 유형      |
 | ---------------- | ---------- | ------ | -------------- |

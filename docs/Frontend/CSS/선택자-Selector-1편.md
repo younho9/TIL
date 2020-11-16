@@ -1,4 +1,7 @@
-# 선택자(Selector) - 1편
+---
+id: 선택자-Selector-1편
+title: '선택자(Selector) - 1편'
+---
 
 > ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
@@ -35,6 +38,8 @@
 </div>
 ```
 
+<br/>
+
 #### 태그 선택자(Type Selector)
 
 같은 태그 이름을 가진 모든 요소를 선택
@@ -61,6 +66,8 @@ li {
 </div>
 ```
 
+<br/>
+
 #### 클래스 선택자(Class Selector)
 
 같은 `class` 속성의 값을 가진 모든 요소 선택
@@ -85,6 +92,8 @@ li {
   <!--선택-->
 </div>
 ```
+
+<br/>
 
 #### 아이디 선택자(ID Selector)
 
@@ -112,6 +121,8 @@ li {
 
 > 한 `id` 선택자 값은 HTML 문서에 한번만 사용되어야 한다.
 
+<br/>
+
 ### 복합 선택자(Combinators)
 
 #### 일치 선택자(Basic Combinator)
@@ -138,6 +149,8 @@ span.orange {
 </div>
 ```
 
+<br/>
+
 #### 자식 선택자(Child Combinator)
 
 요소의 **자식** 중에서 선택
@@ -161,6 +174,8 @@ ul > .orange {
   <span class="orange">오렌지</span>
 </div>
 ```
+
+<br/>
 
 #### 후손(하위) 선택자(Descendant Combinator)
 
@@ -187,6 +202,8 @@ div .orange {
 </div>
 ```
 
+<br/>
+
 #### 인접 형제 선택자(Adjacent Sibling Combinator)
 
 요소의 다음(next) 형제 요소 하나를 선택
@@ -208,6 +225,8 @@ div .orange {
   <li>사과</li>
 </ul>
 ```
+
+<br/>
 
 #### 일반 형제 선택자(General Sibling Combinator)
 
@@ -232,11 +251,15 @@ div .orange {
 </ul>
 ```
 
+<br/>
+
 > CSS에서의 자식(child), 후손(descendant), 형제(sibling) 정의
 
 1. 자식(child) : 요소의 1단계(1-depth) 하위 요소
 2. 후손(descendant) : 요소 내의 모든 하위 요소
 3. 형제(sibling) : 요소와 같은 단계의 요소
+
+<br/>
 
 ### Reference
 

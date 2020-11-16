@@ -1,6 +1,11 @@
-# Programmers-42584. 주식 가격
+---
+id: Programmers-42584-주식-가격
+title: 'Programmers-42584. 주식 가격'
+---
 
 [코딩테스트 연습 - 주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584)
+
+<br/>
 
 | 걸린 시간 | 해결 유무(✅/❌) | 난이도 | 문제 유형 |
 | --------- | ---------------- | ------ | --------- |
@@ -201,3 +206,5 @@ class Queue {
 - [gist - Queue.ts](https://gist.github.com/tbjgolden/142f2e0b2c1670812959e3588c4fa8a2)
 
 - [Data Structures: Improving Time Complexity on Stacks and Queues](https://medium.com/better-programming/improving-time-complexity-on-stacks-and-queues-7396ab7b5a2b)
+
+<br/>

@@ -1,6 +1,11 @@
-# Programmers-42579. 베스트 앨범
+---
+id: Programmers-42579-베스트-앨범
+title: 'Programmers-42579. 베스트 앨범'
+---
 
 [코딩테스트 연습 - 베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
+
+<br/>
 
 | 걸린 시간 | 해결 유무(✅/❌) | 난이도  | 문제 유형 |
 | --------- | ---------------- | ------- | --------- |

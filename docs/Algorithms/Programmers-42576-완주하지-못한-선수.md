@@ -1,6 +1,11 @@
-# Programmers-42576. 완주하지 못한 선수
+---
+id: Programmers-42576-완주하지-못한-선수
+title: 'Programmers-42576. 완주하지 못한 선수'
+---
 
 [코딩테스트 연습 - 완주하지 못한 선수](https://programmers.co.kr/learn/courses/30/lessons/42576)
+
+<br/>
 
 | 걸린 시간 | 난이도 | 문제 유형 |
 | --------- | ------ | --------- |

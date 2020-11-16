@@ -1,6 +1,11 @@
-# Programmers-42587. 프린터
+---
+id: Programmers-42587-프린터
+title: 'Programmers-42587. 프린터'
+---
 
 [코딩테스트 연습 - 프린터](https://programmers.co.kr/learn/courses/30/lessons/42587)
+
+<br/>
 
 | 해결 유무(✅/❌) | 난이도 | 걸린 시간 | 문제 유형 |
 | ---------------- | ------ | --------- | --------- |

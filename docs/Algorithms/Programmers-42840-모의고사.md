@@ -1,6 +1,11 @@
-# Programmers-42840. 모의고사
+---
+id: Programmers-42840-모의고사
+title: 'Programmers-42840. 모의고사'
+---
 
 [코딩테스트 연습 - 모의고사](https://programmers.co.kr/learn/courses/30/lessons/42840)
+
+<br/>
 
 | 해결 유무(✅/❌) | 걸린 시간 | 난이도 | 문제 유형 |
 | ---------------- | --------- | ------ | --------- |

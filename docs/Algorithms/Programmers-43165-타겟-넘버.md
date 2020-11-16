@@ -1,6 +1,11 @@
-# Programmers-43165. 타겟 넘버
+---
+id: Programmers-43165-타겟-넘버
+title: 'Programmers-43165. 타겟 넘버'
+---
 
 [코딩테스트 연습 - 타겟 넘버](https://programmers.co.kr/learn/courses/30/lessons/43165)
+
+<br/>
 
 | 해결 유무(✅/❌) | 걸린 시간 | 난이도 | 문제 유형 |
 | ---------------- | --------- | ------ | --------- |

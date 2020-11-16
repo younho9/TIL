@@ -1,10 +1,15 @@
-# CSS 속성 13. transition-transform
+---
+id: CSS-속성-13-transition-transform
+title: 'CSS 속성 13. transition-transform'
+---
 
 > ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ### `transition`
 
 CSS 속성의 시작과 끝을 지정(전환 효과)하여 중간 값을 애니메이션 - 단축 속성
+
+<br/>
 
 #### 속성 값
 
@@ -17,19 +22,23 @@ CSS 속성의 시작과 끝을 지정(전환 효과)하여 중간 값을 애니�
 
 #### 예제
 
-```
+```plain text
 <div class="box"></div>
 ```
 
-```
+```plain text
 .box {width: 100px;height: 100px;background: tomato;margin: 50px;transition: width 1s, background 2s;}.box:hover {width: 300px;background: dodgerblue;}
 ```
 
 > ☝️ transition 이 일어나기 전 단계에 속성을 지정한다.
 
+<br/>
+
 ### `transition-property`
 
 전환 효과를 사용할 속성 이름을 설정 - 개별 속성
+
+<br/>
 
 #### 속성 값
 
@@ -42,6 +51,8 @@ CSS 속성의 시작과 끝을 지정(전환 효과)하여 중간 값을 애니�
 
 전환 효과의 지속시간을 설정 - 개별 속성
 
+<br/>
+
 #### 속성 값
 
 | 기본값 | 의미                      | 값   |
@@ -50,9 +61,13 @@ CSS 속성의 시작과 끝을 지정(전환 효과)하여 중간 값을 애니�
 
 > ☝️ ms 단위도 가능
 
+<br/>
+
 ### `transition-timing-function`
 
 타이밍 함수(애니메이션 전환 효과를 계산하는 방법) 지정 - 개별 속성
+
+<br/>
 
 #### 속성 값
 
@@ -68,9 +83,13 @@ CSS 속성의 시작과 끝을 지정(전환 효과)하여 중간 값을 애니�
 
 > Easing Functions Cheat Sheet
 
+<br/>
+
 ### `transition-delay`
 
 전환 효과가 몇 초 뒤에 시작할지 대기시간을 설정 - 개별 속성
+
+<br/>
 
 #### 속성 값
 
@@ -80,9 +99,13 @@ CSS 속성의 시작과 끝을 지정(전환 효과)하여 중간 값을 애니�
 
 > ☝️ transition: 2s 3s; 로 입력하면 앞에 오는 시간이 duration , 뒤에 오는 시간이 delay 이다.
 
+<br/>
+
 ### `transform`
 
 요소의 변환 효과(변형)을 지정 - 단축 속성
+
+<br/>
 
 #### `transform` 2D 변환 함수
 
@@ -117,39 +140,45 @@ CSS 속성의 시작과 끝을 지정(전환 효과)하여 중간 값을 애니�
 
 #### 사용법
 
-```
+```plain text
 transform: 변환함수1 변환함수2 변환함수3 ...;transform: 원근법 이동 크기 회전 기울임;
 ```
 
-```
+```plain text
 .box {transform: rotate(20deg) translate(10px, 0);}
 ```
 
 > 2D 변형 효과, 3D 변형 효과가 있다.
 
+<br/>
+
 #### 2D 예제
 
-```
+```plain text
 <div class="box">123</div>
 ```
 
-```
+```plain text
 .box {width: 200px;height: 200px;background: tomato;display: flex;justify-content: center;align-items: center;font-size: 30px;transition: 1s;}.box:hover {transform: translate(30px, 30px);}
 ```
 
 > ☝️ translate(30px, 30px) vs position: relative; left: 30px; top: 30px; : position 은 어느 위치에 배치해놓고 위치가 다시 변하지 않는 경우에 사용하고 (애니메이션에 최적화되어 있지 않다.) translate 는 위치가 수시로 변할 수 있는 경우에 사용한다.
 
+<br/>
+
 #### 3D 예제
 
-```
+```plain text
 <img src="https://heropy.blog/css/images/logo.png" alt="HEROPY">
 ```
 
-```
+```plain text
 img {width: 300px;border: 1px solid lightgray;transform: perspective(500px) rotateX(45deg);}
 ```
 
 > ☝️ perspective() 는 transform의 속성 값 중에 제일 앞에 와야 한다.
+
+<br/>
 
 #### `transform` 변환 속성
 
@@ -165,6 +194,8 @@ img {width: 300px;border: 1px solid lightgray;transform: perspective(500px) rota
 
 요소 변환의 기준점을 설정
 
+<br/>
+
 #### 속성 값
 
 | 의미                             | 기본값 | 값  |
@@ -175,17 +206,21 @@ img {width: 300px;border: 1px solid lightgray;transform: perspective(500px) rota
 
 #### 예제
 
-```
+```plain text
 <img src="https://heropy.blog/css/images/logo.png" alt="HEROPY">
 ```
 
-```
+```plain text
 img {width: 200px;border: 1px solid lightgray;transition: 1s;transform: rotate(45deg);transform-origin: 100% 100%;}
 ```
+
+<br/>
 
 ### `transform-style`
 
 3D 변환 요소의 자식 요소도 3D 변환을 사용할지 설정
+
+<br/>
 
 #### 속성 값
 
@@ -196,17 +231,21 @@ img {width: 200px;border: 1px solid lightgray;transition: 1s;transform: rotate(4
 
 #### 예제
 
-```
+```plain text
 <div class="perspective"><div class="grand-parent"><div class="parent"><img src="https://heropy.blog/css/images/logo.png" alt="HEROPY"></div></div></div>
 ```
 
-```
+```plain text
 .perspective {width: 200px;perspective: 500px;padding: 70px;}.grand-parent{width: 200px;border: 3px solid dodgerblue;transition: 1s;transform: rotateX(-45deg);transform-style: preserve-3d;}.parent {width: 200px;border: 3px solid tomato;transition: 1s;transform: rotateY(45deg);transform-style: preserve-3d;}img {width: 200px;border: 3px solid lightgray;transition: 1s;transform: rotateX(45deg);}
 ```
+
+<br/>
 
 ### `perspective`
 
 하위 요소를 관찰하는 원근 거리를 설정
+
+<br/>
 
 #### 속성 값
 
@@ -225,6 +264,8 @@ img {width: 200px;border: 1px solid lightgray;transition: 1s;transform: rotate(4
 
 원근 거리의 기준점을 설정
 
+<br/>
+
 #### 속성 값
 
 | 의미                             | 기본값 | 값  |
@@ -235,6 +276,8 @@ img {width: 200px;border: 1px solid lightgray;transition: 1s;transform: rotate(4
 ### `backface-visibility`
 
 3D 변환으로 회전된 요소의 뒷면 숨김을 설정
+
+<br/>
 
 #### 속성 값
 
@@ -254,6 +297,8 @@ img {width: 200px;border: 1px solid lightgray;transition: 1s;transform: rotate(4
 matrix-function
 
 > ☝️ 요소의 일반 변환(Transforms) 함수(2D, 3D)를 사용하더라도 브라우저에 의해 matrix 함수로 계산되어 적용된다. (2D 변환 함수는 matrix 로, 3D 변환 함수는 matrix3d 로) 따라서 일반적인 경우는 matrix 함수가 아닌 일반 변환 함수를 사용하면 된다.
+
+<br/>
 
 ### Reference
 

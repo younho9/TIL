@@ -1,6 +1,11 @@
-# Programmers-42628. 이중우선순위큐
+---
+id: Programmers-42628-이중우선순위큐
+title: 'Programmers-42628. 이중우선순위큐'
+---
 
 [코딩테스트 연습 - 이중우선순위큐](https://programmers.co.kr/learn/courses/30/lessons/42628)
+
+<br/>
 
 | 해결 유무(✅/❌) | 걸린 시간  | 난이도 | 문제 유형 |
 | ---------------- | ---------- | ------ | --------- |
@@ -155,3 +160,5 @@ while (
   this.heap[current] > this.heap[rightChildIndex])
 )
 ```
+
+<br/>

@@ -1,6 +1,11 @@
-# Programmers-42577. 전화번호 목록
+---
+id: Programmers-42577-전화번호-목록
+title: 'Programmers-42577. 전화번호 목록'
+---
 
 [코딩테스트 연습 - 전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577)
+
+<br/>
 
 | 난이도 | 걸린 시간 | 해결 유무(✅/❌) | 문제 유형 |
 | ------ | --------- | ---------------- | --------- |

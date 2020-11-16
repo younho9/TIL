@@ -1,6 +1,11 @@
-# Programmers-42578. 위장
+---
+id: Programmers-42578-위장
+title: 'Programmers-42578. 위장'
+---
 
 [코딩테스트 연습 - 위장](https://programmers.co.kr/learn/courses/30/lessons/42578)
+
+<br/>
 
 | 걸린 시간 | 해결 유무(✅/❌) | 난이도 | 문제 유형 |
 | --------- | ---------------- | ------ | --------- |

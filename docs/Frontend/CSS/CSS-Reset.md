@@ -1,4 +1,7 @@
-# CSS Reset
+---
+id: CSS-Reset
+title: 'CSS Reset'
+---
 
 > ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
@@ -16,6 +19,10 @@
 
 이렇게 모든 브라우저가 가진 기본적인 스타일을 없애고 우리가 만든 스타일시트를 모든 브라우저에서 동일하게 볼 수 있도록 만들 수 있다.
 
+<br/>
+
 ### Reference
 
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
+
+<br/>

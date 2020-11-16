@@ -1,6 +1,11 @@
-# Programmers-42626. 더 맵게
+---
+id: Programmers-42626-더-맵게
+title: 'Programmers-42626. 더 맵게'
+---
 
 [코딩테스트 연습 - 더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626)
+
+<br/>
 
 | 난이도 | 해결 유무(✅/❌) | 걸린 시간 | 문제 유형 |
 | ------ | ---------------- | --------- | --------- |

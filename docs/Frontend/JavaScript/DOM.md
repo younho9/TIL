@@ -1,4 +1,7 @@
-# DOM
+---
+id: DOM
+title: 'DOM'
+---
 
 > 📌 Table of Contents
 

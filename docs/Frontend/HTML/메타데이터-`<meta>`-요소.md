@@ -1,8 +1,13 @@
-# 메타데이터 - `<meta>` 요소
+---
+id: 메타데이터-`<meta>`-요소
+title: '메타데이터 - `<meta>` 요소'
+---
 
 [head 태그에는 무엇이 있을까? HTML의 메타데이터](https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 
 > ❗️해당 글은 [head 태그에는 무엇이 있을까? HTML의 메타데이터](https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) - MDN 문서를 보면서 공부한 기록입니다.
+
+<br/>
 
 ### 메타데이터란?
 
@@ -12,6 +17,8 @@
 
 페이지의 `<head>` 요소 안에 있으며, 다양한 형태의 `<meta>`가 있다.
 
+<br/>
+
 #### 문서의 character 인코딩을 특정하기
 
 ```html
@@ -19,6 +26,8 @@
 ```
 
 이 요소는 문서에서 허용하는 문자 집합(character set) 인코딩에 대해서 간단히 표시한다. `utf-8`이 전세계적인 character 집합으로 많은 언어들을 포함한다.
+
+<br/>
 
 #### 저자와 설명
 
@@ -43,6 +52,8 @@ started with developing web sites and applications."
 저자를 지정하는 것은 컨텐츠 작성자에 대한 정보를 볼 수 있게 해준다. (일부 컨텐츠 관리 시스템은 페이지 작성자 정보를 자동으로 추출해서 사용할 수 있는 기능이 있다.)
 
 페이지 콘텐츠 관련 키워드를 포함시키는 것은 검색엔진에서 페이지가 더 많이 표시될 가능성을 높인다. ([SEO - Search Engine Optimization](https://developer.mozilla.org/ko/docs/Glossary/SEO))
+
+<br/>
 
 #### 그 외 다양한 metadata
 
@@ -71,6 +82,8 @@ MDN 페이지의 이러한 메타데이터는 페이스북에 링크했을 때 �
 ```html
 <meta name="twitter:title" content="Mozilla Developer Network" />
 ```
+
+<br/>
 
 ### **Reference**
 

@@ -1,4 +1,7 @@
-# Programmers-42885. 구명보트
+---
+id: Programmers-42885-구명보트
+title: 'Programmers-42885. 구명보트'
+---
 
 [코딩테스트 연습 - 구명보트](https://programmers.co.kr/learn/courses/30/lessons/42885)
 

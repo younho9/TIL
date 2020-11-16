@@ -1,4 +1,7 @@
-# Syntax-01-comment-data-type
+---
+id: Syntax-01-comment-data-type
+title: 'Syntax-01-comment-data-type'
+---
 
 ## Sass(SCSS) Syntax - 1. 주석, 데이터 타입
 
@@ -10,7 +13,7 @@ CSS에서 주석은 `/* 내용 */` 으로 작성했었다.
 
 Sass(SCSS)는 JavaScript처럼 두 가지 종류의 주석을 사용할 수 있다.
 
-```
+```plain text
 // CSS로 컴파일되지 않는 주석
 /* CSS로 컴파일되는 주석 */
 ```
@@ -19,7 +22,7 @@ Sass(SCSS)에만 남기고 싶은 주석은 `//` 로, CSS에도 남겨야되는 
 
 또한 여러 줄 주석의 경우 Sass와 SCSS 간에 약간의 차이가 있다.
 
-```
+```plain text
 /* Sass에서는
  * 여러 줄의 주석을 사용할 때
  * 각 줄에 Asterisk를 사용해야하고,
@@ -30,7 +33,7 @@ Sass(SCSS)에만 남기고 싶은 주석은 `//` 로, CSS에도 남겨야되는 
   * 컴파일되지 않는다. */
 ```
 
-```
+```plain text
 /*
 scss에서는
 여러 줄 주석에서

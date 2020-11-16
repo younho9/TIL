@@ -1,4 +1,7 @@
-# Syntax-04-import
+---
+id: Syntax-04-import
+title: 'Syntax-04-import'
+---
 
 ## Sass(SCSS) Syntax - 4. 가져오기( `@import` )
 
@@ -24,7 +27,7 @@ Sass는 기본적으로 Sass(또는 SCSS) 파일을 가져오지만, 몇 가지 
 
 - 미디어쿼리가 있는 경우
 
-```
+```plain text
 @import "hello.css";
 @import "http://hello.com/hello";
 @import url(hello);
@@ -37,7 +40,7 @@ Sass는 기본적으로 Sass(또는 SCSS) 파일을 가져오지만, 몇 가지 
 
 파일 이름은 `,` 로 구분한다.
 
-```
+```plain text
 @import "header", "footer";
 ```
 
@@ -55,49 +58,49 @@ Sass는 기본적으로 Sass(또는 SCSS) 파일을 가져오지만, 몇 가지 
 
 만약 파일 구조가 이러할 때,
 
-```
+```plain text
 Sass-App# ...├─scss│  ├─header.scss│  ├─side-menu.scss│  └─main.scss# ...
 ```
 
 `main.scss` 로 다른 파일들을 `@import` 하고
 
-```
+```plain text
 // main.scss
 @import "header", "side-menu"
 ```
 
 `node-sass` 로 컴파일하면
 
-```
+```plain text
 $ node-sass scss --output css
 ```
 
 아래와 같이 `scss/`에 있던 파일들이 `css/` 안에 각 하나씩의 파일로 컴파일된다.
 
-```
+```plain text
 Sass-App# ...├─css│  ├─header.css│  ├─side-menu.css│  └─main.css├─scss│  ├─header.scss│  ├─side-menu.scss│  └─main.scss# ...
 ```
 
 이번엔 가져올 파일 이름에 `_` 를 붙이고, 메인 파일인 `main.scss` 에만 `_` 를 붙이지 않는다.
 
-```
+```plain text
 Sass-App# ...├─scss│  ├─_header.scss│  ├─_side-menu.scss│  └─main.scss# ...
 ```
 
-```
+```plain text
 // main.scss
 @import "header", "side-menu";
 ```
 
 컴파일하면…
 
-```
+```plain text
 $ node-sass scss --output css
 ```
 
 아래처럼 별도의 파일로 컴파일되지 않는다.
 
-```
+```plain text
 Sass-App# ...├─css│  └─main.css  # main + header + side-menu├─scss│  ├─header.scss│  ├─side-menu.scss│  └─main.scss# ...
 ```
 

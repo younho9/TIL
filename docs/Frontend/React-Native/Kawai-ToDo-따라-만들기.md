@@ -1,4 +1,7 @@
-# Kawai ToDo 따라 만들기
+---
+id: Kawai-ToDo-따라-만들기
+title: 'Kawai ToDo 따라 만들기'
+---
 
 ### `Dimensions` API
 
@@ -121,3 +124,5 @@ _toggleComplete = () => {
 - `setState` 함수의 파라미터로 함수를 넣는 것이 어떤 의미인가?
 
 - `setState` 함수로 전달되는 함수의 파라미터는 어디서 받아오는 것인가?
+
+<br/>

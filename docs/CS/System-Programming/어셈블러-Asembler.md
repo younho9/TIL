@@ -1,4 +1,7 @@
-# 어셈블러(Asembler)
+---
+id: 어셈블러-Asembler
+title: '어셈블러(Asembler)'
+---
 
 ## Assembly Language Statements
 
@@ -9,6 +12,8 @@
 - 지시어(Directives) : 어셈블러가 어떤 액션을 취해야 하는지를 지시한다. 오브젝트 코드로 변화되지 않는다.
 
 - 매크로(Macro) : 반복되는 명령어를 하나의 명령어로 표현한다.
+
+<br/>
 
 ## Actual Machine Architecture
 
@@ -21,6 +26,8 @@
 - 다양한 어드레싱 모드
 
 - 하드웨어 구현이 어려움
+
+<br/>
 
 ### RISC(Reduced Instruction Set Computers)
 
@@ -36,6 +43,8 @@
 
   - 신뢰성을 높이고 빠른 인스트럭션 실행 시간
 
+   <br/>
+
 ## Assembler란
 
 - 어셈블리 언어로 작성된 프로그램을 머신 코드(오브젝트 코드)로 번역하는 시스템 소프트웨어
@@ -47,6 +56,8 @@
 - 기계독립적 기능
 
   - 머신 아키텍쳐와 직접 관련이 없다.
+
+   <br/>
 
 ### Example of a SIC assembler language program
 
@@ -60,9 +71,11 @@
 
 - RESB, RESW : 데이터 영역의 byte/word를 예약함
 
+<br/>
+
 ### Forward reference
 
-```
+```plain text
 LOC     Source statement              Object code
 1000    FIRST    STL    RETADR        141033
 ...
@@ -84,3 +97,5 @@ LOC     Source statement              Object code
 - Text
 
 - End
+
+<br/>

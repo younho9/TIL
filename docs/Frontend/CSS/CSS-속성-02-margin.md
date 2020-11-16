@@ -1,4 +1,7 @@
-# CSS 속성 02. margin
+---
+id: CSS-속성-02-margin
+title: 'CSS 속성 02. margin'
+---
 
 > ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
@@ -18,23 +21,29 @@
 
 > % 를 margin 의 값으로 사용할 경우 부모 요소의 가로 너비에 대한 비율로 margin 을 사용하게 된다.
 
+<br/>
+
 #### 사용법
 
-```
+```plain text
 margin: 위 우 아래 좌;       /* 시계 방향 */margin: 위 [좌, 우] 아래;    /* 위 아래 방향 */margin: [위, 아래] [좌, 우]; /* 위,아래 + 좌,우 */margin: [위, 아래, 좌, 우];  /* 모든 방향 */
 ```
 
-```
+```plain text
 .box {margin: 10px 20px 30px 40px;margin: 10px 20px 40px;margin: 10px 40px;margin: 10px;}
 ```
+
+<br/>
 
 ### `margin-top, right, bottom, left`
 
 요소의 ’외부(바깥 위쪽 여백)’을 지정
 
-```
+```plain text
 .box1 {margin: 10px 20px 30px 40px;  /* 단축 속성 */}.box2 {/* 개별 속성 */margin-top: 10px;margin-right: 20px;margin-bottom: 10px;margin-left: 10px;}
 ```
+
+<br/>
 
 ### 마진 중복(병합, Collapse)
 
@@ -48,31 +57,35 @@ margin: 위 우 아래 좌;       /* 시계 방향 */margin: 위 [좌, 우] 아�
 
 > ’마진 중복’은 버그(오류)가 아니다. 현상을 우회하거나 응용할 수 있다.
 
+<br/>
+
 #### 형제 요소끼리 만났을 때
 
-```
+```plain text
 <div class="parent"><div class="child"></div><div class="child"></div><div class="child"></div></div>
 ```
 
-```
+```plain text
 .parent {}.child {width: 100px;height: 100px;background: tomato;float: left; /* 블록 요소가 수평으로 쌓이게 해줌 */margin: 20px;}
 ```
 
 위의 예제에서 형제 요소들의 `margin-right` 와 `margin-left` 는 `20px` 이 더해져 `40px` 이 된다.
 
-```
+```plain text
 .parent {}.child {width: 100px;height: 100px;background: tomato;margin: 20px;}
 ```
 
 하지만 `float: left;` 속성을 제거하면, 블록 요소가 수직으로 쌓이게 되는데 이 때 형제 요소들의 `margin-top` 과 `margin-bottom` 이 만나면서 `margin` 이 `40px` 이 되는 것이 아니라 그대로 `20px` 임을 확인할 수 있다. 이것이 마진 중복이다.
 
+<br/>
+
 #### 부모 요소와 자식 요소가 만났을 때
 
-```
+```plain text
 <div class="parent"><div class="child"></div></div>
 ```
 
-```
+```plain text
 .parent {width: 300px;height: 200px;background: cyan;}.child {width: 100px;height: 100px;background: tomato;margin-top: 50px;}
 ```
 
@@ -81,6 +94,8 @@ margin: 위 우 아래 좌;       /* 시계 방향 */margin: 위 [좌, 우] 아�
 이렇게 부모 요소의 `margin-top` 과 자식 요소의 `margin-top` 이 만나있다면 자식 요소의 `margin-top` 이 합쳐지게 된다.
 
 > 부모 요소의 margin-top 과 자식 요소의 margin-top 이 만나지 않도록 부모 요소에 padding: 10px; 을 추가하면 마진 중복이 발생하지 않는다.
+
+<br/>
 
 #### 마진 중복 계산법
 
@@ -95,3 +110,5 @@ margin: 위 우 아래 좌;       /* 시계 방향 */margin: 위 [좌, 우] 아�
 ### Reference
 
 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
+
+<br/>

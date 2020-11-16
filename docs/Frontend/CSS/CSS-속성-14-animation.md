@@ -1,10 +1,15 @@
-# CSS 속성 14. animation
+---
+id: CSS-속성-14-animation
+title: 'CSS 속성 14. animation'
+---
 
 > ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ### `animation`
 
 요소에 애니메이션을 설정/제어 - 단축 속성
+
+<br/>
 
 #### 속성 값
 
@@ -21,41 +26,53 @@
 
 > ☝️ animation 속성 자체가 애니메이션을 만들어주는 것은 아니고 @keyframes 에 설정된 애니메이션을 제어하는 개념이다.
 
+<br/>
+
 #### 사용법
 
-```
+```plain text
 animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반복횟수 반복방향 전후상태 재생/정지];
 ```
 
-```
+```plain text
 .box {width: 100px;height: 100px;background: tomato;animation: hello 2s linear infinite both;}@keyframes hello {0% { width: 200px; }100% { width: 50px; }}
 ```
+
+<br/>
 
 ### `@keyframes`
 
 2개 이상의 애니메이션 중간 상태(프레임)을 지정
 
+<br/>
+
 #### 사용법
 
-```
+```plain text
 @keyframes 애니메이션이름 {0% { 속성: 값; }50% { 속성: 값; }100% { 속성: 값; }}
 ```
 
+<br/>
+
 #### 예제
 
-```
+```plain text
 <div class="box"></div>
 ```
 
-```
+```plain text
 .box {width: 100px;height: 100px;background: tomato;border-radius: 10px;}.box:hover {animation: my-animation 3s infinite alternate;}@keyframes my-animation {0% {width: 100px;background: tomato;}75% {width: 500px;background: dodgerblue;}100% {width: 300px;background: yellowgreen;}}
 ```
 
 > ☝️ transition 에 비해 @keyframes 를 이용하면 애니메이션을 더 세부적으로 설정할 수 있다.
 
+<br/>
+
 ### `animation-name`
 
 `@keyframes` 규칙(애니메이션 프레임)의 이름을 지정 - 개별 속성
+
+<br/>
 
 #### 속성 값
 
@@ -68,6 +85,8 @@ animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반�
 
 애니메이션의 지속 시간 설정 - 개별 속성
 
+<br/>
+
 #### 속성 값
 
 | 기본값 | 의미             | 값   |
@@ -77,6 +96,8 @@ animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반�
 ### `animation-timing-function`
 
 타이밍 함수(애니메이션 효과를 계산하는 방법) 지정 - 개별 속성
+
+<br/>
 
 #### 속성 값
 
@@ -94,6 +115,8 @@ animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반�
 
 애니메이션의 대기 시간 설정 - 개별 속성
 
+<br/>
+
 #### 속성 값
 
 | 의미             | 기본값 | 값   |
@@ -102,9 +125,13 @@ animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반�
 
 > ☝️ 음수가 허용된다. 음수가 있을 경우 애니메이션은 바로 시작되지만, 그 값만큼 애니메이션이 앞서 시작한다. (애니메이션 주기 도중에 시작)ex) -1s 로 설정시, 2초짜리 애니메이션은 1초부터 시작함
 
+<br/>
+
 ### `animation-iteration-count`
 
 애니메이션의 반복 횟수를 설정 - 개별 속성
+
+<br/>
 
 #### 속성 값
 
@@ -116,6 +143,8 @@ animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반�
 ### `animation-direction`
 
 애니메이션의 반복 방향을 설정 - 개별 속성
+
+<br/>
 
 #### 속성 값
 
@@ -130,6 +159,8 @@ animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반�
 
 애니메이션의 전후 상태(위치)를 설정 - 개별 속성
 
+<br/>
+
 #### 속성 값
 
 | 의미                                                                                   | 기본값 | 값        |
@@ -140,6 +171,8 @@ animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반�
 | 애니메이션 시작 위치에서 시작 -> 동작 -> 애니메이션 끝 위치에서 끝                     |        | both      |
 
 > 🔗 animation-fill-mode by park young woong
+
+<br/>
 
 ### `animation-play-state`
 

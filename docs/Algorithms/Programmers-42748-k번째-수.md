@@ -1,6 +1,11 @@
-# Programmers-42748. k번째 수
+---
+id: Programmers-42748-k번째-수
+title: 'Programmers-42748. k번째 수'
+---
 
 [코딩테스트 연습 - K번째수](https://programmers.co.kr/learn/courses/30/lessons/42748)
+
+<br/>
 
 | 해결 유무(✅/❌) | 걸린 시간 | 난이도 | 문제 유형 |
 | ---------------- | --------- | ------ | --------- |

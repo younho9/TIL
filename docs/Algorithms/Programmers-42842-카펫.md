@@ -1,6 +1,11 @@
-# Programmers-42842. 카펫
+---
+id: Programmers-42842-카펫
+title: 'Programmers-42842. 카펫'
+---
 
 [코딩테스트 연습 - 카펫](https://programmers.co.kr/learn/courses/30/lessons/42842)
+
+<br/>
 
 | 해결 유무(✅/❌) | 걸린 시간 | 난이도 | 문제 유형 |
 | ---------------- | --------- | ------ | --------- |

@@ -1,10 +1,17 @@
-# Programmers-42839. 소수 찾기
+---
+id: Programmers-42839-소수-찾기
+title: 'Programmers-42839. 소수 찾기'
+---
 
 [코딩테스트 연습 - 소수 찾기](https://programmers.co.kr/learn/courses/30/lessons/42839)
+
+<br/>
 
 | 해결 유무(✅/❌) | 걸린 시간 | 난이도 | 문제 유형 |
 | ---------------- | --------- | ------ | --------- |
 | ✅               | 2시간     | lv.2   | 완전탐색  |
+
+<br/>
 
 ### 설계 방법
 
@@ -82,3 +89,5 @@ function isPrime(num) {
 ### **참고자료**
 
 - [Find All Permutations of a String in Javascript](https://levelup.gitconnected.com/find-all-permutations-of-a-string-in-javascript-af41bfe072d2)
+
+<br/>

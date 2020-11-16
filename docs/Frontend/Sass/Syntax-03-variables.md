@@ -1,4 +1,7 @@
-# Syntax-03-variables
+---
+id: Syntax-03-variables
+title: 'Syntax-03-variables'
+---
 
 ## Sass(SCSS) Syntax - 3. 변수
 
@@ -10,11 +13,11 @@
 
 변수 이름 앞에 항상 `$` 를 붙여야 한다.
 
-```
+```plain text
 $변수이름: 속성값;
 ```
 
-```
+```plain text
 $color-primary: #e96900;
 $url-images: "/assets/images/";
 $w: 200px;
@@ -28,7 +31,7 @@ $w: 200px;
 
 컴파일하면
 
-```
+```plain text
 .box {width: 200px;margin-left: 200px;background: #e96900 url("/assets/images/bg.jpg");}
 ```
 
@@ -36,7 +39,7 @@ $w: 200px;
 
 변수는 유효범위가 있어서 선언된 블록 ( `{}` ) 내부에서만 사용할 수 있다.
 
-```
+```plain text
 .box1 {
   $color: #111;
   background: $color;
@@ -55,7 +58,7 @@ $w: 200px;
 
 변수에 변수를 할당할 수 있다.
 
-```
+```plain text
 $red: #FF0000;
 $blue: #0000FF;
 
@@ -72,7 +75,7 @@ $color-danger: $red;
 
 컴파일하면
 
-```
+```plain text
 .box {color: #0000FF;background: #FF0000;}
 ```
 
@@ -80,7 +83,7 @@ $color-danger: $red;
 
 `!global` 플래그를 사용하면 특정 블록 내부에 정의된 변수라 하더라도 유효범위를 전역으로 설정할 수 있다.
 
-```
+```plain text
 .box1 {
   $color: #111 !global;
   background: $color;
@@ -92,13 +95,13 @@ $color-danger: $red;
 
 컴파일하면
 
-```
+```plain text
 .box1 {background: #111;}.box2 {background: #111;}
 ```
 
 기존의 같은 이름의 변수가 사용되고 있을 경우 값이 덮어져 사용될 수 있다.
 
-```
+```plain text
 $color: #000;
 .box1 {
   $color: #111 !global;
@@ -115,7 +118,7 @@ $color: #000;
 
 컴파일하면
 
-```
+```plain text
 .box1 {background: #111;}.box2 {background: #111;}.box3 {background: #222;}
 ```
 
@@ -123,7 +126,7 @@ $color: #000;
 
 `!default` 는 기존에 변수가 할당되어 있으면, 기존 할당 값을 사용하게 하고, 기존에 변수가 할당되어 있지 않으면 초깃값으로 설정한다.
 
-```
+```plain text
 $color-primary: red;
 
 .box {
@@ -134,7 +137,7 @@ $color-primary: red;
 
 컴파일하면
 
-```
+```plain text
 .box {background: red;}
 ```
 
@@ -146,14 +149,14 @@ $color-primary: red;
 
 `#{}` 키워드를 사용해 코드의 공간 어디든지 변수 값을 넣을 수 있다.
 
-```
+```plain text
 $family: unquote("Droid+Sans");
 @import url("http://fonts.googleapis.com/css?family=#{$family}");
 ```
 
 컴파일하면
 
-```
+```plain text
 @import url("http://fonts.googleapis.com/css?family=Droid+Sans");
 ```
 

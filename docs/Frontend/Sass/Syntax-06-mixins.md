@@ -1,4 +1,7 @@
-# Syntax-06-mixins
+---
+id: Syntax-06-mixins
+title: 'Syntax-06-mixins'
+---
 
 ## Sass(SCSS) Syntax - 6. 재활용(Mixins)
 
@@ -14,7 +17,7 @@ Mixin 사용법을 두 가지로 나누면 선언하기( `@mixin` )와 포함하
 
 기본적인 `@mixin` 선언법은 다음과 같은데, SCSS와 Sass의 문법이 조금 차이가 있다.
 
-```
+```plain text
 // SCSS
 @mixin 믹스인이름 {
   스타일;
@@ -25,7 +28,7 @@ Mixin 사용법을 두 가지로 나누면 선언하기( `@mixin` )와 포함하
   스타일
 ```
 
-```
+```plain text
 // SCSS
 @mixin large-text {
   font-size: 22px;
@@ -44,7 +47,7 @@ Mixin 사용법을 두 가지로 나누면 선언하기( `@mixin` )와 포함하
 
 또한 `@mixin` 은 선택자를 포함 가능하고, 상위(부모) 요소 참조( `&` 등)도 가능하다.
 
-```
+```plain text
 @mixin large-text {
   font: {
     size: 22px;
@@ -67,7 +70,7 @@ Mixin 사용법을 두 가지로 나누면 선언하기( `@mixin` )와 포함하
 
 선언된 `@mixin` 을 사용할 때는 `@include` 를 사용한다. 역시 SCSS와 Sass가 약간의 차이가 있다.
 
-```
+```plain text
 // SCSS
 @include 믹스인이름;
 
@@ -75,7 +78,7 @@ Mixin 사용법을 두 가지로 나누면 선언하기( `@mixin` )와 포함하
 +믹스인이름
 ```
 
-```
+```plain text
 // SCSS
 h1 {
   @include large-text;
@@ -93,7 +96,7 @@ div
 
 컴파일하면
 
-```
+```plain text
 h1 {font-size: 22px;font-weight: bold;font-family: sans-serif;color: orange;}h1::after {content: "!!";}h1 span.icon {background: url("/images/icon.png");}div {font-size: 22px;font-weight: bold;font-family: sans-serif;color: orange;}div::after {content: "!!";}div span.icon {background: url("/images/icon.png");}
 ```
 
@@ -101,7 +104,7 @@ h1 {font-size: 22px;font-weight: bold;font-family: sans-serif;color: orange;}h1:
 
 Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 
-```
+```plain text
 // SCSS
 @mixin 믹스인이름($매개변수) {
   스타일;
@@ -115,7 +118,7 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 +믹스인이름(인수)
 ```
 
-```
+```plain text
 @mixin dash-line($width, $color) {
   border: $width dashed $color;
 }
@@ -126,7 +129,7 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 
 컴파일하면
 
-```
+```plain text
 .box1 {border: 1px dashed red;}.box2 {border: 4px dashed blue;}
 ```
 
@@ -136,13 +139,13 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 
 `@include` 포함 단계에서 별도의 인수가 전달되지 않는 경우에 기본값을 사용하게 된다.
 
-```
+```plain text
 @mixin 믹스인이름($매개변수: 기본값) {
   스타일;
 }
 ```
 
-```
+```plain text
 @mixin dash-line($width: 1px, $color: black) {
   border: $width dashed $color;
 }
@@ -153,7 +156,7 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 
 컴파일하면
 
-```
+```plain text
 .box1 {border: 1px dashed black;}.box2 {border: 4px dashed black;}
 ```
 
@@ -165,7 +168,7 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 
 이 때, 작성하지 않은 인수가 적용될 수 있도록 `@mixin` 에서 기본값을 설정해 주는 것이 좋다.
 
-```
+```plain text
 @mixin 믹스인이름($매개변수A: 기본값, $매개변수B: 기본값) {
   스타일;
 }
@@ -173,7 +176,7 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 @include 믹스인이름($매개변수B: 인수);
 ```
 
-```
+```plain text
 @mixin position(
   $p: absolute,
   $t: null,
@@ -204,7 +207,7 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 
 컴파일하면
 
-```
+```plain text
 .absolute {position: absolute;bottom: 10px;right: 20px;}.fixed {position: fixed;top: 30px;right: 40px;}
 ```
 
@@ -216,7 +219,7 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 
 매개변수 뒤에 `...` 를 붙여주는 것으로 사용할 수 있다.
 
-```
+```plain text
 @mixin 믹스인이름($매개변수...) {
   스타일;
 }
@@ -224,7 +227,7 @@ Mixin은 함수(Functions)처럼 인수(Arguments)를 가질 수 있다.
 @include 믹스인이름(인수A, 인수B, 인수C);
 ```
 
-```
+```plain text
 // 인수를 순서대로 하나씩 전달 받다가, 3번째 매개변수($bg-values)는 인수의 개수에 상관없이 받음
 @mixin bg($width, $height, $bg-values...) {
   width: $width;
@@ -246,13 +249,13 @@ div {
 
 컴파일하면
 
-```
+```plain text
 div {width: 100px;height: 200px;background: url("/images/a.png") no-repeat 10px 20px,url("/images/b.png") no-repeat,url("/images/c.png");}
 ```
 
 인수 리스트는 `@mixin` 으로 전달할 때도 사용할 수 있다.
 
-```
+```plain text
 @mixin font(
   $style: normal,
   $weight: normal,
@@ -290,7 +293,7 @@ a {
 
 `@mixin` 을 선언할 때 `@content` 를 사용하면 `@include` 를 사용해 원하는 스타일 블록을 추가해서 전달할 수 있다.
 
-```
+```plain text
 @mixin 믹스인이름() {
   스타일;
   @content;
@@ -302,7 +305,7 @@ a {
 }
 ```
 
-```
+```plain text
 @mixin icon($url) {
   &::after {
     content: $url;
@@ -323,7 +326,7 @@ a {
 
 컴파일하면
 
-```
+```plain text
 .icon1::after {content: "/images/icon.png";}.icon2::after {content: "/images/icon.png";position: absolute;}
 ```
 
@@ -331,7 +334,7 @@ a {
 
 즉, `@mixin` 의 매개변수가 아니라 전역변수로 해석된다.
 
-```
+```plain text
 $color: red;
 
 @mixin colors($color: blue) {
@@ -351,7 +354,7 @@ div {
 
 컴파일하면
 
-```
+```plain text
 div {color: red;background-color: blue;border-color: blue;}
 ```
 

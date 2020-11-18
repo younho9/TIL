@@ -1,14 +1,13 @@
 const { getFilesOf, getDirectoriesOf } = require('./src/utils');
+const { CATEGORY_SLUGS, SUB_CATEGORY_SLUGS } = require('./src/constants');
 
-const categories = ['algorithms', 'cs', 'frontend', 'etc'];
-
-module.exports = categories.reduce(
+module.exports = Object.values(CATEGORY_SLUGS).reduce(
   (sidebars, category) => ({
     ...sidebars,
-    [category]: getDirectoriesOf({ root: 'docs', dir: category }).map(dir => ({
+    [category]: getDirectoriesOf({ root: 'docs', dir: category.toLowerCase() }).map(dir => ({
       type: 'category',
-      label: dir,
-      items: getFilesOf({ root: 'docs', dir: `${category}/${dir}` }),
+      label: SUB_CATEGORY_SLUGS[dir],
+      items: getFilesOf({ root: 'docs', dir: `${category.toLowerCase()}/${dir}` }),
     })),
   }),
   {},

@@ -31,7 +31,7 @@ if __name__ == "__main__":
     # Get Daily contents from database
     NotionExporter(
         token=token,
-        docs_directory="./blog",
+        docs_directory="./log/20-log",
         create_page_directory=False,
         add_metadata=True,
     ).get_notion_pages_from_database(

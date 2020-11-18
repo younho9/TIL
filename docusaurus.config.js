@@ -42,7 +42,7 @@ module.exports = {
           label: 'ETC',
           position: 'right',
         },
-        { to: 'blog', label: 'Log', position: 'right' },
+        { to: 'log/2020', label: '2020 Log', position: 'right' },
         {
           href: 'https://github.com/younho9/til',
           position: 'right',
@@ -111,8 +111,8 @@ module.exports = {
           title: 'More',
           items: [
             {
-              label: 'Log',
-              to: 'blog',
+              label: '2020 Log',
+              to: 'log/2020',
             },
             {
               label: 'GitHub',
@@ -139,13 +139,19 @@ module.exports = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
-        blog: {
-          showReadingTime: true,
-          editUrl: 'https://github.com/younho9/til/edit/master/',
-        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'twoZeroLog',
+        routeBasePath: 'log/2020',
+        path: './log/20-log',
       },
     ],
   ],

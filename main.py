@@ -18,6 +18,8 @@ if __name__ == "__main__":
             docs_directory="./docs/" + category.lower(),
             create_page_directory=False,
             add_metadata=True,
+            lower_pathname=True,
+            lower_filename=True,
         ).get_notion_pages_from_database(
             url=database_url,
             category_column_name="Category",
@@ -34,6 +36,8 @@ if __name__ == "__main__":
         docs_directory="./log/20-log",
         create_page_directory=False,
         add_metadata=True,
+        lower_pathname=True,
+        lower_filename=True,
     ).get_notion_pages_from_database(
         url=database_url,
         tags_column_name="Tags",

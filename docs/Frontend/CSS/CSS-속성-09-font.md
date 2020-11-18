@@ -156,7 +156,7 @@ p {font-style: italic;}
 |        | px , em , cm 등 단위로 지정            | 단위   |
 |        | 요소 자체 글꼴 크기의 비율로 지정      | %      |
 
-![CSS-속성-09-font-image-0](images/CSS-속성-09-font-image-.png)
+![CSS-속성-09-font-image-0](images/CSS-속성-09-font-image-0.png)
 
 > 이미지 출처 : Deep dive CSS: font metrics, line-height and vertical-align
 

@@ -67,7 +67,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."
 
 MDN 페이지의 이러한 메타데이터는 페이스북에 링크했을 때 아래의 이미지처럼 나타내게 해준다.
 
-![메타데이터-`<meta>`-요소-image-0](https://mdn.mozillademos.org/files/12349/facebook-output.png)
+![메타데이터-<meta>-요소-image-0](https://mdn.mozillademos.org/files/12349/facebook-output.png)
 
 트위터에서도 유사한 형태의 독점적인 자체 메타데이터를 갖고 있다.
 

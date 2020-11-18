@@ -29,47 +29,47 @@ Sass에서 기본적으로 제공하는 내장 함수에는 많은 종류가 있
 
 [desaturate($color, $amount)](http://sass-lang.com/documentation/Sass/Script/Functions.html#desaturate-instance_method) : 색상의 채도를 낮춤
 
-[grayscale($color)](http://sass-lang.com/documentation/Sass/Script/Functions.html#grayscale-instance_method) : 색상을 회색으로 변환
+[grayscale(\$color)](http://sass-lang.com/documentation/Sass/Script/Functions.html#grayscale-instance_method) : 색상을 회색으로 변환
 
-[invert($color)](http://sass-lang.com/documentation/Sass/Script/Functions.html#invert-instance_method) : 색상을 반전
+[invert(\$color)](http://sass-lang.com/documentation/Sass/Script/Functions.html#invert-instance_method) : 색상을 반전
 
 [rgba($color, $alpha)](http://sass-lang.com/documentation/Sass/Script/Functions.html#rgba-instance_method) : 색상의 투명도 변경
 
-[opacify($color, amount)/fade − in(color, $amount)](https://sass-lang.com/documentation/modules/color#opacify) : 색상을 더 불투명하게
+[opacify(\$color,](https://sass-lang.com/documentation/modules/color#opacify) _[amount](https://sass-lang.com/documentation/modules/color#opacify)_ [)/](https://sass-lang.com/documentation/modules/color#opacify)_[fade](https://sass-lang.com/documentation/modules/color#opacify)_  [−](https://sass-lang.com/documentation/modules/color#opacify) *[in](https://sass-lang.com/documentation/modules/color#opacify)* [(color, \$amount)](https://sass-lang.com/documentation/modules/color#opacify) : 색상을 더 불투명하게
 
-[transparentize($color, amount)/fade − out(color, $amount)](https://sass-lang.com/documentation/modules/color#transparentize) : 색상을 더 투명하게
+[transparentize(\$color,](https://sass-lang.com/documentation/modules/color#transparentize) _[amount](https://sass-lang.com/documentation/modules/color#transparentize)_ [)/](https://sass-lang.com/documentation/modules/color#transparentize)_[fade](https://sass-lang.com/documentation/modules/color#transparentize)_  [−](https://sass-lang.com/documentation/modules/color#transparentize) *[out](https://sass-lang.com/documentation/modules/color#transparentize)* [(color, \$amount)](https://sass-lang.com/documentation/modules/color#transparentize) : 색상을 더 투명하게
 
 #### 문자(String) 함수
 
-[unquote($string)](http://sass-lang.com/documentation/Sass/Script/Functions.html#unquote-instance_method) : 문자의 따옴표 제거
+[unquote(\$string)](http://sass-lang.com/documentation/Sass/Script/Functions.html#unquote-instance_method) : 문자의 따옴표 제거
 
-[quote($string)](http://sass-lang.com/documentation/Sass/Script/Functions.html#quote-instance_method) : 문자에 따옴표 추가
+[quote(\$string)](http://sass-lang.com/documentation/Sass/Script/Functions.html#quote-instance_method) : 문자에 따옴표 추가
 
-[str-insert($string, $insert, $index)](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_insert-instance_method) : 문자의 index번째에 특정 문자를 삽입
+[str-insert($string, $insert, \$index)](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_insert-instance_method) : 문자의 index번째에 특정 문자를 삽입
 
 [str-index($string, $substring)](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_index-instance_method) : 문자에서 특정 문자의 첫 index를 반환
 
-[str-slice($string, start − at, [end-at])](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method) : 문자에서 특정 문자(몇 번째 글자부터 몇 번째 글자까지)를 추출
+[str-slice(\$string,](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method) _[start](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method)_  [−](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method) *[at](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method)* [, [end-at])](http://sass-lang.com/documentation/Sass/Script/Functions.html#str_slice-instance_method) : 문자에서 특정 문자(몇 번째 글자부터 몇 번째 글자까지)를 추출
 
-[to-upper-case($string)](http://sass-lang.com/documentation/Sass/Script/Functions.html#to_upper_case-instance_method) : 문자를 대문자로 변환
+[to-upper-case(\$string)](http://sass-lang.com/documentation/Sass/Script/Functions.html#to_upper_case-instance_method) : 문자를 대문자로 변환
 
-[to-lower-case($string)](http://sass-lang.com/documentation/Sass/Script/Functions.html#to_lower_case-instance_method) : 문자를 소문자로 변환
+[to-lower-case(\$string)](http://sass-lang.com/documentation/Sass/Script/Functions.html#to_lower_case-instance_method) : 문자를 소문자로 변환
 
 #### 숫자(Number) 함수
 
-[percentage($number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#percentage-instance_method) : 숫자(단위 무시)를 백분율로 변환합니다.
+[percentage(\$number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#percentage-instance_method) : 숫자(단위 무시)를 백분율로 변환합니다.
 
-[round($number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#round-instance_method) : 정수로 반올림합니다.
+[round(\$number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#round-instance_method) : 정수로 반올림합니다.
 
-[ceil($number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#ceil-instance_method) : 정수로 올림합니다.
+[ceil(\$number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#ceil-instance_method) : 정수로 올림합니다.
 
-[floor($number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#floor-instance_method) : 정수로 내림(버림)합니다.
+[floor(\$number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#floor-instance_method) : 정수로 내림(버림)합니다.
 
-[abs($number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#abs-instance_method) : 숫자의 절대 값을 반환합니다.
+[abs(\$number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#abs-instance_method) : 숫자의 절대 값을 반환합니다.
 
-[min($numbers…)](http://sass-lang.com/documentation/Sass/Script/Functions.html#min-instance_method) : 숫자 중 최소 값을 찾습니다.
+[min(\$numbers…)](http://sass-lang.com/documentation/Sass/Script/Functions.html#min-instance_method) : 숫자 중 최소 값을 찾습니다.
 
-[max($numbers…)](http://sass-lang.com/documentation/Sass/Script/Functions.html#max-instance_method) : 숫자 중 최대 값을 찾습니다.
+[max(\$numbers…)](http://sass-lang.com/documentation/Sass/Script/Functions.html#max-instance_method) : 숫자 중 최대 값을 찾습니다.
 
 [random()](http://sass-lang.com/documentation/Sass/Script/Functions.html#random-instance_method) : `0` 부터 `1` 사이의 난수를 반환합니다.
 
@@ -77,15 +77,15 @@ Sass에서 기본적으로 제공하는 내장 함수에는 많은 종류가 있
 
 모든 List 내장 함수는 기존 List 데이터를 갱신하지 않고 새 List 데이터를 반환합니다. 모든 List 내장 함수는 Map 데이터에서도 사용할 수 있습니다.
 
-[length($list)](http://sass-lang.com/documentation/Sass/Script/Functions.html#length-instance_method) : List의 개수를 반환합니다.
+[length(\$list)](http://sass-lang.com/documentation/Sass/Script/Functions.html#length-instance_method) : List의 개수를 반환합니다.
 
 [nth($list, $n)](http://sass-lang.com/documentation/Sass/Script/Functions.html#nth-instance_method) : List에서 n번째 값을 반환합니다.
 
-[set-nth($list, $n, $value)](http://sass-lang.com/documentation/Sass/Script/Functions.html#set_nth-instance_method) : List에서 n번째 값을 다른 값으로 변경합니다.
+[set-nth($list, $n, \$value)](http://sass-lang.com/documentation/Sass/Script/Functions.html#set_nth-instance_method) : List에서 n번째 값을 다른 값으로 변경합니다.
 
-[join($list1, _lis_t2, [separator])](http://sass-lang.com/documentation/Sass/Script/Functions.html#join-instance_method) : 두 개의 List를 하나로 결합합니다.
+[join(\$list1, _l__i__s_*t*2, [separator])](http://sass-lang.com/documentation/Sass/Script/Functions.html#join-instance_method) : 두 개의 List를 하나로 결합합니다.
 
-[zip($lists…)](http://sass-lang.com/documentation/Sass/Script/Functions.html#zip-instance_method) : 여러 List들을 하나의 다차원 List로 결합합니다.
+[zip(\$lists…)](http://sass-lang.com/documentation/Sass/Script/Functions.html#zip-instance_method) : 여러 List들을 하나의 다차원 List로 결합합니다.
 
 [index($list, $value)](http://sass-lang.com/documentation/Sass/Script/Functions.html#index-instance_method) : List에서 특정 값의 index를 반환합니다.
 
@@ -97,17 +97,17 @@ Sass에서 기본적으로 제공하는 내장 함수에는 많은 종류가 있
 
 [map-merge($map1, $map2)](http://sass-lang.com/documentation/Sass/Script/Functions.html#map_merge-instance_method) : 두 개의 Map을 병합하여 새로운 Map를 만듭니다.
 
-[map-keys($map)](http://sass-lang.com/documentation/Sass/Script/Functions.html#map_keys-instance_method) : Map에서 모든 key를 List로 반환합니다.
+[map-keys(\$map)](http://sass-lang.com/documentation/Sass/Script/Functions.html#map_keys-instance_method) : Map에서 모든 key를 List로 반환합니다.
 
-[map-values($map)](http://sass-lang.com/documentation/Sass/Script/Functions.html#map_values-instance_method) : Map에서 모든 value를 List로 반환합니다.
+[map-values(\$map)](http://sass-lang.com/documentation/Sass/Script/Functions.html#map_values-instance_method) : Map에서 모든 value를 List로 반환합니다.
 
 #### 관리(Introspection) 함수
 
 [variable-exists(name)](http://sass-lang.com/documentation/Sass/Script/Functions.html#variable_exists-instance_method) : 변수가 현재 범위에 존재하는지 여부를 반환합니다.(인수는 `$`없이 변수의 이름만 사용합니다.)
 
-[unit($number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#unit-instance_method) : 숫자의 단위를 반환합니다.
+[unit(\$number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#unit-instance_method) : 숫자의 단위를 반환합니다.
 
-[unitless($number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#unitless-instance_method) : 숫자에 단위가 있는지 여부를 반환합니다.
+[unitless(\$number)](http://sass-lang.com/documentation/Sass/Script/Functions.html#unitless-instance_method) : 숫자에 단위가 있는지 여부를 반환합니다.
 
 [comparable($number1, $number2)](http://sass-lang.com/documentation/Sass/Script/Functions.html#comparable-instance_method) : 두 개의 숫자가 연산 가능한지 여부를 반환합니다.
 

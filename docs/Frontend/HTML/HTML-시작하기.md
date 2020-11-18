@@ -218,6 +218,6 @@ HTML5에서는 `<tag>` 처럼 `/` 를 생략할 수도 있고, `<tag/>` 처럼 `
 
 > `href` : **h**ypertext **ref**erence
 
-## Reference
+### Reference
 
 [HTML 시작하기](https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started)

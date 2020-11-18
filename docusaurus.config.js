@@ -36,6 +36,12 @@ module.exports = {
           label: 'Frontend',
           position: 'right',
         },
+        {
+          to: 'docs/ETC/Setting/1-Mac-버추얼박스-VirtualBox-에-우분투-Ubuntu-설치하기',
+          activeBasePath: 'docs/ETC',
+          label: 'ETC',
+          position: 'right',
+        },
         { to: 'blog', label: 'Log', position: 'right' },
         {
           href: 'https://github.com/younho9/til',
@@ -69,6 +75,10 @@ module.exports = {
             {
               label: 'Frontend',
               to: 'docs/Frontend/Bootstrap/Bootstrap-getting-started',
+            },
+            {
+              label: 'ETC',
+              to: 'docs/ETC/Setting/1-Mac-버추얼박스-VirtualBox-에-우분투-Ubuntu-설치하기',
             },
           ],
         },

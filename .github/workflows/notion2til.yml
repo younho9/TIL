@@ -33,7 +33,8 @@ jobs:
       - name: Format
         run: |
           npm ci
-          npm run format
+          npm run format:docs
+          npm run format:blog
 
       - name: Git auto commit action
         uses: stefanzweifel/git-auto-commit-action@v4

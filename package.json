@@ -14,7 +14,8 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
-    "format": "cd docs && prettier --write ."
+    "format:docs": "cd docs && prettier --write .",
+    "format:blog": "cd blog && prettier --write ."
   },
   "license": "MIT",
   "dependencies": {

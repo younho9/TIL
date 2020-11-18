@@ -1,3 +1,15 @@
+const { getDirectoriesOf, getFilesOf, appendPath, getFirstContent } = require('./src/utils');
+const { CATEGORY_SLUGS } = require('./src/constants');
+
+const docNavs = Object.entries(CATEGORY_SLUGS).map(([category, categorySlug]) => ({
+  to: getFirstContent(category),
+  activeBasePath: appendPath('docs', category),
+  label: categorySlug,
+  position: 'right',
+}));
+
+const docFooters = docNavs.map(({ to, label }) => ({ to, label }));
+
 module.exports = {
   title: 'TIL(Today I Learned)',
   tagline: '하루동안 공부한 것들을 기록하는 공간',
@@ -18,30 +30,7 @@ module.exports = {
         src: 'img/logo.png',
       },
       items: [
-        {
-          to: 'docs/algorithms/programmers/2020-카카오-인턴십-경주로-건설',
-          activeBasePath: 'docs/algorithms',
-          label: 'Algorithms',
-          position: 'right',
-        },
-        {
-          to: 'docs/cs/design-pattern/observer-pattern-vs-pub-sub-pattern',
-          activeBasePath: 'docs/cs',
-          label: 'CS',
-          position: 'right',
-        },
-        {
-          to: 'docs/frontend/bootstrap/bootstrap-getting-started',
-          activeBasePath: 'docs/frontend',
-          label: 'Frontend',
-          position: 'right',
-        },
-        {
-          to: 'docs/etc/setting/1-mac-버추얼박스-virtualbox-에-우분투-ubuntu-설치하기',
-          activeBasePath: 'docs/etc',
-          label: 'ETC',
-          position: 'right',
-        },
+        ...docNavs,
         { to: 'log/2020', label: '2020 Log', position: 'right' },
         {
           href: 'https://github.com/younho9/til',
@@ -63,24 +52,7 @@ module.exports = {
       links: [
         {
           title: 'Docs',
-          items: [
-            {
-              label: 'Algorithms',
-              to: 'docs/algorithms/programmers/2020-카카오-인턴십-경주로-건설',
-            },
-            {
-              label: 'CS',
-              to: 'docs/cs/design-pattern/observer-pattern-vs-pub-sub-pattern',
-            },
-            {
-              label: 'Frontend',
-              to: 'docs/frontend/bootstrap/bootstrap-getting-started',
-            },
-            {
-              label: 'etc',
-              to: 'docs/etc/setting/1-mac-버추얼박스-virtualbox-에-우분투-ubuntu-설치하기',
-            },
-          ],
+          items: docFooters,
         },
         {
           title: 'Personal Links',

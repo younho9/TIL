@@ -2,19 +2,25 @@ const fs = require('fs');
 const path = require('path');
 const { isBuffer } = require('util');
 
-const getFilesOf = ({ root = 'docs', dir }) =>
+const getFilesOf = dir =>
   fs
-    .readdirSync(`${root}/${dir}`)
-    .map(file => path.parse(file).name)
-    .reduce(
-      (files, fileName) =>
-        fileName === 'images' || fileName === 'README' ? files : [...files, `${dir}/${fileName}`],
-      [],
-    );
+    .readdirSync(dir)
+    .reduce((files, fileName) => (fileName.includes('.') ? [...files, fileName] : files), [])
+    .map(file => path.parse(file).name);
 
-const getDirectoriesOf = ({ root = 'docs', dir }) =>
+const getDirectoriesOf = dir =>
   fs
-    .readdirSync(`${root}/${dir}`)
-    .reduce((dirs, dirName) => (dirName === 'README.md' ? dirs : [...dirs, dirName]), []);
+    .readdirSync(dir)
+    .reduce((dirs, dirName) => (dirName.includes('.') ? dirs : [...dirs, dirName]), []);
 
-module.exports = { getFilesOf, getDirectoriesOf };
+const appendPath = (path, target) => `${path}/${target}`;
+
+const getFirstContent = category => {
+  const categoryPath = appendPath('docs', category);
+  const subCategoryPath = appendPath(categoryPath, getDirectoriesOf(categoryPath)[0]);
+  return appendPath(subCategoryPath, getFilesOf(subCategoryPath)[0]);
+};
+
+const removePriority = dir => dir.split('-').slice(1).join('-');
+
+module.exports = { getFilesOf, getDirectoriesOf, getFirstContent, appendPath, removePriority };

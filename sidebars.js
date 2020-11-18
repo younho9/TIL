@@ -1,14 +1,23 @@
-const { getFilesOf, getDirectoriesOf } = require('./src/utils');
+const { getFilesOf, getDirectoriesOf, removePriority } = require('./src/utils');
 const { CATEGORY_SLUGS, SUB_CATEGORY_SLUGS } = require('./src/constants');
 
-module.exports = Object.values(CATEGORY_SLUGS).reduce(
+const categories = getDirectoriesOf('docs');
+const getSubCategories = category => getDirectoriesOf(`docs/${category}`);
+
+const createSubCategoryItem = (category, subCategory) => ({
+  type: 'category',
+  label: SUB_CATEGORY_SLUGS[removePriority(subCategory)],
+  items: getFilesOf(`docs/${category}/${subCategory}`).map(
+    fileName => `${category}/${subCategory}/${fileName}`,
+  ),
+});
+
+module.exports = categories.reduce(
   (sidebars, category) => ({
     ...sidebars,
-    [category]: getDirectoriesOf({ root: 'docs', dir: category.toLowerCase() }).map(dir => ({
-      type: 'category',
-      label: SUB_CATEGORY_SLUGS[dir],
-      items: getFilesOf({ root: 'docs', dir: `${category.toLowerCase()}/${dir}` }),
-    })),
+    [category]: getSubCategories(category).map(subCategory =>
+      createSubCategoryItem(category, subCategory),
+    ),
   }),
   {},
 );

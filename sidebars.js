@@ -1,6 +1,6 @@
 const { getFilesOf, getDirectoriesOf } = require('./src/utils');
 
-const categories = ['Algorithms', 'CS', 'Frontend', 'ETC'];
+const categories = ['algorithms', 'cs', 'frontend', 'etc'];
 
 module.exports = categories.reduce(
   (sidebars, category) => ({

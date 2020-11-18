@@ -19,26 +19,26 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/Algorithms/Programmers/2020-카카오-인턴십-경주로-건설',
-          activeBasePath: 'docs/Algorithms',
+          to: 'docs/algorithms/programmers/2020-카카오-인턴십-경주로-건설',
+          activeBasePath: 'docs/algorithms',
           label: 'Algorithms',
           position: 'right',
         },
         {
-          to: 'docs/CS/Design-Pattern/Observer-pattern-vs-Pub-Sub-pattern',
-          activeBasePath: 'docs/CS',
+          to: 'docs/cs/design-pattern/observer-pattern-vs-pub-sub-pattern',
+          activeBasePath: 'docs/cs',
           label: 'CS',
           position: 'right',
         },
         {
-          to: 'docs/Frontend/Bootstrap/Bootstrap-getting-started',
-          activeBasePath: 'docs/Frontend',
+          to: 'docs/frontend/bootstrap/bootstrap-getting-started',
+          activeBasePath: 'docs/frontend',
           label: 'Frontend',
           position: 'right',
         },
         {
-          to: 'docs/ETC/Setting/1-Mac-버추얼박스-VirtualBox-에-우분투-Ubuntu-설치하기',
-          activeBasePath: 'docs/ETC',
+          to: 'docs/etc/setting/1-mac-버추얼박스-virtualbox-에-우분투-ubuntu-설치하기',
+          activeBasePath: 'docs/etc',
           label: 'ETC',
           position: 'right',
         },
@@ -66,19 +66,19 @@ module.exports = {
           items: [
             {
               label: 'Algorithms',
-              to: 'docs/Algorithms/Programmers/2020-카카오-인턴십-경주로-건설',
+              to: 'docs/algorithms/programmers/2020-카카오-인턴십-경주로-건설',
             },
             {
               label: 'CS',
-              to: 'docs/CS/Design-Pattern/Observer-pattern-vs-Pub-Sub-pattern',
+              to: 'docs/cs/design-pattern/observer-pattern-vs-pub-sub-pattern',
             },
             {
               label: 'Frontend',
-              to: 'docs/Frontend/Bootstrap/Bootstrap-getting-started',
+              to: 'docs/frontend/bootstrap/bootstrap-getting-started',
             },
             {
-              label: 'ETC',
-              to: 'docs/ETC/Setting/1-Mac-버추얼박스-VirtualBox-에-우분투-Ubuntu-설치하기',
+              label: 'etc',
+              to: 'docs/etc/setting/1-mac-버추얼박스-virtualbox-에-우분투-ubuntu-설치하기',
             },
           ],
         },

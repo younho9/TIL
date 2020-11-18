@@ -15,7 +15,7 @@ if __name__ == "__main__":
     for category in ["Algorithms", "CS", "Frontend", "ETC"]:
         NotionExporter(
             token=token,
-            docs_directory="./docs/" + category,
+            docs_directory="./docs/" + category.lower(),
             create_page_directory=False,
             add_metadata=True,
         ).get_notion_pages_from_database(

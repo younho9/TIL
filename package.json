@@ -15,7 +15,7 @@
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
     "format:docs": "cd docs && prettier --write .",
-    "format:blog": "cd blog && prettier --write ."
+    "format:log": "cd log && prettier --write ."
   },
   "license": "MIT",
   "dependencies": {

@@ -34,7 +34,7 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn format:docs
-          yarn format:blog
+          yarn format:log
 
       - name: Git auto commit action
         uses: stefanzweifel/git-auto-commit-action@v4

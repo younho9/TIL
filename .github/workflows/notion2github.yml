@@ -1,16 +1,3 @@
----
-docs-config: &defaults
-  database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
-  create-page-directory: False
-  add-metadata: True
-  lower-pathname: True
-  lower-filename: True
-  category-column-name: Category
-  tags-column-name: Tags
-  status-column-name: Status
-  current-status: ✅ Completed
-  next-status: 🖨 Published
-
 name: Notion2Github
 on:
   push:
@@ -30,7 +17,18 @@ jobs:
       - name: Notion2Github Algorithms
         uses: younho9/notion2github@v0.0.2-beta
         with:
-          <<: *defaults
+          # default config
+          database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
+          create-page-directory: False
+          add-metadata: True
+          lower-pathname: True
+          lower-filename: True
+          category-column-name: Category
+          tags-column-name: Tags
+          status-column-name: Status
+          current-status: ✅ Completed
+          next-status: 🖨 Published
+
           docs-directory: ./docs/algorithms
           filters: '{ "Main Category": "Algorithms" }'
         env:
@@ -39,7 +37,17 @@ jobs:
       - name: Notion2Github CS
         uses: younho9/notion2github@v0.0.2-beta
         with:
-          <<: *defaults
+          # default config
+          database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
+          create-page-directory: False
+          add-metadata: True
+          lower-pathname: True
+          lower-filename: True
+          category-column-name: Category
+          tags-column-name: Tags
+          status-column-name: Status
+          current-status: ✅ Completed
+          next-status: 🖨 Published
           docs-directory: ./docs/cs
           filters: '{ "Main Category": "CS" }'
         env:
@@ -48,7 +56,17 @@ jobs:
       - name: Notion2Github ETC
         uses: younho9/notion2github@v0.0.2-beta
         with:
-          <<: *defaults
+          # default config
+          database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
+          create-page-directory: False
+          add-metadata: True
+          lower-pathname: True
+          lower-filename: True
+          category-column-name: Category
+          tags-column-name: Tags
+          status-column-name: Status
+          current-status: ✅ Completed
+          next-status: 🖨 Published
           docs-directory: ./docs/etc
           filters: '{ "Main Category": "ETC" }'
         env:
@@ -57,7 +75,17 @@ jobs:
       - name: Notion2Github Frontend
         uses: younho9/notion2github@v0.0.2-beta
         with:
-          <<: *defaults
+          # default config
+          database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
+          create-page-directory: False
+          add-metadata: True
+          lower-pathname: True
+          lower-filename: True
+          category-column-name: Category
+          tags-column-name: Tags
+          status-column-name: Status
+          current-status: ✅ Completed
+          next-status: 🖨 Published
           docs-directory: ./docs/frontend
           filters: '{ "Main Category": "Frontend" }'
         env:
@@ -66,7 +94,17 @@ jobs:
       - name: Notion2Github Log
         uses: younho9/notion2github@v0.0.2-beta
         with:
-          <<: *defaults
+          # default config
+          database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
+          create-page-directory: False
+          add-metadata: True
+          lower-pathname: True
+          lower-filename: True
+          category-column-name: Category
+          tags-column-name: Tags
+          status-column-name: Status
+          current-status: ✅ Completed
+          next-status: 🖨 Published
           docs-directory: ./log/20-log
           filters: '{ "Main Category": "Log" }'
           created-time-column-name: Created Time

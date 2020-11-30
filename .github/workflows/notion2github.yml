@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Notion2Github Algorithms
-        uses: younho9/notion2github@v0.0.2-beta
+        uses: younho9/notion2github@v0.0.3-beta
         with:
           # default config
           database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
@@ -35,7 +35,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
       - name: Notion2Github CS
-        uses: younho9/notion2github@v0.0.2-beta
+        uses: younho9/notion2github@v0.0.3-beta
         with:
           # default config
           database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
@@ -54,7 +54,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
       - name: Notion2Github ETC
-        uses: younho9/notion2github@v0.0.2-beta
+        uses: younho9/notion2github@v0.0.3-beta
         with:
           # default config
           database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
@@ -73,7 +73,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
       - name: Notion2Github Frontend
-        uses: younho9/notion2github@v0.0.2-beta
+        uses: younho9/notion2github@v0.0.3-beta
         with:
           # default config
           database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
@@ -92,7 +92,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
       - name: Notion2Github Log
-        uses: younho9/notion2github@v0.0.2-beta
+        uses: younho9/notion2github@v0.0.3-beta
         with:
           # default config
           database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175

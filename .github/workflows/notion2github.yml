@@ -1,0 +1,117 @@
+name: Notion2Github
+on:
+  schedule:
+    - cron: '0 14 * * *'
+
+jobs:
+  automatic-syncronization-from-notion-to-github:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Notion2Github Algorithms
+        uses: younho9/notion2github@v0.0.3-beta
+        with:
+          # default config
+          database-url: ${{ secrets.DATABASE_URL }}
+          create-page-directory: False
+          add-metadata: True
+          lower-pathname: True
+          lower-filename: True
+          category-column-name: Category
+          tags-column-name: Tags
+          status-column-name: Status
+          current-status: ✅ Completed
+          next-status: 🖨 Published
+
+          docs-directory: ./docs/algorithms
+          filters: '{ "Main Category": "Algorithms" }'
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+      - name: Notion2Github CS
+        uses: younho9/notion2github@v0.0.3-beta
+        with:
+          # default config
+          database-url: ${{ secrets.DATABASE_URL }}
+          create-page-directory: False
+          add-metadata: True
+          lower-pathname: True
+          lower-filename: True
+          category-column-name: Category
+          tags-column-name: Tags
+          status-column-name: Status
+          current-status: ✅ Completed
+          next-status: 🖨 Published
+          docs-directory: ./docs/cs
+          filters: '{ "Main Category": "CS" }'
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+      - name: Notion2Github ETC
+        uses: younho9/notion2github@v0.0.3-beta
+        with:
+          # default config
+          database-url: ${{ secrets.DATABASE_URL }}
+          create-page-directory: False
+          add-metadata: True
+          lower-pathname: True
+          lower-filename: True
+          category-column-name: Category
+          tags-column-name: Tags
+          status-column-name: Status
+          current-status: ✅ Completed
+          next-status: 🖨 Published
+          docs-directory: ./docs/etc
+          filters: '{ "Main Category": "ETC" }'
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+      - name: Notion2Github Frontend
+        uses: younho9/notion2github@v0.0.3-beta
+        with:
+          # default config
+          database-url: ${{ secrets.DATABASE_URL }}
+          create-page-directory: False
+          add-metadata: True
+          lower-pathname: True
+          lower-filename: True
+          category-column-name: Category
+          tags-column-name: Tags
+          status-column-name: Status
+          current-status: ✅ Completed
+          next-status: 🖨 Published
+          docs-directory: ./docs/frontend
+          filters: '{ "Main Category": "Frontend" }'
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+      - name: Notion2Github Log
+        uses: younho9/notion2github@v0.0.3-beta
+        with:
+          # default config
+          database-url: ${{ secrets.DATABASE_URL }}
+          create-page-directory: False
+          add-metadata: True
+          lower-pathname: True
+          lower-filename: True
+          category-column-name: Category
+          tags-column-name: Tags
+          status-column-name: Status
+          current-status: ✅ Completed
+          next-status: 🖨 Published
+          docs-directory: ./log/20-log
+          filters: '{ "Main Category": "Log" }'
+          created-time-column-name: Created Time
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+
+      - name: Format documents
+        uses: creyD/prettier_action@v3.1
+        with:
+          prettier_options: --write ./docs/**/*.md ./log/**/*.md
+          commit_message: 'docs: Update docs (auto)'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

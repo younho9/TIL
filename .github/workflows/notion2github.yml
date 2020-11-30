@@ -18,7 +18,7 @@ jobs:
         uses: younho9/notion2github@v0.0.3-beta
         with:
           # default config
-          database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
+          database-url: ${{ secrets.DATABASE_URL }}
           create-page-directory: False
           add-metadata: True
           lower-pathname: True
@@ -38,7 +38,7 @@ jobs:
         uses: younho9/notion2github@v0.0.3-beta
         with:
           # default config
-          database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
+          database-url: ${{ secrets.DATABASE_URL }}
           create-page-directory: False
           add-metadata: True
           lower-pathname: True
@@ -57,7 +57,7 @@ jobs:
         uses: younho9/notion2github@v0.0.3-beta
         with:
           # default config
-          database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
+          database-url: ${{ secrets.DATABASE_URL }}
           create-page-directory: False
           add-metadata: True
           lower-pathname: True
@@ -76,7 +76,7 @@ jobs:
         uses: younho9/notion2github@v0.0.3-beta
         with:
           # default config
-          database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
+          database-url: ${{ secrets.DATABASE_URL }}
           create-page-directory: False
           add-metadata: True
           lower-pathname: True
@@ -95,7 +95,7 @@ jobs:
         uses: younho9/notion2github@v0.0.3-beta
         with:
           # default config
-          database-url: https://www.notion.so/acc3dfd0339e4cacb5baae8673fddfad?v=83b3d2a66f634940987d1142e51da175
+          database-url: ${{ secrets.DATABASE_URL }}
           create-page-directory: False
           add-metadata: True
           lower-pathname: True

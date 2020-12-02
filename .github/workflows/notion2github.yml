@@ -1,8 +1,5 @@
 name: Notion2Github
 on:
-  push:
-    branch:
-      - test/notion2github@v1.0.0-beta
   schedule:
     - cron: '0 14 * * *'
 
@@ -18,7 +15,7 @@ jobs:
         uses: younho9/notion2github@v1.0.0-beta
         with:
           database-url: ${{ secrets.DATABASE_URL }}
-          docs-directory: ./test/docs/algorithms
+          docs-directory: ./docs/algorithms
           filter-prop: Main Category
           filter-value: Algorithms
         env:
@@ -28,7 +25,7 @@ jobs:
         uses: younho9/notion2github@v1.0.0-beta
         with:
           database-url: ${{ secrets.DATABASE_URL }}
-          docs-directory: ./test/docs/cs
+          docs-directory: ./docs/cs
           filter-prop: Main Category
           filter-value: CS
         env:
@@ -38,7 +35,7 @@ jobs:
         uses: younho9/notion2github@v1.0.0-beta
         with:
           database-url: ${{ secrets.DATABASE_URL }}
-          docs-directory: ./test/docs/etc
+          docs-directory: ./docs/etc
           filter-prop: Main Category
           filter-value: ETC
         env:
@@ -48,7 +45,7 @@ jobs:
         uses: younho9/notion2github@v1.0.0-beta
         with:
           database-url: ${{ secrets.DATABASE_URL }}
-          docs-directory: ./test/docs/frontend
+          docs-directory: ./docs/frontend
           filter-prop: Main Category
           filter-value: Frontend
         env:
@@ -57,7 +54,6 @@ jobs:
       - name: Notion2Github Log
         uses: younho9/notion2github@v0.0.3-beta
         with:
-          # default config
           database-url: ${{ secrets.DATABASE_URL }}
           create-page-directory: False
           add-metadata: True
@@ -68,7 +64,7 @@ jobs:
           status-column-name: Status
           current-status: ✅ Completed
           next-status: 🖨 Published
-          docs-directory: ./test/log/20-log
+          docs-directory: ./log/20-log
           filters: '{ "Main Category": "Log" }'
           created-time-column-name: Created Time
         env:

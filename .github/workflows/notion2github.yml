@@ -1,10 +1,13 @@
 name: Notion2Github
 on:
+  push:
+    branch:
+      - test/notion2github@v1.0.0-beta
   schedule:
     - cron: '0 14 * * *'
 
 jobs:
-  automatic-syncronization-from-notion-to-github:
+  auto-sync-from-notion-to-github:
     runs-on: ubuntu-latest
 
     steps:
@@ -12,79 +15,42 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Notion2Github Algorithms
-        uses: younho9/notion2github@v0.0.3-beta
+        uses: younho9/notion2github@v1.0.0-beta
         with:
-          # default config
           database-url: ${{ secrets.DATABASE_URL }}
-          create-page-directory: False
-          add-metadata: True
-          lower-pathname: True
-          lower-filename: True
-          category-column-name: Category
-          tags-column-name: Tags
-          status-column-name: Status
-          current-status: ✅ Completed
-          next-status: 🖨 Published
-
-          docs-directory: ./docs/algorithms
-          filters: '{ "Main Category": "Algorithms" }'
+          docs-directory: ./test/docs/algorithms
+          filter-prop: Main Category
+          filter-value: Algorithms
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
       - name: Notion2Github CS
-        uses: younho9/notion2github@v0.0.3-beta
+        uses: younho9/notion2github@v1.0.0-beta
         with:
-          # default config
           database-url: ${{ secrets.DATABASE_URL }}
-          create-page-directory: False
-          add-metadata: True
-          lower-pathname: True
-          lower-filename: True
-          category-column-name: Category
-          tags-column-name: Tags
-          status-column-name: Status
-          current-status: ✅ Completed
-          next-status: 🖨 Published
-          docs-directory: ./docs/cs
-          filters: '{ "Main Category": "CS" }'
+          docs-directory: ./test/docs/cs
+          filter-prop: Main Category
+          filter-value: CS
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
       - name: Notion2Github ETC
-        uses: younho9/notion2github@v0.0.3-beta
+        uses: younho9/notion2github@v1.0.0-beta
         with:
-          # default config
           database-url: ${{ secrets.DATABASE_URL }}
-          create-page-directory: False
-          add-metadata: True
-          lower-pathname: True
-          lower-filename: True
-          category-column-name: Category
-          tags-column-name: Tags
-          status-column-name: Status
-          current-status: ✅ Completed
-          next-status: 🖨 Published
-          docs-directory: ./docs/etc
-          filters: '{ "Main Category": "ETC" }'
+          docs-directory: ./test/docs/etc
+          filter-prop: Main Category
+          filter-value: ETC
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
       - name: Notion2Github Frontend
-        uses: younho9/notion2github@v0.0.3-beta
+        uses: younho9/notion2github@v1.0.0-beta
         with:
-          # default config
           database-url: ${{ secrets.DATABASE_URL }}
-          create-page-directory: False
-          add-metadata: True
-          lower-pathname: True
-          lower-filename: True
-          category-column-name: Category
-          tags-column-name: Tags
-          status-column-name: Status
-          current-status: ✅ Completed
-          next-status: 🖨 Published
-          docs-directory: ./docs/frontend
-          filters: '{ "Main Category": "Frontend" }'
+          docs-directory: ./test/docs/frontend
+          filter-prop: Main Category
+          filter-value: Frontend
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
@@ -102,7 +68,7 @@ jobs:
           status-column-name: Status
           current-status: ✅ Completed
           next-status: 🖨 Published
-          docs-directory: ./log/20-log
+          docs-directory: ./test/log/20-log
           filters: '{ "Main Category": "Log" }'
           created-time-column-name: Created Time
         env:

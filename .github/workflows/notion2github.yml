@@ -67,7 +67,7 @@ jobs:
           status-column-name: Status
           current-status: ✅ Completed
           next-status: 🖨 Published
-          docs-directory: ./log/20-log
+          docs-directory: ./log
           filters: '{ "Main Category": "Log" }'
           created-time-column-name: Created Time
         env:

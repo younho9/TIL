@@ -128,7 +128,7 @@ module.exports = {
       {
         id: 'twoZeroLog',
         routeBasePath: 'log/2020',
-        path: './log/20-log',
+        path: './log/2020',
       },
     ],
     [
@@ -136,7 +136,7 @@ module.exports = {
       {
         id: 'twoOneLog',
         routeBasePath: 'log/2021',
-        path: './log/21-log',
+        path: './log/2021',
       },
     ],
   ],

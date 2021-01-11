@@ -32,6 +32,7 @@ module.exports = {
       items: [
         ...docNavs,
         { to: 'log/2020', label: '2020 Log', position: 'right' },
+        { to: 'log/2021', label: '2021 Log', position: 'right' },
         {
           href: 'https://github.com/younho9/til',
           position: 'right',
@@ -83,6 +84,10 @@ module.exports = {
           title: 'More',
           items: [
             {
+              label: '2021 Log',
+              to: 'log/2021',
+            },
+            {
               label: '2020 Log',
               to: 'log/2020',
             },
@@ -123,7 +128,15 @@ module.exports = {
       {
         id: 'twoZeroLog',
         routeBasePath: 'log/2020',
-        path: './log/20-log',
+        path: './log/2020',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'twoOneLog',
+        routeBasePath: 'log/2021',
+        path: './log/2021',
       },
     ],
   ],

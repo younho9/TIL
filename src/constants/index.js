@@ -18,6 +18,7 @@ const SUB_CATEGORY_SLUGS = {
   react: 'React',
   'react-native': 'React Native',
   sass: 'Sass',
+  'design-system': 'Design System',
 };
 
 module.exports = { CATEGORY_SLUGS, SUB_CATEGORY_SLUGS };

@@ -55,20 +55,12 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
       - name: Notion2Github Log
-        uses: younho9/notion2github@v0.0.3-beta
+        uses: younho9/notion2github@v1.0.2
         with:
           database-url: ${{ secrets.DATABASE_URL }}
-          create-page-directory: False
-          add-metadata: True
-          lower-pathname: True
-          lower-filename: True
-          category-column-name: Category
-          tags-column-name: Tags
-          status-column-name: Status
-          current-status: ✅ Completed
-          next-status: 🖨 Published
-          docs-directory: ./log/20-log
-          filters: '{ "Main Category": "Log" }'
+          docs-directory: ./log
+          filter-prop: Main Category
+          filter-value: Log
           created-time-column-name: Created Time
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}

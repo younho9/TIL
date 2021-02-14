@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Notion2Github Algorithms
-        uses: younho9/notion2github@v1.0.2
+        uses: younho9/notion2github@v1.0.3
         with:
           database-url: ${{ secrets.DATABASE_URL }}
           docs-directory: ./docs/algorithms
@@ -25,7 +25,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
       - name: Notion2Github CS
-        uses: younho9/notion2github@v1.0.2
+        uses: younho9/notion2github@v1.0.3
         with:
           database-url: ${{ secrets.DATABASE_URL }}
           docs-directory: ./docs/cs
@@ -35,7 +35,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
       - name: Notion2Github ETC
-        uses: younho9/notion2github@v1.0.2
+        uses: younho9/notion2github@v1.0.3
         with:
           database-url: ${{ secrets.DATABASE_URL }}
           docs-directory: ./docs/etc
@@ -45,7 +45,7 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
 
       - name: Notion2Github Frontend
-        uses: younho9/notion2github@v1.0.2
+        uses: younho9/notion2github@v1.0.3
         with:
           database-url: ${{ secrets.DATABASE_URL }}
           docs-directory: ./docs/frontend

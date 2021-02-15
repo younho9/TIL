@@ -89,7 +89,7 @@ Sass에서 기본적으로 제공하는 내장 함수에는 많은 종류가 있
 
 [set-nth($list, $n, \$value)](http://sass-lang.com/documentation/Sass/Script/Functions.html#set_nth-instance_method) : List에서 n번째 값을 다른 값으로 변경합니다.
 
-[join(\$list1, _l__i__s_*t*2, [separator])](http://sass-lang.com/documentation/Sass/Script/Functions.html#join-instance_method) : 두 개의 List를 하나로 결합합니다.
+[join(\$list1, _l**i**s_*t*2, [separator])](http://sass-lang.com/documentation/Sass/Script/Functions.html#join-instance_method) : 두 개의 List를 하나로 결합합니다.
 
 [zip(\$lists…)](http://sass-lang.com/documentation/Sass/Script/Functions.html#zip-instance_method) : 여러 List들을 하나의 다차원 List로 결합합니다.
 

@@ -24,7 +24,7 @@ module.exports = {
   projectName: 'til',
   themeConfig: {
     algolia: {
-      apiKey: process.env.API_KEY,
+      apiKey: process.env.SEARCH_API_KEY,
       indexName: process.env.INDEX_NAME,
       appId: process.env.APPLICATION_ID,
       contextualSearch: true,

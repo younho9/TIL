@@ -1,5 +1,6 @@
 const { getDirectoriesOf, getFilesOf, appendPath, getFirstContent } = require('./src/utils');
 const { CATEGORY_SLUGS } = require('./src/constants');
+require('dotenv').config();
 
 const docNavs = Object.entries(CATEGORY_SLUGS).map(([category, categorySlug]) => ({
   to: getFirstContent(category),
@@ -9,6 +10,8 @@ const docNavs = Object.entries(CATEGORY_SLUGS).map(([category, categorySlug]) =>
 }));
 
 const docFooters = docNavs.map(({ to, label }) => ({ to, label }));
+
+console.log();
 
 module.exports = {
   title: 'TIL(Today I Learned)',
@@ -20,6 +23,12 @@ module.exports = {
   organizationName: 'younho9',
   projectName: 'til',
   themeConfig: {
+    algolia: {
+      apiKey: process.env.API_KEY,
+      indexName: process.env.INDEX_NAME,
+      appId: process.env.APPLICATION_ID,
+      contextualSearch: true,
+    },
     hideableSidebar: true,
     prism: {
       theme: require('prism-react-renderer/themes/nightOwl'),

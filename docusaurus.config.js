@@ -32,8 +32,14 @@ module.exports = {
       },
       items: [
         ...docNavs,
-        { to: 'log/2020', label: '2020 Log', position: 'right' },
-        { to: 'log/2021', label: '2021 Log', position: 'right' },
+        {
+          label: 'Logs',
+          position: 'right',
+          items: [
+            { to: 'log/2021', label: '2021 Log' },
+            { to: 'log/2020', label: '2020 Log' },
+          ],
+        },
         {
           href: 'https://github.com/younho9/til',
           position: 'right',

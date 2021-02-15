@@ -21,4 +21,6 @@ const SUB_CATEGORY_SLUGS = {
   'design-system': 'Design System',
 };
 
-module.exports = { CATEGORY_SLUGS, SUB_CATEGORY_SLUGS };
+const DATE_PREFIX_LENGTH = 11;
+
+module.exports = { CATEGORY_SLUGS, SUB_CATEGORY_SLUGS, DATE_PREFIX_LENGTH };

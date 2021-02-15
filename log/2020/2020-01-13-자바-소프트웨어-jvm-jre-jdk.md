@@ -1,7 +1,14 @@
 ---
-slug: 2020-01-13-자바-소프트웨어-jvm-jre-jdk
+icon: ./images/2020-01-13-자바-소프트웨어-jvm-jre-jdk-icon-0.png
+cover: ./images/2020-01-13-자바-소프트웨어-jvm-jre-jdk-cover-0.png
+slug: '자바-소프트웨어-jvm-jre-jdk'
 title: '자바 소프트웨어 (JVM, JRE, JDK)'
+main_category: Log
+category: 2020
 tags: ['Java']
+author: younho9
+created_time: 2020-01-13
+updated_time: 2021-02-15
 ---
 
 ## Java를 설치하려는데...
@@ -10,11 +17,17 @@ tags: ['Java']
 
 > 🔗 _[Java SE 다운로드 페이지](https://www.oracle.com/technetwork/java/javase/downloads/index.html)_
 
-![2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-0](images/2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-0.png)
+<br />
 
-![2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-1](images/2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-1.png)
+![2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-0](./images/2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-0.png)
+
+<br />
+
+![2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-1](./images/2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-1.png)
 
 왼쪽은 현재 가장 최신 버전인 듯한 13.0.1이고, 오른쪽은 보편적으로 많이 쓰인다고 하는 8버전이다. 그런데 왜 표기법이 하나는 13.0.1이고, 하나는 8u231인가?
+
+<br />
 
 ### 자바 버전 표기법
 
@@ -40,9 +53,11 @@ tags: ['Java']
 
 8버전의 경우 JDK 1.8이라고 하기도 한다.
 
-![2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-2](images/2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-2.png)
+![2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-2](./images/2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-2.png)
 
 근데 JDK가 무슨 뜻인가?
+
+<br />
 
 ### JDK가 뭔데?
 
@@ -56,6 +71,8 @@ Java로 프로그램을 만들기 위해서는 **반드시 JDK로 설치해야 �
 
 그럼 JRE는?
 
+<br />
+
 ### JRE는 뭔데?
 
 ---
@@ -67,6 +84,8 @@ JRE는 JVM 이 자바 프로그램을 동작시킬 때 필요한 라이브러리
 요약하면 JVM + 런타임에 사용하는 다른 파일들(라이브러리)
 
 그럼 JVM은?
+
+<br />
 
 ### JVM은 뭔데?
 
@@ -88,13 +107,17 @@ JVM은 다음과 같은 역할을 한다.
 
 > 💡 어떠한 장비에서든지 실행될 수 있도록 기본 환경을 제공해 준다.
 
+<br />
+
 ### 그림으로 정리
 
 ---
 
-![2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-3](images/2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-3.png)
+![2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-3](./images/2020-01-13-자바-소프트웨어-jvm-jre-jdk-image-3.png)
 
 그림으로 요약하자면 이러하다.
+
+<br />
 
 ## Reference
 

@@ -25,6 +25,7 @@ module.exports = {
       theme: require('prism-react-renderer/themes/nightOwl'),
     },
     navbar: {
+      hideOnScroll: true,
       title: 'Today I Learned',
       logo: {
         alt: 'Today I Learned',

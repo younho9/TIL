@@ -12,6 +12,10 @@
   overflow: hidden;
 }
 
+.heroLogo {
+  margin-bottom: 2rem;
+}
+
 @media screen and (max-width: 966px) {
   .heroBanner {
     padding: 2rem;
@@ -34,4 +38,16 @@
 .featureImage {
   height: 200px;
   width: 200px;
+}
+
+.githubButtonWrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.githubButton {
+  border: none;
+  overflow: hidden;
 }

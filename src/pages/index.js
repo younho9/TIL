@@ -16,8 +16,15 @@ function Home() {
     >
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
+          <img
+            alt={'Today I Learned'}
+            className={styles.heroLogo}
+            src={useBaseUrl('/img/undraw_developer_activity.svg')}
+            width={600}
+          />
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
+
           <div className={styles.buttons}>
             <Link
               className={clsx(
@@ -28,6 +35,15 @@ function Home() {
             >
               Get Started
             </Link>
+          </div>
+          <div className={styles.githubButtonWrapper}>
+            <iframe
+              className={styles.githubButton}
+              src="https://ghbtns.com/github-btn.html?user=younho9&amp;repo=til&amp;type=star&amp;count=true&amp;size=large"
+              width={120}
+              height={30}
+              title="GitHub Stars"
+            />
           </div>
         </div>
       </header>

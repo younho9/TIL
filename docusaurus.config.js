@@ -11,8 +11,6 @@ const docNavs = Object.entries(CATEGORY_SLUGS).map(([category, categorySlug]) =>
 
 const docFooters = docNavs.map(({ to, label }) => ({ to, label }));
 
-console.log();
-
 module.exports = {
   title: 'TIL(Today I Learned)',
   tagline: '하루동안 공부한 것들을 기록하는 공간',
@@ -28,6 +26,9 @@ module.exports = {
       indexName: process.env.INDEX_NAME,
       appId: process.env.APPLICATION_ID,
       contextualSearch: true,
+    },
+    colorMode: {
+      defaultMode: 'dark',
     },
     hideableSidebar: true,
     prism: {

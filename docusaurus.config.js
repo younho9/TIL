@@ -20,6 +20,7 @@ module.exports = {
   organizationName: 'younho9',
   projectName: 'til',
   themeConfig: {
+    hideableSidebar: true,
     prism: {
       theme: require('prism-react-renderer/themes/nightOwl'),
     },

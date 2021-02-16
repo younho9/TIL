@@ -6,7 +6,6 @@ const docNavs = Object.entries(CATEGORY_SLUGS).map(([category, categorySlug]) =>
   to: getFirstContent(category),
   activeBasePath: appendPath('docs', category),
   label: categorySlug,
-  position: 'right',
 }));
 
 const docFooters = docNavs.map(({ to, label }) => ({ to, label }));
@@ -42,10 +41,14 @@ module.exports = {
         src: 'img/logo.png',
       },
       items: [
-        ...docNavs,
+        {
+          label: 'Docs',
+          position: 'left',
+          items: [...docNavs],
+        },
         {
           label: 'Logs',
-          position: 'right',
+          position: 'left',
           items: [
             { to: 'log/2021', label: '2021 Log' },
             { to: 'log/2020', label: '2020 Log' },
@@ -71,6 +74,10 @@ module.exports = {
       links: [
         {
           title: 'Docs',
+          items: [...docFooters],
+        },
+        {
+          title: 'Logs',
           items: [
             {
               label: '2021 Log',
@@ -80,7 +87,6 @@ module.exports = {
               label: '2020 Log',
               to: 'log/2020',
             },
-            ...docFooters,
           ],
         },
         {

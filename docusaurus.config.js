@@ -71,7 +71,17 @@ module.exports = {
       links: [
         {
           title: 'Docs',
-          items: docFooters,
+          items: [
+            {
+              label: '2021 Log',
+              to: 'log/2021',
+            },
+            {
+              label: '2020 Log',
+              to: 'log/2020',
+            },
+            ...docFooters,
+          ],
         },
         {
           title: 'Personal Links',
@@ -102,14 +112,6 @@ module.exports = {
           title: 'More',
           items: [
             {
-              label: '2021 Log',
-              to: 'log/2021',
-            },
-            {
-              label: '2020 Log',
-              to: 'log/2020',
-            },
-            {
               label: 'GitHub',
               href: 'https://github.com/younho9/til',
             },
@@ -117,6 +119,13 @@ module.exports = {
               label: 'Notion',
               href:
                 'https://www.notion.so/younho9/107dc84223664f60b21a61f55b2700a4?v=e848ff1783f44fc7b1d499740e16c46c',
+            },
+            {
+              html: `
+                <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+                  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" />
+                </a>
+              `,
             },
           ],
         },

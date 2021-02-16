@@ -14,7 +14,7 @@
 <div align="center">
     <kbd>
         <a href="https://til.younho9.dev">
-            <img width="800" alt="TIL" src="https://user-images.githubusercontent.com/48426991/107970070-fd292400-6ff3-11eb-9d54-90b449bc0db9.png">
+            <img width="800" alt="TIL" src="https://user-images.githubusercontent.com/48426991/108034693-39eb2e80-7079-11eb-9c45-b4b994de57a4.png">
         </a>
     </kbd>
 </div>

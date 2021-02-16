@@ -136,6 +136,11 @@ module.exports = {
           ],
         },
       ],
+      logo: {
+        alt: 'younho9',
+        src: 'img/logo.png',
+        href: 'https://younho9.dev/',
+      },
       copyright: `Copyright © ${new Date().getFullYear()} younho9. Built with Docusaurus.`,
     },
   },

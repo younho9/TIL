@@ -104,28 +104,6 @@ html[data-theme='dark'] .header-notion-link:before {
   }
 }
 
-/* Blog Sidebar */
-
-.sidebar_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogSidebar- {
-  .sidebarItemList_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogSidebar- {
-    .sidebarItem_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogSidebar- {
-      .sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogSidebar- {
-        font-weight: 500;
-        padding: 6px 8px 6px 12px;
-        border-top-right-radius: var(--ifm-code-border-radius);
-        border-bottom-right-radius: var(--ifm-code-border-radius);
-        color: var(--ifm-font-color-base);
-        border-left: 4px solid var(--ifm-color-primary);
-        background-color: rgba(121, 118, 171, 0.2);
-
-        code {
-          color: var(--ifm-font-color-base);
-        }
-      }
-    }
-  }
-}
-
 .footer__logo {
   width: 75px;
   height: 75px;

@@ -1,4 +1,5 @@
 /* stylelint-disable docusaurus/copyright-header */
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -63,6 +64,23 @@ html[data-theme='dark'] .header-github-link:before {
 
 html[data-theme='dark'] .header-notion-link:before {
   background: url('/img/notion-white.svg') no-repeat;
+}
+
+.table-of-contents {
+  .table-of-contents__link--active {
+    font-weight: 500;
+    margin-left: -16px;
+    padding: 6px 8px 6px 12px;
+    border-top-right-radius: var(--ifm-code-border-radius);
+    border-bottom-right-radius: var(--ifm-code-border-radius);
+    color: var(--ifm-font-color-base);
+    border-left: 4px solid var(--ifm-color-primary);
+    background-color: rgba(121, 118, 171, 0.2);
+
+    code {
+      color: var(--ifm-font-color-base);
+    }
+  }
 }
 
 .footer__logo {

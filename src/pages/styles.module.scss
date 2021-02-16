@@ -28,6 +28,25 @@
   justify-content: center;
 }
 
+.getStarted {
+  color: var(--ifm-color-black);
+  background-color: var(--ifm-color-white);
+  border-radius: 6px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 30px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease all;
+
+  &:hover {
+    background-color: var(--ifm-color-gray-100);
+    text-decoration: none;
+  }
+}
+
 .features {
   display: flex;
   align-items: center;

@@ -6,13 +6,12 @@ const docNavs = Object.entries(CATEGORY_SLUGS).map(([category, categorySlug]) =>
   to: getFirstContent(category),
   activeBasePath: appendPath('docs', category),
   label: categorySlug,
-  position: 'right',
 }));
 
 const docFooters = docNavs.map(({ to, label }) => ({ to, label }));
 
 module.exports = {
-  title: 'TIL(Today I Learned)',
+  title: '📝 TIL(Today I Learned)',
   tagline: '하루동안 공부한 것들을 기록하는 공간',
   url: 'https://til.younho9.dev',
   baseUrl: '/',
@@ -35,17 +34,20 @@ module.exports = {
       theme: require('prism-react-renderer/themes/nightOwl'),
     },
     navbar: {
-      hideOnScroll: true,
       title: 'Today I Learned',
       logo: {
         alt: 'Today I Learned',
         src: 'img/logo.png',
       },
       items: [
-        ...docNavs,
+        {
+          label: 'Docs',
+          position: 'left',
+          items: [...docNavs],
+        },
         {
           label: 'Logs',
-          position: 'right',
+          position: 'left',
           items: [
             { to: 'log/2021', label: '2021 Log' },
             { to: 'log/2020', label: '2020 Log' },
@@ -67,11 +69,23 @@ module.exports = {
       ],
     },
     footer: {
-      style: 'dark',
       links: [
         {
           title: 'Docs',
-          items: docFooters,
+          items: [...docFooters],
+        },
+        {
+          title: 'Logs',
+          items: [
+            {
+              label: '2021 Log',
+              to: 'log/2021',
+            },
+            {
+              label: '2020 Log',
+              to: 'log/2020',
+            },
+          ],
         },
         {
           title: 'Personal Links',
@@ -102,14 +116,6 @@ module.exports = {
           title: 'More',
           items: [
             {
-              label: '2021 Log',
-              to: 'log/2021',
-            },
-            {
-              label: '2020 Log',
-              to: 'log/2020',
-            },
-            {
               label: 'GitHub',
               href: 'https://github.com/younho9/til',
             },
@@ -118,9 +124,21 @@ module.exports = {
               href:
                 'https://www.notion.so/younho9/107dc84223664f60b21a61f55b2700a4?v=e848ff1783f44fc7b1d499740e16c46c',
             },
+            {
+              html: `
+                <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+                  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" />
+                </a>
+              `,
+            },
           ],
         },
       ],
+      logo: {
+        alt: 'younho9',
+        src: 'img/logo.png',
+        href: 'https://younho9.dev/',
+      },
       copyright: `Copyright © ${new Date().getFullYear()} younho9. Built with Docusaurus.`,
     },
   },
@@ -135,12 +153,13 @@ module.exports = {
           showLastUpdateTime: true,
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       },
     ],
   ],
   plugins: [
+    'docusaurus-plugin-sass',
     [
       '@docusaurus/plugin-content-blog',
       {

@@ -50,7 +50,7 @@ function DocItem(props) {
 
     script.src = 'https://utteranc.es/client.js';
     script.setAttribute('repo', 'younho9/TIL');
-    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('issue-term', 'title');
     script.setAttribute('label', 'comment');
     script.setAttribute('theme', 'github-light');
     script.crossOrigin = 'anonymous';

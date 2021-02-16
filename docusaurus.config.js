@@ -1,6 +1,5 @@
-const { getDirectoriesOf, getFilesOf, appendPath, getFirstContent } = require('./src/utils');
+const { appendPath, getFirstContent } = require('./src/utils');
 const { CATEGORY_SLUGS } = require('./src/constants');
-require('dotenv').config();
 
 const docNavs = Object.entries(CATEGORY_SLUGS).map(([category, categorySlug]) => ({
   to: getFirstContent(category),
@@ -21,9 +20,9 @@ module.exports = {
   projectName: 'til',
   themeConfig: {
     algolia: {
-      apiKey: process.env.SEARCH_API_KEY,
-      indexName: process.env.INDEX_NAME,
-      appId: process.env.APPLICATION_ID,
+      apiKey: 'df534cd50449ff1ac456585231e62076',
+      indexName: 'til',
+      appId: 'CPGK41PHIV',
       contextualSearch: true,
     },
     colorMode: {

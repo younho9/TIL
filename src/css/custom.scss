@@ -20,10 +20,6 @@ html[data-theme='dark'] {
   --ifm-footer-background-color: #1c1e21;
 }
 
-// body {
-//   background-color: #f4f3f0;
-// }
-
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
@@ -72,14 +68,6 @@ html[data-theme='dark'] .header-notion-link:before {
   background: url('/img/notion-white.svg') no-repeat;
 }
 
-/* Navbar */
-
-.navbar {
-  // background: var(--ifm-navbar-background-color);
-  // text-align: left;
-  // height: 85px;
-}
-
 /* Menu */
 
 .menu__list {
@@ -112,6 +100,28 @@ html[data-theme='dark'] .header-notion-link:before {
 
     code {
       color: var(--ifm-font-color-base);
+    }
+  }
+}
+
+/* Blog Sidebar */
+
+.sidebar_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogSidebar- {
+  .sidebarItemList_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogSidebar- {
+    .sidebarItem_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogSidebar- {
+      .sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogSidebar- {
+        font-weight: 500;
+        padding: 6px 8px 6px 12px;
+        border-top-right-radius: var(--ifm-code-border-radius);
+        border-bottom-right-radius: var(--ifm-code-border-radius);
+        color: var(--ifm-font-color-base);
+        border-left: 4px solid var(--ifm-color-primary);
+        background-color: rgba(121, 118, 171, 0.2);
+
+        code {
+          color: var(--ifm-font-color-base);
+        }
+      }
     }
   }
 }

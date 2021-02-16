@@ -23,7 +23,6 @@ module.exports = {
       apiKey: 'df534cd50449ff1ac456585231e62076',
       indexName: 'til',
       appId: 'CPGK41PHIV',
-      contextualSearch: true,
     },
     colorMode: {
       defaultMode: 'dark',

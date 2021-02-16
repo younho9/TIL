@@ -148,7 +148,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/younho9/til/edit/master/',
+          editUrl: 'https://github.com/younho9/til/edit/main/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
@@ -166,6 +166,7 @@ module.exports = {
         id: 'twoZeroLog',
         routeBasePath: 'log/2020',
         path: './log/2020',
+        editUrl: 'https://github.com/younho9/til/edit/main/',
       },
     ],
     [
@@ -174,6 +175,7 @@ module.exports = {
         id: 'twoOneLog',
         routeBasePath: 'log/2021',
         path: './log/2021',
+        editUrl: 'https://github.com/younho9/til/edit/main/',
       },
     ],
   ],

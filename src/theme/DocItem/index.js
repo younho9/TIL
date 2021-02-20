@@ -16,6 +16,7 @@ import IconEdit from '@theme/IconEdit';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import { useActivePlugin, useVersions, useActiveVersion } from '@theme/hooks/useDocs';
+import Comment from '../../components/Comment';
 
 function DocItem(props) {
   const { siteConfig } = useDocusaurusContext();
@@ -44,20 +45,6 @@ function DocItem(props) {
   const metaImageUrl = useBaseUrl(metaImage, {
     absolute: true,
   });
-
-  useEffect(() => {
-    const script = document.createElement('script');
-
-    script.src = 'https://utteranc.es/client.js';
-    script.setAttribute('repo', 'younho9/TIL');
-    script.setAttribute('issue-term', 'title');
-    script.setAttribute('label', 'comment');
-    script.setAttribute('theme', 'github-light');
-    script.crossOrigin = 'anonymous';
-    script.async = true;
-
-    document.getElementById('comment-system').appendChild(script);
-  }, []);
 
   return (
     <>
@@ -146,7 +133,7 @@ function DocItem(props) {
               <DocPaginator metadata={metadata} />
             </div>
           </div>
-          <div id="comment-system"></div>
+          <Comment />
         </div>
         {!hideTableOfContents && DocContent.toc && (
           <div className="col col--3">

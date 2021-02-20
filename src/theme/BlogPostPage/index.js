@@ -11,26 +11,13 @@ import BlogPostPaginator from '@theme/BlogPostPaginator';
 import BlogSidebar from '@theme/BlogSidebar';
 import TOC from '@theme/TOC';
 import IconEdit from '@theme/IconEdit';
+import Comment from '../../components/Comment';
 
 function BlogPostPage(props) {
   const { content: BlogPostContents, sidebar } = props;
   const { frontMatter, metadata } = BlogPostContents;
   const { title, description, nextItem, prevItem, editUrl } = metadata;
   const { hide_table_of_contents: hideTableOfContents } = frontMatter;
-
-  useEffect(() => {
-    const script = document.createElement('script');
-
-    script.src = 'https://utteranc.es/client.js';
-    script.setAttribute('repo', 'younho9/TIL');
-    script.setAttribute('issue-term', 'title');
-    script.setAttribute('label', 'comment');
-    script.setAttribute('theme', 'github-light');
-    script.crossOrigin = 'anonymous';
-    script.async = true;
-
-    document.getElementById('comment-system').appendChild(script);
-  }, []);
 
   return (
     <Layout title={title} description={description} wrapperClassName="blog-wrapper">
@@ -57,7 +44,7 @@ function BlogPostPage(props) {
                   <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
                 </div>
               )}
-              <div id="comment-system"></div>
+              <Comment />
             </main>
             {!hideTableOfContents && BlogPostContents.toc && (
               <div className="col col--2">

@@ -93,7 +93,7 @@ module.exports = {
               href: 'https://younho9.dev',
             },
             {
-              label: 'Github',
+              label: 'GitHub',
               href: 'https://github.com/younho9',
             },
             {

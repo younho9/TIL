@@ -10,6 +10,7 @@ const SUB_CATEGORY_SLUGS = {
   'design-pattern': 'Design Pattern',
   'system-programming': 'System Programming',
   setting: 'Setting',
+  'bug-fix': 'Bug Fix',
   bootstrap: 'Bootstrap',
   css: 'CSS',
   html: 'HTML',

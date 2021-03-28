@@ -11,6 +11,7 @@ const SUB_CATEGORY_SLUGS = {
   'system-programming': 'System Programming',
   setting: 'Setting',
   'bug-fix': 'Bug Fix',
+  python: 'Python',
   bootstrap: 'Bootstrap',
   css: 'CSS',
   html: 'HTML',

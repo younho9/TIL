@@ -1,11 +1,9 @@
 {
   "name": "younho9-til",
   "description": "하루동안 공부한 것들을 기록하는 공간",
-  "authors": {
-    "name": "younho9",
-    "email": "younho9.choo@gmail.com"
-  },
   "repository": "https://github.com/younho9/TIL.git",
+  "license": "MIT",
+  "author": "younho9 <younho9.choo@gmail.com>",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -15,27 +13,6 @@
     "serve": "docusaurus serve",
     "format:docs": "cd docs && prettier --write .",
     "format:log": "cd log && prettier --write ."
-  },
-  "license": "MIT",
-  "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.2",
-    "@docusaurus/plugin-pwa": "2.0.0-beta.2",
-    "@docusaurus/preset-classic": "2.0.0-beta.2",
-    "@mdx-js/react": "1.6.22",
-    "clsx": "1.1.1",
-    "docusaurus-plugin-sass": "0.1.12",
-    "dotenv": "8.2.0",
-    "prettier": "2.2.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  },
-  "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.0.0-beta.2",
-    "@tsconfig/docusaurus": "1.0.2",
-    "@types/react": "17.0.2",
-    "@types/react-helmet": "6.1.0",
-    "@types/react-router-dom": "5.1.7",
-    "typescript": "4.1.5"
   },
   "browserslist": {
     "production": [
@@ -48,5 +25,25 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@docusaurus/core": "2.0.0-beta.2",
+    "@docusaurus/plugin-pwa": "2.0.0-beta.2",
+    "@docusaurus/preset-classic": "2.0.0-beta.2",
+    "@mdx-js/react": "1.6.22",
+    "clsx": "1.1.1",
+    "docusaurus-plugin-sass": "0.2.1",
+    "prettier": "2.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "2.0.0-beta.2",
+    "@tsconfig/docusaurus": "1.0.2",
+    "@types/react": "17.0.11",
+    "@types/react-helmet": "6.1.1",
+    "@types/react-router-dom": "5.1.7",
+    "sass": "1.35.1",
+    "typescript": "4.3.4"
   }
 }

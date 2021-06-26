@@ -1,13 +1,23 @@
-const { appendPath, getFirstContent } = require('./src/utils');
-const { CATEGORY_SLUGS } = require('./src/constants');
+const docNavItems = [
+  {
+    to: 'docs/algorithms/programmers/2020-카카오-인턴십-경주로-건설',
+    label: 'Algorithms',
+  },
+  { to: 'docs/cs/design-pattern/observer-pattern-vs-pub-sub-pattern', label: 'CS' },
+  { to: 'docs/frontend/html/html-시작하기', label: 'Frontend' },
+  { to: 'docs/frontend/html/html-시작하기', label: 'ETC' },
+];
 
-const docNavs = Object.entries(CATEGORY_SLUGS).map(([category, categorySlug]) => ({
-  to: getFirstContent(category),
-  activeBasePath: appendPath('docs', category),
-  label: categorySlug,
-}));
-
-const docFooters = docNavs.map(({ to, label }) => ({ to, label }));
+const logNavItems = [
+  {
+    label: '2021 Log',
+    to: 'log/2021',
+  },
+  {
+    label: '2020 Log',
+    to: 'log/2020',
+  },
+];
 
 module.exports = {
   title: '📝 TIL(Today I Learned)',
@@ -41,15 +51,12 @@ module.exports = {
         {
           label: 'Docs',
           position: 'left',
-          items: [...docNavs],
+          items: docNavItems,
         },
         {
           label: 'Logs',
           position: 'left',
-          items: [
-            { to: 'log/2021', label: '2021 Log' },
-            { to: 'log/2020', label: '2020 Log' },
-          ],
+          items: logNavItems,
         },
         {
           href: 'https://github.com/younho9/til',
@@ -57,33 +64,17 @@ module.exports = {
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
         },
-        {
-          href:
-            'https://www.notion.so/younho9/107dc84223664f60b21a61f55b2700a4?v=e848ff1783f44fc7b1d499740e16c46c',
-          position: 'right',
-          className: 'header-notion-link',
-          'aria-label': 'Notion CMS',
-        },
       ],
     },
     footer: {
       links: [
         {
           title: 'Docs',
-          items: [...docFooters],
+          items: docNavItems,
         },
         {
           title: 'Logs',
-          items: [
-            {
-              label: '2021 Log',
-              to: 'log/2021',
-            },
-            {
-              label: '2020 Log',
-              to: 'log/2020',
-            },
-          ],
+          items: logNavItems,
         },
         {
           title: 'Personal Links',
@@ -116,11 +107,6 @@ module.exports = {
             {
               label: 'GitHub',
               href: 'https://github.com/younho9/til',
-            },
-            {
-              label: 'Notion',
-              href:
-                'https://www.notion.so/younho9/107dc84223664f60b21a61f55b2700a4?v=e848ff1783f44fc7b1d499740e16c46c',
             },
             {
               html: `

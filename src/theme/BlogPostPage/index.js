@@ -31,14 +31,6 @@ function BlogPostPage(props) {
               <BlogPostItem frontMatter={frontMatter} metadata={metadata} isBlogPostPage>
                 <BlogPostContents />
               </BlogPostItem>
-              <div>
-                {editUrl && (
-                  <a href={editUrl} target="_blank" rel="noreferrer noopener">
-                    <IconEdit />
-                    Edit this page
-                  </a>
-                )}
-              </div>
               {(nextItem || prevItem) && (
                 <div className="margin-vert--xl">
                   <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />

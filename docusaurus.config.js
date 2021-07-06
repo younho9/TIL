@@ -26,6 +26,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'error',
   favicon: 'img/logo.png',
+  
   organizationName: 'younho9',
   projectName: 'til',
   themeConfig: {
@@ -37,6 +38,7 @@ module.exports = {
     colorMode: {
       defaultMode: 'dark',
     },
+    image: 'img/undraw_developer_activity.svg',
     hideableSidebar: true,
     prism: {
       theme: require('prism-react-renderer/themes/nightOwl'),

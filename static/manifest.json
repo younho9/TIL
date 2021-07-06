@@ -3,7 +3,7 @@
   "short_name": "📝 TIL",
   "theme_color": "#5468ff",
   "background_color": "#424242",
-  "display": "standalone",
+  "display": "browser",
   "scope": "./",
   "start_url": "./index.html",
   "icons": [

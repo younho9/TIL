@@ -5,7 +5,10 @@ title: 'PIP로 Python 모듈 업데이트하기'
 main_category: Log
 category: 2021
 tags: ['Python']
-author: younho9
+author: Younho Choo
+author_title: younho9
+author_url: https://github.com/younho9
+author_image_url: https://avatars.githubusercontent.com/u/48426991
 created_time: 2021-02-15
 updated_time: 2021-02-15
 ---

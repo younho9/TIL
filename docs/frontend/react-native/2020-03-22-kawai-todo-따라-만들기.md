@@ -4,7 +4,10 @@ slug: 'kawai-todo-따라-만들기'
 title: 'Kawai ToDo 따라 만들기'
 main_category: Frontend
 category: 5. React Native
-author: younho9
+author: Younho Choo
+author_title: younho9
+author_url: https://github.com/younho9
+author_image_url: https://avatars.githubusercontent.com/u/48426991
 created_time: 2020-03-22
 updated_time: 2021-02-15
 ---

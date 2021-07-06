@@ -5,7 +5,10 @@ slug: 'mac-버추얼박스-virtualbox-에-우분투-ubuntu-설치하기'
 title: '[Mac] 버추얼박스(VirtualBox)에 우분투(Ubuntu) 설치하기'
 main_category: ETC
 category: 1. Setting
-author: younho9
+author: Younho Choo
+author_title: younho9
+author_url: https://github.com/younho9
+author_image_url: https://avatars.githubusercontent.com/u/48426991
 created_time: 2020-03-25
 updated_time: 2021-02-15
 ---

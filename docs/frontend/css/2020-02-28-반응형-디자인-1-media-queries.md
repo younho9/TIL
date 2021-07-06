@@ -4,7 +4,10 @@ slug: '반응형-디자인-1-media-queries'
 title: '반응형 디자인 1.Media queries'
 main_category: Frontend
 category: 2. CSS
-author: younho9
+author: Younho Choo
+author_title: younho9
+author_url: https://github.com/younho9
+author_image_url: https://avatars.githubusercontent.com/u/48426991
 created_time: 2020-02-28
 updated_time: 2021-02-15
 ---

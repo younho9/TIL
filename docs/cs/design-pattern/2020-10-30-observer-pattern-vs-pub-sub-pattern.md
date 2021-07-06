@@ -4,7 +4,10 @@ slug: 'observer-pattern-vs-pub-sub-pattern'
 title: 'Observer pattern vs Pub-Sub pattern'
 main_category: CS
 category: 1. Design Pattern
-author: younho9
+author: Younho Choo
+author_title: younho9
+author_url: https://github.com/younho9
+author_image_url: https://avatars.githubusercontent.com/u/48426991
 created_time: 2020-10-30
 updated_time: 2021-02-15
 ---

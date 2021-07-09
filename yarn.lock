@@ -13306,6 +13306,7 @@ typescript@4.3.4:
   version: 0.0.0-use.local
   resolution: "younho9-til@workspace:."
   dependencies:
+    "@babel/plugin-proposal-object-rest-spread": ^7.14.7
     "@docusaurus/core": 2.0.0-beta.2
     "@docusaurus/module-type-aliases": 2.0.0-beta.2
     "@docusaurus/plugin-content-blog": 2.0.0-beta.2

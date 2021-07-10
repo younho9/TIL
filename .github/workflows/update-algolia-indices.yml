@@ -1,0 +1,24 @@
+name: Update algolia indices
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+jobs:
+  updateAlgoliaIndices:
+    name: Update algolia indices
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get the content of algolia.config.json as config
+        id: algolia_config
+        run: echo "::set-output name=config::$(cat algolia.config.json | jq -r tostring)"
+
+      - name: Push indices to Algolia
+        uses: signcl/docsearch-scraper-action@v1.0.1
+        env:
+          APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+          CONFIG: ${{ steps.algolia_config.outputs.config }}

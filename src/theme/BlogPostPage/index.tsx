@@ -4,37 +4,42 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import React, { useEffect } from 'react';
+
+import React from 'react';
 import Layout from '@theme/Layout';
 import BlogPostItem from '@theme/BlogPostItem';
 import BlogPostPaginator from '@theme/BlogPostPaginator';
+import type { Props } from '@theme/BlogPostPage';
 import BlogSidebar from '@theme/BlogSidebar';
 import TOC from '@theme/TOC';
-import IconEdit from '@theme/IconEdit';
-import Comment from '../../components/Comment';
+import { ThemeClassNames } from '@docusaurus/theme-common';
+import { Comment } from '../../components';
 
-function BlogPostPage(props) {
+function BlogPostPage(props: Props): JSX.Element {
   const { content: BlogPostContents, sidebar } = props;
   const { frontMatter, metadata } = BlogPostContents;
-  const { title, description, nextItem, prevItem, editUrl } = metadata;
+  const { title, description, nextItem, prevItem } = metadata;
   const { hide_table_of_contents: hideTableOfContents } = frontMatter;
 
   return (
-    <Layout title={title} description={description} wrapperClassName="blog-wrapper">
+    <Layout
+      title={title}
+      description={description}
+      wrapperClassName={ThemeClassNames.wrapper.blogPages}
+      pageClassName={ThemeClassNames.page.blogPostPage}
+    >
       {BlogPostContents && (
         <div className="container margin-vert--lg">
           <div className="row">
-            <div className="col col--2">
+            <aside className="col col--3">
               <BlogSidebar sidebar={sidebar} />
-            </div>
-            <main className="col col--8">
+            </aside>
+            <main className="col col--7">
               <BlogPostItem frontMatter={frontMatter} metadata={metadata} isBlogPostPage>
                 <BlogPostContents />
               </BlogPostItem>
               {(nextItem || prevItem) && (
-                <div className="margin-vert--xl">
-                  <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
-                </div>
+                <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
               )}
               <Comment />
             </main>

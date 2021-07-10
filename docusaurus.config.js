@@ -37,7 +37,7 @@ module.exports = {
     colorMode: {
       defaultMode: 'dark',
     },
-    image: 'img/undraw_developer_activity.svg',
+    image: 'img/og-image.png',
     hideableSidebar: true,
     prism: {
       theme: require('prism-react-renderer/themes/nightOwl'),

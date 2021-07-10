@@ -17,9 +17,12 @@ import { MainHeading } from '@theme/Heading';
 import clsx from 'clsx';
 import styles from './styles.module.scss';
 import { useActivePlugin, useVersions } from '@theme/hooks/useDocs';
-import { Comment } from '../../components';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import { Comment, ShareThisPage } from '../../components';
 
 function DocItem(props: Props): JSX.Element {
+  const location = ExecutionEnvironment.canUseDOM ? window.location : null;
   const { content: DocContent, versionMetadata } = props;
   const { metadata, frontMatter } = DocContent;
   const {
@@ -30,7 +33,7 @@ function DocItem(props: Props): JSX.Element {
   } = frontMatter;
   const { description, title, editUrl, lastUpdatedAt, formattedLastUpdatedAt, lastUpdatedBy } =
     metadata;
-
+  const context = useDocusaurusContext();
   const { pluginId } = useActivePlugin({ failfast: true });
   const versions = useVersions(pluginId);
 
@@ -43,6 +46,10 @@ function DocItem(props: Props): JSX.Element {
   // - user asks to hide it with frontmatter
   // - the markdown content does not already contain a top-level h1 heading
   const shouldAddTitle = !hideTitle && typeof DocContent.contentTitle === 'undefined';
+
+  const { siteConfig = {} } = context;
+  const url = location && `${siteConfig.url}/${location.pathname}`;
+  const shareData = { url, title };
 
   return (
     <>
@@ -74,8 +81,14 @@ function DocItem(props: Props): JSX.Element {
 
               {(editUrl || lastUpdatedAt || lastUpdatedBy) && (
                 <footer className="row docusaurus-mt-lg">
-                  <div className="col">{editUrl && <EditThisPage editUrl={editUrl} />}</div>
-
+                  <div className={clsx('col', styles.pageActionWrapper)}>
+                    <div>{editUrl && <EditThisPage editUrl={editUrl} />}</div>
+                    {url && navigator.share && (
+                      <div>
+                        <ShareThisPage data={shareData} />
+                      </div>
+                    )}
+                  </div>
                   <div className={clsx('col', styles.lastUpdated)}>
                     {(lastUpdatedAt || lastUpdatedBy) && (
                       <LastUpdated

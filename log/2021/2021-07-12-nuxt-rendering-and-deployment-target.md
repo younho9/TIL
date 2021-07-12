@@ -25,3 +25,4 @@ Nuxt.js에는 몇 가지 명령어가 있는데, `target` 값에 따라서 가�
 ## 참고자료
 
 [Demystify Nuxtʼs target, mode, and ssr properties](https://kontent.ai/blog/demystify-nuxt-target-mode-and-ssr-properties)
+[Going Full Static](https://nuxtjs.org/blog/going-full-static)

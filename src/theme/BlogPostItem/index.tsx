@@ -7,22 +7,26 @@
 
 import React from 'react';
 import clsx from 'clsx';
-import { MDXProvider } from '@mdx-js/react';
-import Translate, { translate } from '@docusaurus/Translate';
+import {MDXProvider} from '@mdx-js/react';
+import Translate, {translate} from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
-import { usePluralForm } from '@docusaurus/theme-common';
+import {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
+import {usePluralForm} from '@docusaurus/theme-common';
 import MDXComponents from '@theme/MDXComponents';
-import Seo from '@theme/Seo';
 import EditThisPage from '@theme/EditThisPage';
-import type { Props } from '@theme/BlogPostItem';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import type {Props} from '@theme/BlogPostItem';
+
 import styles from './styles.module.scss';
-import { ShareThisPage } from '../../components';
+import TagsListInline from '@theme/TagsListInline';
+import BlogPostAuthors from '@theme/BlogPostAuthors';
+
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'; // swizzled
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment'; // swizzled
+import {ShareThisPage} from '../../components'; // swizzled
 
 // Very simple pluralization: probably good enough for now
 function useReadingTimePlural() {
-  const { selectMessage } = usePluralForm();
+  const {selectMessage} = usePluralForm();
   return (readingTimeFloat: number) => {
     const readingTime = Math.ceil(readingTimeFloat);
     return selectMessage(
@@ -34,131 +38,131 @@ function useReadingTimePlural() {
             'Pluralized label for "{readingTime} min read". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
           message: 'One min read|{readingTime} min read',
         },
-        { readingTime },
+        {readingTime},
       ),
     );
   };
 }
 
 function BlogPostItem(props: Props): JSX.Element {
-  const location = ExecutionEnvironment.canUseDOM ? window.location : null;
   const readingTimePlural = useReadingTimePlural();
-  const context = useDocusaurusContext();
-  const { children, frontMatter, metadata, truncated, isBlogPostPage = false } = props;
-  const { date, formattedDate, permalink, tags, readingTime, title, editUrl } = metadata;
-  const { author, image, keywords } = frontMatter;
+  const {withBaseUrl} = useBaseUrlUtils();
+  const {
+    children,
+    frontMatter,
+    assets,
+    metadata,
+    truncated,
+    isBlogPostPage = false,
+  } = props;
+  const {
+    date,
+    formattedDate,
+    permalink,
+    tags,
+    readingTime,
+    title,
+    editUrl,
+    authors,
+  } = metadata;
 
-  const authorURL = frontMatter.author_url || frontMatter.authorURL;
-  const authorTitle = frontMatter.author_title || frontMatter.authorTitle;
-  const authorImageURL = frontMatter.author_image_url || frontMatter.authorImageURL;
+  const image = assets.image ?? frontMatter.image;
 
-  const { siteConfig = {} } = context;
-  const url = location && `${siteConfig.url}/${location.pathname}`;
-  const shareData = { url, title };
+  const location = ExecutionEnvironment.canUseDOM ? window.location : null; // swizzled
+  const context = useDocusaurusContext(); // swizzled
+  const {siteConfig = {}} = context; // swizzled
+  const url = location && `${siteConfig.url}/${location.pathname}`; // swizzled
+  const shareData = {url, title}; // swizzled
 
   const renderPostHeader = () => {
     const TitleHeading = isBlogPostPage ? 'h1' : 'h2';
 
     return (
       <header>
-        <TitleHeading className={styles.blogPostTitle}>
-          {isBlogPostPage ? title : <Link to={permalink}>{title}</Link>}
+        <TitleHeading className={styles.blogPostTitle} itemProp="headline">
+          {isBlogPostPage ? (
+            title
+          ) : (
+            <Link itemProp="url" to={permalink}>
+              {title}
+            </Link>
+          )}
         </TitleHeading>
         <div className={clsx(styles.blogPostData, 'margin-vert--md')}>
-          <time dateTime={date}>{formattedDate}</time>
+          <time dateTime={date} itemProp="datePublished">
+            {formattedDate}
+          </time>
 
-          {readingTime && (
+          {typeof readingTime !== 'undefined' && (
             <>
               {' · '}
               {readingTimePlural(readingTime)}
             </>
           )}
         </div>
-        <div className="avatar margin-vert--md">
-          {authorImageURL && (
-            <Link className="avatar__photo-link avatar__photo" href={authorURL}>
-              <img src={authorImageURL} alt={author} />
-            </Link>
-          )}
-          <div className="avatar__intro">
-            {author && (
-              <>
-                <div className="avatar__name">
-                  <Link href={authorURL}>{author}</Link>
-                </div>
-                <small className="avatar__subtitle">{authorTitle}</small>
-              </>
-            )}
-          </div>
-        </div>
+        <BlogPostAuthors authors={authors} assets={assets} />
       </header>
     );
   };
 
   return (
-    <>
-      <Seo {...{ keywords, image }} />
+    <article
+      className={!isBlogPostPage ? 'margin-bottom--xl' : undefined}
+      itemProp="blogPost"
+      itemScope
+      itemType="http://schema.org/BlogPosting">
+      {renderPostHeader()}
 
-      <article className={!isBlogPostPage ? 'margin-bottom--xl' : undefined}>
-        {renderPostHeader()}
-        <div className="markdown">
-          <MDXProvider components={MDXComponents}>{children}</MDXProvider>
-        </div>
-        {
-          <footer
-            className={clsx('row docusaurus-mt-lg', {
-              [styles.blogPostDetailsFull]: isBlogPostPage,
-            })}
-          >
-            {tags.length > 0 && (
-              <div className="col">
+      {image && (
+        <meta itemProp="image" content={withBaseUrl(image, {absolute: true})} />
+      )}
+
+      <div className="markdown" itemProp="articleBody">
+        <MDXProvider components={MDXComponents}>{children}</MDXProvider>
+      </div>
+
+      {(tags.length > 0 || truncated) && (
+        <footer
+          className={clsx('row docusaurus-mt-lg', {
+            [styles.blogPostDetailsFull]: isBlogPostPage,
+          })}>
+          {tags.length > 0 && (
+            <div className={clsx('col', {'col--9': !isBlogPostPage})}>
+              <TagsListInline tags={tags} />
+            </div>
+          )}
+
+          {isBlogPostPage && editUrl && (
+            <div
+              className={clsx(
+                'col',
+                'margin-top--sm',
+                styles.pageActionWrapper,
+              )}>
+              <EditThisPage editUrl={editUrl} />
+              {/* swizzled */}
+              {url && navigator.share && <ShareThisPage data={shareData} />}
+            </div>
+          )}
+
+          {!isBlogPostPage && truncated && (
+            <div className="col col--3 text--right">
+              <Link
+                to={metadata.permalink}
+                aria-label={`Read more about ${title}`}>
                 <b>
                   <Translate
-                    id="theme.tags.tagsListLabel"
-                    description="The label alongside a tag list"
-                  >
-                    Tags:
+                    id="theme.blog.post.readMore"
+                    description="The label used in blog post item excerpts to link to full blog posts">
+                    Read More
                   </Translate>
                 </b>
-                {tags.map(({ label, permalink: tagPermalink }) => (
-                  <Link key={tagPermalink} className="margin-horiz--sm" to={tagPermalink}>
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            )}
-
-            {isBlogPostPage && editUrl && (
-              <div className={clsx('col', 'margin-top--sm', styles.pageActionWrapper)}>
-                <div>
-                  <EditThisPage editUrl={editUrl} />
-                </div>
-                {url && navigator.share && (
-                  <div>
-                    <ShareThisPage data={shareData} />
-                  </div>
-                )}
-              </div>
-            )}
-
-            {!isBlogPostPage && truncated && (
-              <div className="col text--right">
-                <Link to={metadata.permalink} aria-label={`Read more about ${title}`}>
-                  <b>
-                    <Translate
-                      id="theme.blog.post.readMore"
-                      description="The label used in blog post item excerpts to link to full blog posts"
-                    >
-                      Read More
-                    </Translate>
-                  </b>
-                </Link>
-              </div>
-            )}
-          </footer>
-        }
-      </article>
-    </>
+              </Link>
+            </div>
+          )}
+        </footer>
+      )}
+    </article>
   );
 }
 

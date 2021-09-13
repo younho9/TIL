@@ -6,114 +6,97 @@
  */
 
 import React from 'react';
+import clsx from 'clsx';
+
+import useWindowSize from '@theme/hooks/useWindowSize';
 import DocPaginator from '@theme/DocPaginator';
 import DocVersionBanner from '@theme/DocVersionBanner';
 import Seo from '@theme/Seo';
-import LastUpdated from '@theme/LastUpdated';
-import type { Props } from '@theme/DocItem';
+import type {Props} from '@theme/DocItem';
+import DocItemFooter from '@theme/DocItemFooter';
 import TOC from '@theme/TOC';
-import EditThisPage from '@theme/EditThisPage';
-import { MainHeading } from '@theme/Heading';
-import clsx from 'clsx';
-import styles from './styles.module.scss';
-import { useActivePlugin, useVersions } from '@theme/hooks/useDocs';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
-import { Comment, ShareThisPage } from '../../components';
+import {MainHeading} from '@theme/Heading';
 
-function DocItem(props: Props): JSX.Element {
-  const location = ExecutionEnvironment.canUseDOM ? window.location : null;
-  const { content: DocContent, versionMetadata } = props;
-  const { metadata, frontMatter } = DocContent;
+import styles from './styles.module.scss';
+import {ThemeClassNames} from '@docusaurus/theme-common';
+
+import {Comment} from '../../components'; // swizzled
+
+export default function DocItem(props: Props): JSX.Element {
+  const {content: DocContent, versionMetadata} = props;
+  const {metadata, frontMatter} = DocContent;
   const {
     image,
     keywords,
     hide_title: hideTitle,
     hide_table_of_contents: hideTableOfContents,
   } = frontMatter;
-  const { description, title, editUrl, lastUpdatedAt, formattedLastUpdatedAt, lastUpdatedBy } =
-    metadata;
-  const context = useDocusaurusContext();
-  const { pluginId } = useActivePlugin({ failfast: true });
-  const versions = useVersions(pluginId);
-
-  // If site is not versioned or only one version is included
-  // we don't show the version badge
-  // See https://github.com/facebook/docusaurus/issues/3362
-  const showVersionBadge = versions.length > 1;
+  const {description, title} = metadata;
 
   // We only add a title if:
   // - user asks to hide it with frontmatter
   // - the markdown content does not already contain a top-level h1 heading
-  const shouldAddTitle = !hideTitle && typeof DocContent.contentTitle === 'undefined';
+  const shouldAddTitle =
+    !hideTitle && typeof DocContent.contentTitle === 'undefined';
 
-  const { siteConfig = {} } = context;
-  const url = location && `${siteConfig.url}/${location.pathname}`;
-  const shareData = { url, title };
+  const windowSize = useWindowSize();
+
+  const canRenderTOC =
+    !hideTableOfContents && DocContent.toc && DocContent.toc.length > 0;
+
+  const renderTocDesktop =
+    canRenderTOC && (windowSize === 'desktop' || windowSize === 'ssr');
 
   return (
     <>
-      <Seo {...{ title, description, keywords, image }} />
+      <Seo {...{title, description, keywords, image}} />
 
       <div className="row">
         <div
           className={clsx('col', {
             [styles.docItemCol]: !hideTableOfContents,
-          })}
-        >
+          })}>
           <DocVersionBanner versionMetadata={versionMetadata} />
           <div className={styles.docItemContainer}>
             <article>
-              {showVersionBadge && (
-                <span className="badge badge--secondary">Version: {versionMetadata.label}</span>
+              {versionMetadata.badge && (
+                <span
+                  className={clsx(
+                    ThemeClassNames.docs.docVersionBadge,
+                    'badge badge--secondary',
+                  )}>
+                  Version: {versionMetadata.label}
+                </span>
               )}
 
-              <div className="markdown">
+              <div
+                className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
                 {/*
-                Title can be declared inside md content or declared through frontmatter and added manually
-                To make both cases consistent, the added title is added under the same div.markdown block
-                See https://github.com/facebook/docusaurus/pull/4882#issuecomment-853021120
-                */}
+                 Title can be declared inside md content or declared through frontmatter and added manually
+                 To make both cases consistent, the added title is added under the same div.markdown block
+                 See https://github.com/facebook/docusaurus/pull/4882#issuecomment-853021120
+                 */}
                 {shouldAddTitle && <MainHeading>{title}</MainHeading>}
 
                 <DocContent />
               </div>
 
-              {(editUrl || lastUpdatedAt || lastUpdatedBy) && (
-                <footer className="row docusaurus-mt-lg">
-                  <div className={clsx('col', styles.pageActionWrapper)}>
-                    <div>{editUrl && <EditThisPage editUrl={editUrl} />}</div>
-                    {url && navigator.share && (
-                      <div>
-                        <ShareThisPage data={shareData} />
-                      </div>
-                    )}
-                  </div>
-                  <div className={clsx('col', styles.lastUpdated)}>
-                    {(lastUpdatedAt || lastUpdatedBy) && (
-                      <LastUpdated
-                        lastUpdatedAt={lastUpdatedAt}
-                        formattedLastUpdatedAt={formattedLastUpdatedAt}
-                        lastUpdatedBy={lastUpdatedBy}
-                      />
-                    )}
-                  </div>
-                </footer>
-              )}
+              <DocItemFooter {...props} />
             </article>
 
             <DocPaginator metadata={metadata} />
           </div>
-          <Comment />
+          <Comment /> {/* swizzled */}
         </div>
-        {!hideTableOfContents && DocContent.toc && (
+        {renderTocDesktop && (
           <div className="col col--3">
-            <TOC toc={DocContent.toc} />
+            <TOC
+              toc={DocContent.toc}
+              className={ThemeClassNames.docs.docTocDesktop}
+            />
           </div>
         )}
       </div>
     </>
   );
 }
-
-export default DocItem;

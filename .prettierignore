@@ -1,0 +1,4 @@
+.yarn/
+.pnp.js
+.docusaurus/
+build/

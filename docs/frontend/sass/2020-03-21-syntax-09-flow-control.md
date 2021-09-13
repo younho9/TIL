@@ -14,7 +14,8 @@ updated_time: 2021-02-15
 
 ## Sass(SCSS) Syntax - 9. 흐름 제어(Flow Control)
 
-> ❗️ 해당 글은 패스트캠퍼스 - 프론트엔드 개발 강의에서 HTML & CSS, SASS(SCSS) Part의 박영웅 강사님의 강의자료(Sass(SCSS) 완전 정복!)를 보며 정리한 것입니다.
+> ❗️ 해당 글은 패스트캠퍼스 - 프론트엔드 개발 강의에서 HTML & CSS, SASS(SCSS)
+> Part의 박영웅 강사님의 강의자료(Sass(SCSS) 완전 정복!)를 보며 정리한 것입니다.
 
 ### 흐름 제어(Flow Control)
 
@@ -120,7 +121,8 @@ div {
 div {width: 200px;height: 800px;}
 ```
 
-내장 함수 `unitless()` (숫자에 단위가 있는지 여부를 반환하는 함수)를 사용하는 예제
+내장 함수 `unitless()` (숫자에 단위가 있는지 여부를 반환하는 함수)를 사용하는 예
+제
 
 ```plain text
 @mixin pCenter($w, $h, $p: absolute) {
@@ -208,7 +210,8 @@ div {width: 200px;height: 800px;}
 
 `to` 는 주어진 값 직전까지만 반복해야할 경우 사용.
 
-하지만 `:nth-child()` 에서 특히 유용하게 사용되는 `@for` 는 일반적으로 `through` 를 사용한다.
+하지만 `:nth-child()` 에서 특히 유용하게 사용되는 `@for` 는 일반적으로 `through`
+를 사용한다.
 
 #### `@each`
 
@@ -314,7 +317,8 @@ $fruits-data: (
 
 #### `@while`
 
-`@while` 은 조건이 `false` 로 평가될 때까지 내용을 반복한다. `while` 문과 유사하게 잘못된 조건으로 인해 컴파일 중 무한 루프에 빠질 수 있다.
+`@while` 은 조건이 `false` 로 평가될 때까지 내용을 반복한다. `while` 문과 유사하
+게 잘못된 조건으로 인해 컴파일 중 무한 루프에 빠질 수 있다.
 
 ```plain text
 @while 조건 {
@@ -341,6 +345,8 @@ $i: 6;
 
 ### Reference
 
-[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) -
+HTML & CSS, SASS(SCSS) Part by
+[ParkYoungWoong](https://github.com/ParkYoungWoong)
 
 [Sass(SCSS) 완전 정복!](https://heropy.blog/2018/01/31/sass/)

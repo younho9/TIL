@@ -8,15 +8,19 @@ author_url: https://github.com/younho9
 author_image_url: https://avatars.githubusercontent.com/u/48426991
 ---
 
-Nuxt.js의 View는 `app template`과 `Layout`, `Page`로 구성된다. SEO 최적화를 위해 페이지 별로 meta 태그와 head 섹션을 구성할 수 있다.
+Nuxt.js의 View는 `app template`과 `Layout`, `Page`로 구성된다. SEO 최적화를 위해
+페이지 별로 meta 태그와 head 섹션을 구성할 수 있다.
 
 ![Composition of a View in Nuxt.js](https://nuxtjs.org/docs/2.x/views.png)
 
 ## Pages
 
-모든 페이지 컴포넌트는 뷰 컴포넌트이다. 하지만 Nuxt.js는 쉽게 개발할 수 있도록 특별한 속성들과 함수들을 추가한다.
+모든 페이지 컴포넌트는 뷰 컴포넌트이다. 하지만 Nuxt.js는 쉽게 개발할 수 있도록특
+별한 속성들과 함수들을 추가한다.
 
-> 모든 페이지 속성을 보려면 [Directory Structure](https://nuxtjs.org/docs/2.x/directory-structure/pages)를 참고
+> 모든 페이지 속성을 보려면
+> [Directory Structure](https://nuxtjs.org/docs/2.x/directory-structure/pages)를
+> 참고
 
 ## Layouts
 
@@ -34,7 +38,8 @@ Nuxt.js의 View는 `app template`과 `Layout`, `Page`로 구성된다. SEO 최�
 
 > 레이아웃에는 `<Nuxt />` 컴포넌트를 반드시 추가해야 한다.
 
-기본 레이아웃 외의 커스텀 레이아웃은 `layouts` 폴더에 다른 이름으로 파일을 생성하여 만들 수 있다.
+기본 레이아웃 외의 커스텀 레이아웃은 `layouts` 폴더에 다른 이름으로 파일을 생성
+하여 만들 수 있다.
 
 ```html title="layouts/blog.vue"
 <template>
@@ -45,7 +50,8 @@ Nuxt.js의 View는 `app template`과 `Layout`, `Page`로 구성된다. SEO 최�
 </template>
 ```
 
-이렇게 생성한 레이아웃을 사용하려면, `page` 컴포넌트에서 `layout` 속성에 파일 이름을 값으로 사용하면 된다.
+이렇게 생성한 레이아웃을 사용하려면, `page` 컴포넌트에서 `layout` 속성에 파일 이
+름을 값으로 사용하면 된다.
 
 ```html title="pages/posts.vue"
 <template>
@@ -63,7 +69,10 @@ Nuxt.js의 View는 `app template`과 `Layout`, `Page`로 구성된다. SEO 최�
 
 에러 페이지는 에러가 발생할 때(`404`, `500`, 등등) 표시되는 페이지 컴포넌트이다.
 
-에러 페이지는 레이아웃이지만, 에러가 발생할 때 표시되는 특별한 컴포넌트로 봐야 한다. 따라서 다른 레이아웃 컴포넌트와 달리 `<Nuxt />` 컴포넌트를 포함해선 안되고, `layouts` 디렉토리에 위치해야 한다. 다른 페이지 컴포넌트처럼 다른 레이아웃을 사용할 수 있다.
+에러 페이지는 레이아웃이지만, 에러가 발생할 때 표시되는 특별한 컴포넌트로 봐야한
+다. 따라서 다른 레이아웃 컴포넌트와 달리 `<Nuxt />` 컴포넌트를 포함해선 안되고 ,
+`layouts` 디렉토리에 위치해야 한다. 다른 페이지 컴포넌트처럼 다른 레이아웃을사용
+할 수 있다.
 
 ```html title="layouts/error.vue"
 <template>
@@ -84,7 +93,8 @@ Nuxt.js의 View는 `app template`과 `Layout`, `Page`로 구성된다. SEO 최�
 
 ## Document: App.html
 
-App 템플릿은 head와 body에 대한 컨텐츠와 변수를 주입하는 Nuxt.js 애플리케이션의 실제 HTML 프레임을 만드는데 사용된다.
+App 템플릿은 head와 body에 대한 컨텐츠와 변수를 주입하는 Nuxt.js 애플리케이션의
+실제 HTML 프레임을 만드는데 사용된다.
 
 이 파일은 자동적으로 생성되고, 일반적으로 수정할 필요가 거의 없다.
 

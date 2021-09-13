@@ -52,6 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.20"],
             ["@types/react-helmet", "npm:6.1.2"],
             ["@types/react-router-dom", "npm:5.1.8"],
+            ["@younho9/prettier-config", "virtual:7968a97a3be686422bed721b1bc589b1abcbcf58d31db0284c52666bdc42742738f169f2c6420c897217e105779d30fb49af15fd5d8311d80f28ab7b78c024b4#npm:1.1.0"],
             ["clsx", "npm:1.1.1"],
             ["docusaurus-plugin-sass", "virtual:7968a97a3be686422bed721b1bc589b1abcbcf58d31db0284c52666bdc42742738f169f2c6420c897217e105779d30fb49af15fd5d8311d80f28ab7b78c024b4#npm:0.2.1"],
             ["file-loader", "virtual:7968a97a3be686422bed721b1bc589b1abcbcf58d31db0284c52666bdc42742738f169f2c6420c897217e105779d30fb49af15fd5d8311d80f28ab7b78c024b4#npm:6.2.0"],
@@ -5877,6 +5878,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@xtuc-long-npm-4.2.2-37236e6d72-ec09a359f9.zip/node_modules/@xtuc/long/",
           "packageDependencies": [
             ["@xtuc/long", "npm:4.2.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@younho9/prettier-config", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/@younho9-prettier-config-npm-1.1.0-ff84ed32b3-875c683ff3.zip/node_modules/@younho9/prettier-config/",
+          "packageDependencies": [
+            ["@younho9/prettier-config", "npm:1.1.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:7968a97a3be686422bed721b1bc589b1abcbcf58d31db0284c52666bdc42742738f169f2c6420c897217e105779d30fb49af15fd5d8311d80f28ab7b78c024b4#npm:1.1.0", {
+          "packageLocation": "./.yarn/$$virtual/@younho9-prettier-config-virtual-6b057a59e5/0/cache/@younho9-prettier-config-npm-1.1.0-ff84ed32b3-875c683ff3.zip/node_modules/@younho9/prettier-config/",
+          "packageDependencies": [
+            ["@younho9/prettier-config", "virtual:7968a97a3be686422bed721b1bc589b1abcbcf58d31db0284c52666bdc42742738f169f2c6420c897217e105779d30fb49af15fd5d8311d80f28ab7b78c024b4#npm:1.1.0"],
+            ["@types/prettier", null],
+            ["prettier", "npm:2.4.0"]
+          ],
+          "packagePeers": [
+            "@types/prettier",
+            "prettier"
           ],
           "linkType": "HARD",
         }]
@@ -18921,6 +18944,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.20"],
             ["@types/react-helmet", "npm:6.1.2"],
             ["@types/react-router-dom", "npm:5.1.8"],
+            ["@younho9/prettier-config", "virtual:7968a97a3be686422bed721b1bc589b1abcbcf58d31db0284c52666bdc42742738f169f2c6420c897217e105779d30fb49af15fd5d8311d80f28ab7b78c024b4#npm:1.1.0"],
             ["clsx", "npm:1.1.1"],
             ["docusaurus-plugin-sass", "virtual:7968a97a3be686422bed721b1bc589b1abcbcf58d31db0284c52666bdc42742738f169f2c6420c897217e105779d30fb49af15fd5d8311d80f28ab7b78c024b4#npm:0.2.1"],
             ["file-loader", "virtual:7968a97a3be686422bed721b1bc589b1abcbcf58d31db0284c52666bdc42742738f169f2c6420c897217e105779d30fb49af15fd5d8311d80f28ab7b78c024b4#npm:6.2.0"],

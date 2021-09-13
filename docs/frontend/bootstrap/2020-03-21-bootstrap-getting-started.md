@@ -30,7 +30,11 @@ updated_time: 2021-02-15
 
 [부트스트랩 CDN](https://www.bootstrapcdn.com/)
 
-> ☝️ CDN이란?CDN is short for content delivery network. A content delivery network (CDN) is a system of distributed servers (network) that deliver pages and other web content to a user, based on the geographic locations of the user, the origin of the webpage and the content delivery server.CDN - Webopedia
+> ☝️ CDN이란?CDN is short for content delivery network. A content delivery
+> network (CDN) is a system of distributed servers (network) that deliver pages
+> and other web content to a user, based on the geographic locations of the
+> user, the origin of the webpage and the content delivery server.CDN -
+> Webopedia
 
 #### 다운로드 방법
 
@@ -42,7 +46,8 @@ bootstrap download
 
 1. 소스 코드로 다운받기
 
-> 소스로 다운받으면 Less 나 Grunt 등을 사용해서 관리할 수 있는 모양이다. 잘은 모르겠다..
+> 소스로 다운받으면 Less 나 Grunt 등을 사용해서 관리할 수 있는 모양이다. 잘은 모
+> 르겠다..
 
 1. Sass 버전 다운받기
 
@@ -56,7 +61,9 @@ bootstrap download
 
 - IE8 이하 버전 지원 종료
 
-> 관리자 템플릿, WISYWIG 에디터 등 아직까지 플러그인들이 3기반에 머물러 있는 경우가 많음.3을 추천한다고 함.패스트캠퍼스 - 프론트엔드 개발 강의 - Bootstrap Part
+> 관리자 템플릿, WISYWIG 에디터 등 아직까지 플러그인들이 3기반에 머물러 있는 경
+> 우가 많음.3을 추천한다고 함.패스트캠퍼스 - 프론트엔드 개발 강의 - Bootstrap
+> Part
 
 ### 레이아웃
 

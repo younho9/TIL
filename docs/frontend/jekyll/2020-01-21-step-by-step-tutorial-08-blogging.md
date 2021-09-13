@@ -14,7 +14,8 @@ updated_time: 2021-02-15
 
 [Blogging](https://jekyllrb.com/docs/step-by-step/08-blogging/)
 
-이제 데이터베이스 없이 어떻게 블로그를 만들 수 있는지 궁금할 것이다. Jekyll 스타일에서 오로지 text 파일만으로 blogging하는 것이 가능하다.
+이제 데이터베이스 없이 어떻게 블로그를 만들 수 있는지 궁금할 것이다. Jekyll 스타
+일에서 오로지 text 파일만으로 blogging하는 것이 가능하다.
 
 <br />
 
@@ -22,7 +23,8 @@ updated_time: 2021-02-15
 
 ---
 
-블로그 포스트는 `_posts` 라는 폴더에 있다. 포스트의 파일명은 특별한 포맷을 가지는데 발행일, 제목, 확장자 이다.
+블로그 포스트는 `_posts` 라는 폴더에 있다. 포스트의 파일명은 특별한 포맷을 가지
+는데 발행일, 제목, 확장자 이다.
 
 첫 포스트를 `_posts/2018-08-20-bananas.md` 로 만들어보자.
 
@@ -41,7 +43,9 @@ starch covered with a rind, which may be green, yellow, red, purple, or brown
 when ripe.
 ```
 
-이것은 어떻게 보면 `about.md` 파일과 비슷해 보이는데, `author` 라는 커스텀 변수가 있고(꼭 필요한 것은 아니고 `creator` 라는 이름으로 사용할 수도 있다.) `layout` 이 다르다.
+이것은 어떻게 보면 `about.md` 파일과 비슷해 보이는데, `author` 라는 커스텀 변수
+가 있고(꼭 필요한 것은 아니고 `creator` 라는 이름으로 사용할 수도 있다.)
+`layout` 이 다르다.
 
 <br />
 
@@ -61,7 +65,8 @@ layout: default
 {{ content }}
 ```
 
-이것은 레이아웃의 상속의 예이다. `post` 레이아웃은 `title` , `date` , `author` , `content` 를 표시하고 이것은 `default` 레이아웃으로 감싸진다.
+이것은 레이아웃의 상속의 예이다. `post` 레이아웃은 `title` , `date` , `author` ,
+`content` 를 표시하고 이것은 `default` 레이아웃으로 감싸진다.
 
 또한 `date_to_string` 필터는 날짜를 보기 좋은 형식으로 표시해준다.
 
@@ -71,7 +76,8 @@ layout: default
 
 ---
 
-현재 blog 포스트들을 navigate하는 방법이 없다. 전형적으로 블로그는 모든 포스트를 리스트하는 페이지를 갖고 있다.
+현재 blog 포스트들을 navigate하는 방법이 없다. 전형적으로 블로그는 모든 포스트를
+리스트하는 페이지를 갖고 있다.
 
 Jekyll에서는 포스트들을 `site.posts` 로 접근할 수 있다.
 
@@ -98,11 +104,14 @@ title: Blog
 
 - `post.url` 은 포스트의 output path를 Jekyll이 찾아준다.
 
-- `post.title` 은 포스트의 파일 이름에서 `title` 을 가져오는데 front matter의 `title` 으로 override 할 수 있다.
+- `post.title` 은 포스트의 파일 이름에서 `title` 을 가져오는데 front matter의
+  `title` 으로 override 할 수 있다.
 
 - `post.excerpt` 는 기본적으로 콘텐츠의 첫 번째 단락을 가져온다.
 
-또한 우리는 기본 페이지에서부터 Blog 페이지로 갈 수 있는 방법이 네비게이션에 추가되어야 하므로 `_data/navigation.yml` 파일에 blog page를 위한 엔트리를 추가한다.
+또한 우리는 기본 페이지에서부터 Blog 페이지로 갈 수 있는 방법이 네비게이션에 추
+가되어야 하므로 `_data/navigation.yml` 파일에 blog page를 위한 엔트리를 추가한다
+.
 
 ```plain text
 - name: Home

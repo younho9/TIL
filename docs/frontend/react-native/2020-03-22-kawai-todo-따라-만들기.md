@@ -17,7 +17,7 @@ updated_time: 2021-02-15
 [Dimensions · React Native](https://reactnative.dev/docs/dimensions)
 
 ```javascript
-import { Dimensions } from 'react-native';
+import {Dimensions} from 'react-native';
 ```
 
 ```javascript
@@ -26,7 +26,7 @@ const windowHeight = Dimensions.get('window').height;
 
 or;
 
-const { height, width } = Dimensions.get('window');
+const {height, width} = Dimensions.get('window');
 ```
 
 사용하는 핸드폰(윈도우 객체)의 가로 너비, 세로 너비를 구할 수 있다.
@@ -36,7 +36,7 @@ const { height, width } = Dimensions.get('window');
 [Platform Specific Code · React Native](https://reactnative.dev/docs/platform-specific-code)
 
 ```javascript
-import { Platform, StyleSheet } from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   height: Platform.OS === 'ios' ? 200 : 100,
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 ```
 
 ```javascript
-import { Platform, StyleSheet } from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -82,7 +82,8 @@ const styles = StyleSheet.create({
 })
 ```
 
-`shadow` 는 iOS와 Android에서 속성이 다르다. Android는 `elevation` 으로 사용한다.
+`shadow` 는 iOS와 Android에서 속성이 다르다. Android는 `elevation` 으로 사용한다
+.
 
 ### `ScrollView`
 
@@ -120,7 +121,7 @@ const styles = StyleSheet.create({
 
 ```javascript
 _toggleComplete = () => {
-  this.setState(prevState => {
+  this.setState((prevState) => {
     return {
       isCompleted: !prevState.isCompleted,
     };

@@ -12,7 +12,11 @@ created_time: 2020-02-03
 updated_time: 2021-02-15
 ---
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
+> ❗️ 해당 글은
+> [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에
+> 서 HTML & CSS, SASS(SCSS) Part의
+> [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니
+> 다.
 
 ### `transition`
 
@@ -106,7 +110,8 @@ CSS 속성의 시작과 끝을 지정(전환 효과)하여 중간 값을 애니�
 | ---- | --------------------------- | ------ |
 | 시간 | 전환 효과의 대기시간을 설정 | 0s     |
 
-> ☝️ transition: 2s 3s; 로 입력하면 앞에 오는 시간이 duration , 뒤에 오는 시간이 delay 이다.
+> ☝️ transition: 2s 3s; 로 입력하면 앞에 오는 시간이 duration , 뒤에 오는 시간이
+> delay 이다.
 
 <br />
 
@@ -171,7 +176,10 @@ transform: 변환함수1 변환함수2 변환함수3 ...;transform: 원근법 �
 .box {width: 200px;height: 200px;background: tomato;display: flex;justify-content: center;align-items: center;font-size: 30px;transition: 1s;}.box:hover {transform: translate(30px, 30px);}
 ```
 
-> ☝️ translate(30px, 30px) vs position: relative; left: 30px; top: 30px; : position 은 어느 위치에 배치해놓고 위치가 다시 변하지 않는 경우에 사용하고 (애니메이션에 최적화되어 있지 않다.) translate 는 위치가 수시로 변할 수 있는 경우에 사용한다.
+> ☝️ translate(30px, 30px) vs position: relative; left: 30px; top: 30px; :
+> position 은 어느 위치에 배치해놓고 위치가 다시 변하지 않는 경우에 사용하고 (애
+> 니메이션에 최적화되어 있지 않다.) translate 는 위치가 수시로 변할 수 있는 경우
+> 에 사용한다.
 
 <br />
 
@@ -305,10 +313,15 @@ img {width: 200px;border: 1px solid lightgray;transition: 1s;transform: rotate(4
 
 matrix-function
 
-> ☝️ 요소의 일반 변환(Transforms) 함수(2D, 3D)를 사용하더라도 브라우저에 의해 matrix 함수로 계산되어 적용된다. (2D 변환 함수는 matrix 로, 3D 변환 함수는 matrix3d 로) 따라서 일반적인 경우는 matrix 함수가 아닌 일반 변환 함수를 사용하면 된다.
+> ☝️ 요소의 일반 변환(Transforms) 함수(2D, 3D)를 사용하더라도 브라우저에 의해
+> matrix 함수로 계산되어 적용된다. (2D 변환 함수는 matrix 로, 3D 변환 함수는
+> matrix3d 로) 따라서 일반적인 경우는 matrix 함수가 아닌 일반 변환 함수를 사용하
+> 면 된다.
 
 <br />
 
 ### Reference
 
-[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) -
+HTML & CSS, SASS(SCSS) Part by
+[ParkYoungWoong](https://github.com/ParkYoungWoong)

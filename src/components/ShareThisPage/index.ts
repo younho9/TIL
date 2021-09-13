@@ -1,1 +1,1 @@
-export { default as ShareThisPage } from './ShareThisPage';
+export {default as ShareThisPage} from './ShareThisPage';

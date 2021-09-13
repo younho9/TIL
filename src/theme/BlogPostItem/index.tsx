@@ -110,7 +110,8 @@ function BlogPostItem(props: Props): JSX.Element {
       className={!isBlogPostPage ? 'margin-bottom--xl' : undefined}
       itemProp="blogPost"
       itemScope
-      itemType="http://schema.org/BlogPosting">
+      itemType="http://schema.org/BlogPosting"
+    >
       {renderPostHeader()}
 
       {image && (
@@ -125,7 +126,8 @@ function BlogPostItem(props: Props): JSX.Element {
         <footer
           className={clsx('row docusaurus-mt-lg', {
             [styles.blogPostDetailsFull]: isBlogPostPage,
-          })}>
+          })}
+        >
           {tags.length > 0 && (
             <div className={clsx('col', {'col--9': !isBlogPostPage})}>
               <TagsListInline tags={tags} />
@@ -138,7 +140,8 @@ function BlogPostItem(props: Props): JSX.Element {
                 'col',
                 'margin-top--sm',
                 styles.pageActionWrapper,
-              )}>
+              )}
+            >
               <EditThisPage editUrl={editUrl} />
               {/* swizzled */}
               {url && navigator.share && <ShareThisPage data={shareData} />}
@@ -149,11 +152,13 @@ function BlogPostItem(props: Props): JSX.Element {
             <div className="col col--3 text--right">
               <Link
                 to={metadata.permalink}
-                aria-label={`Read more about ${title}`}>
+                aria-label={`Read more about ${title}`}
+              >
                 <b>
                   <Translate
                     id="theme.blog.post.readMore"
-                    description="The label used in blog post item excerpts to link to full blog posts">
+                    description="The label used in blog post item excerpts to link to full blog posts"
+                  >
                     Read More
                   </Translate>
                 </b>

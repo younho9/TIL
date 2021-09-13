@@ -14,11 +14,13 @@ updated_time: 2021-02-15
 
 ## Sass(SCSS) Syntax - 2. 중첩
 
-> ❗️ 해당 글은 패스트캠퍼스 - 프론트엔드 개발 강의에서 HTML & CSS, SASS(SCSS) Part의 박영웅 강사님의 강의자료(Sass(SCSS) 완전 정복!)를 보며 정리한 것입니다.
+> ❗️ 해당 글은 패스트캠퍼스 - 프론트엔드 개발 강의에서 HTML & CSS, SASS(SCSS)
+> Part의 박영웅 강사님의 강의자료(Sass(SCSS) 완전 정복!)를 보며 정리한 것입니다.
 
 ### 중첩(Nesting)
 
-Sass(SCSS)는 중첩 기능을 제공해주어 상위 선택자의 반복을 피하고 편리하고 직관적으로 복잡한 구조의 CSS를 작성할 수 있다.
+Sass(SCSS)는 중첩 기능을 제공해주어 상위 선택자의 반복을 피하고 편리하고 직관적
+으로 복잡한 구조의 CSS를 작성할 수 있다.
 
 ```plain text
 .section {
@@ -67,7 +69,8 @@ Sass(SCSS)는 중첩 기능을 제공해주어 상위 선택자의 반복을 피
 .btn {position: absolute;}.btn.active {color: red;}.list li:last-child {margin-right: 0;}
 ```
 
-`&` 키워드가 상위(부모) 선택자로 치환하는 개념이기 때문에 다음과 같이 응용하는 것도 가능하다.
+`&` 키워드가 상위(부모) 선택자로 치환하는 개념이기 때문에 다음과 같이 응용하는것
+도 가능하다.
 
 ```plain text
 .fs {
@@ -106,9 +109,11 @@ Sass(SCSS)는 중첩 기능을 제공해주어 상위 선택자의 반복을 피
 
 > 🔗 Sass(SCSS) Syntax - 3. 변수 참조
 
-그런데 이 변수는 유효범위가 있어서 변수가 선언된 `.section` 의 블록 ( `{}` ) 내부에서만 사용할 수 있고, 그 밖에서 사용하면 컴파일되지 않는다.
+그런데 이 변수는 유효범위가 있어서 변수가 선언된 `.section` 의 블록 ( `{}` ) 내
+부에서만 사용할 수 있고, 그 밖에서 사용하면 컴파일되지 않는다.
 
-그래서 `.section` 의 하위 요소는 아니지만, 변수를 사용하기 위해 `@at-root` 키워드를 사용하면 유용하다.
+그래서 `.section` 의 하위 요소는 아니지만, 변수를 사용하기 위해 `@at-root` 키워
+드를 사용하면 유용하다.
 
 ```plain text
 .section {
@@ -135,7 +140,8 @@ Sass(SCSS)는 중첩 기능을 제공해주어 상위 선택자의 반복을 피
 
 #### 중첩된 속성
 
-`font-` , `margin-` 등 동일한 네임 스페이스를 가지는 속성들(같은 단축 속성 아래에 있는 개별 속성들)을 사용할 때 중복을 줄이기 위해 사용하는 방법
+`font-` , `margin-` 등 동일한 네임 스페이스를 가지는 속성들(같은 단축 속성 아래
+에 있는 개별 속성들)을 사용할 때 중복을 줄이기 위해 사용하는 방법
 
 ```plain text
 .box {
@@ -165,6 +171,8 @@ Sass(SCSS)는 중첩 기능을 제공해주어 상위 선택자의 반복을 피
 
 ### Reference
 
-[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) -
+HTML & CSS, SASS(SCSS) Part by
+[ParkYoungWoong](https://github.com/ParkYoungWoong)
 
 [Sass(SCSS) 완전 정복!](https://heropy.blog/2018/01/31/sass/)

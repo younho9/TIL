@@ -20,7 +20,8 @@ updated_time: 2021-02-15
 
 ![2020-01-21-jekyll-github-page를-이용해-개인블로그-만들기-image-0](./images/2020-01-21-jekyll-github-page를-이용해-개인블로그-만들기-image-0.png)
 
-맥에는 루비가 기본적으로 설치되어 있지만, Jekyll 홈페이지의 설명대로 아래의 명령을 입력하면 오류가 발생한다.
+맥에는 루비가 기본적으로 설치되어 있지만, Jekyll 홈페이지의 설명대로 아래의 명령
+을 입력하면 오류가 발생한다.
 
 ```bash
 # RubyGems를 통해 Jekyll과 Bundler를 설치한다
@@ -33,10 +34,12 @@ gem install jekyll bundler
 
 #### Gem::FilePermissionError
 
-맥은 시스템 ruby를 사용하고 있다. sudo를 통해 root 권한으로 실행하면 설치가 가능하지만, 보안상 이유로 권장하지 않는 설치법이라고 한다.
+맥은 시스템 ruby를 사용하고 있다. sudo를 통해 root 권한으로 실행하면 설치가 가능
+하지만, 보안상 이유로 권장하지 않는 설치법이라고 한다.
 
-rbenv라는 ruby version 관리자를 통해 여러 버전의 루비를 맥에 설치하고 관리할 수 있다.
-시스템 루비가 아닌 다른 루비를 rbenv를 통해 설치하여 jekyll 환경을 만들 수 있다.
+rbenv라는 ruby version 관리자를 통해 여러 버전의 루비를 맥에 설치하고 관리할 수
+있다. 시스템 루비가 아닌 다른 루비를 rbenv를 통해 설치하여 jekyll 환경을 만들 수
+있다.
 
 [Troubleshooting](https://jekyllrb.com/docs/troubleshooting/)
 

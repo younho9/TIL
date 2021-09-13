@@ -12,7 +12,11 @@ created_time: 2020-02-03
 updated_time: 2021-02-15
 ---
 
-> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
+> ❗️ 해당 글은
+> [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에
+> 서 HTML & CSS, SASS(SCSS) Part의
+> [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니
+> 다.
 
 ### `background`
 
@@ -94,7 +98,9 @@ background-image: url("경로");
 .box {background-image: url("../img/image.jpg");width: 120px;height: 80px;}.box1 {/* 개별 속성 */background-image: url("../img/image1.jpg"),url("../img/image2.jpg"),url("../img/image3.jpg");}.box2 {/* 단축 속성 */background: url("../img/image1.jpg") no-repeat,url("../img/image2.jpg") no-repeat 100px 50px,url("../img/image3.jpg") repeat-x;}
 ```
 
-> ☝️ 배경 이미지 삽입 시, 요소의 크기가 설정되어 있어야 배경 이미지가 보일 수 있다.✌️ 하나 이상의 배경 이미지를 삽입할 경우 , 로 구분한다. 먼저 작성된 이미지가 더 위에 쌓인다. 이런 ’다중 배경 이미지’는 IE8 이하 버전에 사용할 수 없다.
+> ☝️ 배경 이미지 삽입 시, 요소의 크기가 설정되어 있어야 배경 이미지가 보일 수 있
+> 다.✌️ 하나 이상의 배경 이미지를 삽입할 경우 , 로 구분한다. 먼저 작성된 이미지
+> 가 더 위에 쌓인다. 이런 ’다중 배경 이미지’는 IE8 이하 버전에 사용할 수 없다.
 
 <br />
 
@@ -147,7 +153,8 @@ background-image: url("경로");
 background-position: 방향1 방향2;
 ```
 
-> 가운데에 위치시킬 때는 center center; 로 해도 되지만 center 를 한번만 입력해도 가능하다.
+> 가운데에 위치시킬 때는 center center; 로 해도 되지만 center 를 한번만 입력해도
+> 가능하다.
 
 값이 단위( `%` , `px` 등)일 경우
 
@@ -155,7 +162,8 @@ background-position: 방향1 방향2;
 background-position: X축 Y축;
 ```
 
-> ☝️ 값이 방향일 경우에는 순서를 바꿔도 상관이 없지만 값이 단위일 경우에는 순서가 X축, Y축으로 정해져 있다.
+> ☝️ 값이 방향일 경우에는 순서를 바꿔도 상관이 없지만 값이 단위일 경우에는 순서
+> 가 X축, Y축으로 정해져 있다.
 
 단위와 방향을 혼합해서 사용할 경우
 
@@ -163,7 +171,9 @@ background-position: X축 Y축;
 background-position: X축(left, right, center) Y축(top, bottom, center);
 ```
 
-> ☝️ 단위와 방향을 혼합해서 사용할 경우 left , right 와 같은 X축 방향을 첫 번째로, top , bottom 같은 Y축 방향을 두 번째로 작성해야 한다. center 는 X축과 Y축 위치에 따라 동작한다.
+> ☝️ 단위와 방향을 혼합해서 사용할 경우 left , right 와 같은 X축 방향을 첫 번째
+> 로, top , bottom 같은 Y축 방향을 두 번째로 작성해야 한다. center 는 X축과 Y축
+> 위치에 따라 동작한다.
 
 <br />
 
@@ -248,4 +258,6 @@ section {height: 300px;border: 2px dashed lightgray;}.section2 {background-image
 
 ### Reference
 
-[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) -
+HTML & CSS, SASS(SCSS) Part by
+[ParkYoungWoong](https://github.com/ParkYoungWoong)

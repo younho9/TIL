@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 
 function Home() {
   const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
+  const {siteConfig = {}} = context;
 
   return (
     <Layout title={siteConfig.title} description={siteConfig.tagline}>

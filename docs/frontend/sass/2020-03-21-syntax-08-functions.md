@@ -14,7 +14,8 @@ updated_time: 2021-02-15
 
 ## Sass(SCSS) Syntax - 8. 함수(Functions)
 
-> ❗️ 해당 글은 패스트캠퍼스 - 프론트엔드 개발 강의에서 HTML & CSS, SASS(SCSS) Part의 박영웅 강사님의 강의자료(Sass(SCSS) 완전 정복!)를 보며 정리한 것입니다.
+> ❗️ 해당 글은 패스트캠퍼스 - 프론트엔드 개발 강의에서 HTML & CSS, SASS(SCSS)
+> Part의 박영웅 강사님의 강의자료(Sass(SCSS) 완전 정복!)를 보며 정리한 것입니다.
 
 ### 함수(Functions)
 
@@ -76,13 +77,15 @@ $max-width: 980px;
 .box_group {/* 총 너비 */width: 980px;}.box_group .box1 {/* 총 너비의 약 8.3% */width: 81.66667px;}.box_group .box2 {/* 총 너비의 약 66.7% */width: 653.33333px;}.box_group .box3 {/* 총 너비의 25% */width: 245px;}
 ```
 
-함수는 `@include` 같은 별도의 지시어 없이 사용하기 때문에 내장 함수(Built-in Functions)의 이름이 충돌할 가능성이 있다.
+함수는 `@include` 같은 별도의 지시어 없이 사용하기 때문에 내장 함수(Built-in
+Functions)의 이름이 충돌할 가능성이 있다.
 
 따라서 지정한 함수에는 별도의 접두어를 붙여 충돌을 방지하는 것이 좋다.
 
 예를 들어, `red()` 라는 내장 함수가 있다.
 
-같은 이름을 사용하면 이름이 충돌하기 때문에 별도의 접두어를 붙여 `extract-red()` 같은 이름을 만든다.
+같은 이름을 사용하면 이름이 충돌하기 때문에 별도의 접두어를 붙여 `extract-red()`
+같은 이름을 만든다.
 
 ```plain text
 // 내가 정의한 함수
@@ -102,6 +105,8 @@ div {
 
 ### Reference
 
-[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) -
+HTML & CSS, SASS(SCSS) Part by
+[ParkYoungWoong](https://github.com/ParkYoungWoong)
 
 [Sass(SCSS) 완전 정복!](https://heropy.blog/2018/01/31/sass/)

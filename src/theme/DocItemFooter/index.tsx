@@ -28,7 +28,8 @@ function TagsRow(props: TagsListInlineProps) {
       className={clsx(
         ThemeClassNames.docs.docFooterTagsRow,
         'row margin-bottom--sm',
-      )}>
+      )}
+    >
       <div className="col">
         <TagsListInline {...props} />
       </div>
@@ -100,7 +101,8 @@ export default function DocItemFooter(props: Props): JSX.Element {
 
   return (
     <footer
-      className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}>
+      className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}
+    >
       {canDisplayTagsRow && <TagsRow tags={tags} />}
       {canDisplayEditMetaRow && (
         <EditMetaRow

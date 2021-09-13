@@ -14,11 +14,13 @@ updated_time: 2021-02-15
 
 ## Sass(SCSS) Syntax - 7. 확장(Extend)
 
-> ❗️ 해당 글은 패스트캠퍼스 - 프론트엔드 개발 강의에서 HTML & CSS, SASS(SCSS) Part의 박영웅 강사님의 강의자료(Sass(SCSS) 완전 정복!)를 보며 정리한 것입니다.
+> ❗️ 해당 글은 패스트캠퍼스 - 프론트엔드 개발 강의에서 HTML & CSS, SASS(SCSS)
+> Part의 박영웅 강사님의 강의자료(Sass(SCSS) 완전 정복!)를 보며 정리한 것입니다.
 
 ### 확장(Extend)
 
-다른 선택자의 모든 스타일을 그대로 가져오면서 몇 가지 스타일을 추가해야하는 경우, 확장을 사용할 수 있다.
+다른 선택자의 모든 스타일을 그대로 가져오면서 몇 가지 스타일을 추가해야하는 경우
+, 확장을 사용할 수 있다.
 
 ```plain text
 .btn {
@@ -32,7 +34,8 @@ updated_time: 2021-02-15
 }
 ```
 
-> ☝️ btn-danger 선택자가 btn 의 padding , margin , background 등의 속성을 모두 가져오면서 background 만 red 로 바꾸고 싶을 때, 확장을 사용함.
+> ☝️ btn-danger 선택자가 btn 의 padding , margin , background 등의 속성을 모두가
+> 져오면서 background 만 red 로 바꾸고 싶을 때, 확장을 사용함.
 
 컴파일하면
 
@@ -88,7 +91,9 @@ updated_time: 2021-02-15
 
 ### Reference
 
-[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) -
+HTML & CSS, SASS(SCSS) Part by
+[ParkYoungWoong](https://github.com/ParkYoungWoong)
 
 [Sass(SCSS) 완전 정복!](https://heropy.blog/2018/01/31/sass/)
 

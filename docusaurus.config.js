@@ -3,9 +3,12 @@ const docNavItems = [
     to: 'docs/algorithms/programmers/2020-카카오-인턴십-경주로-건설',
     label: 'Algorithms',
   },
-  { to: 'docs/cs/design-pattern/observer-pattern-vs-pub-sub-pattern', label: 'CS' },
-  { to: 'docs/frontend/html/html-시작하기', label: 'Frontend' },
-  { to: 'docs/frontend/html/html-시작하기', label: 'ETC' },
+  {
+    to: 'docs/cs/design-pattern/observer-pattern-vs-pub-sub-pattern',
+    label: 'CS',
+  },
+  {to: 'docs/frontend/html/html-시작하기', label: 'Frontend'},
+  {to: 'docs/frontend/html/html-시작하기', label: 'ETC'},
 ];
 
 const logNavItems = [
@@ -60,9 +63,9 @@ module.exports = {
           items: logNavItems,
         },
         {
-          href: 'https://github.com/younho9/til',
-          position: 'right',
-          className: 'header-github-link',
+          'href': 'https://github.com/younho9/til',
+          'position': 'right',
+          'className': 'header-github-link',
           'aria-label': 'GitHub repository',
         },
       ],

@@ -11,6 +11,7 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
+    "format": "prettier --write .",
     "format:docs": "cd docs && prettier --write .",
     "format:log": "cd log && prettier --write ."
   },
@@ -26,6 +27,7 @@
       "last 1 safari version"
     ]
   },
+  "prettier": "@younho9/prettier-config",
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.6",
     "@docusaurus/mdx-loader": "^2.0.0-beta.6",
@@ -54,6 +56,7 @@
     "@types/react": "^17.0.20",
     "@types/react-helmet": "^6.1.2",
     "@types/react-router-dom": "^5.1.8",
+    "@younho9/prettier-config": "^1.1.0",
     "prettier": "^2.4.0",
     "sass": "^1.39.2",
     "sass-loader": "^12.1.0",

@@ -5,22 +5,21 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import clsx from 'clsx';
-
-import LastUpdated from '@theme/LastUpdated';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment'; // swizzled
+import {ThemeClassNames} from '@docusaurus/theme-common';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'; // swizzled
 import type {Props} from '@theme/DocItem';
 import EditThisPage from '@theme/EditThisPage';
+import LastUpdated from '@theme/LastUpdated';
 import TagsListInline, {
   Props as TagsListInlineProps,
 } from '@theme/TagsListInline';
+import clsx from 'clsx';
+import React from 'react';
+
+import {ShareThisPage} from '../../components'; // swizzled
 
 import styles from './styles.module.scss';
-import {ThemeClassNames} from '@docusaurus/theme-common';
-
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext'; // swizzled
-import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment'; // swizzled
-import {ShareThisPage} from '../../components'; // swizzled
 
 function TagsRow(props: TagsListInlineProps) {
   return (

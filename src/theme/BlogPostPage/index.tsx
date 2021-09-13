@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import Seo from '@theme/Seo';
+import {ThemeClassNames} from '@docusaurus/theme-common';
 import BlogLayout from '@theme/BlogLayout';
 import BlogPostItem from '@theme/BlogPostItem';
-import BlogPostPaginator from '@theme/BlogPostPaginator';
 import type {Props} from '@theme/BlogPostPage';
-import {ThemeClassNames} from '@docusaurus/theme-common';
+import BlogPostPaginator from '@theme/BlogPostPaginator';
+import Seo from '@theme/Seo';
+import React from 'react';
 
 import {Comment} from '../../components'; // swizzled
 

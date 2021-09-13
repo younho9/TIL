@@ -5,11 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
 import Translate from '@docusaurus/Translate';
-import {IoShareOutline} from 'react-icons/io5';
 import clsx from 'clsx';
+import React from 'react';
+
 import styles from './styles.module.scss';
+
+import {IoShareOutline} from 'react-icons/io5';
 
 interface Props {
   data: {

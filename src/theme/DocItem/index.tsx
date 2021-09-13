@@ -5,22 +5,21 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import clsx from 'clsx';
-
-import useWindowSize from '@theme/hooks/useWindowSize';
-import DocPaginator from '@theme/DocPaginator';
-import DocVersionBanner from '@theme/DocVersionBanner';
-import Seo from '@theme/Seo';
+import {ThemeClassNames} from '@docusaurus/theme-common';
 import type {Props} from '@theme/DocItem';
 import DocItemFooter from '@theme/DocItemFooter';
-import TOC from '@theme/TOC';
+import DocPaginator from '@theme/DocPaginator';
+import DocVersionBanner from '@theme/DocVersionBanner';
 import {MainHeading} from '@theme/Heading';
-
-import styles from './styles.module.scss';
-import {ThemeClassNames} from '@docusaurus/theme-common';
+import useWindowSize from '@theme/hooks/useWindowSize';
+import Seo from '@theme/Seo';
+import TOC from '@theme/TOC';
+import clsx from 'clsx';
+import React from 'react';
 
 import {Comment} from '../../components'; // swizzled
+
+import styles from './styles.module.scss';
 
 export default function DocItem(props: Props): JSX.Element {
   const {content: DocContent, versionMetadata} = props;

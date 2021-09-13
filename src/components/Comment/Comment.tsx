@@ -1,5 +1,5 @@
-import React from 'react';
 import useThemeContext from '@theme/hooks/useThemeContext';
+import React from 'react';
 
 const utterancesSelector = 'iframe.utterances-frame';
 

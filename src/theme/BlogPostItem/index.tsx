@@ -5,24 +5,24 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import clsx from 'clsx';
-import {MDXProvider} from '@mdx-js/react';
-import Translate, {translate} from '@docusaurus/Translate';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment'; // swizzled
 import Link from '@docusaurus/Link';
-import {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
 import {usePluralForm} from '@docusaurus/theme-common';
-import MDXComponents from '@theme/MDXComponents';
-import EditThisPage from '@theme/EditThisPage';
+import Translate, {translate} from '@docusaurus/Translate';
+import {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'; // swizzled
+import {MDXProvider} from '@mdx-js/react';
+import BlogPostAuthors from '@theme/BlogPostAuthors';
 import type {Props} from '@theme/BlogPostItem';
+import EditThisPage from '@theme/EditThisPage';
+import MDXComponents from '@theme/MDXComponents';
+import TagsListInline from '@theme/TagsListInline';
+import clsx from 'clsx';
+import React from 'react';
+
+import {ShareThisPage} from '../../components'; // swizzled
 
 import styles from './styles.module.scss';
-import TagsListInline from '@theme/TagsListInline';
-import BlogPostAuthors from '@theme/BlogPostAuthors';
-
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext'; // swizzled
-import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment'; // swizzled
-import {ShareThisPage} from '../../components'; // swizzled
 
 // Very simple pluralization: probably good enough for now
 function useReadingTimePlural() {

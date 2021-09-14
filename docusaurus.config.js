@@ -66,6 +66,12 @@ module.exports = {
           items: logNavItems,
         },
         {
+          label: 'Wiki',
+          position: 'left',
+          to: 'wiki/싱글-스레드',
+          activeBaseRegex: 'wiki/',
+        },
+        {
           'href': 'https://github.com/younho9/til',
           'position': 'right',
           'className': 'header-github-link',
@@ -155,8 +161,8 @@ module.exports = {
       '@docusaurus/plugin-content-blog',
       {
         id: 'twoZeroLog',
-        routeBasePath: 'log/2020',
         path: './log/2020',
+        routeBasePath: 'log/2020',
         editUrl: 'https://github.com/younho9/til/edit/main/',
       },
     ],
@@ -164,8 +170,17 @@ module.exports = {
       '@docusaurus/plugin-content-blog',
       {
         id: 'twoOneLog',
-        routeBasePath: 'log/2021',
         path: './log/2021',
+        routeBasePath: 'log/2021',
+        editUrl: 'https://github.com/younho9/til/edit/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'wiki',
+        path: './wiki',
+        routeBasePath: 'wiki',
         editUrl: 'https://github.com/younho9/til/edit/main/',
       },
     ],

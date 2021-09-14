@@ -8,7 +8,10 @@ const docNavItems = [
     label: 'CS',
   },
   {to: 'docs/frontend/html/html-시작하기', label: 'Frontend'},
-  {to: 'docs/frontend/html/html-시작하기', label: 'ETC'},
+  {
+    to: 'docs/etc/setting/mac-버추얼박스-virtualbox-에-우분투-ubuntu-설치하기',
+    label: 'ETC',
+  },
 ];
 
 const logNavItems = [

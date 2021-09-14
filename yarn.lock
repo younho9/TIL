@@ -3483,12 +3483,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@younho9/prettier-config@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@younho9/prettier-config@npm:1.1.0"
+"@younho9/prettier-config@npm:1.2.0":
+  version: 1.2.0
+  resolution: "@younho9/prettier-config@npm:1.2.0"
   peerDependencies:
     prettier: "*"
-  checksum: 875c683ff32a87d28330f6f93ea1c5a2c7ea02afd7ad1c78fc08a5bc8ed348e24fa77acdd3bafd6ed470d1158299aef5296f301a80130872d9c5259095fbc46e
+  checksum: b674e0e72bf725383555a62ee2d5106a78cf5199b88ecb6c2760fa2a0b4ed88efc8af198ed2a885b58113d869c4b1022d1a91b4bf07ee7136350902639eeecbf
   languageName: node
   linkType: hard
 
@@ -15169,7 +15169,7 @@ typescript@4.3.5:
     "@types/react-router-dom": ^5.1.8
     "@typescript-eslint/eslint-plugin": ^4.29.0
     "@typescript-eslint/parser": ^4.29.0
-    "@younho9/prettier-config": ^1.1.0
+    "@younho9/prettier-config": 1.2.0
     clsx: ^1.1.1
     docusaurus-plugin-sass: ^0.2.1
     eslint: ^7.32.0

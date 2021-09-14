@@ -12,18 +12,13 @@ created_time: 2020-02-03
 updated_time: 2021-02-15
 ---
 
-> ❗️ 해당 글은
-> [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에
-> 서 HTML & CSS, SASS(SCSS) Part의
-> [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니
-> 다.
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ### `float`
 
 요소를 좌우 방향으로 띄움(수평 정렬)
 
-> ☝️ CSS3에서 Flexible box 라는 개념이 등장하면서 최근에는 float 보다 Flexible
-> box 를 이용한 수평 정렬을 하는 편이다.
+> ☝️ CSS3에서 Flexible box 라는 개념이 등장하면서 최근에는 float 보다 Flexible box 를 이용한 수평 정렬을 하는 편이다.
 
 <br />
 
@@ -77,8 +72,7 @@ float-horizon-right
 
 #### `float` 해제
 
-`float` 속성이 적용된 요소의 주위로 다른 요소들이 흐르게 되는데 이를 방지하기 위
-해 속성을 해제해야 한다.
+`float` 속성이 적용된 요소의 주위로 다른 요소들이 흐르게 되는데 이를 방지하기 위해 속성을 해제해야 한다.
 
 1. 형제 요소에 `clear: (left, right, both)` 추가하여 해제
 
@@ -106,8 +100,7 @@ float-horizon-right
 
 #### 부모 요소에서 해제 - `overflow`
 
-`float` 속성이 추가된 요소의 부모 요소에 `overflow` 속성을 추가해 보이지 않게 하
-는 방법.
+`float` 속성이 추가된 요소의 부모 요소에 `overflow` 속성을 추가해 보이지 않게 하는 방법.
 
 ```plain text
 <div class="parent"><div class="child"></div><div class="child"></div></div>
@@ -117,8 +110,7 @@ float-horizon-right
 .parent {overflow: hidden; /* or auto */}.child {float: left;}
 ```
 
-> ☝️ 다음 요소를 만들지 않아도 되는 장점이 있지만 관련 없는 속성으로 해결하는 일
-> 종의 ’편법’으로 사용을 권장하지 않음
+> ☝️ 다음 요소를 만들지 않아도 되는 장점이 있지만 관련 없는 속성으로 해결하는 일종의 ’편법’으로 사용을 권장하지 않음
 
 <br />
 
@@ -140,9 +132,7 @@ float-horizon-right
 
 #### `display` 수정
 
-`inline` 요소의 경우 `float` 속성이 부여되었을 때 자동적으로 `block` 요소의 특성
-을 갖게 된다. 따라서 `float` 속성을 사용할 때 `display: block;` 을 따로 지정할필
-요가 없다.
+`inline` 요소의 경우 `float` 속성이 부여되었을 때 자동적으로 `block` 요소의 특성을 갖게 된다. 따라서 `float` 속성을 사용할 때 `display: block;` 을 따로 지정할필요가 없다.
 
 | 지정값             | 변화값                            |
 | ------------------ | --------------------------------- |
@@ -161,8 +151,7 @@ float-horizon-right
 | inline-flex        | inline-flex / float 속성 효과없음 |
 | 그 외              | 변화없음                          |
 
-> ☝️ 대부분의 값이 block 으로 변경되는데 flex , inline-flex 의 경우 변경되지 않
-> 는다.
+> ☝️ 대부분의 값이 block 으로 변경되는데 flex , inline-flex 의 경우 변경되지 않는다.
 
 <br />
 
@@ -207,8 +196,7 @@ float-horizon-right
 .box {width: 100px;height: 100px;background: tomato;border: 4px dashed red;border-radius: 20px;display: flex;justify-content: center;align-items: center;font-size: 30px;}.relative {position: relative;top: 100px;left: 30px;}
 ```
 
-> ☝️ relative 속성값을 가진 요소는 자기 자신이 원래 있었던 위치에서 주변 요소에
-> 영향을 준다.
+> ☝️ relative 속성값을 가진 요소는 자기 자신이 원래 있었던 위치에서 주변 요소에영향을 준다.
 
 <br />
 
@@ -226,9 +214,7 @@ float-horizon-right
 
 position-absolute
 
-> 💡 위치상 부모 요소 - 조상 요소 중 position 속성이 부여되어 있는 요소 ( static
-> 제외 )조상 요소에 없다면 -> body (일반적으로 없음) -> html (일반적으로 없음)
-> -> window 객체 (뷰포트)
+> 💡 위치상 부모 요소 - 조상 요소 중 position 속성이 부여되어 있는 요소 ( static 제외 )조상 요소에 없다면 -> body (일반적으로 없음) -> html (일반적으로 없음) -> window 객체 (뷰포트)
 
 <br />
 
@@ -260,8 +246,7 @@ position-absolute
 
 1. `position` 이 모두 존재한다면 `z-index` 속성의 숫자 값이 높을 수록 위에 쌓임
 
-1. `position` 속성의 값이 있고, `z-index` 속성의 숫자 값이 같다면, ‘HTML’ 의 마
-   지막 코드일수록 위에 쌓임(나중에 작성한 코드(요소))
+1. `position` 속성의 값이 있고, `z-index` 속성의 숫자 값이 같다면, ‘HTML’ 의 마지막 코드일수록 위에 쌓임(나중에 작성한 코드(요소))
 
 ```plain text
 position > z-index > HTML 마지막 코드
@@ -273,8 +258,7 @@ position > z-index > HTML 마지막 코드
 
 #### `display` 수정
 
-`float` 속성과 비슷하게 `absolute` , `fixed` 속성 값이 적용된 요소는 `display`
-속성의 값이 대부분 `block` 으로 수정된다.
+`float` 속성과 비슷하게 `absolute` , `fixed` 속성 값이 적용된 요소는 `display` 속성의 값이 대부분 `block` 으로 수정된다.
 
 | 지정값             | 변화값                            |
 | ------------------ | --------------------------------- |
@@ -295,8 +279,7 @@ position > z-index > HTML 마지막 코드
 
 ### `top` , `bottom` , `left` , `right`
 
-요소의 `position` 기준에 맞는 ‘위쪽’, ‘아래쪽’, ‘왼쪽’, ’오른쪽’에서의 거리(위치
-)를 설정
+요소의 `position` 기준에 맞는 ‘위쪽’, ‘아래쪽’, ‘왼쪽’, ’오른쪽’에서의 거리(위치 )를 설정
 
 | 값   | 의미                                                                              | 기본값              |
 | ---- | --------------------------------------------------------------------------------- | ------------------- |
@@ -310,6 +293,4 @@ position > z-index > HTML 마지막 코드
 
 ### Reference
 
-[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) -
-HTML & CSS, SASS(SCSS) Part by
-[ParkYoungWoong](https://github.com/ParkYoungWoong)
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

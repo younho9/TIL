@@ -12,11 +12,7 @@ created_time: 2020-02-03
 updated_time: 2021-02-15
 ---
 
-> ❗️ 해당 글은
-> [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에
-> 서 HTML & CSS, SASS(SCSS) Part의
-> [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니
-> 다.
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ### `animation`
 
@@ -37,8 +33,7 @@ updated_time: 2021-02-15
 | animation-fill-mode       | 애니메이션의 전후 상태(위치) 설정 | none    |
 | animation-play-state      | 애니메이션의 재생과 정지 설정     | running |
 
-> ☝️ animation 속성 자체가 애니메이션을 만들어주는 것은 아니고 @keyframes 에 설
-> 정된 애니메이션을 제어하는 개념이다.
+> ☝️ animation 속성 자체가 애니메이션을 만들어주는 것은 아니고 @keyframes 에 설정된 애니메이션을 제어하는 개념이다.
 
 <br />
 
@@ -78,8 +73,7 @@ animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반�
 .box {width: 100px;height: 100px;background: tomato;border-radius: 10px;}.box:hover {animation: my-animation 3s infinite alternate;}@keyframes my-animation {0% {width: 100px;background: tomato;}75% {width: 500px;background: dodgerblue;}100% {width: 300px;background: yellowgreen;}}
 ```
 
-> ☝️ transition 에 비해 @keyframes 를 이용하면 애니메이션을 더 세부적으로 설정할
-> 수 있다.
+> ☝️ transition 에 비해 @keyframes 를 이용하면 애니메이션을 더 세부적으로 설정할수 있다.
 
 <br />
 
@@ -138,9 +132,7 @@ animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반�
 | ---- | ---------------- | ------ |
 | 시간 | 대기 시간을 설정 | 0s     |
 
-> ☝️ 음수가 허용된다. 음수가 있을 경우 애니메이션은 바로 시작되지만, 그 값만큼애
-> 니메이션이 앞서 시작한다. (애니메이션 주기 도중에 시작)ex) -1s 로 설정시, 2 초
-> 짜리 애니메이션은 1초부터 시작함
+> ☝️ 음수가 허용된다. 음수가 있을 경우 애니메이션은 바로 시작되지만, 그 값만큼애니메이션이 앞서 시작한다. (애니메이션 주기 도중에 시작)ex) -1s 로 설정시, 2 초짜리 애니메이션은 1초부터 시작함
 
 <br />
 
@@ -202,6 +194,4 @@ animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반�
 
 ### Reference
 
-[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) -
-HTML & CSS, SASS(SCSS) Part by
-[ParkYoungWoong](https://github.com/ParkYoungWoong)
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)

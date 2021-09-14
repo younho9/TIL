@@ -14,37 +14,25 @@ updated_time: 2021-02-15
 
 ## 시스템 소프트웨어와 기계 종속성
 
-1. 시스템 소프트웨어의 설계는 그 소프트웨어가 동작할 머신의 구조와 밀접한 관련이
-   있다.
+1. 시스템 소프트웨어의 설계는 그 소프트웨어가 동작할 머신의 구조와 밀접한 관련이있다.
 
-   - 예를 들어, 어셈블러는 mnemonic instruction을 machine code로 해석하고, 운영
-     체제는 컴퓨팅 시스템의 자원을 직접적으로 관리한다.
+   - 예를 들어, 어셈블러는 mnemonic instruction을 machine code로 해석하고, 운영체제는 컴퓨팅 시스템의 자원을 직접적으로 관리한다.
 
-1. 시스템의 구체적인 구현법은 시간이 지남에 따라 변했지만, 바탕에 깔려있는 컨셉
-   은 여전하다.
+1. 시스템의 구체적인 구현법은 시간이 지남에 따라 변했지만, 바탕에 깔려있는 컨셉은 여전하다.
 
 1. 시스템 소프트웨어의 기본적인 구조와 설계는 대부분의 컴퓨터에서 비슷하다.
 
-   - 예를 들어, 어셈블러의 일반적인 설계와 로직은 다른 머신 아키텍쳐에서 거의 동
-     일하다.
+   - 예를 들어, 어셈블러의 일반적인 설계와 로직은 다른 머신 아키텍쳐에서 거의 동일하다.
 
 <br />
 
 ## SIC와 SIC/XE
 
-실제 머신은 매우 복잡하여 학습하기 좋지 않고, 가장 기본적인 기능에 충실할 수 없
-으므로, SIC와 SIC/XE를 통해 이해하도록 한다. SIC와 SIC/XE는 가상의 컴퓨터
-(hypothetical computer)로 실제 머신에서 볼 수 있는 하드웨어의 기능들을 포함하고,
-일반적이지 않고 관련 없는 복잡성들은 제거했다.
+실제 머신은 매우 복잡하여 학습하기 좋지 않고, 가장 기본적인 기능에 충실할 수 없으므로, SIC와 SIC/XE를 통해 이해하도록 한다. SIC와 SIC/XE는 가상의 컴퓨터 (hypothetical computer)로 실제 머신에서 볼 수 있는 하드웨어의 기능들을 포함하고, 일반적이지 않고 관련 없는 복잡성들은 제거했다.
 
-> 구체적인 세부사항으로부터 떨어져서 시스템 소프트웨어의 기본적인 컨셉을 이해하
-> 도록 한다.
+> 구체적인 세부사항으로부터 떨어져서 시스템 소프트웨어의 기본적인 컨셉을 이해하도록 한다.
 
-SIC는 Simplified Instructional Computer로 가상 컴퓨터의 표준적인 모델이고,
-SIC/XE는 SIC의 확장된 버전(the eXtra Equipment(or Expensive))이다. SIC에서 작동
-하는 프로그램은 모두 SIC/XE에서 정상적으로 동작하는 상위호환(upward
-compatibility)을 보장한다. 하지만 SIC/XE에서 작동하는 프로그램이 SIC에서 작동된
-다는 하위호환(backward compatibility)은 보장하지 않는다.
+SIC는 Simplified Instructional Computer로 가상 컴퓨터의 표준적인 모델이고, SIC/XE는 SIC의 확장된 버전(the eXtra Equipment(or Expensive))이다. SIC에서 작동하는 프로그램은 모두 SIC/XE에서 정상적으로 동작하는 상위호환(upward compatibility)을 보장한다. 하지만 SIC/XE에서 작동하는 프로그램이 SIC에서 작동된다는 하위호환(backward compatibility)은 보장하지 않는다.
 
 <br />
 
@@ -62,8 +50,7 @@ compatibility)을 보장한다. 하지만 SIC/XE에서 작동하는 프로그램
 
 ### 레지스터
 
-SIC에는 특수한 목적을 가진 5개의 레지스터가 존재한다. 길이는 각각 24비트이고 숫
-자 표현과 Mnemonic 표현을 가진다.
+SIC에는 특수한 목적을 가진 5개의 레지스터가 존재한다. 길이는 각각 24비트이고 숫자 표현과 Mnemonic 표현을 가진다.
 
 - A(0) : Accumulator register
 
@@ -77,8 +64,7 @@ SIC에는 특수한 목적을 가진 5개의 레지스터가 존재한다. 길�
 
 ### 데이터 포맷
 
-Integer와 Character 두 가지 데이터 포맷을 지원한다. (Floating-point는 지원하지않
-음)
+Integer와 Character 두 가지 데이터 포맷을 지원한다. (Floating-point는 지원하지않음)
 
 Character는 8비트(ASCII), Integer는 24비트
 
@@ -98,8 +84,7 @@ Character는 8비트(ASCII), Integer는 24비트
 
 - Indexed addressing mode (x=1) : Target Address = address + (X)
 
-직접 주소는 주소를 직접 사용하고 인덱스 주소는 해당 주소에 Index 레지스터의 값을
-더한 것을 주소로 사용한다.
+직접 주소는 주소를 직접 사용하고 인덱스 주소는 해당 주소에 Index 레지스터의 값을더한 것을 주소로 사용한다.
 
 ### 명령어 종류(Instruction Type)
 
@@ -119,30 +104,23 @@ Character는 8비트(ASCII), Integer는 24비트
 
 > 명령어 표기법
 
-A ← (A) + (m .. m+2) : A 레지스터에 A 레지스터의 값과 메모리 주소 _m, m+1, m+2_
-에 있는 값(3Bytes word 이므로)을 더해서 넣는다.
+A ← (A) + (m .. m+2) : A 레지스터에 A 레지스터의 값과 메모리 주소 _m, m+1, m+2_ 에 있는 값(3Bytes word 이므로)을 더해서 넣는다.
 
-`()` 로 감싸 있으면 메모리 주소 또는 레지스터 주소에 담겨있는 값을 말하고 감싸있
-지 않으면 해당 주소를 말한다.
+`()` 로 감싸 있으면 메모리 주소 또는 레지스터 주소에 담겨있는 값을 말하고 감싸있지 않으면 해당 주소를 말한다.
 
 #### Load & Store
 
 LDA, LDX, STA, STX, etc.
 
-- `LDA` _`m`_ : A 레지스터 ← (_m .. m+2)_, A 레지스터에 _m_ 이 가르키는 메모리주
-  소에 있는 값을 Load함.
+- `LDA` _`m`_ : A 레지스터 ← (_m .. m+2)_, A 레지스터에 _m_ 이 가르키는 메모리주소에 있는 값을 Load함.
 
-- `LDX` _`m`_ : X 레지스터 ← (_m .. m+2)_, X 레지스터에 _m_ 이 가르키는 메모리주
-  소에 있는 값을 Load함.
+- `LDX` _`m`_ : X 레지스터 ← (_m .. m+2)_, X 레지스터에 _m_ 이 가르키는 메모리주소에 있는 값을 Load함.
 
-- `STA` _`m`_ : (_m .. m+2)_ ← A 레지스터, A 레지스터에 있는 값을 _m_ 이 가르키
-  는 메모리 주소에 Store함.
+- `STA` _`m`_ : (_m .. m+2)_ ← A 레지스터, A 레지스터에 있는 값을 _m_ 이 가르키는 메모리 주소에 Store함.
 
-- `STX` _`m`_ : (_m .. m+2)_ ← X 레지스터, X 레지스터에 있는 값을 _m_ 이 가르키
-  는 메모리 주소에 Store함.
+- `STX` _`m`_ : (_m .. m+2)_ ← X 레지스터, X 레지스터에 있는 값을 _m_ 이 가르키는 메모리 주소에 Store함.
 
-> LDCH, STCH 의 Character 데이터를 다룰 때는 앞의 16비트를 자르고 맨 뒤의 8자리
-> 만 Load하고 Store한다
+> LDCH, STCH 의 Character 데이터를 다룰 때는 앞의 16비트를 자르고 맨 뒤의 8자리만 Load하고 Store한다
 
 #### Arithmetic & Logic
 
@@ -164,11 +142,9 @@ LDA, LDX, STA, STX, etc.
 
 2가지 명령어 COMP 와 TIX
 
-- `COMP` _`m`_ : 비교되어 나온 값(크다, 작다, 같다)을 SW 레지스터의 Condition
-  code에 저장한다
+- `COMP` _`m`_ : 비교되어 나온 값(크다, 작다, 같다)을 SW 레지스터의 Condition code에 저장한다
 
-- `TIX` _`m`_ : X ← (X) + 1; 후 X와 (_m .. m+2_) 를 비교한 결과를 SW 레지스터의
-  Condition code에 저장한다
+- `TIX` _`m`_ : X ← (X) + 1; 후 X와 (_m .. m+2_) 를 비교한 결과를 SW 레지스터의 Condition code에 저장한다
 
 #### Conditional Jumps
 
@@ -188,20 +164,15 @@ SW 레지스터의 Condition code에 따라 점프하는 명령어이다.
 
 `RSUB` : PC ← (L)
 
-`JSUB` 은 L(링커) 리턴 할 때 돌아갈 값을 보관하는 레지스터에 PC를 저장해두고 PC
-에 서브루틴(_m_) 을 부른다. 그리고 _m_ 에 있는 명령들을 수행한 후, 다시 원래의루
-틴으로 L 레지스터를 참조해 돌아온다.
+`JSUB` 은 L(링커) 리턴 할 때 돌아갈 값을 보관하는 레지스터에 PC를 저장해두고 PC 에 서브루틴(_m_) 을 부른다. 그리고 _m_ 에 있는 명령들을 수행한 후, 다시 원래의루틴으로 L 레지스터를 참조해 돌아온다.
 
 `RSUB` 은 리턴과 유사한 의미이다.
 
 #### I/O
 
-인풋과 아웃풋은 한번에 1바이트 씩만 전송한다. A 레지스터의 마지막 1바이트
-(rightmost byte)를 사용한다. 모든 디바이스는 각각을 구별하기 위해 unique한 8비트
-의 코드가 부여된다. 따라서 구별되는 한도 내 2^8 개의 디바이스가 붙을 수 있다.
+인풋과 아웃풋은 한번에 1바이트 씩만 전송한다. A 레지스터의 마지막 1바이트 (rightmost byte)를 사용한다. 모든 디바이스는 각각을 구별하기 위해 unique한 8비트의 코드가 부여된다. 따라서 구별되는 한도 내 2^8 개의 디바이스가 붙을 수 있다.
 
-`TD` _`m`_ : Test device specified by (_m_), (sets CC), < : device is ready, =
-device isn't ready
+`TD` _`m`_ : Test device specified by (_m_), (sets CC), < : device is ready, = device isn't ready
 
 `RD` _`m`_ : A[rightmost byte] ← data from device specified by (_m_)
 
@@ -211,8 +182,7 @@ device isn't ready
 
 ## SIC/XE Machine Architecture
 
-SIC/XE는 SIC의 업그레이드판으로 많은 기능들은 동일하다. 동일한 부분을 제외하고변
-화된 부분을 알아본다.
+SIC/XE는 SIC의 업그레이드판으로 많은 기능들은 동일하다. 동일한 부분을 제외하고변화된 부분을 알아본다.
 
 ### 메모리
 
@@ -220,15 +190,13 @@ SIC/XE는 SIC의 업그레이드판으로 많은 기능들은 동일하다. 동�
 
 ### 레지스터
 
-SIC가 가진 5개의 레지스터에 더해 4개가 더 추가되어 9개가 되었다. F 레지스터만 48
-비트이고 나머지는 모두 24비트이다.
+SIC가 가진 5개의 레지스터에 더해 4개가 더 추가되어 9개가 되었다. F 레지스터만 48 비트이고 나머지는 모두 24비트이다.
 
 ![2020-04-06-sic-xe-machine-architecture-image-2](./images/2020-04-06-sic-xe-machine-architecture-image-2.jpg)
 
 ### 데이터 포맷
 
-48비트 부동소수점(Floating-point data type)이 추가되었다. 이것은 다음의 포맷을가
-진다.
+48비트 부동소수점(Floating-point data type)이 추가되었다. 이것은 다음의 포맷을가진다.
 
 ![2020-04-06-sic-xe-machine-architecture-image-3](./images/2020-04-06-sic-xe-machine-architecture-image-3.jpg)
 
@@ -240,13 +208,11 @@ SIC와는 달리 명령어를 처리하는 포맷이 존재한다.
 
 - Format 2 (2 byte) : Opcode(8bits) + r1(4bits) + r2(4bits)
 
-- Format 3 (3 byte) (_Flag e = 0_) : Opcode(6bits) + | n | i | x | b | p | e | +
-  address(12bits)
+- Format 3 (3 byte) (_Flag e = 0_) : Opcode(6bits) + | n | i | x | b | p | e | + address(12bits)
 
 ![2020-04-06-sic-xe-machine-architecture-image-4](./images/2020-04-06-sic-xe-machine-architecture-image-4.png)
 
-- Format 4 (4 byte) (_Flag e = 1_) : Opcode(6bits) + | n | i | x | b | p | e | +
-  address(20bits)
+- Format 4 (4 byte) (_Flag e = 1_) : Opcode(6bits) + | n | i | x | b | p | e | + address(20bits)
 
 ![2020-04-06-sic-xe-machine-architecture-image-5](./images/2020-04-06-sic-xe-machine-architecture-image-5.png)
 
@@ -264,8 +230,7 @@ SIC와는 달리 명령어를 처리하는 포맷이 존재한다.
 
 > when _x=1_ 일 때, **indexed addressing**이 결합되어 (X)가 TA 계산에 더해진다
 
-- _i=1, n=0_ : **immediate addressing**, 메모리 참조 없이 TA가 operand 값으로 쓰
-  인다.
+- _i=1, n=0_ : **immediate addressing**, 메모리 참조 없이 TA가 operand 값으로 쓰인다.
 
 - _i=0, n=1_ : **indirect addressing**, 메모리 참조 값으로 다시 메모리 접근
 

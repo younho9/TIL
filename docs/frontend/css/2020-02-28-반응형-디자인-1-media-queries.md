@@ -12,11 +12,7 @@ created_time: 2020-02-28
 updated_time: 2021-02-15
 ---
 
-> ❗️ 해당 글은
-> [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에
-> 서 HTML & CSS, SASS(SCSS) Part의
-> [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니
-> 다.
+> ❗️ 해당 글은 [패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/)에서 HTML & CSS, SASS(SCSS) Part의 [박영웅 강사님](https://github.com/ParkYoungWoong)의 강의자료를 정리한 것입니다.
 
 ### **`@media`**
 
@@ -64,8 +60,7 @@ updated_time: 2021-02-15
 
 #### **미디어옵션**
 
-> ☝️ 디바이스 종류에 따른 단위는 '기획 / 디자인' 단계에서 결정하는 것이 효과적이
-> 다.
+> ☝️ 디바이스 종류에 따른 단위는 '기획 / 디자인' 단계에서 결정하는 것이 효과적이다.
 
 | 종류           | 디바이스         | 단위(px)    |
 | -------------- | ---------------- | ----------- |
@@ -77,11 +72,9 @@ updated_time: 2021-02-15
 
 #### **미디어 파일 관리**
 
-`main.css` 안에 반응형을 위한 `@media` 코드를 작성하면, 너무 길어지고 한 속성을
-보기 위해 위 아래로 스크롤을 자주해야 하는 단점이 있다.
+`main.css` 안에 반응형을 위한 `@media` 코드를 작성하면, 너무 길어지고 한 속성을보기 위해 위 아래로 스크롤을 자주해야 하는 단점이 있다.
 
-따라서 `main.css` 내부의 반응형을 위한 코드는 외부의 다른 파일로 추출해내고
-, `html` 파일 에 따로 링크하는 방법이 있다.
+따라서 `main.css` 내부의 반응형을 위한 코드는 외부의 다른 파일로 추출해내고 , `html` 파일 에 따로 링크하는 방법이 있다.
 
 #### **기존 코드**
 
@@ -102,8 +95,7 @@ updated_time: 2021-02-15
 /* 선택자와 속성들 */
 ```
 
-`main_midium.css` 파일에는 `midium` 즉 태블릿 크기의 디바이스를 위한 반응형 코드
-들이 들어있는데, 이제 `@media` 부분은 생략하고 반응형 코드만 작성하면 된다.
+`main_midium.css` 파일에는 `midium` 즉 태블릿 크기의 디바이스를 위한 반응형 코드들이 들어있는데, 이제 `@media` 부분은 생략하고 반응형 코드만 작성하면 된다.
 
 `index.html`
 
@@ -116,13 +108,10 @@ updated_time: 2021-02-15
 />
 ```
 
-`main.css` 를 연결하고, 반응형이 들어있는 `main_midium.css` 도 연결하는데, 이 때
- `midia` 속성을 사용하여 미디어 타입과 특성을 정의해 사용할 수 있다.
+`main.css` 를 연결하고, 반응형이 들어있는 `main_midium.css` 도 연결하는데, 이 때  `midia` 속성을 사용하여 미디어 타입과 특성을 정의해 사용할 수 있다.
 
 ### Reference
 
-[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) -
-HTML & CSS, SASS(SCSS) Part by
-[ParkYoungWoong](https://github.com/ParkYoungWoong)
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
 
 [CSS Grid 완벽 가이드](https://heropy.blog/2019/08/17/css-grid/)

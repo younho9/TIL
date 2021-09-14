@@ -82,8 +82,7 @@ const styles = StyleSheet.create({
 })
 ```
 
-`shadow` 는 iOS와 Android에서 속성이 다르다. Android는 `elevation` 으로 사용한다
-.
+`shadow` 는 iOS와 Android에서 속성이 다르다. Android는 `elevation` 으로 사용한다 .
 
 ### `ScrollView`
 

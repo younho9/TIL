@@ -14,8 +14,7 @@ updated_time: 2021-02-15
 
 [Front Matter](https://jekyllrb.com/docs/step-by-step/03-front-matter/)
 
-Front matter란 문서의 상단에 있는 두 개의 triple-dashed line ( `—-` ) 사이에 들
-어가는 [YAML](https://yaml.org/) 조각이다.
+Front matter란 문서의 상단에 있는 두 개의 triple-dashed line ( `—-` ) 사이에 들어가는 [YAML](https://yaml.org/) 조각이다.
 
 예를 들어,
 
@@ -56,8 +55,6 @@ title: Home
 </html>
 ```
 
-상단에 Front matter를 기입하고, `<title>` 태그 사이에 Liquid 문법으로
-`{{ page.title }}` 를 사용하면, 상단에 기입한 Front matter 인 `title: Home` 를보
-고 `Home` 이 `<title>` 태그에 들어가게 된다.
+상단에 Front matter를 기입하고, `<title>` 태그 사이에 Liquid 문법으로 `{{ page.title }}` 를 사용하면, 상단에 기입한 Front matter 인 `title: Home` 를보고 `Home` 이 `<title>` 태그에 들어가게 된다.
 
 <br />

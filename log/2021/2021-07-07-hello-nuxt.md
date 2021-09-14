@@ -32,7 +32,6 @@ yarn create nuxt-app
 # npx create-nuxt-app
 ```
 
-`create-nuxt-app` 을 사용하면 cli를 통해 프로젝트에 관한 설정에 대한 질의를 한다
-.
+`create-nuxt-app` 을 사용하면 cli를 통해 프로젝트에 관한 설정에 대한 질의를 한다 .
 
 ![image-20210707155912520](images/2021-07-07-create-nuxt-app-question.png)

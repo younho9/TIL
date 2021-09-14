@@ -42,8 +42,7 @@ class MyClass {
 
 ### 클래스 상속
 
-JS에서도 클래스 상속을 지원하기 때문에, 기존 클래스를 확장하여 클래스를 생성할수
-있다.
+JS에서도 클래스 상속을 지원하기 때문에, 기존 클래스를 확장하여 클래스를 생성할수있다.
 
 ```js
 class Animal {
@@ -77,34 +76,25 @@ rabbit.hide(); // 흰 토끼 이/가 숨었습니다!
 
 ![프로토타입 체이닝](https://ko.javascript.info/article/class-inheritance/animal-rabbit-extends.svg)
 
-클래스 `Rabbit`으로 만든 객체는 `rabbit.hide()`와 같은 `Rabbit`에 정의된 메서드
-에도 접근할 수 있고, `rabbit.run()`과 같은 `Animal`에 정의된 메서드에도 접근할수
-있다.
+클래스 `Rabbit`으로 만든 객체는 `rabbit.hide()`와 같은 `Rabbit`에 정의된 메서드에도 접근할 수 있고, `rabbit.run()`과 같은 `Animal`에 정의된 메서드에도 접근할수있다.
 
-`extends` 키워드는 이렇게 프로토타입 기반으로 동작하여, 객체 `rabbit` ->
-`Rabbit.prototype` -> `Animal.prototype` 순으로 메소드를 찾아서 실행한다.
+`extends` 키워드는 이렇게 프로토타입 기반으로 동작하여, 객체 `rabbit` -> `Rabbit.prototype` -> `Animal.prototype` 순으로 메소드를 찾아서 실행한다.
 
 ### 접근 제어자(Access Modifier)
 
-객체 지향 프로그래밍에서는 접근 제어자를 활용해
-[내부 인터페이스와 외부 인터페이스를 구분하여 캡슐화](https://ko.javascript.info/private-protected-properties-methods#ref-1065)한
-다.
+객체 지향 프로그래밍에서는 접근 제어자를 활용해 [내부 인터페이스와 외부 인터페이스를 구분하여 캡슐화](https://ko.javascript.info/private-protected-properties-methods#ref-1065)한다.
 
 - `public` : 어디서든지 접근할 수 있으며 외부 인터페이스를 구성한다.
-- `protected` : 클래스 자신과 자손 클래스에서만 접근할 수 있으며 내부 인터페이스
-  를 구성한다.
+- `protected` : 클래스 자신과 자손 클래스에서만 접근할 수 있으며 내부 인터페이스를 구성한다.
 - `private` : 클래스 자신에서만 접근할 수 있으며 내부 인터페이스를 구성한다.
 
-JS에서는 `public`, `protected` 에 대한 문법적 지원이 없으며, 관습적으로 `_` 접두
-사를 사용하여 `protected` 프로퍼티를 사용한다.
+JS에서는 `public`, `protected` 에 대한 문법적 지원이 없으며, 관습적으로 `_` 접두사를 사용하여 `protected` 프로퍼티를 사용한다.
 
-[`private` 속성](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields)은
-ES2019부터 지원하게 되었다.
+[`private` 속성](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields)은 ES2019부터 지원하게 되었다.
 
 ### `static`
 
-정적 프로퍼티와 메서드는 어떤 특정한 객체가 아닌 클래스에 속한 함수를 구현하고자
-할 때 주로 사용된다.
+정적 프로퍼티와 메서드는 어떤 특정한 객체가 아닌 클래스에 속한 함수를 구현하고자할 때 주로 사용된다.
 
 정적 멤버는 상속된다.
 
@@ -128,16 +118,13 @@ alert(article.title); // Today's digest
 
 ## TS 클래스 문법
 
-TS는 JS의 모든 클래스 문법을 지원하며, 그에 더해서 몇 가지 문법적인 지원을 추가
-해준다. 하지만 모든 문법은 컴파일 타임에 대해서만 적용되고, 런타임에는 결국 JS가
-지원하는 기능만을 사용해 동작한다는 것을 기억하자.
+TS는 JS의 모든 클래스 문법을 지원하며, 그에 더해서 몇 가지 문법적인 지원을 추가해준다. 하지만 모든 문법은 컴파일 타임에 대해서만 적용되고, 런타임에는 결국 JS가지원하는 기능만을 사용해 동작한다는 것을 기억하자.
 
 다음은 JS에서 지원하지 않지만, TS에서 사용할 수 있는 Class와 관련된 기능들이다.
 
 ### [`readonly`](https://www.typescriptlang.org/docs/handbook/2/classes.html#readonly)
 
-필드에는 `readonly` 제어자를 접두사로 사용할 수 있다. 이렇게 하면 생성자 함수가
-아닌 곳에서 할당을 방지할 수 있다.
+필드에는 `readonly` 제어자를 접두사로 사용할 수 있다. 이렇게 하면 생성자 함수가아닌 곳에서 할당을 방지할 수 있다.
 
 ```ts
 class Greeter {
@@ -161,11 +148,9 @@ g.name = 'also not ok';
 
 ### [`overload`](https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads)
 
-JS는 함수의 매개변수의 갯수와 자료형이 자유롭기 때문에, 오버로드에 대한 개념이사
-실상 없다. (단지, 매개변수의 조건에 따른 분기를 작성하는 정도)
+JS는 함수의 매개변수의 갯수와 자료형이 자유롭기 때문에, 오버로드에 대한 개념이사실상 없다. (단지, 매개변수의 조건에 따른 분기를 작성하는 정도)
 
-TS에서는 다양한 방식으로 호출할 수 있는 함수에 대해 구체적으로 오버로드
-`signature`를 작성할 수 있다.
+TS에서는 다양한 방식으로 호출할 수 있는 함수에 대해 구체적으로 오버로드 `signature`를 작성할 수 있다.
 
 ```ts
 class Point {
@@ -213,8 +198,7 @@ d.greet();
 d.greet('reader');
 ```
 
-파생 클래스가 기본 클래스의 규칙을 따르는 것이 중요한데, 기본 클래스가 파생 클래
-스 인스턴스를 참조할 수 있어야 한다.
+파생 클래스가 기본 클래스의 규칙을 따르는 것이 중요한데, 기본 클래스가 파생 클래스 인스턴스를 참조할 수 있어야 한다.
 
 ```ts
 // Alias the derived instance through a base class reference
@@ -252,16 +236,13 @@ b.greet();
 
 - `public` : 기본적으로 모든 멤버는 `public`으로 어디서나 접근할 수 있다.
 - `protected` : 클래스 자신과 자손 클래스에서만 접근할 수 있다.
-- `private` : `protected`와 유사하게 클래스 자신에서만 접근할 수 있지만, 자손 클
-  래스에서도 접근할 수 없다.
+- `private` : `protected`와 유사하게 클래스 자신에서만 접근할 수 있지만, 자손 클래스에서도 접근할 수 없다.
 
 ### [Why No Static Classes?](https://www.typescriptlang.org/docs/handbook/2/classes.html#why-no-static-classes)
 
-TS(JS)는 Java나 C#에서 사용하는 `static class` 라고 불리는 구조를 사용하지 않는
-다. (`static class`는 인스턴스화 할 수 없다.)
+TS(JS)는 Java나 C#에서 사용하는 `static class` 라고 불리는 구조를 사용하지 않는다. (`static class`는 인스턴스화 할 수 없다.)
 
-따라서, `static class` 문법을 사용하는 것은 불필요하다. 단지 단순 리터럴 객체를
-쓰는 것과 동일하다.
+따라서, `static class` 문법을 사용하는 것은 불필요하다. 단지 단순 리터럴 객체를쓰는 것과 동일하다.
 
 ```ts
 // Unnecessary "static" class
@@ -280,11 +261,9 @@ const MyHelperObject = {
 
 ### [`abstract`](https://www.typescriptlang.org/docs/handbook/2/classes.html#abstract-classes-and-members)
 
-아직 구현하지 않은 메소드와 프로퍼티에 `abstract` 키워드를 사용할 수 있다.
-`abstract` 멤버를 가진 클래스는 반드시 `abstarct class` 여야 한다.
+아직 구현하지 않은 메소드와 프로퍼티에 `abstract` 키워드를 사용할 수 있다. `abstract` 멤버를 가진 클래스는 반드시 `abstarct class` 여야 한다.
 
-`abstract class`의 역할은 `abstract` 멤버를 구현할 서브 클래스의 기초 클래스가되
-는 것이다.
+`abstract class`의 역할은 `abstract` 멤버를 구현할 서브 클래스의 기초 클래스가되는 것이다.
 
 ```ts
 abstract class Base {

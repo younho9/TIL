@@ -9,5 +9,4 @@ created_time: 2021-09-14
 updated_time: 2021-09-14
 ---
 
-함수에 드러나지 않은 입력값을 부원인(Side Cause)라고 하고, 이로 인해 발생한 결과
-를 부작용(Side Effect)이라고 한다.
+함수에 드러나지 않은 입력값을 부원인(Side Cause)라고 하고, 이로 인해 발생한 결과를 부작용(Side Effect)이라고 한다.

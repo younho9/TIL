@@ -14,8 +14,7 @@ updated_time: 2021-02-15
 
 ## Sass(SCSS) Syntax - 1. 주석, 데이터 타입
 
-> ❗️ 해당 글은 패스트캠퍼스 - 프론트엔드 개발 강의에서 HTML & CSS, SASS(SCSS)
-> Part의 박영웅 강사님의 강의자료(Sass(SCSS) 완전 정복!)를 보며 정리한 것입니다.
+> ❗️ 해당 글은 패스트캠퍼스 - 프론트엔드 개발 강의에서 HTML & CSS, SASS(SCSS) Part의 박영웅 강사님의 강의자료(Sass(SCSS) 완전 정복!)를 보며 정리한 것입니다.
 
 ### 주석(Comment)
 
@@ -28,8 +27,7 @@ Sass(SCSS)는 JavaScript처럼 두 가지 종류의 주석을 사용할 수 있�
 /* CSS로 컴파일되는 주석 */
 ```
 
-Sass(SCSS)에만 남기고 싶은 주석은 `//` 로, CSS에도 남겨야되는 주석인 경우에는
-`/* */` 로 주석을 작성하면 된다.
+Sass(SCSS)에만 남기고 싶은 주석은 `//` 로, CSS에도 남겨야되는 주석인 경우에는 `/* */` 로 주석을 작성하면 된다.
 
 또한 여러 줄 주석의 경우 Sass와 SCSS 간에 약간의 차이가 있다.
 
@@ -79,8 +77,6 @@ CSS와 호환이 쉽다.
 
 ### Reference
 
-[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) -
-HTML & CSS, SASS(SCSS) Part by
-[ParkYoungWoong](https://github.com/ParkYoungWoong)
+[패스트캠퍼스 - 프론트엔드 개발 강의](https://www.fastcampus.co.kr/dev_online_react/) - HTML & CSS, SASS(SCSS) Part by [ParkYoungWoong](https://github.com/ParkYoungWoong)
 
 [Sass(SCSS) 완전 정복!](https://heropy.blog/2018/01/31/sass/)

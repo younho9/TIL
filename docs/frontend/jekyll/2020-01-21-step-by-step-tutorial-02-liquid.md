@@ -82,8 +82,7 @@ Liquid는 Jekyll이 사용하고 있는 템플릿 언어이다.
 ...
 ```
 
-Jekyll에게 해당 문서가 Liquid를 사용하고 있음을 알리기 위해서는 해당 문서(
-`index.html` ) 상단에 **front matter가 있어야한다.**
+Jekyll에게 해당 문서가 Liquid를 사용하고 있음을 알리기 위해서는 해당 문서( `index.html` ) 상단에 **front matter가 있어야한다.**
 
 ```html
 ---

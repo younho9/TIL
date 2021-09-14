@@ -9,8 +9,7 @@ created_time: 2021-03-09
 
 ## 에러 상황
 
-NPM을 처음 설치하고 `global` 옵션으로 `yarn` 을 설치하려고 할 때 에러가 발생했다
-.
+NPM을 처음 설치하고 `global` 옵션으로 `yarn` 을 설치하려고 할 때 에러가 발생했다 .
 
 ```bash
 Missing write access to /usr/local/lib/node_modules

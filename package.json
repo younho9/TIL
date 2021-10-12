@@ -4,7 +4,7 @@
   "description": "하루동안 공부한 것들을 기록하는 공간",
   "repository": "https://github.com/younho9/TIL.git",
   "license": "MIT",
-  "author": "younho9 <younho9.choo@gmail.com>",
+  "author": "Younho Choo <yo+github@younho9.com>",
   "scripts": {
     "postinstall": "yarn git:install-hooks",
     "build": "docusaurus build",

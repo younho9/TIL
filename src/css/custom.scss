@@ -47,27 +47,6 @@ html[data-theme='dark'] .header-github-link:before {
   background: url('/img/github-white.svg') no-repeat;
 }
 
-.header-notion-link {
-  padding: 4px 14px;
-  transform: translateY(0.7px);
-}
-
-.header-notion-link:hover {
-  opacity: 0.6;
-}
-
-.header-notion-link:before {
-  content: '';
-  width: 26px;
-  height: 24px;
-  display: flex;
-  background: url('/img/notion-black.svg') no-repeat;
-}
-
-html[data-theme='dark'] .header-notion-link:before {
-  background: url('/img/notion-white.svg') no-repeat;
-}
-
 /* Menu */
 
 .menu__list {

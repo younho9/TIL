@@ -101,10 +101,6 @@ module.exports = {
               href: 'https://github.com/younho9',
             },
             {
-              label: 'Notion',
-              href: 'https://bit.ly/yh9blog',
-            },
-            {
               label: 'Instagram',
               href: 'https://instagram.com/younho_9',
             },

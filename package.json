@@ -6,7 +6,6 @@
   "license": "MIT",
   "author": "Younho Choo <yo+github@younho9.com>",
   "scripts": {
-    "postinstall": "yarn git:install-hooks",
     "build": "docusaurus build",
     "deploy": "docusaurus deploy",
     "docusaurus": "docusaurus",
@@ -17,6 +16,7 @@
     "git:commit-msg": "commitlint --edit",
     "git:install-hooks": "husky install",
     "git:pre-commit": "lint-staged",
+    "postinstall": "yarn git:install-hooks",
     "lint": "yarn lint:src && yarn lint:types",
     "lint:fix": "yarn lint:src --fix",
     "lint:src": "eslint src --ext .ts,.tsx",
@@ -34,6 +34,11 @@
     ],
     "package.json": [
       "yarn format:pkg"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@docusaurus/core/lib/babel/preset"
     ]
   },
   "browserslist": {

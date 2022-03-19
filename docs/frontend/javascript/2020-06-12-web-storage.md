@@ -108,8 +108,8 @@ Storage 객체는 iterable 객체가 아니다. 대신 배열처럼 다뤄 전�
 
 ```javascript
 for (let i = 0; i < localStorage.length; i++) {
-  let key = localStorage.key(i);
-  alert(`${key}: ${localStorage.getItem(key)}`);
+	let key = localStorage.key(i);
+	alert(`${key}: ${localStorage.getItem(key)}`);
 }
 ```
 
@@ -118,7 +118,7 @@ for (let i = 0; i < localStorage.length; i++) {
 ```javascript
 // 좋지 않은 방법
 for (let key in localStorage) {
-  alert(key); // getItem, setItem 같은 내장 필드까지 출력됩니다.
+	alert(key); // getItem, setItem 같은 내장 필드까지 출력됩니다.
 }
 ```
 
@@ -126,10 +126,10 @@ for (let key in localStorage) {
 
 ```javascript
 for (let key in localStorage) {
-  if (!localStorage.hasOwnProperty(key)) {
-    continue; // setItem, getItem 등의 키를 건너뜁니다.
-  }
-  alert(`${key}: ${localStorage.getItem(key)}`);
+	if (!localStorage.hasOwnProperty(key)) {
+		continue; // setItem, getItem 등의 키를 건너뜁니다.
+	}
+	alert(`${key}: ${localStorage.getItem(key)}`);
 }
 ```
 
@@ -138,7 +138,7 @@ for of 문을 사용하는 방법도 있다.
 ```javascript
 let keys = Object.keys(localStorage);
 for (let key of keys) {
-  alert(`${key}: ${localStorage.getItem(key)}`);
+	alert(`${key}: ${localStorage.getItem(key)}`);
 }
 ```
 

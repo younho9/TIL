@@ -86,13 +86,13 @@ title: Staff
 <h1>Staff</h1>
 
 <ul>
-  {% for author in site.authors %}
-  <li>
-    <h2>{{ author.name }}</h2>
-    <h3>{{ author.position }}</h3>
-    <p>{{ author.content | markdownify }}</p>
-  </li>
-  {% endfor %}
+	{% for author in site.authors %}
+	<li>
+		<h2>{{ author.name }}</h2>
+		<h3>{{ author.position }}</h3>
+		<p>{{ author.content | markdownify }}</p>
+	</li>
+	{% endfor %}
 </ul>
 ```
 
@@ -132,13 +132,13 @@ title: Staff
 <h1>Staff</h1>
 
 <ul>
-  {% for author in site.authors %}
-  <li>
-    <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
-    <h3>{{ author.position }}</h3>
-    <p>{{ author.content | markdownify }}</p>
-  </li>
-  {% endfor %}
+	{% for author in site.authors %}
+	<li>
+		<h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
+		<h3>{{ author.position }}</h3>
+		<p>{{ author.content | markdownify }}</p>
+	</li>
+	{% endfor %}
 </ul>
 ```
 
@@ -219,10 +219,10 @@ layout: default
 
 <h2>Posts</h2>
 <ul>
-  {% assign filtered_posts = site.posts | where: 'author', page.short_name %} {%
-  for post in filtered_posts %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
+	{% assign filtered_posts = site.posts | where: 'author', page.short_name %} {%
+	for post in filtered_posts %}
+	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
 </ul>
 ```
 
@@ -248,10 +248,10 @@ layout: default
 <h1>{{ page.title }}</h1>
 
 <p>
-  {{ page.date | date_to_string }} {% assign author = site.authors | where:
-  'short_name', page.author | first %} {% if author %} -
-  <a href="{{ author.url }}">{{ author.name }}</a>
-  {% endif %}
+	{{ page.date | date_to_string }} {% assign author = site.authors | where:
+	'short_name', page.author | first %} {% if author %} -
+	<a href="{{ author.url }}">{{ author.name }}</a>
+	{% endif %}
 </p>
 
 {{ content }}

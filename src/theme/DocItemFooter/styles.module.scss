@@ -6,21 +6,21 @@
  */
 
 .lastUpdated {
-  margin-top: 0.2rem;
-  font-style: italic;
-  font-size: smaller;
+	margin-top: 0.2rem;
+	font-style: italic;
+	font-size: smaller;
 }
 
 @media only screen and (min-width: 997px) {
-  .lastUpdated {
-    text-align: right;
-  }
+	.lastUpdated {
+		text-align: right;
+	}
 }
 
 .pageActionWrapper {
-  display: flex;
+	display: flex;
 
-  & > * {
-    margin-right: 8px;
-  }
+	& > * {
+		margin-right: 8px;
+	}
 }

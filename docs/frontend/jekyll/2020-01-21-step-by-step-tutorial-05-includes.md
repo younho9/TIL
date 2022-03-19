@@ -38,8 +38,8 @@ updated_time: 2021-02-15
 
 ```html
 <nav>
-  <a href="/">Home</a>
-  <a href="/about.html">About</a>
+	<a href="/">Home</a>
+	<a href="/about.html">About</a>
 </nav>
 ```
 
@@ -50,13 +50,13 @@ updated_time: 2021-02-15
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-    {% include navigation.html %} {{ content }}
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<title>{{ page.title }}</title>
+	</head>
+	<body>
+		{% include navigation.html %} {{ content }}
+	</body>
 </html>
 ```
 

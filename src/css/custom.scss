@@ -8,86 +8,86 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #5468ff;
-  --ifm-code-font-size: 95%;
-  --ifm-navbar-background-color: #ffffff;
-  --ifm-footer-background-color: #f5f5fa;
-  --ifm-menu-color-background-active: var(--ifm-color-emphasis-200);
+	--ifm-color-primary: #5468ff;
+	--ifm-code-font-size: 95%;
+	--ifm-navbar-background-color: #ffffff;
+	--ifm-footer-background-color: #f5f5fa;
+	--ifm-menu-color-background-active: var(--ifm-color-emphasis-200);
 }
 
 html[data-theme='dark'] {
-  --ifm-navbar-background-color: #242424;
-  --ifm-footer-background-color: #1c1e21;
+	--ifm-navbar-background-color: #242424;
+	--ifm-footer-background-color: #1c1e21;
 }
 
 .docusaurus-highlight-code-line {
-  background-color: rgb(72, 77, 91);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
+	background-color: rgb(72, 77, 91);
+	display: block;
+	margin: 0 calc(-1 * var(--ifm-pre-padding));
+	padding: 0 var(--ifm-pre-padding);
 }
 
 .header-github-link {
-  padding: 4px 14px;
+	padding: 4px 14px;
 }
 
 .header-github-link:hover {
-  opacity: 0.6;
+	opacity: 0.6;
 }
 
 .header-github-link:before {
-  content: '';
-  width: 26px;
-  height: 24px;
-  display: flex;
-  background: url('/img/github-black.svg') no-repeat;
+	content: '';
+	width: 26px;
+	height: 24px;
+	display: flex;
+	background: url('/img/github-black.svg') no-repeat;
 }
 
 html[data-theme='dark'] .header-github-link:before {
-  background: url('/img/github-white.svg') no-repeat;
+	background: url('/img/github-white.svg') no-repeat;
 }
 
 /* Menu */
 
 .menu__list {
-  .menu__list {
-    .menu__link {
-      color: var(--ifm-font-color-base);
-    }
-  }
+	.menu__list {
+		.menu__link {
+			color: var(--ifm-font-color-base);
+		}
+	}
 
-  .menu__link--active.active {
-    border-left: 5px solid var(--ifm-color-primary) !important;
-    font-weight: 700 !important;
-    padding-left: 8px;
-    background-color: rgba(121, 118, 171, 0.2);
-  }
+	.menu__link--active.active {
+		border-left: 5px solid var(--ifm-color-primary) !important;
+		font-weight: 700 !important;
+		padding-left: 8px;
+		background-color: rgba(121, 118, 171, 0.2);
+	}
 }
 
 /* Table of Contents */
 
 .table-of-contents {
-  .table-of-contents__link--active {
-    font-weight: 500;
-    margin-left: -16px;
-    padding: 6px 8px 6px 12px;
-    border-top-right-radius: var(--ifm-code-border-radius);
-    border-bottom-right-radius: var(--ifm-code-border-radius);
-    color: var(--ifm-font-color-base);
-    border-left: 4px solid var(--ifm-color-primary);
-    background-color: rgba(121, 118, 171, 0.2);
+	.table-of-contents__link--active {
+		font-weight: 500;
+		margin-left: -16px;
+		padding: 6px 8px 6px 12px;
+		border-top-right-radius: var(--ifm-code-border-radius);
+		border-bottom-right-radius: var(--ifm-code-border-radius);
+		color: var(--ifm-font-color-base);
+		border-left: 4px solid var(--ifm-color-primary);
+		background-color: rgba(121, 118, 171, 0.2);
 
-    code {
-      color: var(--ifm-font-color-base);
-    }
-  }
+		code {
+			color: var(--ifm-font-color-base);
+		}
+	}
 }
 
 .footer__logo {
-  width: 75px;
-  height: 75px;
+	width: 75px;
+	height: 75px;
 }
 
 .alert.alert--warning.margin-bottom--md {
-  display: none;
+	display: none;
 }

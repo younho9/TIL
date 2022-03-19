@@ -18,27 +18,27 @@ author_image_url: https://avatars.githubusercontent.com/u/48426991
 
 ```js
 var person = {
-  name: ['Bob', 'Smith'],
-  age: 32,
-  gender: 'male',
-  interests: ['music', 'skiing'],
-  bio: function () {
-    alert(
-      this.name[0] +
-        ' ' +
-        this.name[1] +
-        ' is ' +
-        this.age +
-        ' years old. He likes ' +
-        this.interests[0] +
-        ' and ' +
-        this.interests[1] +
-        '.',
-    );
-  },
-  greeting: function () {
-    alert("Hi! I'm " + this.name[0] + '.');
-  },
+	name: ['Bob', 'Smith'],
+	age: 32,
+	gender: 'male',
+	interests: ['music', 'skiing'],
+	bio: function () {
+		alert(
+			this.name[0] +
+				' ' +
+				this.name[1] +
+				' is ' +
+				this.age +
+				' years old. He likes ' +
+				this.interests[0] +
+				' and ' +
+				this.interests[1] +
+				'.',
+		);
+	},
+	greeting: function () {
+		alert("Hi! I'm " + this.name[0] + '.');
+	},
 };
 ```
 
@@ -72,7 +72,7 @@ public Class Person {
 
 ```js
 var foo = function () {
-  console.dir(this);
+	console.dir(this);
 };
 
 // 1. 함수 호출
@@ -107,12 +107,12 @@ OOP의 기본 컨셉은 실 세계의 일들을 객체를 사용해서 **모델�
 
 ```js
 function createNewPerson(name) {
-  var obj = {};
-  obj.name = name;
-  obj.greeting = function () {
-    alert("Hi! I'm " + this.name + '.');
-  };
-  return obj;
+	var obj = {};
+	obj.name = name;
+	obj.greeting = function () {
+		alert("Hi! I'm " + this.name + '.');
+	};
+	return obj;
 }
 
 var salva = createNewPerson('Salva');
@@ -126,15 +126,15 @@ salva.greeting();
 
 ```js
 function Person(name) {
-  // this = {};  (빈 객체가 암시적으로 만들어짐)
+	// this = {};  (빈 객체가 암시적으로 만들어짐)
 
-  // 새로운 프로퍼티를 this에 추가함
-  this.name = name;
-  this.greeting = function () {
-    alert(`Hi! I'm ${this.name}.`);
-  };
+	// 새로운 프로퍼티를 this에 추가함
+	this.name = name;
+	this.greeting = function () {
+		alert(`Hi! I'm ${this.name}.`);
+	};
 
-  // return this;  (this가 암시적으로 반환됨)
+	// return this;  (this가 암시적으로 반환됨)
 }
 
 var salva = new Person('Salva');
@@ -149,16 +149,16 @@ salva.greeting();
 ```js
 // 객체 리터럴 방식
 var foo = {
-  name: 'foo',
-  gender: 'male',
+	name: 'foo',
+	gender: 'male',
 };
 
 console.dir(foo);
 
 // 생성자 함수 방식
 function Person(name, gender) {
-  this.name = name;
-  this.gender = gender;
+	this.name = name;
+	this.gender = gender;
 }
 
 var me = new Person('Lee', 'male');

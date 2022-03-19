@@ -28,7 +28,7 @@ Nuxt.js의 View는 `app template`과 `Layout`, `Page`로 구성된다. SEO 최�
 
 ```html title="layouts/default.vue"
 <template>
-  <Nuxt />
+	<Nuxt />
 </template>
 ```
 
@@ -38,10 +38,10 @@ Nuxt.js의 View는 `app template`과 `Layout`, `Page`로 구성된다. SEO 최�
 
 ```html title="layouts/blog.vue"
 <template>
-  <div>
-    <div>My blog navigation bar here</div>
-    <Nuxt />
-  </div>
+	<div>
+		<div>My blog navigation bar here</div>
+		<Nuxt />
+	</div>
 </template>
 ```
 
@@ -49,13 +49,13 @@ Nuxt.js의 View는 `app template`과 `Layout`, `Page`로 구성된다. SEO 최�
 
 ```html title="pages/posts.vue"
 <template>
-  <!-- Your template -->
+	<!-- Your template -->
 </template>
 <script>
-  export default {
-    layout: 'blog',
-    // page component definitions
-  };
+	export default {
+		layout: 'blog',
+		// page component definitions
+	};
 </script>
 ```
 
@@ -67,18 +67,18 @@ Nuxt.js의 View는 `app template`과 `Layout`, `Page`로 구성된다. SEO 최�
 
 ```html title="layouts/error.vue"
 <template>
-  <div>
-    <h1 v-if="error.statusCode === 404">Page not found</h1>
-    <h1 v-else>An error occurred</h1>
-    <NuxtLink to="/">Home page</NuxtLink>
-  </div>
+	<div>
+		<h1 v-if="error.statusCode === 404">Page not found</h1>
+		<h1 v-else>An error occurred</h1>
+		<NuxtLink to="/">Home page</NuxtLink>
+	</div>
 </template>
 
 <script>
-  export default {
-    props: ['error'],
-    layout: 'error', // you can set a custom layout for the error page
-  };
+	export default {
+		props: ['error'],
+		layout: 'error', // you can set a custom layout for the error page
+	};
 </script>
 ```
 
@@ -94,12 +94,12 @@ App 템플릿은 head와 body에 대한 컨텐츠와 변수를 주입하는 Nuxt
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie9 ie9" {{ HTML_ATTRS }}><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html {{ HTML_ATTRS }}><!--<![endif]-->
-  <head {{ HEAD_ATTRS }}>
-    {{ HEAD }}
-  </head>
-  <body {{ BODY_ATTRS }}>
-    {{ APP }}
-  </body>
+	<head {{ HEAD_ATTRS }}>
+		{{ HEAD }}
+	</head>
+	<body {{ BODY_ATTRS }}>
+		{{ APP }}
+	</body>
 </html>
 ```
 

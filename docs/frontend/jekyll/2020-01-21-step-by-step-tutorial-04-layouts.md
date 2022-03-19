@@ -35,13 +35,13 @@ Jekyll은 페이지에 대해서 HTML 뿐만 아니라 Markdown을 지원한다.
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-    {{ content }}
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<title>{{ page.title }}</title>
+	</head>
+	<body>
+		{{ content }}
+	</body>
 </html>
 ```
 

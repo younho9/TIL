@@ -1,98 +1,119 @@
 {
-  "name": "younho9-til",
-  "private": true,
-  "description": "하루동안 공부한 것들을 기록하는 공간",
-  "repository": "https://github.com/younho9/TIL.git",
-  "license": "MIT",
-  "author": "Younho Choo <yo+github@younho9.com>",
-  "scripts": {
-    "postinstall": "yarn git:install-hooks",
-    "build": "docusaurus build",
-    "deploy": "docusaurus deploy",
-    "docusaurus": "docusaurus",
-    "format": "prettier --write .",
-    "format:docs": "cd docs && prettier --write .",
-    "format:log": "cd log && prettier --write .",
-    "format:pkg": "npx sort-package-json",
-    "git:commit-msg": "commitlint --edit",
-    "git:install-hooks": "husky install",
-    "git:pre-commit": "lint-staged",
-    "lint": "yarn lint:src && yarn lint:types",
-    "lint:fix": "yarn lint:src --fix",
-    "lint:src": "eslint src --ext .ts,.tsx",
-    "lint:types": "tsc src/**/*.{ts,tsx,.d.ts} --noEmit",
-    "serve": "docusaurus serve",
-    "start": "docusaurus start",
-    "swizzle": "docusaurus swizzle"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,md,mdx}": [
-      "prettier --write"
-    ],
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ],
-    "package.json": [
-      "yarn format:pkg"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "prettier": "@younho9/prettier-config",
-  "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.6",
-    "@docusaurus/mdx-loader": "^2.0.0-beta.6",
-    "@docusaurus/module-type-aliases": "2.0.0-beta.6",
-    "@docusaurus/plugin-content-blog": "2.0.0-beta.6",
-    "@docusaurus/plugin-content-docs": "2.0.0-beta.6",
-    "@docusaurus/plugin-pwa": "2.0.0-beta.6",
-    "@docusaurus/preset-classic": "2.0.0-beta.6",
-    "@docusaurus/theme-classic": "2.0.0-beta.6",
-    "@docusaurus/theme-common": "2.0.0-beta.6",
-    "@mdx-js/react": "^1.6.22",
-    "clsx": "^1.1.1",
-    "docusaurus-plugin-sass": "^0.2.1",
-    "file-loader": "^6.2.0",
-    "prism-react-renderer": "^1.2.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.2.0",
-    "tslib": "^2.3.1",
-    "url": "^0.11.0",
-    "url-loader": "^4.1.1"
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-object-rest-spread": "^7.15.6",
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "@tsconfig/docusaurus": "^1.0.4",
-    "@types/node": "^16.9.1",
-    "@types/react": "^17.0.20",
-    "@types/react-helmet": "^6.1.2",
-    "@types/react-router-dom": "^5.1.8",
-    "@typescript-eslint/eslint-plugin": "^4.29.0",
-    "@typescript-eslint/parser": "^4.29.0",
-    "@younho9/prettier-config": "1.2.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-import-resolver-node": "^0.3.4",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-prettier": "^3.4.0",
-    "husky": "^7.0.1",
-    "lint-staged": "^11.1.2",
-    "prettier": "^2.4.0",
-    "sass": "^1.39.2",
-    "sass-loader": "^12.1.0",
-    "typescript": "4.3.5"
-  }
+	"name": "@younho9/til",
+	"private": true,
+	"description": "하루동안 공부한 것들을 기록하는 공간",
+	"repository": "https://github.com/younho9/TIL.git",
+	"license": "MIT",
+	"author": "Younho Choo <yo+github@younho9.com>",
+	"scripts": {
+		"build": "docusaurus build",
+		"deploy": "docusaurus deploy",
+		"docusaurus": "docusaurus",
+		"format": "prettier --write",
+		"format:docs": "yarn format ./docs",
+		"format:log": "prettier --write ./log",
+		"git:commit-msg": "commitlint --edit",
+		"git:install-hooks": "husky install",
+		"git:pre-commit": "lint-staged",
+		"postinstall": "yarn git:install-hooks",
+		"lint": "eslint src --ext .ts,.tsx",
+		"lint:fix": "yarn lint --fix",
+		"serve": "docusaurus serve",
+		"start": "docusaurus start",
+		"swizzle": "docusaurus swizzle"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,json,css,md,mdx}": [
+			"yarn format"
+		],
+		"*.{js,jsx,ts,tsx}": [
+			"eslint --fix"
+		]
+	},
+	"babel": {
+		"presets": [
+			"@docusaurus/core/lib/babel/preset"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"commitlint": {
+		"extends": "@commitlint/config-conventional"
+	},
+	"eslintConfig": {
+		"extends": [
+			"plugin:@younho9/recommended"
+		],
+		"parserOptions": {
+			"project": [
+				"./tsconfig.json"
+			],
+			"ecmaVersion": "latest"
+		}
+	},
+	"prettier": "@younho9/prettier-config",
+	"dependencies": {
+		"@docusaurus/core": "2.0.0-beta.6",
+		"@docusaurus/mdx-loader": "^2.0.0-beta.6",
+		"@docusaurus/module-type-aliases": "2.0.0-beta.6",
+		"@docusaurus/plugin-content-blog": "2.0.0-beta.6",
+		"@docusaurus/plugin-content-docs": "2.0.0-beta.6",
+		"@docusaurus/plugin-pwa": "2.0.0-beta.6",
+		"@docusaurus/preset-classic": "2.0.0-beta.6",
+		"@docusaurus/theme-classic": "2.0.0-beta.6",
+		"@docusaurus/theme-common": "2.0.0-beta.6",
+		"@mdx-js/react": "^1.6.22",
+		"clsx": "^1.1.1",
+		"docusaurus-plugin-sass": "^0.2.1",
+		"file-loader": "^6.2.0",
+		"prism-react-renderer": "^1.2.1",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-icons": "^4.2.0",
+		"tslib": "^2.3.1",
+		"url": "^0.11.0",
+		"url-loader": "^4.1.1"
+	},
+	"devDependencies": {
+		"@babel/plugin-proposal-object-rest-spread": "^7.15.6",
+		"@commitlint/cli": "^13.1.0",
+		"@commitlint/config-conventional": "^13.1.0",
+		"@docusaurus/types": "^2.0.0-beta.17",
+		"@tsconfig/docusaurus": "^1.0.4",
+		"@types/node": "^16.9.1",
+		"@types/react": "^17.0.20",
+		"@types/react-helmet": "^6.1.2",
+		"@types/react-router-dom": "^5.1.8",
+		"@typescript-eslint/eslint-plugin": "^5.15.0",
+		"@typescript-eslint/parser": "^5.15.0",
+		"@younho9/eslint-plugin": "^0.6.1",
+		"@younho9/prettier-config": "^2.3.1",
+		"eslint": "^8.11.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.25.4",
+		"eslint-plugin-jest": "^26.1.1",
+		"eslint-plugin-jsdoc": "^38.0.4",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-react": "^7.29.4",
+		"eslint-plugin-react-hooks": "^4.3.0",
+		"husky": "^7.0.1",
+		"lint-staged": "^11.1.2",
+		"prettier": "^2.4.0",
+		"sass": "^1.39.2",
+		"sass-loader": "^12.1.0",
+		"typescript": "4.3.5"
+	},
+	"packageManager": "yarn@3.2.0"
 }

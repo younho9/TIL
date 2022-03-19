@@ -39,7 +39,7 @@ const {height, width} = Dimensions.get('window');
 import {Platform, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  height: Platform.OS === 'ios' ? 200 : 100,
+	height: Platform.OS === 'ios' ? 200 : 100,
 });
 ```
 
@@ -47,17 +47,17 @@ const styles = StyleSheet.create({
 import {Platform, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    ...Platform.select({
-      ios: {
-        backgroundColor: 'red',
-      },
-      android: {
-        backgroundColor: 'blue',
-      },
-    }),
-  },
+	container: {
+		flex: 1,
+		...Platform.select({
+			ios: {
+				backgroundColor: 'red',
+			},
+			android: {
+				backgroundColor: 'blue',
+			},
+		}),
+	},
 });
 ```
 
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
 
 ```javascript
 <ScrollView>
-  <ToDo />
+	<ToDo />
 </ScrollView>
 ```
 
@@ -120,11 +120,11 @@ const styles = StyleSheet.create({
 
 ```javascript
 _toggleComplete = () => {
-  this.setState((prevState) => {
-    return {
-      isCompleted: !prevState.isCompleted,
-    };
-  });
+	this.setState((prevState) => {
+		return {
+			isCompleted: !prevState.isCompleted,
+		};
+	});
 };
 ```
 

@@ -6,67 +6,67 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+	padding: 4rem 0;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
 }
 
 .heroLogo {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+	.heroBanner {
+		padding: 2rem;
+	}
 }
 
 .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .getStarted {
-  color: var(--ifm-color-black);
-  background-color: var(--ifm-color-white);
-  border-radius: 6px;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 10px 30px;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease all;
+	color: var(--ifm-color-black);
+	background-color: var(--ifm-color-white);
+	border-radius: 6px;
+	border: none;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 10px 30px;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s ease all;
 
-  &:hover {
-    background-color: var(--ifm-color-gray-100);
-    text-decoration: none;
-  }
+	&:hover {
+		background-color: var(--ifm-color-gray-100);
+		text-decoration: none;
+	}
 }
 
 .features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 2rem 0;
+	width: 100%;
 }
 
 .featureImage {
-  height: 200px;
-  width: 200px;
+	height: 200px;
+	width: 200px;
 }
 
 .githubButtonWrapper {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .githubButton {
-  border: none;
-  overflow: hidden;
+	border: none;
+	overflow: hidden;
 }

@@ -6,112 +6,113 @@
  */
 
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment'; // swizzled
-import {ThemeClassNames} from '@docusaurus/theme-common';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'; // swizzled
 import type {Props} from '@theme/DocItem';
 import EditThisPage from '@theme/EditThisPage';
 import LastUpdated from '@theme/LastUpdated';
 import TagsListInline, {
-  Props as TagsListInlineProps,
+	Props as TagsListInlineProps,
 } from '@theme/TagsListInline';
-import clsx from 'clsx';
-import React from 'react';
 
 import {ShareThisPage} from '../../components'; // swizzled
 
 import styles from './styles.module.scss';
 
+import {ThemeClassNames} from '@docusaurus/theme-common';
+import clsx from 'clsx';
+import React from 'react';
+
 function TagsRow(props: TagsListInlineProps) {
-  return (
-    <div
-      className={clsx(
-        ThemeClassNames.docs.docFooterTagsRow,
-        'row margin-bottom--sm',
-      )}
-    >
-      <div className="col">
-        <TagsListInline {...props} />
-      </div>
-    </div>
-  );
+	return (
+		<div
+			className={clsx(
+				ThemeClassNames.docs.docFooterTagsRow,
+				'row margin-bottom--sm',
+			)}
+		>
+			<div className="col">
+				<TagsListInline {...props} />
+			</div>
+		</div>
+	);
 }
 
 type EditMetaRowProps = Pick<
-  Props['content']['metadata'],
-  'editUrl' | 'lastUpdatedAt' | 'lastUpdatedBy' | 'formattedLastUpdatedAt'
+	Props['content']['metadata'],
+	'editUrl' | 'lastUpdatedAt' | 'lastUpdatedBy' | 'formattedLastUpdatedAt'
 >;
 function EditMetaRow({
-  title, // swizzled
-  editUrl,
-  lastUpdatedAt,
-  lastUpdatedBy,
-  formattedLastUpdatedAt,
+	title, // swizzled
+	editUrl,
+	lastUpdatedAt,
+	lastUpdatedBy,
+	formattedLastUpdatedAt,
 }: {
-  title: string; // swizzled
+	title: string; // swizzled
 } & EditMetaRowProps) {
-  const location = ExecutionEnvironment.canUseDOM ? window.location : null; // swizzled
-  const context = useDocusaurusContext(); // swizzled
-  const {siteConfig = {}} = context; // swizzled
-  const url = location && `${siteConfig.url}/${location.pathname}`; // swizzled
-  const shareData = {url, title}; // swizzled
+	const location = ExecutionEnvironment.canUseDOM ? window.location : null; // swizzled
+	const context = useDocusaurusContext(); // swizzled
+	const {siteConfig} = context; // swizzled
+	const url = location && `${siteConfig.url}/${location.pathname}`; // swizzled
+	const shareData = {url, title}; // swizzled
 
-  return (
-    <div className={clsx(ThemeClassNames.docs.docFooterEditMetaRow, 'row')}>
-      {/* swizzled */}
-      <div className={clsx('col', styles.pageActionWrapper)}>
-        {editUrl && <EditThisPage editUrl={editUrl} />}
-        {/* swizzled */}
-        {url && navigator.share && <ShareThisPage data={shareData} />}
-      </div>
+	return (
+		<div className={clsx(ThemeClassNames.docs.docFooterEditMetaRow, 'row')}>
+			{/* swizzled */}
+			<div className={clsx('col', styles.pageActionWrapper)}>
+				{editUrl && <EditThisPage editUrl={editUrl} />}
+				{/* swizzled */}
+				{url && navigator.share && <ShareThisPage data={shareData} />}
+			</div>
 
-      <div className={clsx('col', styles.lastUpdated)}>
-        {(lastUpdatedAt || lastUpdatedBy) && (
-          <LastUpdated
-            lastUpdatedAt={lastUpdatedAt}
-            formattedLastUpdatedAt={formattedLastUpdatedAt}
-            lastUpdatedBy={lastUpdatedBy}
-          />
-        )}
-      </div>
-    </div>
-  );
+			<div className={clsx('col', styles.lastUpdated)}>
+				{(lastUpdatedAt || lastUpdatedBy) && (
+					<LastUpdated
+						lastUpdatedAt={lastUpdatedAt}
+						formattedLastUpdatedAt={formattedLastUpdatedAt}
+						lastUpdatedBy={lastUpdatedBy}
+					/>
+				)}
+			</div>
+		</div>
+	);
 }
 
 export default function DocItemFooter(props: Props): JSX.Element {
-  const {content: DocContent} = props;
-  const {metadata} = DocContent;
-  const {
-    title, // swizzled
-    editUrl,
-    lastUpdatedAt,
-    formattedLastUpdatedAt,
-    lastUpdatedBy,
-    tags,
-  } = metadata;
+	const {content: DocContent} = props;
+	const {metadata} = DocContent;
+	const {
+		title, // swizzled
+		editUrl,
+		lastUpdatedAt,
+		formattedLastUpdatedAt,
+		lastUpdatedBy,
+		tags,
+	} = metadata;
 
-  const canDisplayTagsRow = tags.length > 0;
-  const canDisplayEditMetaRow = !!(editUrl || lastUpdatedAt || lastUpdatedBy);
+	const canDisplayTagsRow = tags.length > 0;
+	const canDisplayEditMetaRow = !!(editUrl || lastUpdatedAt || lastUpdatedBy);
 
-  const canDisplayFooter = canDisplayTagsRow || canDisplayEditMetaRow;
+	const canDisplayFooter = canDisplayTagsRow || canDisplayEditMetaRow;
 
-  if (!canDisplayFooter) {
-    return <></>;
-  }
+	if (!canDisplayFooter) {
+		return <></>;
+	}
 
-  return (
-    <footer
-      className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}
-    >
-      {canDisplayTagsRow && <TagsRow tags={tags} />}
-      {canDisplayEditMetaRow && (
-        <EditMetaRow
-          title={title} // swizzled
-          editUrl={editUrl}
-          lastUpdatedAt={lastUpdatedAt}
-          lastUpdatedBy={lastUpdatedBy}
-          formattedLastUpdatedAt={formattedLastUpdatedAt}
-        />
-      )}
-    </footer>
-  );
+	return (
+		<footer
+			className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}
+		>
+			{canDisplayTagsRow && <TagsRow tags={tags} />}
+			{canDisplayEditMetaRow && (
+				<EditMetaRow
+					title={title} // swizzled
+					editUrl={editUrl}
+					lastUpdatedAt={lastUpdatedAt}
+					lastUpdatedBy={lastUpdatedBy}
+					formattedLastUpdatedAt={formattedLastUpdatedAt}
+				/>
+			)}
+		</footer>
+	);
 }

@@ -1,11 +1,11 @@
 /// <reference types="@docusaurus/module-type-aliases" />
 
 declare module '*.module.scss' {
-  const classes: {readonly [key: string]: string};
-  export default classes;
+	const classes: {readonly [key: string]: string};
+	export default classes;
 }
 
 declare module '*.scss' {
-  const src: string;
-  export default src;
+	const src: string;
+	export default src;
 }

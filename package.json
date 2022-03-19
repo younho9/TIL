@@ -49,6 +49,9 @@
 			"last 1 safari version"
 		]
 	},
+	"commitlint": {
+		"extends": "@commitlint/config-conventional"
+	},
 	"prettier": "@younho9/prettier-config",
 	"dependencies": {
 		"@docusaurus/core": "2.0.0-beta.6",

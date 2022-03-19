@@ -6,21 +6,21 @@
  */
 
 .docItemContainer header + * {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 .lastUpdated {
-  margin-top: 0.2rem;
-  font-style: italic;
-  font-size: smaller;
+	margin-top: 0.2rem;
+	font-style: italic;
+	font-size: smaller;
 }
 
 @media only screen and (min-width: 997px) {
-  .docItemCol {
-    max-width: 75% !important;
-  }
+	.docItemCol {
+		max-width: 75% !important;
+	}
 
-  .lastUpdated {
-    text-align: right;
-  }
+	.lastUpdated {
+		text-align: right;
+	}
 }

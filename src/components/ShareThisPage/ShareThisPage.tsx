@@ -14,28 +14,28 @@ import styles from './styles.module.scss';
 import {IoShareOutline} from 'react-icons/io5';
 
 interface Props {
-  data: {
-    url: string;
-    title: string;
-    text?: string;
-  };
+	data: {
+		url: string;
+		title: string;
+		text?: string;
+	};
 }
 
 export default function ShareThisPage({data}: Props): JSX.Element {
-  const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
-    e.preventDefault();
+	const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
+		e.preventDefault();
 
-    if (navigator.share) {
-      navigator.share(data);
-    }
-  };
+		if (navigator.share) {
+			navigator.share(data);
+		}
+	};
 
-  return (
-    <a href="#" target="_blank" rel="noreferrer noopener" onClick={handleClick}>
-      <IoShareOutline size={20} className={clsx(styles.iconShare)} />
-      <Translate description="The link label to share the current page">
-        Share this page
-      </Translate>
-    </a>
-  );
+	return (
+		<a href="#" target="_blank" rel="noreferrer noopener" onClick={handleClick}>
+			<IoShareOutline size={20} className={clsx(styles.iconShare)} />
+			<Translate description="The link label to share the current page">
+				Share this page
+			</Translate>
+		</a>
+	);
 }

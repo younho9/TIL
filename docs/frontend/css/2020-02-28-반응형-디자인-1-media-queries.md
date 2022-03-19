@@ -29,9 +29,9 @@ updated_time: 2021-02-15
 
 ```css
 @media screen and (max-width: 1200px) {
-  body {
-    color: red;
-  }
+	body {
+		color: red;
+	}
 }
 ```
 
@@ -83,7 +83,7 @@ updated_time: 2021-02-15
 ```css
 /* MEDIA */
 @media (max-width: 1024px) {
-  /* 선택자와 속성들 */
+	/* 선택자와 속성들 */
 }
 ```
 
@@ -102,9 +102,9 @@ updated_time: 2021-02-15
 ```html
 <link rel="stylesheet" href="css/main.css" />
 <link
-  rel="stylesheet"
-  media="all and (max-width: 1024px)"
-  href="css/main_medium.css"
+	rel="stylesheet"
+	media="all and (max-width: 1024px)"
+	href="css/main_medium.css"
 />
 ```
 

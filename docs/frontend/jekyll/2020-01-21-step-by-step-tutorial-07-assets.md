@@ -65,14 +65,14 @@ Jekyll 사이트는 종종 이 구조를 사용하여 asset을 체계적으로 �
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-  </head>
-  <body>
-    {% include navigation.html %} {{ content }}
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<title>{{ page.title }}</title>
+		<link rel="stylesheet" href="/assets/css/styles.css" />
+	</head>
+	<body>
+		{% include navigation.html %} {{ content }}
+	</body>
 </html>
 ```
 

@@ -16,13 +16,13 @@ const person = 'Mike';
 const age = 28;
 
 function myTag(strings, personExp, ageExp) {
-  console.log(strings); // ["that ", " is a ", "", raw: Array(3)]
-  const str0 = strings[0];
-  const str1 = strings[1];
+	console.log(strings); // ["that ", " is a ", "", raw: Array(3)]
+	const str0 = strings[0];
+	const str1 = strings[1];
 
-  const ageStr = ageExp > 99 ? 'centenarian' : 'youngster';
+	const ageStr = ageExp > 99 ? 'centenarian' : 'youngster';
 
-  return str0 + personExp + str1 + ageStr;
+	return str0 + personExp + str1 + ageStr;
 }
 
 const output = myTag`that ${person} is a ${age}`;
@@ -35,8 +35,8 @@ console.log(output);
 
 ```javascript
 function myTag(strings, ...expressions) {
-  console.log(strings); // ["that ", " is a ", "", raw: Array(3)]
-  console.log(expressions); // ["Mike", 28]
+	console.log(strings); // ["that ", " is a ", "", raw: Array(3)]
+	console.log(expressions); // ["Mike", 28]
 }
 
 const person = 'Mike';

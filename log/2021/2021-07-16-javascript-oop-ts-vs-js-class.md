@@ -46,26 +46,26 @@ JS에서도 클래스 상속을 지원하기 때문에, 기존 클래스를 확�
 
 ```js
 class Animal {
-  constructor(name) {
-    this.speed = 0;
-    this.name = name;
-  }
-  run(speed) {
-    this.speed = speed;
-    alert(`${this.name} 은/는 속도 ${this.speed}로 달립니다.`);
-  }
-  stop() {
-    this.speed = 0;
-    alert(`${this.name} 이/가 멈췄습니다.`);
-  }
+	constructor(name) {
+		this.speed = 0;
+		this.name = name;
+	}
+	run(speed) {
+		this.speed = speed;
+		alert(`${this.name} 은/는 속도 ${this.speed}로 달립니다.`);
+	}
+	stop() {
+		this.speed = 0;
+		alert(`${this.name} 이/가 멈췄습니다.`);
+	}
 }
 
 let animal = new Animal('동물');
 
 class Rabbit extends Animal {
-  hide() {
-    alert(`${this.name} 이/가 숨었습니다!`);
-  }
+	hide() {
+		alert(`${this.name} 이/가 숨었습니다!`);
+	}
 }
 
 let rabbit = new Rabbit('흰 토끼');
@@ -100,15 +100,15 @@ JS에서는 `public`, `protected` 에 대한 문법적 지원이 없으며, 관�
 
 ```js
 class Article {
-  constructor(title, date) {
-    this.title = title;
-    this.date = date;
-  }
+	constructor(title, date) {
+		this.title = title;
+		this.date = date;
+	}
 
-  static createTodays() {
-    // this는 Article입니다.
-    return new this("Today's digest", new Date());
-  }
+	static createTodays() {
+		// this는 Article입니다.
+		return new this("Today's digest", new Date());
+	}
 }
 
 let article = Article.createTodays();
@@ -128,18 +128,18 @@ TS는 JS의 모든 클래스 문법을 지원하며, 그에 더해서 몇 가지
 
 ```ts
 class Greeter {
-  readonly name: string = 'world';
+	readonly name: string = 'world';
 
-  constructor(otherName?: string) {
-    if (otherName !== undefined) {
-      this.name = otherName;
-    }
-  }
+	constructor(otherName?: string) {
+		if (otherName !== undefined) {
+			this.name = otherName;
+		}
+	}
 
-  err() {
-    this.name = 'not ok';
-    // Cannot assign to 'name' because it is a read-only property.
-  }
+	err() {
+		this.name = 'not ok';
+		// Cannot assign to 'name' because it is a read-only property.
+	}
 }
 const g = new Greeter();
 g.name = 'also not ok';
@@ -154,21 +154,21 @@ TS에서는 다양한 방식으로 호출할 수 있는 함수에 대해 구체�
 
 ```ts
 class Point {
-  // Overloads
-  constructor(x: number, y: string);
-  constructor(s: string);
-  constructor(xs: any, y?: any) {
-    // TBD
-  }
+	// Overloads
+	constructor(x: number, y: string);
+	constructor(s: string);
+	constructor(xs: any, y?: any) {
+		// TBD
+	}
 }
 
 class Util {
-  // Overloads
-  len(s: string): number;
-  len(arr: any[]): number;
-  len(x: any) {
-    return x.length;
-  }
+	// Overloads
+	len(s: string): number;
+	len(arr: any[]): number;
+	len(x: any) {
+		return x.length;
+	}
 }
 ```
 
@@ -178,19 +178,19 @@ TypeScript에서는 파생 클래스가 항상 기본 클래스의 하위 유형
 
 ```ts
 class Base {
-  greet() {
-    console.log('Hello, world!');
-  }
+	greet() {
+		console.log('Hello, world!');
+	}
 }
 
 class Derived extends Base {
-  greet(name?: string) {
-    if (name === undefined) {
-      super.greet();
-    } else {
-      console.log(`Hello, ${name.toUpperCase()}`);
-    }
-  }
+	greet(name?: string) {
+		if (name === undefined) {
+			super.greet();
+		} else {
+			console.log(`Hello, ${name.toUpperCase()}`);
+		}
+	}
 }
 
 const d = new Derived();
@@ -211,18 +211,18 @@ b.greet();
 
 ```ts
 class Base {
-  greet() {
-    console.log('Hello, world!');
-  }
+	greet() {
+		console.log('Hello, world!');
+	}
 }
 
 class Derived extends Base {
-  // Make this parameter required
-  greet(name: string) {
-    // Property 'greet' in type 'Derived' is not assignable to the same property in base type 'Base'.
-    // Type '(name: string) => void' is not assignable to type '() => void'.
-    console.log(`Hello, ${name.toUpperCase()}`);
-  }
+	// Make this parameter required
+	greet(name: string) {
+		// Property 'greet' in type 'Derived' is not assignable to the same property in base type 'Base'.
+		// Type '(name: string) => void' is not assignable to type '() => void'.
+		console.log(`Hello, ${name.toUpperCase()}`);
+	}
 }
 
 const b: Base = new Derived();
@@ -247,7 +247,7 @@ TS(JS)는 Java나 C#에서 사용하는 `static class` 라고 불리는 구조�
 ```ts
 // Unnecessary "static" class
 class MyStaticClass {
-  static doSomething() {}
+	static doSomething() {}
 }
 
 // Preferred (alternative 1)
@@ -255,7 +255,7 @@ function doSomething() {}
 
 // Preferred (alternative 2)
 const MyHelperObject = {
-  dosomething() {},
+	dosomething() {},
 };
 ```
 
@@ -267,17 +267,17 @@ const MyHelperObject = {
 
 ```ts
 abstract class Base {
-  abstract getName(): string;
+	abstract getName(): string;
 
-  printName() {
-    console.log('Hello, ' + this.getName());
-  }
+	printName() {
+		console.log('Hello, ' + this.getName());
+	}
 }
 
 class Derived extends Base {
-  getName() {
-    return 'world';
-  }
+	getName() {
+		return 'world';
+	}
 }
 
 const d = new Derived();

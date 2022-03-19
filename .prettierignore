@@ -1,4 +1,4 @@
 .yarn/
-.pnp.js
+.pnp.*
 .docusaurus/
 build/

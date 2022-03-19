@@ -1,4 +1,5 @@
 import useThemeContext from '@theme/hooks/useThemeContext';
+
 import React from 'react';
 
 const utterancesSelector = 'iframe.utterances-frame';
@@ -6,10 +7,11 @@ const utterancesSelector = 'iframe.utterances-frame';
 function Comment(): JSX.Element {
 	const {isDarkTheme} = useThemeContext();
 	const utterancesTheme = isDarkTheme ? 'github-dark' : 'github-light';
-	const containerRef = React.useRef(null);
+	const containerRef = React.useRef<HTMLDivElement>(null);
 
 	React.useEffect(() => {
-		const utterancesEl = containerRef.current.querySelector(utterancesSelector);
+		const utterancesEl =
+			containerRef.current.querySelector<HTMLIFrameElement>(utterancesSelector);
 
 		const createUtterancesEl = () => {
 			const script = document.createElement('script');

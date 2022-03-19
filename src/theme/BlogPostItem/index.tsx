@@ -7,22 +7,23 @@
 
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment'; // swizzled
 import Link from '@docusaurus/Link';
-import {usePluralForm} from '@docusaurus/theme-common';
 import Translate, {translate} from '@docusaurus/Translate';
 import {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'; // swizzled
-import {MDXProvider} from '@mdx-js/react';
 import BlogPostAuthors from '@theme/BlogPostAuthors';
 import type {Props} from '@theme/BlogPostItem';
 import EditThisPage from '@theme/EditThisPage';
 import MDXComponents from '@theme/MDXComponents';
 import TagsListInline from '@theme/TagsListInline';
-import clsx from 'clsx';
-import React from 'react';
 
 import {ShareThisPage} from '../../components'; // swizzled
 
 import styles from './styles.module.scss';
+
+import {usePluralForm} from '@docusaurus/theme-common';
+import {MDXProvider} from '@mdx-js/react';
+import clsx from 'clsx';
+import React from 'react';
 
 // Very simple pluralization: probably good enough for now
 function useReadingTimePlural() {
@@ -70,7 +71,7 @@ function BlogPostItem(props: Props): JSX.Element {
 
 	const location = ExecutionEnvironment.canUseDOM ? window.location : null; // swizzled
 	const context = useDocusaurusContext(); // swizzled
-	const {siteConfig = {}} = context; // swizzled
+	const {siteConfig} = context; // swizzled
 	const url = location && `${siteConfig.url}/${location.pathname}`; // swizzled
 	const shareData = {url, title}; // swizzled
 

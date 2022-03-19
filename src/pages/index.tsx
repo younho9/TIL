@@ -2,14 +2,15 @@ import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import clsx from 'clsx';
-import React from 'react';
 
 import styles from './styles.module.scss';
 
+import clsx from 'clsx';
+import React from 'react';
+
 function Home(): JSX.Element {
 	const context = useDocusaurusContext();
-	const {siteConfig = {}} = context;
+	const {siteConfig} = context;
 
 	return (
 		<Layout title={siteConfig.title} description={siteConfig.tagline}>

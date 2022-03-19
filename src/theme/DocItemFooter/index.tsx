@@ -6,7 +6,6 @@
  */
 
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment'; // swizzled
-import {ThemeClassNames} from '@docusaurus/theme-common';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'; // swizzled
 import type {Props} from '@theme/DocItem';
 import EditThisPage from '@theme/EditThisPage';
@@ -14,12 +13,14 @@ import LastUpdated from '@theme/LastUpdated';
 import TagsListInline, {
 	Props as TagsListInlineProps,
 } from '@theme/TagsListInline';
-import clsx from 'clsx';
-import React from 'react';
 
 import {ShareThisPage} from '../../components'; // swizzled
 
 import styles from './styles.module.scss';
+
+import {ThemeClassNames} from '@docusaurus/theme-common';
+import clsx from 'clsx';
+import React from 'react';
 
 function TagsRow(props: TagsListInlineProps) {
 	return (
@@ -51,7 +52,7 @@ function EditMetaRow({
 } & EditMetaRowProps) {
 	const location = ExecutionEnvironment.canUseDOM ? window.location : null; // swizzled
 	const context = useDocusaurusContext(); // swizzled
-	const {siteConfig = {}} = context; // swizzled
+	const {siteConfig} = context; // swizzled
 	const url = location && `${siteConfig.url}/${location.pathname}`; // swizzled
 	const shareData = {url, title}; // swizzled
 

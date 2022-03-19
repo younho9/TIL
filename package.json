@@ -16,10 +16,8 @@
 		"git:install-hooks": "husky install",
 		"git:pre-commit": "lint-staged",
 		"postinstall": "yarn git:install-hooks",
-		"lint": "yarn lint:src && yarn lint:types",
-		"lint:fix": "yarn lint:src --fix",
-		"lint:src": "eslint src --ext .ts,.tsx",
-		"lint:types": "tsc src/**/*.{ts,tsx,.d.ts} --noEmit",
+		"lint": "eslint src --ext .ts,.tsx",
+		"lint:fix": "yarn lint --fix",
 		"serve": "docusaurus serve",
 		"start": "docusaurus start",
 		"swizzle": "docusaurus swizzle"
@@ -52,6 +50,17 @@
 	"commitlint": {
 		"extends": "@commitlint/config-conventional"
 	},
+	"eslintConfig": {
+		"extends": [
+			"plugin:@younho9/recommended"
+		],
+		"parserOptions": {
+			"project": [
+				"./tsconfig.json"
+			],
+			"ecmaVersion": "latest"
+		}
+	},
 	"prettier": "@younho9/prettier-config",
 	"dependencies": {
 		"@docusaurus/core": "2.0.0-beta.6",
@@ -79,19 +88,26 @@
 		"@babel/plugin-proposal-object-rest-spread": "^7.15.6",
 		"@commitlint/cli": "^13.1.0",
 		"@commitlint/config-conventional": "^13.1.0",
+		"@docusaurus/types": "^2.0.0-beta.17",
 		"@tsconfig/docusaurus": "^1.0.4",
 		"@types/node": "^16.9.1",
 		"@types/react": "^17.0.20",
 		"@types/react-helmet": "^6.1.2",
 		"@types/react-router-dom": "^5.1.8",
-		"@typescript-eslint/eslint-plugin": "^4.29.0",
-		"@typescript-eslint/parser": "^4.29.0",
+		"@typescript-eslint/eslint-plugin": "^5.15.0",
+		"@typescript-eslint/parser": "^5.15.0",
+		"@younho9/eslint-plugin": "^0.6.1",
 		"@younho9/prettier-config": "^2.3.1",
-		"eslint": "^7.32.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-import-resolver-node": "^0.3.4",
-		"eslint-plugin-import": "^2.23.4",
-		"eslint-plugin-prettier": "^3.4.0",
+		"eslint": "^8.11.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.25.4",
+		"eslint-plugin-jest": "^26.1.1",
+		"eslint-plugin-jsdoc": "^38.0.4",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-react": "^7.29.4",
+		"eslint-plugin-react-hooks": "^4.3.0",
 		"husky": "^7.0.1",
 		"lint-staged": "^11.1.2",
 		"prettier": "^2.4.0",

@@ -5,15 +5,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import {ThemeClassNames} from '@docusaurus/theme-common';
 import BlogLayout from '@theme/BlogLayout';
 import BlogPostItem from '@theme/BlogPostItem';
 import type {Props} from '@theme/BlogPostPage';
 import BlogPostPaginator from '@theme/BlogPostPaginator';
 import Seo from '@theme/Seo';
-import React from 'react';
 
 import {Comment} from '../../components'; // swizzled
+
+import {ThemeClassNames} from '@docusaurus/theme-common';
+import React from 'react';
 
 function BlogPostPage(props: Props): JSX.Element {
 	const {content: BlogPostContents, sidebar} = props;

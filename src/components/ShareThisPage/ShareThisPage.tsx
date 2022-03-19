@@ -6,11 +6,11 @@
  */
 
 import Translate from '@docusaurus/Translate';
-import clsx from 'clsx';
-import React from 'react';
 
 import styles from './styles.module.scss';
 
+import clsx from 'clsx';
+import React from 'react';
 import {IoShareOutline} from 'react-icons/io5';
 
 interface Props {
@@ -26,11 +26,12 @@ export default function ShareThisPage({data}: Props): JSX.Element {
 		e.preventDefault();
 
 		if (navigator.share) {
-			navigator.share(data);
+			void navigator.share(data);
 		}
 	};
 
 	return (
+		// eslint-disable-next-line jsx-a11y/anchor-is-valid
 		<a href="#" target="_blank" rel="noreferrer noopener" onClick={handleClick}>
 			<IoShareOutline size={20} className={clsx(styles.iconShare)} />
 			<Translate description="The link label to share the current page">

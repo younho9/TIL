@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const docNavItems = [
 	{
 		to: 'docs/algorithms/programmers/2020-카카오-인턴십-경주로-건설',
